@@ -1,0 +1,21 @@
+MiniMax H3 is licensed under the MiniMax H3 Community License Agreement, Copyright © 2026 MiniMax. All Rights Reserved.
+
+----------------------------------------------------------------------
+
+Awesome MiniMax H3 Skills is an independent community project. It is not
+an official MiniMax website or product.
+
+Third-party materials bundled with this project:
+
+1. MiniMax H3 official skill demo media — third_party/MiniMax-H3/
+   Source: https://github.com/MiniMax-AI/MiniMax-H3 (assets/, skills/)
+   These materials are © MiniMax and remain subject to the MiniMax H3
+   Community License Agreement, a copy of which is included at
+   third_party/MiniMax-H3/LICENSE.
+   Files re-encoded by this project (GIF -> MP4 / WebP for web delivery)
+   are marked as modified in third_party/MiniMax-H3/README.md.
+
+2. GSAP (GreenSock Animation Platform) — src/vendor/
+   © GreenSock, Inc. Subject to the GSAP standard "no charge" license:
+   https://gsap.com/standard-license/
+   The files are unmodified; license headers are preserved in-file.
