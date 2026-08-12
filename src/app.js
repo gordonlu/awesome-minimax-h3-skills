@@ -432,12 +432,12 @@
   function renderHome() {
     var home = $("#view-home");
     var modeSet = {}, nModes = 0, nVideos = 0;
-    SKILLS.forEach(function (s) {
+    DATA.skills.forEach(function (s) {
       (s.modes || []).forEach(function (m) { if (!modeSet[m.id]) { modeSet[m.id] = 1; nModes++; } });
       if (s.preview && s.preview.video) nVideos++;
     });
     var heroStats = [
-      { n: SKILLS.length, label: t("hero.stat.skills") },
+      { n: DATA.skills.length, label: t("hero.stat.skills") },
       { n: nModes, label: t("hero.stat.modes") },
       { n: nVideos, label: t("hero.stat.demos") }
     ];
