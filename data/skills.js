@@ -395,9 +395,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/cinematic-key-art-animator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/cinematic-key-art-animator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/cinematic-key-art-animator/assets/preview.gif",
+        caption: { en: "Actual output: a white/dark-navy mecha on a rain-soaked deck fires, sidesteps, dashes, and lands an energy-blade slash", zh: "实际成片：白蓝机甲雨夜甲板战斗连段——点射、侧闪、冲刺、光刃横斩收尾" },
       },
       inputs: [
         { en: "One character illustration / key art / mecha artwork", zh: "一张角色插画/主视觉/机甲原画" },
@@ -478,9 +478,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/construction-timelapse-video-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/construction-timelapse-video-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/construction-timelapse-video-generator/assets/preview.gif",
+        caption: { en: "Actual output: an empty hillside builds into a modern glass-and-wood villa with pool and landscaping", zh: "实际成片：空山坡 8 秒建起现代玻璃木别墅——地基、框架、幕墙、泳池、景观逐层完成" },
       },
       inputs: [
         { en: "Start image (optional), final image (optional), or neither", zh: "起始图（可选）、完工图（可选），或都没有" },
@@ -563,9 +563,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/living-ink-painting-video-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/living-ink-painting-video-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/living-ink-painting-video-generator/assets/preview.gif",
+        caption: { en: "Actual output: a red-black koi swims across the ink painting, then breaks free from the paper as living ink", zh: "实际成片：红黑锦鲤在宣纸上灵动游动，破纸而出化作水墨生灵" },
       },
       inputs: [
         { en: "The ink-wash subject (fish, bird, mountain, blossom, dragon…)", zh: "水墨主体（鱼、鸟、山、花、龙……）" },
@@ -643,9 +643,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/miniature-creature-awakening-video-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/miniature-creature-awakening-video-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-creature-awakening-video-generator/assets/preview.gif",
+        caption: { en: "Actual output: a tiny dragon wakes, stretches, sneezes golden sparks, and lands a hero pose", zh: "实际成片：小飞龙苏醒、伸腰、打喷嚏喷出金色火花，hero 姿态收尾" },
       },
       inputs: [
         { en: "One small-creature image (mascot, fantasy pet, figurine, tiny animal)", zh: "一张小生物图（吉祥物/幻想宠物/手办/小动物）" },
@@ -722,9 +722,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/miniature-world-landscape-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/miniature-world-landscape-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-world-landscape-generator/assets/preview.gif",
+        caption: { en: "Actual output: a glass-sphere storm island — lightning strikes the sea inside the sphere", zh: "实际成片：玻璃球风暴岛——球内雷暴劈中海面" },
       },
       inputs: [
         { en: "Landscape family + presentation mode + one hero effect", zh: "景观家族 + 呈现模式 + 一个英雄特效" },
