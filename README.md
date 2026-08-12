@@ -1,5 +1,9 @@
 # Awesome MiniMax H3 Skills
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fh3skills.com&label=h3skills.com%20online)](https://h3skills.com)
+[![Last Commit](https://img.shields.io/github/last-commit/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
+
 MiniMax H3 官方 Skills 的可视化发现与参考站点 · A visual discovery and
 reference site for the official MiniMax H3 Skills.
 
@@ -7,12 +11,6 @@ reference site for the official MiniMax H3 Skills.
 
 > Independent community project — not an official MiniMax website.
 > 独立社区项目，并非 MiniMax 官方网站。
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fh3skills.com&label=h3skills.com%20online)](https://h3skills.com)
-[![GitHub Stars](https://img.shields.io/github/stars/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
-[![GitHub Forks](https://img.shields.io/github/forks/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
-[![Last Commit](https://img.shields.io/github/last-commit/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
 
 ![Awesome MiniMax H3 Skills — homepage](docs/screenshot-home.jpg)
 
