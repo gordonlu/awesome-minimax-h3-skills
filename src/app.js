@@ -225,10 +225,16 @@
   }
 
   function videoTag(p, cls) {
-    return (
+    var v =
       '<video class="' + cls + '" muted loop playsinline preload="none" ' +
       'poster="' + esc(p.poster) + '"' +
-      (p.video ? ' data-src="' + esc(p.video) + '"' : "") + "></video>"
+      (p.video ? ' data-src="' + esc(p.video) + '"' : "") + "></video>";
+    if (!p.video) {
+      return '<img class="' + cls + '" src="' + esc(p.poster) + '" alt="" loading="lazy" decoding="async">';
+    }
+    return (
+      '<span class="media-bg" style="background-image:url(&quot;' + esc(p.poster) + '&quot;)"></span>' +
+      '<span class="media-fg">' + v + "</span>"
     );
   }
 
