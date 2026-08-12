@@ -229,9 +229,10 @@ window.AMHS_DATA = {
       ],
       languages: ["en", "zh"],
       preview: {
-        poster: "data/anthology-images/t2va-space.jpg",
+        poster: "community-skills/h3-promo-film/assets/poster.webp",
+        video: "community-skills/h3-promo-film/assets/preview.mp4",
         sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-promo-film/assets/preview.gif",
-        caption: { en: "Sample prompt style — epic sci-fi teaser (manual example). Demo video coming soon.", zh: "示例提示词风格——史诗太空预告（手册同款）。示例视频生成中。" },
+        caption: { en: "Actual output: Peking duck promo — steam in the oven, knife carving, perfect skin-to-meat fanning onto porcelain", zh: "实际成片：北京烤鸭宣传——炉中蒸汽、刀工片鸭、皮肉均匀铺上白瓷盘" },
       },
       inputs: [
         { en: "Concept & mood in one line", zh: "一句话概念与氛围" },
@@ -309,9 +310,10 @@ window.AMHS_DATA = {
       ],
       languages: ["en", "zh"],
       preview: {
-        poster: "data/anthology-images/kf-telescope.png",
+        poster: "community-skills/h3-keyframe-film/assets/poster.webp",
+        video: "community-skills/h3-keyframe-film/assets/preview.mp4",
         sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-keyframe-film/assets/preview.gif",
-        caption: { en: "Sample prompt style — telescope 4-keyframe sequence (manual example). Demo video coming soon.", zh: "示例提示词风格——望远镜四关键帧（手册同款）。示例视频生成中。" },
+        caption: { en: "Actual output: wuxia swordsman FL2VA — opening stance flows through sweeps, leap, and turn, landing exactly on the closing pose", zh: "实际成片：剑客首尾帧——起势连贯平扫纵跃回旋，精确落到收势定格" },
       },
       inputs: [
         { en: "Reference image(s): start frame, end frame, or keyframe sequence", zh: "参考图：首帧 / 尾帧 / 关键帧序列" },
