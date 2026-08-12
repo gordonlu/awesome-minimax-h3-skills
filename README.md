@@ -10,14 +10,6 @@ reference site for the official MiniMax H3 Skills.
 
 ![Awesome MiniMax H3 Skills — homepage](docs/screenshot-home.jpg)
 
-## Online / 在线访问
-
-- Main: **https://h3skills.com** (Cloudflare Pages, Web Analytics enabled)
-- Fallback: https://awesome-minimax-h3-skills.pages.dev
-
-主域名 **https://h3skills.com**（Cloudflare Pages，已接入 Web Analytics），
-备用地址为 pages.dev。
-
 ## Run / 运行
 
 Pure static site, no build step. Any static server works:
