@@ -16,7 +16,7 @@ Prompts follow `h3-prompt-writing` (`base-en.txt`). The alignment instruction li
 
 Use when: I2VA first-frame requests; FL2VA pose-to-pose transitions; L2VA "end on this exact frame" requests; multi-keyframe montages (up to 4 frames); image + text motion description in any language.
 
-Do **not** use when: no images at all (→ `h3-promo-film`), a reference *video* is the motion source (→ `reference-motion-transfer`), or the user wants to edit an existing clip.
+Do **not** use when: no images at all (→ `h3-promo-film`), a reference *video* is the motion source (→ `reference-motion-transfer`), the user wants to edit an existing clip, or the user has **exactly two images and nothing else** (→ `h3-fl2va-film`, the FL2VA-only studio).
 
 ## 2. Intake
 
