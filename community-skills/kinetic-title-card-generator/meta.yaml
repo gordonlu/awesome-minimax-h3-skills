@@ -1,0 +1,26 @@
+display-name-zh: 片头字效
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Kinetic Type
+- Animation / Title Card
+complete-tags-cn:
+- 创意实验 / 动态字
+- 动画 / 片头字卡
+summary-en: Text is the hero — brand names, film or song titles, slogans as kinetic title cards with spell-perfect text.
+summary-cn: 文字当主角——品牌名、片名、歌名做成动态片头字卡，文字拼写必须一字不差。
+desc-en: |
+  7–8s text-to-video clips where displayed words carry the whole shot: a title ignites into
+  gold dust, slides out of fog, or punches in with a light flare. Text rules are first-class:
+  one line of ≤6 characters, fixed position, one entrance and one resolution, original language
+  preserved, spelling verified in QC. Different from music-video-subtitle-generator (lyric
+  karaoke) and h3-promo-film (commercials with incidental text): here the words ARE the video.
+desc-cn: |
+  7–8 秒文生视频：画面文字是整支片的主角——片名化作金尘、从雾中滑出、或随光爆弹入画面。
+  文字规则是头等要求：每行 ≤6 字、位置固定、一种入场与一种收尾、保留原文、QC 逐字核拼写。
+  区别于 music-video-subtitle-generator（歌词卡拉 OK）与 h3-promo-film（带点缀文字的广告片）：
+  本 Skill 里字本身就是视频。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

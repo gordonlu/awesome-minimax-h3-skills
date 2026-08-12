@@ -1,0 +1,27 @@
+display-name-zh: 自然微动治愈
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Ambient
+- Animation / Nature
+complete-tags-cn:
+- 创意实验 / 氛围
+- 动画 / 自然
+summary-en: Full-scale natural environments living at real-world size — the environmental system is the declared motion owner.
+summary-cn: 真实尺度的自然场景「活着」——环境系统（风/光/水/云）是唯一主要动作载体。
+desc-en: |
+  7–8s text-to-video clips of real-scale nature: mist breathing through a forest, waves
+  collapsing on a shore, cloud sheets over a valley, rain streaking a window, grass rippling.
+  Each clip declares one environmental system as the primary motion owner with visible change
+  every 1–2 seconds and one soft physical peak — never a frozen wallpaper with a slow zoom.
+  Follows base-en.txt exactly. Miniature scenes route to miniature-world-landscape-generator,
+  ink-paper subjects to living-ink-painting-video-generator.
+desc-cn: |
+  7–8 秒文生视频：真实尺度的大自然——林间雾息、浪涛崩岸、云海过谷、窗上雨痕、草浪起伏。
+  每片声明一个环境系统（风/光/水/云）作为主要动作载体，每 1–2 秒可见变化，并含一个柔和
+  物理峰值——绝不做只有慢推镜头的壁纸片。严格遵循 base-en.txt。微缩场景路由到
+  miniature-world-landscape-generator，水墨纸面题材路由到 living-ink-painting-video-generator。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

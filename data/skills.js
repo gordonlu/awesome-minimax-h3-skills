@@ -780,6 +780,167 @@ window.AMHS_DATA = {
 
       
 
+
+      {
+      slug: "natural-ambient-living-generator",
+      name: "Natural Ambient Living Generator",
+      nameZh: "自然微动治愈",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Full-scale natural environments living at real-world size — one environmental system is the declared motion owner.",
+        zh: "真实尺度的自然场景「活着」——环境系统（风/光/水/云）是唯一主要动作载体。",
+      },
+      description: {
+        en: "7–8s text-to-video clips of real-scale nature: mist breathing through a forest, waves collapsing on a shore, cloud sheets over a valley, rain streaking a window, grass rippling. Each clip declares one environmental system as the primary motion owner with visible change every 1–2 seconds and one soft physical peak — never a frozen wallpaper with a slow zoom. Ships with a canonical morning-forest demo prompt that runs as-is. T2VA, no reference material needed.",
+        zh: "7–8 秒文生视频：真实尺度的大自然——林间雾息、浪涛崩岸、云海过谷、窗上雨痕、草浪起伏。每片声明一个环境系统（风/光/水/云）作为主要动作载体，每 1–2 秒可见变化，并含一个柔和物理峰值——绝不做只有慢推镜头的壁纸片。内置可直接运行的「晨雾森林」canonical demo。T2VA，无需参考素材。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Ambient", zh: "氛围" },
+        { en: "Nature", zh: "自然" },
+        { en: "T2VA", zh: "T2VA" },
+        { en: "Relaxing", zh: "治愈" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/natural-ambient-living-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "Environment theme: forest / ocean / sky / river / desert / snow / window", zh: "环境主题：森林/海洋/天空/河流/沙漠/雪原/窗前" },
+        { en: "One declared motion-owner system: wind, light, water, cloud, particles", zh: "一个声明的动作载体系统：风/光/水/云/粒子" },
+        { en: "Duration (default 7–8s), aspect ratio, tempo (Natural / Calm / Energetic)", zh: "时长（默认 7–8s）、画幅、节奏（自然/平静/激烈）" },
+      ],
+      capabilities: [
+        { en: "Declares one environmental system as primary motion owner per clip", zh: "每片声明一个环境系统作为主要动作载体" },
+        { en: "Enforces visible change every 1–2 seconds with one soft peak beat", zh: "每 1–2 秒强制可见变化，含一个柔和峰值" },
+        { en: "Keeps camera strictly supporting — no wallpaper-with-zoom output", zh: "镜头严格辅助——拒绝壁纸+慢推镜头" },
+      ],
+      workflow: [
+        { id: "theme", title: { en: "Pick theme + system", zh: "选主题与系统" }, desc: { en: "One environment, one motion-owner system.", zh: "一个环境，一个动作载体系统。" } },
+        { id: "beats", title: { en: "Plan 1–2s changes", zh: "规划 1–2s 变化" }, desc: { en: "Three readable changes + one soft physical peak + relaxation.", zh: "三拍可见变化 + 一个柔和物理峰值 + 收尾松弛。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "System visibly moves; peak exists; terrain stable; no camera-only shot.", zh: "系统可见运动；峰值存在；地形稳定；非镜头戏。" } },
+      ],
+      outputs: [
+        { en: "A 7–8s natural ambient clip (MP4)", zh: "一段 7–8 秒自然氛围短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Ambient · T2VA system-driven beats", zh: "氛围 · T2VA 系统驱动节拍" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Relaxing real-scale nature shorts (forest, ocean, sky, rain window)", zh: "真实尺度自然治愈短片（森林/海洋/天空/窗雨）" },
+        { en: "Ambient backgrounds that still visibly breathe", zh: "仍然「活着」的氛围背景" },
+      ],
+      notFor: [
+        { en: "Miniature / diorama scenes (see miniature-world-landscape-generator)", zh: "微缩/沙盘场景（见 miniature-world-landscape-generator）" },
+        { en: "Ink-paper subjects (see living-ink-painting-video-generator)", zh: "水墨纸面题材（见 living-ink-painting-video-generator）" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill natural-ambient-living-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/natural-ambient-living-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/natural-ambient-living-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — canonical morning forest", zh: "prompt-library.md — 晨雾森林 canonical demo" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/natural-ambient-living-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+      {
+      slug: "kinetic-title-card-generator",
+      name: "Kinetic Title Card Generator",
+      nameZh: "片头字效",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Text is the hero — brand names, film or song titles, slogans as kinetic title cards with spell-perfect text.",
+        zh: "文字当主角——品牌名、片名、歌名做成动态片头字卡，文字拼写必须一字不差。",
+      },
+      description: {
+        en: "7–8s text-to-video clips where displayed words carry the whole shot: a title ignites into gold dust, slides out of fog, or punches in with a light flare. Text rules are first-class: one line of ≤6 characters, fixed position, one entrance and one resolution, original language preserved, spelling verified in QC. Distinct from music-video-subtitle-generator (lyric karaoke) and h3-promo-film (commercials with incidental text): here the words ARE the video. Ships with a canonical album-title demo 「黎明」.",
+        zh: "7–8 秒文生视频：画面文字是整支片的主角——片名化作金尘、从雾中滑出、或随光爆弹入画面。文字规则是头等要求：每行 ≤6 字、位置固定、一种入场与一种收尾、保留原文、QC 逐字核拼写。区别于 music-video-subtitle-generator（歌词卡拉 OK）与 h3-promo-film（带点缀文字的广告片）：本 Skill 里字本身就是视频。内置「黎明」专辑片头 canonical demo。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Kinetic Type", zh: "动态字" },
+        { en: "Title Card", zh: "片头字卡" },
+        { en: "T2VA", zh: "T2VA" },
+        { en: "Branding", zh: "品牌" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/kinetic-title-card-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "The exact text: brand name / film or song title / slogan (≤6 chars per line)", zh: "确切文字：品牌名/片名/歌名/口号（每行 ≤6 字）" },
+        { en: "Font flavor, position, entrance and exit behaviors", zh: "字体气质、位置、入场与收尾方式" },
+        { en: "Duration (default 7–8s), aspect ratio, music direction", zh: "时长（默认 7–8s）、画幅、配乐方向" },
+      ],
+      capabilities: [
+        { en: "Treats text integrity as a first-class QC item (spelling, no morphing, no relocation)", zh: "把文字完整性列为头等 QC（拼写、不变形、不漂移）" },
+        { en: "Fixes one entrance + one resolution per title", zh: "每个片头只有一次入场 + 一种收尾" },
+        { en: "Keeps original language verbatim, never translates or splits words", zh: "保留原文，绝不翻译或拆词" },
+      ],
+      workflow: [
+        { id: "text", title: { en: "Lock the text", zh: "锁定文字" }, desc: { en: "Exact wording, position, font flavor, one entrance.", zh: "确切用词、位置、字体气质、一次入场。" } },
+        { id: "arc", title: { en: "Build the 7–8s arc", zh: "构建 7–8s 弧线" }, desc: { en: "Arrival → land/lock → ambient support → hold or exit.", zh: "入场 → 落定锁定 → 环境衬托 → 定格或退场。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Spelling, position, entrance beat, clean hold ≥2s.", zh: "拼写、位置、入场节拍、干净定格 ≥2s。" } },
+      ],
+      outputs: [
+        { en: "A 7–8s kinetic title card (MP4)", zh: "一段 7–8 秒动态片头字卡（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Title card · T2VA text-first beats", zh: "片头字卡 · T2VA 文字优先节拍" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Brand-name opens, film/song title cards, event posters", zh: "品牌开场、片名/歌名字卡、活动海报" },
+        { en: "Short-word kinetic type (≤6 chars per line)", zh: "短词动态字（每行 ≤6 字）" },
+      ],
+      notFor: [
+        { en: "Lyric karaoke (see music-video-subtitle-generator)", zh: "歌词卡拉 OK（见 music-video-subtitle-generator）" },
+        { en: "Full commercials with incidental text (see h3-promo-film)", zh: "带点缀文字的完整广告片（见 h3-promo-film）" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill kinetic-title-card-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/kinetic-title-card-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/kinetic-title-card-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — canonical 黎明 title card", zh: "prompt-library.md — 黎明片头 canonical demo" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/kinetic-title-card-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
 {
       slug: "minimalist-product-ad-generator",
       name: "Minimalist Product Ad Generator",
