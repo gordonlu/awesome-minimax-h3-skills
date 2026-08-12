@@ -10,6 +10,11 @@ reference site for the official MiniMax H3 Skills.
 
 ![Awesome MiniMax H3 Skills — homepage](docs/screenshot-home.jpg)
 
+## Online / 在线访问
+
+- Main: **https://h3skills.com**
+- Fallback: https://awesome-minimax-h3-skills.pages.dev
+
 ## Run / 运行
 
 Pure static site, no build step. Any static server works:
