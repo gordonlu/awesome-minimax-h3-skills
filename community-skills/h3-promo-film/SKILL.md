@@ -1,12 +1,12 @@
 ---
-name: h3-text2video
+name: h3-promo-film
 description: |
-  Write runnable MiniMax H3 text-to-video (T2VA) prompts with no reference assets at all. Use when the user wants a video generated purely from a text description — food promos, teasers, explainer clips, abstract or cinematic one-shots. Produces integrated_multimodal_description with timecoded beats, overall_soundscape, and non_diegetic_music following the official base-en.txt guide. Requests that bring reference images or videos are redirected to the image-to-video or motion-transfer skills.
+  Write runnable MiniMax H3 promo & trailer prompts with no reference assets at all — food promos, product campaigns, brand teasers, cinematic trailers. Use when the user wants a publicity or marketing short generated purely from text. Produces timecoded beats per base-en.txt; requests with reference images or videos are redirected. Produces integrated_multimodal_description with timecoded beats, overall_soundscape, and non_diegetic_music following the official base-en.txt guide. Requests that bring reference images or videos are redirected to the image-to-video or motion-transfer skills.
 ---
 
-# H3 Text-to-Video Prompt Studio
+# H3 Promo Film Studio
 
-Use this Skill when the user wants a MiniMax H3 video **from text alone**: "make a 6-second Peking-duck promo", "a sci-fi teaser for my channel", "a clean product one-shot". No images, no clips — the prompt is the entire production.
+Use this Skill when the user wants a **promo or trailer** from MiniMax H3 **from text alone**: "make a 6-second Peking-duck promo", "a product launch film", "a sci-fi teaser for my channel". No images, no clips — the prompt is the entire production.
 
 Core principle: **the description is the footage. Every visible beat must exist in text with a timecode, or it will not exist in the video.**
 
@@ -16,7 +16,7 @@ Prompts follow `h3-prompt-writing` (`base-en.txt`). Field names, order, and timi
 
 Use when: pure-text generation requests in any language; any of T2VA's natural jobs — food / product promos, trailers, ambient or cinematic shots, explainer-style one-shots, kinetic-type pieces.
 
-Do **not** use when: the user supplies reference images (I2VA/FL2VA), reference videos (Ref2VA), or wants to edit/continue an existing clip. Route to `h3-image2video` or `reference-motion-transfer` instead. Requests for >15s continuous output require segmentation.
+Do **not** use when: the user supplies reference images (I2VA/FL2VA), reference videos (Ref2VA), or wants to edit/continue an existing clip. Route to `h3-keyframe-film` or `reference-motion-transfer` instead. Requests for >15s continuous output require segmentation.
 
 ## 2. Intake
 
@@ -74,4 +74,4 @@ Deliver: final video file; the beat sheet; the exact prompt text used (reusable 
 
 ## Boundaries
 
-Text-only generation only. If the user mentions uploading an image or clip, stop and route to `h3-image2video` / `reference-motion-transfer`. Do not generate real identifiable persons, brand logos, or copyrighted characters; abstract them or decline.
+Text-only generation only. If the user mentions uploading an image or clip, stop and route to `h3-keyframe-film` / `reference-motion-transfer`. Do not generate real identifiable persons, brand logos, or copyrighted characters; abstract them or decline.

@@ -1,24 +1,24 @@
-display-name-zh: 文生视频提示词工坊
+display-name-zh: 文生宣传片工坊
 version: 0.1.0
-tag-en: Creative & Experimental
-tag-cn: 创意实验
+tag-en: Commercial Film
+tag-cn: 商业宣传
 complete-tags-en:
-- Creative & Experimental / T2VA
-- Prompt / Text-to-Video
+- Commercial Film / T2VA Promo
+- Prompt / Promo & Trailer
 complete-tags-cn:
-- 创意实验 / 文生视频
-- 提示词 / T2VA
-summary-en: Write runnable MiniMax H3 text-to-video prompts with no reference assets at all.
-summary-cn: 无任何参考素材，纯文本写出可直接运行的 MiniMax H3 文生视频提示词。
+- 商业宣传 / 宣传与预告
+- 提示词 / 宣传片
+summary-en: Write runnable MiniMax H3 promo & trailer prompts (food promos, product films, teasers) with text alone.
+summary-cn: 纯文本写出可直接运行的 MiniMax H3 宣传/预告片提示词（产品宣传、影视预告）。
 desc-en: |
   Turns a text idea into a production-ready T2VA prompt: style sentence first, timecoded
   beats that tile the full duration, on-screen text placement, soundscape, and music direction.
   Follows the official base-en.txt guide exactly. Not for requests that carry reference images
-  or videos (see h3-image2video / reference-motion-transfer).
+  or videos (see h3-keyframe-film / reference-motion-transfer).
 desc-cn: |
   把文字创意转成可直接生产的 T2VA 提示词：风格句开头、铺满全程的时间码节拍、
   画面文字定位、环境音与配乐方向，严格遵循官方 base-en.txt 指南。
-  不适用于携带参考图或参考视频的需求（见 h3-image2video / reference-motion-transfer）。
+  不适用于携带参考图或参考视频的需求（见 h3-keyframe-film / reference-motion-transfer）。
 author-en: gordonlu
 author-cn: gordonlu
 source: community

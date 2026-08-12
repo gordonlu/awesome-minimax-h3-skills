@@ -1,8 +1,8 @@
-# H3 Image-to-Video — Runnable Prompt Library
+# H3 Keyframe Film — Runnable Prompt Library
 
-本库提供**可直接运行**的 MiniMax H3 **图生视频** Prompt：I2VA（首帧）/ FL2VA（首+尾帧）/ L2VA（尾帧）三模式各一例，语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。用图片锁形象，用文字锁动作。
+本库提供**可直接运行**的 MiniMax H3 **关键帧短片** Prompt：多关键帧蒙太奇（I2VA）/ 首尾帧过渡（FL2VA）/ 尾帧落定（L2VA）各一例，语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。用图片锁形象，用文字锁动作。
 
-> 只有文字没有图？请换用 `h3-text2video`（纯文生）。
+> 只有文字没有图？请换用 `h3-promo-film`（纯文生）。
 
 ## 速查表
 

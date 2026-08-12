@@ -1,8 +1,8 @@
-# H3 Text-to-Video — Runnable Prompt Library
+# H3 Promo Film — Runnable Prompt Library
 
-本库提供**可直接运行**的 MiniMax H3 **纯文生视频（T2VA）** Prompt，语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。无任何参考素材，一切画面由文本承载。
+本库提供**可直接运行**的 MiniMax H3 **文生宣传/预告片（T2VA）** Prompt——产品宣传与影视预告两类，语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。无任何参考素材，一切画面由文本承载。
 
-> 需要参考图 / 参考视频？本 Skill 不适用，请换用 `h3-image2video`（图生）或 `reference-motion-transfer`（动作迁移）。
+> 需要参考图 / 参考视频？本 Skill 不适用，请换用 `h3-keyframe-film`（图生）或 `reference-motion-transfer`（动作迁移）。
 
 ## 速查表
 

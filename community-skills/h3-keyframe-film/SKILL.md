@@ -1,12 +1,12 @@
 ---
-name: h3-image2video
+name: h3-keyframe-film
 description: |
-  Write runnable MiniMax H3 image-to-video prompts — I2VA (first frame), FL2VA (first+last frame), L2VA (last frame only). Use when the user has reference images (keyframes, character art, product shots, final poses) and wants the image identity locked while text drives the motion. Follows base-en.txt exactly, including the keyframe-alignment instruction lines. Pure-text requests are redirected to h3-text2video; reference-video motion goes to reference-motion-transfer.
+  Write runnable MiniMax H3 keyframe-film prompts — multi-keyframe montages, first-last frame transitions (FL2VA), final-frame landings (L2VA), and I2VA first-frame animation. Use when the user has reference images (keyframes, character art, product shots, final poses) and wants the image identity locked while text drives the motion. Follows base-en.txt exactly, including the keyframe-alignment instruction lines. Pure-text requests are redirected to h3-promo-film; reference-video motion goes to reference-motion-transfer.
 ---
 
-# H3 Image-to-Video Prompt Studio
+# H3 Keyframe Film Studio
 
-Use this Skill when the user has **images but no video** and wants MiniMax H3 to animate them: "start from this character sheet", "transition between these two poses", "land exactly on this final frame". Images lock the identity; text locks the motion.
+Use this Skill when the user has **images but no video** and wants a storyboard-style short from MiniMax H3: "cut through these four keyframes", "transition between these two poses", "land exactly on this final frame". Images lock the identity; text locks the motion.
 
 Core principle: **the alignment line decides what the video is anchored to; the timecoded beats decide what happens between anchors.**
 
@@ -16,7 +16,7 @@ Prompts follow `h3-prompt-writing` (`base-en.txt`). The alignment instruction li
 
 Use when: I2VA first-frame requests; FL2VA pose-to-pose transitions; L2VA "end on this exact frame" requests; multi-keyframe montages (up to 4 frames); image + text motion description in any language.
 
-Do **not** use when: no images at all (→ `h3-text2video`), a reference *video* is the motion source (→ `reference-motion-transfer`), or the user wants to edit an existing clip.
+Do **not** use when: no images at all (→ `h3-promo-film`), a reference *video* is the motion source (→ `reference-motion-transfer`), or the user wants to edit an existing clip.
 
 ## 2. Intake
 
@@ -70,4 +70,4 @@ Deliver: final video file; the prompt with alignment line exactly as used; setti
 
 ## Boundaries
 
-Image-to-video only. No images → `h3-text2video`. Reference-video motion → `reference-motion-transfer`. Do not animate real identifiable persons without consent, brand logos, or copyrighted characters; abstract or decline.
+Image-to-video only. No images → `h3-promo-film`. Reference-video motion → `reference-motion-transfer`. Do not animate real identifiable persons without consent, brand logos, or copyrighted characters; abstract or decline.
