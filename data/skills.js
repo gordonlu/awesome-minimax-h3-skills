@@ -369,7 +369,415 @@ window.AMHS_DATA = {
     /* ----------------------------------------------------------
      * VIDEO STYLE SKILLS (order follows official README table)
      * ---------------------------------------------------------- */
-    {
+    
+      {
+      slug: "cinematic-key-art-animator",
+      name: "Cinematic Key Art Animator",
+      nameZh: "影视级主视觉动画",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "One character key-art / illustration becomes a 7–8s moving-key-art clip — atmospheric Living Key Art or high-density Action Burst, identity locked.",
+        zh: "一张角色主视觉/立绘变 7–8 秒动态主视觉——氛围化 Living Key Art 或高密度 Action Burst，身份全程锁定。",
+      },
+      description: {
+        en: "Turns a single strong static character image into a short moving-key-art sequence without redesigning the character. Routes automatically between Living Key Art (portraits, emotional art, atmospheric poses) and Action Burst (mecha, weapons, combat poses), locks identity anchors (face, hairstyle, costume, weapon, silhouette), and enforces a causal action chain with escalating peaks — the character, never the camera, owns the motion. Ships with templates for both modes, a canonical mecha combat burst demo, per-failure recovery guidance, and a 17-point QC checklist.",
+        zh: "把一张强静态角色图变成短动态主视觉序列，且不改动角色设计。自动在 Living Key Art（肖像、情绪艺术、氛围站姿）与 Action Burst（机甲、武器、战斗姿态）间路由，锁定身份锚点（脸、发型、服装、武器、剪影），强制因果动作链与逐级峰值——动作永远归角色不归镜头。附带两种模式的模板、机甲战斗 burst canonical demo、分故障恢复指南与 17 项 QC 清单。",
+      },
+      categories: ["animation", "game", "creative"],
+      tags: [
+        { en: "Key Art", zh: "主视觉" },
+        { en: "I2VA", zh: "I2VA" },
+        { en: "Character Animation", zh: "角色动画" },
+        { en: "Action", zh: "动作" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/cinematic-key-art-animator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "One character illustration / key art / mecha artwork", zh: "一张角色插画/主视觉/机甲原画" },
+        { en: "Desired mode: Living Key Art or Action Burst (auto-routed by subject)", zh: "期望模式：Living Key Art 或 Action Burst（按题材自动路由）" },
+        { en: "Duration (default 8s), aspect ratio, action budget, tempo", zh: "时长（默认 8s）、画幅、动作预算、节奏" },
+      ],
+      capabilities: [
+        { en: "Routes between atmospheric Living Key Art and high-density Action Burst", zh: "在氛围化 Living Key Art 与高密度 Action Burst 之间路由" },
+        { en: "Locks identity anchors and allows significant pose change", zh: "锁定身份锚点，允许大幅姿态变化" },
+        { en: "Enforces causal action chains with 2–3 escalating peaks", zh: "强制因果动作链与 2–3 个逐级峰值" },
+        { en: "Keeps character motion primary; camera/effects strictly supporting", zh: "角色动作为主，镜头/特效严格辅助" },
+      ],
+      workflow: [
+        { id: "route", title: { en: "Route the mode", zh: "路由模式" }, desc: { en: "Combat subject → Action Burst; portrait/atmosphere → Living Key Art.", zh: "战斗题材 → Action Burst；肖像/氛围 → Living Key Art。" } },
+        { id: "lock", title: { en: "Lock identity", zh: "锁定身份" }, desc: { en: "Face, hair, costume, weapon, silhouette, art direction.", zh: "脸、发型、服装、武器、剪影、美术方向。" } },
+        { id: "chain", title: { en: "Build the causal action chain", zh: "构建因果动作链" }, desc: { en: "Each beat creates the reason for the next; escalate to peaks.", zh: "每个节拍为下一节拍制造理由，逐级抬升到峰值。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Verify beat count, causal continuity, identity, final pose.", zh: "核对节拍数、因果连续、身份一致、终局姿态。" } },
+      ],
+      outputs: [
+        { en: "A polished 7–8s moving key-art clip (MP4)", zh: "一段 7–8 秒动态主视觉成片（MP4）" },
+        { en: "Mode-specific prompt template filled for reuse", zh: "按模式填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Primary mode: the supplied image is frame 0 of H3-Base-FL2VA.", zh: "主模式：图片作为 H3-Base-FL2VA 的第 0 帧。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Living Key Art / Action Burst · I2VA", zh: "Living Key Art / Action Burst · I2VA" },
+          fields: ["frame-0 reference line", "integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Animating game key art, character illustrations, mecha art", zh: "游戏主视觉、角色立绘、机甲原画动起来" },
+        { en: "Dynamic posters / moving portrait showcases", zh: "动态海报 / 动态立绘展示" },
+        { en: "Short combat micro-scenes from a single pose image", zh: "单张姿态图生成短战斗微场景" },
+      ],
+      notFor: [
+        { en: "Pure-text requests without any image", zh: "无图的纯文本需求" },
+        { en: "Reference-video motion transfer", zh: "参考视频动作迁移" },
+        { en: "Real identifiable persons or copyrighted characters", zh: "真人或受版权保护的角色" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill cinematic-key-art-animator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/cinematic-key-art-animator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/cinematic-key-art-animator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — one example per mode", zh: "prompt-library.md — 每模式一例" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/cinematic-key-art-animator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+      {
+      slug: "construction-timelapse-video-generator",
+      name: "Construction Timelapse Video Generator",
+      nameZh: "建造延时摄影工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "A 7–8s accelerated build-from-zero timelapse with persistent build state — completed work never disappears, resets, or changes design.",
+        zh: "7–8 秒从零建造的加速延时——强制「建造状态持续」，已完成部分绝不消失、重置或改设计。",
+      },
+      description: {
+        en: "Satisfying construction and assembly clips for structures, machines, interiors, infrastructure, and miniature worlds. Routes between FL2VA / L2VA / T2VA / I2VA according to which start/end images you have, requires 4–5 readable build stages with plausible dependency order, and keeps the growing structure — not cranes, machinery, or camera — as the primary motion owner. Ships with a canonical empty-hillside-to-villa demo and stage-by-stage beat plans.",
+        zh: "建筑、机械、室内、基础设施与微缩世界的满足感建造短片。按你拥有的首/尾图在 FL2VA / L2VA / T2VA / I2VA 间自动路由，要求至少 4–5 个可读建造阶段且依赖顺序合理，并让增长的建筑——而非吊车、机械或镜头——成为主要动作载体。内置「空地到现代别墅」canonical demo 与逐阶段节拍计划。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Timelapse", zh: "延时摄影" },
+        { en: "Construction", zh: "建造" },
+        { en: "FL2VA/L2VA", zh: "FL2VA/L2VA" },
+        { en: "Satisfying Content", zh: "解压内容" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/construction-timelapse-video-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "Start image (optional), final image (optional), or neither", zh: "起始图（可选）、完工图（可选），或都没有" },
+        { en: "Construction type: building / machine / interior / infrastructure / miniature", zh: "建造类型：建筑/机械/室内/基础设施/微缩世界" },
+        { en: "Duration (default 8s), aspect ratio, realistic vs stylized build", zh: "时长（默认 8s）、画幅、写实或风格化建造" },
+      ],
+      capabilities: [
+        { en: "Routes between FL2VA / L2VA / T2VA / I2VA by available images", zh: "按可用图片在 FL2VA / L2VA / T2VA / I2VA 间路由" },
+        { en: "Enforces persistent build state (no disappearing / resetting structures)", zh: "强制建造状态持续（结构不消失/不重置）" },
+        { en: "Requires 4–5 readable build stages with plausible order", zh: "要求 4–5 个可读建造阶段且顺序合理" },
+        { en: "Keeps the growing structure as primary motion owner", zh: "让增长中的建筑成为主要动作载体" },
+      ],
+      workflow: [
+        { id: "route", title: { en: "Pick the mode", zh: "选择模式" }, desc: { en: "L2VA for fast iteration with a final image; FL2VA for exact before/after; T2VA for pure-text; I2VA to lock the start site.", zh: "有完工图快速迭代用 L2VA；前后对比严格用 FL2VA；纯文用 T2VA；锁定起始地用 I2VA。" } },
+        { id: "stages", title: { en: "Name 4–5 build stages", zh: "列出 4–5 个建造阶段" }, desc: { en: "Foundation → structure → envelope → systems → finishing, in dependency order.", zh: "地基 → 结构 → 围护 → 系统 → 收尾，按依赖顺序。" } },
+        { id: "persist", title: { en: "Enforce persistence", zh: "强制持续性" }, desc: { en: "Completed stages stay forever; nothing resets, relocates, or redesigns.", zh: "已完成阶段永久保留；不重置、不移位、不改设计。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Check progress throughout, stage count, persistence, convergence.", zh: "核对全程进度、阶段数、持续性与收敛。" } },
+      ],
+      outputs: [
+        { en: "A 7–8s accelerated construction timelapse (MP4)", zh: "一段 7–8 秒加速建造延时（MP4）" },
+        { en: "Mode-appropriate prompt template filled for reuse", zh: "按模式填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "L2VA", en: "Final image anchors the exact destination; start site inferred.", zh: "完工图锚定精确终点，起始地合理推断。" },
+        { id: "FL2VA", en: "Exact before/after control with matched start and end frames.", zh: "首尾帧匹配，前后对比严格受控。" },
+        { id: "T2VA", en: "Fastest pure-text concept exploration.", zh: "纯文字最快概念探索。" },
+        { id: "I2VA", en: "Start-site controlled exploration with a described final design.", zh: "锁定起始场地，文字描述最终设计。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "FL2VA / T2VA construction · 4–5 stage chain", zh: "FL2VA / T2VA 建造 · 4–5 阶段链" },
+          fields: ["frame references (FL2VA)", "integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Building / assembly timelapses from zero or a raw site", zh: "从零或毛坯场地开始的建造/组装延时" },
+        { en: "Infrastructure, interiors, machines, miniature world builds", zh: "基础设施、室内、机械、微缩世界建造" },
+        { en: "Before/after reveals with matched frames", zh: "首尾帧匹配的前后对比揭示" },
+      ],
+      notFor: [
+        { en: "Non-construction timelapses (growth, weather, urban flow)", zh: "非建造类延时（生长、天气、城市流动）" },
+        { en: "Real-time construction without time compression", zh: "不带时间压缩的实时施工" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill construction-timelapse-video-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/construction-timelapse-video-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/construction-timelapse-video-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — one example per mode", zh: "prompt-library.md — 每模式一例" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/construction-timelapse-video-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+      {
+      slug: "living-ink-painting-video-generator",
+      name: "Living Ink Painting Video Generator",
+      nameZh: "水墨活化工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "A painted ink-wash subject moves inside the painting, then accelerates and breaks free from the paper as living ink-and-water.",
+        zh: "画中水墨主体先灵动游走，再骤然加速突破纸面，化作流动的水墨生灵。",
+      },
+      description: {
+        en: "A 7–8s text-to-video shot where a traditional ink-wash subject on rice paper comes alive: it moves briskly within the flat painting, then breaks free as a translucent ink-and-water form. Enforces ink-material continuity (brush-textured edges, ink trails, pigment), keeps the ink subject as primary motion owner, and includes a canonical red-black koi demo prompt that runs as-is on the H3 WebApp in T2VA mode.",
+        zh: "一个 7–8 秒文生视频镜头：宣纸上的传统水墨主体活了过来——先在平面画作内快速游走，再破纸而出化作流动的水墨生灵。强制水墨材质连续（笔触边缘、墨迹拖尾、颜料质感），水墨主体始终是主要动作载体，内置可直接运行的红黑锦鲤 canonical demo（H3 WebApp T2VA 模式）。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Ink Wash", zh: "水墨" },
+        { en: "T2VA", zh: "T2VA" },
+        { en: "Chinese Art", zh: "国画" },
+        { en: "Material Continuity", zh: "材质连续" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/living-ink-painting-video-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "The ink-wash subject (fish, bird, mountain, blossom, dragon…)", zh: "水墨主体（鱼、鸟、山、花、龙……）" },
+        { en: "Accent pigment / palette, table setting, optional musical instrument", zh: "点缀颜料/配色、桌面陈设、可选配器" },
+        { en: "Duration (default 8s), aspect ratio", zh: "时长（默认 8s）、画幅" },
+      ],
+      capabilities: [
+        { en: "Builds the three-phase arc: painted motion → break-free → dimensional hero moment", zh: "构建三段弧线：画内游走 → 破纸而出 → 立体英雄瞬间" },
+        { en: "Enforces ink-material continuity throughout", zh: "全程强制水墨材质连续" },
+        { en: "Keeps the ink subject as primary motion owner", zh: "水墨主体作为主要动作载体" },
+      ],
+      workflow: [
+        { id: "subject", title: { en: "Pick the ink subject", zh: "选择水墨主体" }, desc: { en: "One painted subject; one accent pigment.", zh: "一个画中主体；一种点缀颜料。" } },
+        { id: "arc", title: { en: "Build the 8s arc", zh: "构建 8 秒弧线" }, desc: { en: "First motion ≤1s → brisk painting travel → sharp break-free → dimensional arc → settle.", zh: "首动 ≤1s → 画内疾行 → 骤然破出 → 立体弧线 → 收尾。" } },
+        { id: "material", title: { en: "Enforce ink material", zh: "锁定水墨材质" }, desc: { en: "Brush edges, ink trails, pigment separation, droplets.", zh: "笔触边缘、墨迹拖尾、颜料分离、墨滴。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Check peak, travel distance, material, camera ownership.", zh: "核对峰值、行进距离、材质与镜头归属。" } },
+      ],
+      outputs: [
+        { en: "A 7–8s living ink painting clip (MP4)", zh: "一段 7–8 秒水墨活化短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Living ink · T2VA three-phase arc", zh: "水墨活化 · T2VA 三段弧线" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Ink-wash subjects coming alive and breaking free of the paper", zh: "水墨主体活化并破纸而出" },
+        { en: "Traditional Chinese art inspired satisfying clips", zh: "国画风格的解压短片" },
+      ],
+      notFor: [
+        { en: "Realistic watercolor / oil-painting styles", zh: "写实水彩/油画风格" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill living-ink-painting-video-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/living-ink-painting-video-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/living-ink-painting-video-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — canonical koi demo", zh: "prompt-library.md — 锦鲤 canonical demo" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/living-ink-painting-video-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+      {
+      slug: "miniature-creature-awakening-video-generator",
+      name: "Miniature Creature Awakening Video Generator",
+      nameZh: "微缩生物苏醒工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "A small creature image visibly wakes, performs a clear body action, interacts with its surroundings, and lands a final pose.",
+        zh: "小生物图肉眼可见地苏醒，完成明确肢体动作，与周围互动，并以可读姿态收尾。",
+      },
+      description: {
+        en: "One image of a small creature, mascot, fantasy pet, figurine-like character, or tiny animal becomes a stable 7–8s I2VA clip. The creature must visibly wake, perform at least one clear multi-joint body action, interact with one nearby object or effect, and finish in a readable pose — identity and anatomy locked, no slow motion, camera strictly supporting. Includes a canonical tiny-dragon beat chain and failure-recovery guidance.",
+        zh: "一张小生物图（吉祥物、幻想宠物、手办感角色、小动物）变成一个稳定的 7–8 秒 I2VA 短片。生物必须肉眼可见地苏醒、至少完成一个清晰的多关节肢体动作、与附近一个物体或特效互动、并以可读姿态收尾——身份与解剖结构锁定、禁用慢动作、镜头严格辅助。内置「小飞龙」canonical 节拍链与故障恢复指南。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Creature", zh: "生物" },
+        { en: "I2VA", zh: "I2VA" },
+        { en: "Mascot", zh: "吉祥物" },
+        { en: "Identity Lock", zh: "身份锁定" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/miniature-creature-awakening-video-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "One small-creature image (mascot, fantasy pet, figurine, tiny animal)", zh: "一张小生物图（吉祥物/幻想宠物/手办/小动物）" },
+        { en: "Desired awakening arc and interaction target", zh: "期望的苏醒弧线与互动对象" },
+        { en: "Duration (default 8s), aspect ratio", zh: "时长（默认 8s）、画幅" },
+      ],
+      capabilities: [
+        { en: "Enforces a core motion spine: wake → body action → interaction → final pose", zh: "强制核心动作脊柱：苏醒 → 肢体动作 → 互动 → 收尾姿态" },
+        { en: "Requires at least one clear multi-joint body action (no blink-only output)", zh: "至少一个清晰多关节动作（禁止只眨眼）" },
+        { en: "Locks identity and anatomy; keeps camera strictly supporting", zh: "锁定身份与解剖；镜头严格辅助" },
+      ],
+      workflow: [
+        { id: "spine", title: { en: "Define the motion spine", zh: "定义动作脊柱" }, desc: { en: "Wake → primary action → interaction/peak → reaction → final pose.", zh: "苏醒 → 主动作 → 互动/峰值 → 反应 → 收尾姿态。" } },
+        { id: "lock", title: { en: "Lock identity", zh: "锁定身份" }, desc: { en: "Colors, anatomy, environment, important objects.", zh: "配色、解剖、环境、重要物件。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Check visible motion, peak, interaction, anatomy stability.", zh: "核对可见动作、峰值、互动、解剖稳定。" } },
+      ],
+      outputs: [
+        { en: "A stable 7–8s awakening clip (MP4)", zh: "一段稳定的 7–8 秒苏醒短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Primary mode: the supplied image is frame 0 of H3-Base-FL2VA.", zh: "主模式：图片作为 H3-Base-FL2VA 的第 0 帧。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Awakening · I2VA motion spine", zh: "苏醒 · I2VA 动作脊柱" },
+          fields: ["frame-0 reference line", "integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Animating mascots, fantasy pets, figurines, and tiny animals", zh: "吉祥物、幻想宠物、手办与小动物动起来" },
+        { en: "Come-to-life reveals from a single creature image", zh: "单张生物图的「活过来」揭示" },
+      ],
+      notFor: [
+        { en: "Pure-text requests without an image", zh: "无图的纯文本需求" },
+        { en: "Human characters or large-scale scenes", zh: "人类角色或大型场景" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill miniature-creature-awakening-video-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/miniature-creature-awakening-video-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-creature-awakening-video-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — canonical tiny dragon", zh: "prompt-library.md — 小飞龙 canonical demo" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-creature-awakening-video-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+      {
+      slug: "miniature-world-landscape-generator",
+      name: "Miniature World Landscape Generator",
+      nameZh: "微缩世界景观工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Cinematic miniature landscapes (natural / urban / historical / fantasy / terrarium) with one clearly visible hero effect each.",
+        zh: "电影感微缩景观短片（自然/城市/历史/奇幻/生态缸），每片只选一个清晰可见的英雄特效。",
+      },
+      description: {
+        en: "Richly detailed miniature landscapes across seven families; each clip combines one landscape family, one presentation mode, and one hero effect (storm, waterfall, volcano glow, autumn wind, colony power-up…) with strong scale cues and a tempo matched to the effect. Ships with a 40-entry effect library, five named presets (Storm Island, Alpine Morning, Volcano Cutaway, Autumn Railway, Mars Colony, Floating Island), and scale-anchor rules that keep the world visibly miniature. Runs as T2VA on H3-Base-FL2VA.",
+        zh: "横跨七大景观家族的精致微缩世界短片：每片组合「一个景观家族 + 一种呈现模式 + 一个英雄特效」（风暴、瀑布、火山辉光、秋风、殖民地点亮……），带强比例尺提示，节奏与特效匹配。内置 40 条特效库、五个命名预设（风暴岛、晨雾山谷、火山剖面、秋日铁道、火星殖民地、浮空岛）与比例锚定规则，保证世界始终是微缩的。在 H3-Base-FL2VA 上以 T2VA 运行。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Miniature World", zh: "微缩世界" },
+        { en: "Diorama", zh: "沙盘微缩" },
+        { en: "T2VA", zh: "T2VA" },
+        { en: "Hero Effect", zh: "英雄特效" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/miniature-world-landscape-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+      },
+      inputs: [
+        { en: "Landscape family + presentation mode + one hero effect", zh: "景观家族 + 呈现模式 + 一个英雄特效" },
+        { en: "Effect intensity (Gentle / Clear / Dramatic), tempo", zh: "特效强度（温和/清晰/戏剧化）、节奏" },
+        { en: "Duration (default 8s), aspect ratio", zh: "时长（默认 8s）、画幅" },
+      ],
+      capabilities: [
+        { en: "Combines landscape family, presentation mode, and one hero effect per clip", zh: "每片组合一个景观家族、一种呈现与一个英雄特效" },
+        { en: "Provides a 40-entry effect library and five named presets", zh: "提供 40 条特效库与五个命名预设" },
+        { en: "Keeps the world visibly miniature via scale anchors", zh: "用比例锚定保证世界始终是微缩的" },
+      ],
+      workflow: [
+        { id: "pick", title: { en: "Pick the combination", zh: "选择组合" }, desc: { en: "Family + presentation + hero effect + intensity.", zh: "家族 + 呈现 + 英雄特效 + 强度。" } },
+        { id: "scale", title: { en: "Anchor the scale", zh: "锚定比例" }, desc: { en: "First-second scale cues; terrain landmarks locked.", zh: "首秒建立比例提示；地形地标锁定。" } },
+        { id: "effect", title: { en: "Own the effect", zh: "特效归位" }, desc: { en: "Hero effect is the primary motion owner; camera never substitutes.", zh: "英雄特效是主要动作载体，镜头绝不替代。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Check effect visibility, peak, scale, terrain stability.", zh: "核对特效可见性、峰值、比例与地形稳定。" } },
+      ],
+      outputs: [
+        { en: "A 7–8s miniature landscape clip (MP4)", zh: "一段 7–8 秒微缩景观短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Miniature landscape · T2VA formula", zh: "微缩景观 · T2VA 公式" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Miniature world satisfying / cinematic clips across themes", zh: "多主题微缩世界的解压/电影感短片" },
+        { en: "Diorama, terrarium, tabletop, and glass-sphere scenes", zh: "沙盘、生态缸、桌游与玻璃球场景" },
+      ],
+      notFor: [
+        { en: "Full-scale (non-miniature) landscape shots", zh: "全尺寸（非微缩）景观镜头" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill miniature-world-landscape-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/miniature-world-landscape-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-world-landscape-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — canonical Storm Island", zh: "prompt-library.md — 风暴岛 canonical demo" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-world-landscape-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+
+{
       slug: "minimalist-product-ad-generator",
       name: "Minimalist Product Ad Generator",
       nameZh: "极简产品广告生成器",

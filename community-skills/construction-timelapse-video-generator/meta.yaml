@@ -1,0 +1,26 @@
+display-name-zh: 建造延时摄影工坊
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Timelapse
+- Creative & Experimental / Build
+complete-tags-cn:
+- 动画 / 延时摄影
+- 创意实验 / 建造
+summary-en: Create a 7–8s accelerated construction timelapse from empty/incomplete to finished, with persistent build state.
+summary-cn: 生成 7–8 秒从空地/半成品到完工的加速建造延时，强制「建造状态持续」——已完成的部分绝不消失、重置或变形。
+desc-en: |
+  A satisfying build-from-zero clip for structures, machines, interiors, infrastructure or
+  miniature worlds. Routes between FL2VA / L2VA / T2VA / I2VA by the start/end images you have,
+  enforces a persistent build state (completed stages never disappear, reset, relocate, or change
+  design), requires 4–5 readable build stages, and keeps the growing structure — not cranes or
+  cameras — as the primary motion owner. Ships with a canonical empty-hillside-to-villa demo.
+desc-cn: |
+  从零建造的满足感短片，覆盖建筑、机械、室内、基础设施与微缩世界。按你拥有的首/尾图自动在
+  FL2VA / L2VA / T2VA / I2VA 之间路由，强制「建造状态持续」（已完成阶段绝不消失、重置、
+  移位或改设计），要求至少 4–5 个可读建造阶段，并让增长的建筑——而非吊车或镜头——成为主要
+  动作载体。内置「空地到现代别墅」canonical demo。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

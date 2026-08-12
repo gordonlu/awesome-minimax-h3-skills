@@ -1,0 +1,25 @@
+display-name-zh: 微缩生物苏醒工坊
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Creature
+- Creative & Experimental / I2VA
+complete-tags-cn:
+- 动画 / 生物
+- 创意实验 / I2VA
+summary-en: Turn one small-creature image (mascot, fantasy pet, figurine) into a stable waking-up clip with a clear body action.
+summary-cn: 把一张小生物图（吉祥物/幻想宠物/手办）做成稳定的 7–8 秒苏醒短片，必须有明确的肢体动作。
+desc-en: |
+  One image of a small creature becomes a 7–8s I2VA clip where the creature visibly wakes,
+  performs at least one clear multi-joint body action, interacts with one nearby object or
+  effect, and finishes in a readable pose — with identity locked and no slow-motion. Includes
+  a canonical tiny-dragon beat chain and failure-recovery guidance. Uses H3-Base-FL2VA with
+  the supplied image as frame 0.
+desc-cn: |
+  一张小生物图变成一个 7–8 秒 I2VA 短片：生物必须肉眼可见地苏醒、至少完成一个清晰的
+  多关节肢体动作、与附近一个物体或特效互动、并以可读姿态收尾——身份锁定、禁用慢动作。
+  内置「小飞龙」canonical 节拍链与故障恢复指南。使用 H3-Base-FL2VA，图片作为第 0 帧。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

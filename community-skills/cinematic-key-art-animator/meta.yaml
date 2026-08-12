@@ -1,0 +1,27 @@
+display-name-zh: 影视级主视觉动画
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Key Art
+- Creative & Experimental / I2VA
+complete-tags-cn:
+- 动画 / 主视觉
+- 创意实验 / I2VA
+summary-en: Turn one character key-art / illustration into a polished 7–8s moving-key-art clip (Living Key Art or Action Burst).
+summary-cn: 把一张角色立绘/游戏主视觉做成 7–8 秒的动态主视觉短片（氛围化 Living Key Art 或高密度 Action Burst）。
+desc-en: |
+  One strong static character image becomes a short moving-key-art sequence without redesigning
+  the character. Automatically routes between atmospheric Living Key Art and high-density Action
+  Burst, locks identity (face, hair, costume, weapon, silhouette), and enforces a causal action
+  chain with escalating peaks so the character — not the camera — owns the motion. Ships with a
+  canonical mecha combat demo and per-failure recovery guidance. Uses H3-Base-FL2VA with the
+  image as frame 0.
+desc-cn: |
+  把一张强静态角色图变成短动态主视觉序列，且不改动角色设计。自动在氛围化 Living Key Art
+  与高密度 Action Burst 之间路由，锁定身份（脸、发型、服装、武器、剪影），强制因果动作链与
+  逐级抬升的动作峰值——动作永远归角色，不归镜头。内置机甲战斗 canonical demo 与分故障恢复
+  指南。使用 H3-Base-FL2VA，图片作为第 0 帧。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

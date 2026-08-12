@@ -1,0 +1,25 @@
+display-name-zh: 微缩世界景观工坊
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Diorama
+- Creative & Experimental / T2VA
+complete-tags-cn:
+- 动画 / 沙盘微缩
+- 创意实验 / T2VA
+summary-en: Create cinematic miniature-landscape clips (natural / urban / historical / fantasy / terrarium) with one hero effect.
+summary-cn: 生成电影感微缩景观短片（自然/城市/历史/奇幻/生态缸），每片只选一个英雄特效作为主要动作载体。
+desc-en: |
+  Richly detailed miniature landscapes across seven families, each clip combining one landscape
+  family, one presentation mode, and one clearly visible hero effect (storm, waterfall, volcano
+  glow, autumn wind…) with strong scale cues and a tempo matched to the effect. Ships with a
+  40-second effect library, five named presets, and scale-anchor rules so worlds stay miniature.
+  Uses H3-Base-FL2VA in T2VA mode.
+desc-cn: |
+  横跨七大景观家族的精致微缩世界短片：每片组合「一个景观家族 + 一种呈现模式 + 一个清晰可见
+  的英雄特效」（风暴、瀑布、火山辉光、秋风……），带强比例尺提示，节奏与特效匹配。内置 40 条
+  特效库、五个命名预设与比例锚定规则，保证世界始终是微缩的。使用 H3-Base-FL2VA 的 T2VA 模式。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

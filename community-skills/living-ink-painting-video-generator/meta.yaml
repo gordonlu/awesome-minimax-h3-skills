@@ -1,0 +1,25 @@
+display-name-zh: 水墨活化工坊
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Ink Wash
+- Creative & Experimental / T2VA
+complete-tags-cn:
+- 动画 / 水墨
+- 创意实验 / T2VA
+summary-en: Bring a traditional ink-wash subject on rice paper to life — it moves inside the painting, then breaks free as living ink-and-water.
+summary-cn: 让宣纸上的传统水墨主体活过来——先在画内灵动游走，再突破纸面化作流动的水墨生灵。
+desc-en: |
+  A 7–8s text-to-video shot where a painted subject comes alive, moves briskly within the flat
+  painting, then accelerates and breaks free from the paper as a translucent ink-and-water form.
+  Enforces ink-material continuity (brush-textured edges, ink trails, pigment), keeps the ink
+  subject as the primary motion owner, and includes a canonical red-black koi demo prompt that
+  runs as-is. Uses H3-Base-FL2VA in T2VA mode.
+desc-cn: |
+  一个 7–8 秒文生视频镜头：画中主体先灵动起来，在平面画作内快速游走，再骤然加速突破纸面，
+  化作流动的水墨生灵。强制水墨材质连续（笔触边缘、墨迹拖尾、颜料质感），水墨主体始终是
+  主要动作载体，内置可直接运行的红黑锦鲤 canonical demo。使用 H3-Base-FL2VA 的 T2VA 模式。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
