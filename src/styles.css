@@ -452,8 +452,8 @@ img, video { display: block; max-width: 100%; }
 .card-media .media-bg, .detail-media .media-bg {
   position: absolute; inset: 0;
   background-position: center; background-size: cover;
-  filter: blur(10px) brightness(0.85) saturate(1.2);
-  transform: scale(1.05);
+  filter: blur(6px) brightness(0.92) saturate(1.2);
+  transform: scale(1.03);
 }
 .card-media .media-fg, .detail-media .media-fg {
   position: absolute; inset: 0;
