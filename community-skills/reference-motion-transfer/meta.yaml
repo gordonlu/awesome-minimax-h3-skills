@@ -1,0 +1,30 @@
+display-name-zh: 动作参考迁移
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Motion Transfer
+- Creative & Experimental / Ref2VA
+complete-tags-cn:
+- 创意实验 / 动作迁移
+- 创意实验 / Ref2VA
+summary-en: Transfer the motion from a reference video onto a new target subject with MiniMax H3.
+summary-cn: 将参考视频中的动作迁移到全新目标主体上，输出动作一致、身份稳定的新视频。
+desc-en: |
+  For creators who want a character, mascot, product, or creature to perform the dance, gesture,
+  action, locomotion, or camera move seen in a reference video. The Skill analyzes the reference
+  motion into a timecoded beat sheet, locks the target subject's identity anchors, builds Ref2VA
+  prompts with attribute_transfer retention (with I2VA / FL2VA / L2VA fallbacks), generates
+  with MiniMax H3, and reviews motion fidelity, identity stability, and body integrity. Best for
+  dance and gesture transfer, mascot performance, and camera-move replication; not for style-only
+  transfer, direct editing of the source video, real-person impersonation, or pure-text requests
+  without any reference material.
+desc-cn: |
+  面向想让角色、吉祥物、产品或生物表演参考视频中的舞蹈、手势、动作或运镜的创作者。
+  Skill 将参考动作拆解为带时间码的节拍表，锁定目标主体身份锚点，构建带 attribute_transfer
+  保留标记的 Ref2VA 提示词（并提供 I2VA / FL2VA / L2VA 兜底路径），用 MiniMax H3 生成，
+  最后检查动作保真、身份稳定与身体完整性。适用于舞蹈和手势迁移、吉祥物表演、运镜复制；
+  不适用于纯风格迁移、直接剪辑原视频、真人 impersonation，或没有任何参考素材的纯文字请求。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

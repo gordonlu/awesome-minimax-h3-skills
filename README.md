@@ -53,6 +53,16 @@ MiniMax H3、官方 H3 Skills 及相关媒体素材版权归 MiniMax 所有，�
 Every skill page marks its origin as:
 **Official MiniMax H3 Skill · Source: MiniMax-AI/MiniMax-H3**
 
+## Disclaimer / 免责声明
+
+The prompt gallery page reuses example images from the official MiniMax H3
+handbook for learning and showcase purposes. Brand marks appearing inside
+those examples belong to their respective owners; this project has no
+affiliation, endorsement, or agency with them.
+
+合辑页的示例图片来自 MiniMax H3 官方《使用手册》，仅用于学习与展示。其中
+出现的品牌标识归其各自所有者所有，本项目与其无任何关联、授权或代言关系。
+
 ## Credits / 数据来源
 
 - Skills & demo media: https://github.com/MiniMax-AI/MiniMax-H3

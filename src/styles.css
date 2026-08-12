@@ -118,6 +118,8 @@ img, video { display: block; max-width: 100%; }
 .lang-sep { color: var(--faint); }
 .nav-gh { color: var(--muted); display: grid; place-items: center; transition: color 0.25s; }
 .nav-gh:hover { color: var(--ink); }
+.nav-gh--official { color: var(--accent); }
+.nav-gh--official:hover { color: var(--ink); }
 
 /* ==========================================================================
    Shared layout helpers
@@ -162,6 +164,35 @@ img, video { display: block; max-width: 100%; }
   pointer-events: none;
 }
 .hero-inner { position: relative; }
+
+/* Hero background: random official demo reels, masked toward the right */
+.hero-bg {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-bg-frame {
+  position: absolute; inset: 0;
+  opacity: 0.6;
+  -webkit-mask-image: linear-gradient(102deg, transparent 2%, rgba(0, 0, 0, 0.26) 34%, rgba(0, 0, 0, 0.82) 60%, #000 76%);
+  mask-image: linear-gradient(102deg, transparent 2%, rgba(0, 0, 0, 0.26) 34%, rgba(0, 0, 0, 0.82) 60%, #000 76%);
+}
+.hero-bg-video,
+.hero-bg-frame img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: 76% 50%;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.hero-bg::after {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(12, 12, 14, 0.52), rgba(12, 12, 14, 0) 42%),
+    linear-gradient(180deg, rgba(12, 12, 14, 0.12) 0%, rgba(12, 12, 14, 0.4) 58%, var(--bg) 97%);
+}
 .hero-kicker {
   font-family: var(--font-mono); font-size: 12px;
   letter-spacing: 0.24em; color: var(--muted);
@@ -178,6 +209,7 @@ img, video { display: block; max-width: 100%; }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title .line > span { display: inline-block; will-change: transform; }
 .hero-title .accent { color: var(--accent); }
+.hero-title i { color: var(--accent); }
 .hero-sub {
   margin-top: 26px;
   max-width: 560px;
@@ -195,7 +227,7 @@ img, video { display: block; max-width: 100%; }
 }
 .stat .stat-num i { font-style: normal; color: var(--accent); }
 .stat .stat-label {
-  margin-top: 8px;
+  margin-top: 14px;
   font-family: var(--font-mono); font-size: 10.5px;
   letter-spacing: 0.18em; color: var(--faint);
   text-transform: uppercase;
@@ -431,6 +463,10 @@ img, video { display: block; max-width: 100%; }
   letter-spacing: 0.14em; color: #0C0C0E;
   background: var(--accent);
   padding: 4px 9px; border-radius: 6px;
+}
+.card-media .card-badge.community {
+  background: #43C6E8;
+  outline: 1px solid rgba(12, 12, 14, 0.28);
 }
 .card-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
 .card-cats { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
@@ -793,6 +829,11 @@ img, video { display: block; max-width: 100%; }
   .detail-top { grid-template-columns: 1fr; }
   .detail-media { order: -1; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .hero-bg-frame {
+    opacity: 0.34;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.55) 62%, transparent 96%);
+    mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.55) 62%, transparent 96%);
+  }
 }
 @media (max-width: 640px) {
   .site-nav .nav-link { display: none; }
@@ -812,4 +853,294 @@ img, video { display: block; max-width: 100%; }
   .grain { animation: none; }
   .marquee-track { animation-duration: 240s; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
+  .hero-bg-video { display: none; }
+}
+
+/* ==========================================================================
+   Anthology view (官方提示词合辑)
+   ========================================================================== */
+.anth-hero { position: relative; padding: clamp(104px, 15vw, 180px) 0 clamp(44px, 6vw, 76px); }
+.anth-hero-inner { position: relative; }
+
+.anth-index {
+  position: sticky; top: var(--header-h); z-index: 30;
+  background: rgba(12, 12, 14, 0.82);
+  -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.anth-index-inner {
+  display: flex; gap: 8px; align-items: center;
+  padding-top: 12px; padding-bottom: 12px;
+  overflow-x: auto; scrollbar-width: none;
+}
+.anth-index-inner::-webkit-scrollbar { display: none; }
+.anth-index-chip {
+  flex-shrink: 0;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.06em;
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 7px 14px;
+  transition: all 0.22s var(--ease-out);
+}
+.anth-index-chip:hover { color: var(--ink); border-color: var(--accent); }
+.anth-index-num { color: var(--accent); font-size: 10px; letter-spacing: 0.1em; }
+
+.anth-group { padding: clamp(52px, 7vw, 88px) 0 0; }
+.anth-group-head {
+  display: flex; align-items: baseline; gap: 18px;
+  margin-bottom: clamp(24px, 3.4vw, 40px);
+}
+.anth-group-idx {
+  font-family: var(--font-mono); font-size: 13px; font-weight: 600;
+  color: var(--accent); letter-spacing: 0.06em;
+}
+.anth-group-title {
+  font-size: clamp(24px, 3vw, 38px); font-weight: 720;
+  letter-spacing: -0.03em; line-height: 1.1;
+}
+.anth-group-count {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+  color: var(--faint);
+  flex-shrink: 0;
+}
+.anth-group-head .detail-section-line { margin-left: auto; }
+
+.anth-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2.4vw, 24px);
+}
+
+.anth-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 22px 20px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: transform 0.3s var(--ease-out), border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+.anth-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 108, 55, 0.45);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+.anth-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.anth-card-title {
+  font-size: 15.5px; font-weight: 650; letter-spacing: -0.015em; line-height: 1.35;
+}
+.anth-modes { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; flex-shrink: 0; }
+.anth-mode {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.08em;
+  color: var(--muted);
+  border: 1px solid var(--line-strong);
+  border-radius: 5px; padding: 3px 7px;
+  text-transform: uppercase;
+}
+.anth-refs {
+  font-family: var(--font-mono); font-size: 11.5px; color: var(--muted);
+  line-height: 1.55;
+}
+.anth-refs-label {
+  display: inline-block;
+  font-size: 9px; letter-spacing: 0.16em;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+  background: var(--accent-soft);
+  border-radius: 4px; padding: 2px 6px;
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+.anth-prompt { margin-top: 2px; }
+.anth-prompt-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 6px;
+}
+.anth-prompt-label {
+  font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.22em;
+  color: var(--faint);
+}
+.anth-prompt pre {
+  background: #101013;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  height: 236px; overflow-y: auto;
+  scrollbar-width: thin; scrollbar-color: var(--line-strong) transparent;
+}
+.anth-prompt pre::-webkit-scrollbar { width: 6px; }
+.anth-prompt pre::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+.anth-prompt code {
+  font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.55;
+  color: #D8D3C8;
+  white-space: pre-wrap; word-break: break-word;
+}
+.anth-copy {
+  flex-shrink: 0;
+  background: var(--surface-2);
+}
+.anth-copy:hover { background: var(--accent-soft); }
+
+.anth-note {
+  padding: clamp(48px, 6vw, 72px) 0 clamp(28px, 4vw, 40px);
+  text-align: center;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em;
+  color: var(--faint);
+}
+
+@media (max-width: 900px) {
+  .anth-grid { grid-template-columns: 1fr; }
+  .anth-group-head { flex-wrap: wrap; }
+}
+
+/* ---------- Home: anthology entry banner ---------- */
+.anth-entry { padding-bottom: clamp(24px, 4vw, 48px); }
+.anth-banner {
+  position: relative;
+  display: flex; align-items: stretch; justify-content: space-between; gap: 28px;
+  background:
+    linear-gradient(90deg, rgba(18, 18, 22, 0.97) 0%, rgba(18, 18, 22, 0.9) 28%, rgba(18, 18, 22, 0.74) 50%, rgba(18, 18, 22, 0.52) 68%, rgba(18, 18, 22, 0.34) 84%, rgba(18, 18, 22, 0.24) 100%),
+    url("../data/anthology-images/ed-addperson.jpg") right center / cover no-repeat,
+    #15151A;
+  border: 1px solid var(--line-strong);
+  border-radius: 18px;
+  padding: clamp(26px, 4vw, 44px);
+  overflow: hidden;
+  transition: transform 0.35s var(--ease-out), border-color 0.35s, box-shadow 0.35s;
+}
+.anth-banner:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 108, 55, 0.5);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+.anth-banner-glow {
+  position: absolute; inset: auto -20% -70% auto;
+  width: 60%; height: 120%;
+  background: radial-gradient(closest-side, rgba(255, 108, 55, 0.16), transparent 70%);
+  pointer-events: none;
+}
+.anth-banner-body { position: relative; max-width: 640px; }
+.anth-banner-kicker {
+  font-family: var(--font-mono); font-size: 11.5px;
+  letter-spacing: 0.2em; color: var(--accent);
+  display: flex; align-items: center; gap: 10px;
+}
+.anth-banner-title {
+  margin-top: 16px;
+  font-size: clamp(24px, 3.2vw, 38px);
+  font-weight: 720; letter-spacing: -0.03em; line-height: 1.15;
+}
+.anth-banner-title i { color: var(--accent); }
+.anth-banner-sub {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: clamp(14px, 1.4vw, 16px);
+  max-width: 560px;
+}
+.anth-banner-meta {
+  margin-top: 22px;
+  display: flex; gap: clamp(18px, 3vw, 36px); flex-wrap: wrap;
+}
+.anth-banner-meta span {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.16em;
+  color: var(--faint);
+}
+.anth-banner-meta b { color: var(--ink); font-size: 15px; margin-right: 5px; letter-spacing: 0; }
+.anth-banner-cta {
+  position: relative;
+  display: flex; align-items: center; flex-shrink: 0;
+}
+.anth-banner-chips {
+  margin-top: 16px;
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.anth-banner-chips .anth-index-chip { background: var(--surface); }
+.anth-banner-chips .anth-index-chip:hover { color: var(--ink); border-color: var(--accent); }
+.anth-group { scroll-margin-top: calc(var(--header-h) + 16px); }
+
+@media (max-width: 860px) {
+  .anth-banner { flex-direction: column; }
+  .anth-banner-cta { width: 100%; }
+  .anth-banner-cta .btn { width: 100%; justify-content: center; }
+}
+
+.anth-hero-chips {
+  margin-top: clamp(26px, 3.6vw, 44px);
+  display: flex; flex-wrap: wrap; gap: 8px;
+  max-width: 780px;
+}
+
+.anth-hero .stat .stat-num b { color: var(--accent); }
+
+/* ---------- Anthology card reference image ---------- */
+.anth-media {
+  margin: -22px -22px 14px;
+  height: 264px;
+  border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+  overflow: hidden;
+  position: relative;
+  cursor: zoom-in;
+  background: #101013;
+}
+.anth-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease-out);
+}
+.anth-card:hover .anth-media img { transform: scale(1.05); }
+.anth-media-zoom {
+  position: absolute; right: 12px; bottom: 12px;
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono); font-size: 15px; line-height: 1;
+  color: var(--ink);
+  background: rgba(12, 12, 14, 0.65);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.25s var(--ease-out);
+}
+.anth-card:hover .anth-media-zoom { opacity: 1; transform: translateY(0); }
+
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(8, 8, 10, 0.92);
+  display: flex; align-items: center; justify-content: center;
+  cursor: zoom-out;
+  padding: clamp(16px, 4vw, 56px);
+  animation: lb-in 0.25s var(--ease-out);
+}
+.lightbox img {
+  max-width: 100%; max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+}
+@keyframes lb-in { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: scale(1); } }
+
+/* ---------- Anthology hero rotating images ---------- */
+.anth-hero-bg .hero-bg-frame img {
+  transition: opacity 1.2s ease;
+  animation: anth-hero-zoom 7.2s ease-in-out infinite alternate;
+}
+@keyframes anth-hero-zoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anth-hero-bg .hero-bg-frame img { animation: none; }
+}
+
+.anth-disclaimer {
+  margin: 16px auto 0;
+  max-width: 760px;
+  font-family: var(--font-sans);
+  font-size: 10.5px; line-height: 1.8;
+  letter-spacing: 0.02em;
+  color: var(--faint);
+  text-transform: none;
 }

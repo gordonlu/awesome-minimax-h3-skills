@@ -1,0 +1,26 @@
+display-name-zh: 图生视频提示词工坊
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / I2VA
+- Prompt / Image-to-Video
+complete-tags-cn:
+- 创意实验 / 图生视频
+- 提示词 / I2VA
+summary-en: Write runnable MiniMax H3 image-to-video prompts (I2VA / FL2VA / L2VA) that lock identity with images and drive motion with text.
+summary-cn: 图片锁形象、文字锁动作，写出可直接运行的 MiniMax H3 图生视频提示词（I2VA / FL2VA / L2VA）。
+desc-en: |
+  Covers first-frame (I2VA), first+last frame (FL2VA), and last-frame-only (L2VA) generation,
+  plus multi-keyframe montages. Uses the exact keyframe-alignment instruction lines from
+  base-en.txt, identity anchors that survive every frame, and timecoded motion paths that
+  land on the locked end frame. Not for pure-text requests (h3-text2video) or reference-video
+  motion transfer (reference-motion-transfer).
+desc-cn: |
+  覆盖首帧（I2VA）、首+尾帧（FL2VA）、仅尾帧（L2VA）与多关键帧蒙太奇。
+  使用 base-en.txt 的关键帧对齐指令固定句式，身份锚点贯穿全片，
+  时间码动作路径精确落帧。不适用于纯文本需求（h3-text2video）或参考视频动作迁移
+  （reference-motion-transfer）。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

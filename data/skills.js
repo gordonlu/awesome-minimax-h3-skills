@@ -113,6 +113,260 @@ window.AMHS_DATA = {
     },
 
     /* ----------------------------------------------------------
+     * COMMUNITY SKILL (authored for this repo)
+     * ---------------------------------------------------------- */
+    {
+      slug: "reference-motion-transfer",
+      name: "Reference Motion Transfer",
+      nameZh: "动作参考迁移",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Recreate a character or animal with the exact dance routine from a reference clip — lock the look with a reference image, lock the moves with a reference video.",
+        zh: "让任意角色/动物完整复刻参考视频中的舞蹈动作——参考图锁形象，参考视频锁动作，节奏节拍级对齐。",
+      },
+      description: {
+        en: "A practical companion to the official h3-prompt-writing foundation. It classifies the request into one of four transfer levels, extracts the beat map from the reference video (via zero-crossing BPM estimation), separates scene and camera decisions from the reference, then builds a six-section Ref2VA prompt where retention_analysis marks every preserved attribute explicitly and detailed_description carries only style, scene, and timing — never invented steps. Ships with a verified 7-second example: a fox in a cropped hoodie dancing to the full reference routine, generated end-to-end on the MiniMax H3 WebApp.",
+        zh: "官方 h3-prompt-writing 基础 Skill 的实战配套。将需求划分为四级迁移，用零交点法从参考视频提取节拍表，把场景/相机决策与参考内容分离，再构建六段式 Ref2VA 提示词——retention_analysis 逐条标记保留属性，detailed_description 只承载风格、场景与节奏，绝不自行编造动作。附带一个已跑通的 7 秒示例：穿连帽衫的狐狸完整复刻参考舞步，全程在 MiniMax H3 WebApp 端到端生成。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Motion Transfer", zh: "动作迁移" },
+        { en: "Ref2VA", zh: "Ref2VA" },
+        { en: "Beat Map", zh: "节拍表" },
+        { en: "Dance/Cinematic", zh: "舞蹈/影视" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/reference-motion-transfer/assets/poster.webp",
+        video: "community-skills/reference-motion-transfer/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/reference-motion-transfer/assets/preview.gif",
+        caption: { en: "Actual output: the fox dances the full reference routine, generated on the MiniMax H3 WebApp", zh: "实际成片：狐狸完整复刻参考舞蹈，由 MiniMax H3 WebApp 生成" },
+      },
+      inputs: [
+        { en: "Target subject: a reference image of the character or animal", zh: "目标主体：角色/动物的参考图片" },
+        { en: "Reference clip whose motion, routine, or vibe should be transferred", zh: "动作来源：承载动作、舞蹈或氛围的参考视频" },
+        { en: "Transfer level: verbatim, keep-look-new-moves, partial, or beat-only rewrite", zh: "迁移等级：逐帧复刻 / 保形换动作 / 局部迁移 / 只借节拍重构" },
+        { en: "Target duration, aspect ratio, scene and camera preferences", zh: "目标时长、画幅比例、场景与相机偏好" },
+      ],
+      capabilities: [
+        { en: "Classifies the request into 4 transfer levels (verbatim / keep-look / partial / beat-only)", zh: "将需求划分为四级迁移（完整复刻 / 保形换动作 / 局部迁移 / 只借节拍）" },
+        { en: "Extracts a beat map from the reference video via zero-crossing BPM estimation", zh: "通过零交点法从参考视频提取节拍表" },
+        { en: "Builds a six-section Ref2VA prompt using the official reference guide", zh: "按官方参考指南构建六段式 Ref2VA 提示词" },
+        { en: "Keeps detailed_description style-only: never invents steps, Never restates the moves", zh: "detailed_description 只写风格不写动作：绝不自行编造舞步" },
+        { en: "Verifies the output against a 7-point acceptance checklist", zh: "按 7 项验收清单核验成片与提示词的对应关系" },
+      ],
+      workflow: [
+        { id: "clarify", title: { en: "Identify the transfer level", zh: "判断迁移等级" }, desc: { en: "Verbatim full routine, keep-look-new-moves, partial transfer, or beat-only rebuild.", zh: "逐帧复刻 / 保形换动作 / 局部迁移 / 只借节拍重构。" } },
+        { id: "beats",   title: { en: "Extract the beat map", zh: "提取节拍表" }, desc: { en: "Resample the clip, detect zero crossings, estimate BPM, and anchor key poses to timestamps.", zh: "重采样参考片段，用零交点法估 BPM，把关键姿态锚定到时间戳。" } },
+        { id: "decouple", title: { en: "Separate scene from motion", zh: "场景与动作解耦" }, desc: { en: "Scene, camera and wardrobe decisions come from the user — never copied from the reference.", zh: "场景、相机、服装决策来自用户，不从参考视频搬运。" } },
+        { id: "compose", title: { en: "Compose the Ref2VA prompt", zh: "构建 Ref2VA 提示词" }, desc: { en: "subject_definitions → summary → retention_analysis → detailed_description → overall_soundscape → non_diegetic_music, with consistent labels.", zh: "subject_definitions → summary → retention_analysis → detailed_description → overall_soundscape → non_diegetic_music，标签全程一致。" } },
+        { id: "verify",  title: { en: "Generate and verify", zh: "生成并验收" }, desc: { en: "Run on the WebApp, then check identity, moves, timing, and audio against the 7-point list.", zh: "WebApp 生成后，对照 7 项清单核验形象、动作、节奏与音频。" } },
+      ],
+      outputs: [
+        { en: "Final generation clip (MP4) with reference-locked identity and beats", zh: "最终生成成片（MP4），形象与节拍严格锁定参考" },
+        { en: "Beat map with timestamped key poses", zh: "带时间戳关键姿态的节拍表" },
+        { en: "The full six-section Ref2VA prompt for reuse", zh: "可复用的完整六段式 Ref2VA 提示词" },
+      ],
+      modes: [
+        { id: "Ref2VA", en: "Full transfer: image locks the look, video locks the moves — the skill's primary mode.", zh: "完整迁移：图锁形象、视频锁动作——本 Skill 的主模式。" },
+        { id: "I2VA",   en: "Lock the look only and start from the first frame.", zh: "只锁形象，从首帧向前推进。" },
+        { id: "FL2VA",  en: "Emulate the reference's vibe along a described path between two keyframes.", zh: "只借氛围，沿首尾帧之间的描述路径做风格化。" },
+        { id: "L2VA",   en: "Rebuild motion from the beat map, converging to the supplied last frame.", zh: "依据节拍表重构动作，收敛至给定尾帧。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Full-transfer mode · Ref2VA", zh: "完整迁移 · Ref2VA" },
+          fields: ["subject_definitions", "summary", "retention_analysis", "detailed_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Recreating a character / animal performing an existing dance or motion routine", zh: "让角色/动物复刻现有舞蹈或动作套路" },
+        { en: "Keep-look-new-moves: same subject, choreography invented from a beat map", zh: "保形换动作：同一形象，依据节拍表新编舞" },
+        { en: "Partial transfer: borrowing one motion motif into a new scene", zh: "局部迁移：把某个动作母题挪进新场景" },
+      ],
+      notFor: [
+        { en: "Pure text description without any reference video or image", zh: "无任何参考视频/图片的纯文本描述" },
+        { en: "Requests that demand a completely different scene and camera layout", zh: "场景与机位布局被要求完全不同的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/reference-motion-transfer",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/reference-motion-transfer/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/reference-motion-transfer/SKILL.cn.md",
+        docs: [
+          { label: { en: "prompt-library.md — one example per mode", zh: "prompt-library.md — 每模式一例" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/reference-motion-transfer/references/prompt-library.md" },
+          { label: { en: "Official prompt anthology (curated from the H3 manual)", zh: "官方提示词合辑（精选自 H3 使用手册）" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/docs/official-prompt-anthology.md" },
+        ],
+      },
+    },
+
+    {
+      slug: "h3-text2video",
+      name: "H3 Text-to-Video Prompt Studio",
+      nameZh: "文生视频提示词工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Turn a text idea into a runnable MiniMax H3 T2VA prompt — style sentence first, timecoded beats that tile the full duration, soundscape and music built in.",
+        zh: "把文字创意转成可直接运行的 H3 文生视频提示词——风格句开头、铺满全程的时间码节拍、环境音与配乐一次写齐。",
+      },
+      description: {
+        en: "Pure text-to-video with zero reference assets: the prompt is the entire production. Decomposes the concept into 3–5 timecoded beats, writes the integrated_multimodal_description with a style sentence first and on-screen text placement, then overall_soundscape and non_diegetic_music per the official base-en.txt guide. Ships with runnable examples (food promo, sci-fi teaser) in its prompt library.",
+        zh: "纯文生、零参考素材——提示词就是全部制作。把创意拆成 3–5 个带时间码的节拍，风格句开头的 integrated_multimodal_description 配画面文字定位，再按官方 base-en.txt 指南写环境音与配乐。附可直接运行的示例（美食宣传、科幻预告）。",
+      },
+      categories: ["prompt"],
+      tags: [
+        { en: "T2VA", zh: "T2VA" },
+        { en: "Text-to-Video", zh: "文生视频" },
+        { en: "Timecoded Beats", zh: "时间码节拍" },
+        { en: "Zero Assets", zh: "零素材" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "data/anthology-images/t2va-space.jpg",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-text2video/assets/preview.gif",
+        caption: { en: "Sample prompt style — epic sci-fi teaser (manual example). Demo video coming soon.", zh: "示例提示词风格——史诗太空预告（手册同款）。示例视频生成中。" },
+      },
+      inputs: [
+        { en: "Concept & mood in one line", zh: "一句话概念与氛围" },
+        { en: "Aspect ratio and duration (4–15s)", zh: "画幅比例与时长（4–15 秒）" },
+        { en: "Visual style, on-screen text, audio policy", zh: "视觉风格、画面文字、音频策略" },
+      ],
+      capabilities: [
+        { en: "Decomposes any concept into 3–5 timecoded beats that tile the full duration", zh: "把任意概念拆成 3–5 个铺满全程的时间码节拍" },
+        { en: "Writes style-first integrated_multimodal_description with camera moves per beat", zh: "写风格句开头的描述，逐拍带运镜" },
+        { en: "Places on-screen text with exact position and original language", zh: "画面文字按位置定位并保留原文语言" },
+        { en: "Generates overall_soundscape and non_diegetic_music per the official guide", zh: "按官方指南生成环境音与配乐方向" },
+      ],
+      workflow: [
+        { id: "clarify", title: { en: "Confirm intake", zh: "确认输入" }, desc: { en: "Concept, ratio, duration, style, on-screen text, audio policy.", zh: "概念、画幅、时长、风格、画面文字、音频策略。" } },
+        { id: "beats",   title: { en: "Build the beat sheet", zh: "搭建节拍表" }, desc: { en: "3–5 readable actions, ≥1s each, tiling the full duration.", zh: "3–5 个可读动作，每个 ≥1 秒，铺满全程。" } },
+        { id: "compose", title: { en: "Compose the T2VA prompt", zh: "构建 T2VA 提示词" }, desc: { en: "Style sentence → [Shot N] → timecoded beats → soundscape → music.", zh: "风格句 → [Shot N] → 时间码节拍 → 环境音 → 配乐。" } },
+        { id: "verify",  title: { en: "Generate and review", zh: "生成并验收" }, desc: { en: "Check beat coverage, scene/subject consistency, camera, text, audio.", zh: "核对节拍覆盖、场景与主体一致性、运镜、文字、音频。" } },
+      ],
+      outputs: [
+        { en: "Final generation clip (MP4)", zh: "最终生成成片（MP4）" },
+        { en: "The full T2VA prompt for reuse", zh: "可复用的完整 T2VA 提示词" },
+        { en: "Timecoded beat sheet", zh: "带时间码的节拍表" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Pure text-to-video. No reference assets — the prompt is the footage.", zh: "纯文生视频。零参考素材——提示词就是画面。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "T2VA", zh: "T2VA" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Food / product promos, teasers, cinematic one-shots from text alone", zh: "纯文字的美食/产品宣传、预告片、氛围单镜头" },
+        { en: "Explainer-style clips and kinetic-type pieces", zh: "说明型短片与动态文字片" },
+      ],
+      notFor: [
+        { en: "Requests that carry reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill h3-text2video",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/h3-text2video",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-text2video/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-text2video/SKILL.md",
+        docs: [
+          { label: { en: "prompt-library.md — runnable T2VA examples", zh: "prompt-library.md — 可直接运行的文生示例" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-text2video/references/prompt-library.md" },
+        ],
+      },
+    },
+
+    {
+      slug: "h3-image2video",
+      name: "H3 Image-to-Video Prompt Studio",
+      nameZh: "图生视频提示词工坊",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Lock identity with images, drive motion with text — runnable I2VA / FL2VA / L2VA prompts with the exact alignment lines from the official guide.",
+        zh: "图片锁形象、文字锁动作——首帧/首尾帧/尾帧图生提示词，对齐指令固定句式与官方一致。",
+      },
+      description: {
+        en: "Covers first-frame (I2VA), first+last frame (FL2VA), and last-frame-only (L2VA) generation plus multi-keyframe montages. Uses the exact keyframe-alignment instruction lines from base-en.txt, identity anchors that survive every frame, and timecoded motion paths that land on the locked end frame. Ships with runnable examples (telescope keyframes, sword-dance FL2VA, toast L2VA).",
+        zh: "覆盖首帧（I2VA）、首+尾帧（FL2VA）、仅尾帧（L2VA）与多关键帧蒙太奇。使用 base-en.txt 的关键帧对齐指令固定句式，身份锚点贯穿全片，时间码动作路径精确落帧。附可直接运行的示例（望远镜关键帧、舞剑首尾帧、举杯尾帧）。",
+      },
+      categories: ["prompt"],
+      tags: [
+        { en: "I2VA", zh: "I2VA" },
+        { en: "FL2VA / L2VA", zh: "FL2VA / L2VA" },
+        { en: "Keyframes", zh: "关键帧" },
+        { en: "Image-to-Video", zh: "图生视频" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "data/anthology-images/kf-telescope.png",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-image2video/assets/preview.gif",
+        caption: { en: "Sample prompt style — telescope 4-keyframe sequence (manual example). Demo video coming soon.", zh: "示例提示词风格——望远镜四关键帧（手册同款）。示例视频生成中。" },
+      },
+      inputs: [
+        { en: "Reference image(s): start frame, end frame, or keyframe sequence", zh: "参考图：首帧 / 尾帧 / 关键帧序列" },
+        { en: "Motion description with beats, in words", zh: "文字化的动作描述与节拍" },
+        { en: "Aspect ratio, duration, style and audio policy", zh: "画幅、时长、风格与音频策略" },
+      ],
+      capabilities: [
+        { en: "Selects the mode (I2VA / FL2VA / L2VA) from the available images", zh: "按可用图片选择模式（I2VA / FL2VA / L2VA）" },
+        { en: "Writes the exact keyframe-alignment instruction lines from base-en.txt", zh: "写出与官方一致的 keyframe 对齐指令固定句式" },
+        { en: "Keeps identity anchors consistent across every frame", zh: "身份锚点全程一致，多帧不漂移" },
+        { en: "Lands the final beat exactly on the locked end frame", zh: "末拍精确落在锁定的尾帧" },
+      ],
+      workflow: [
+        { id: "clarify", title: { en: "Confirm images and their roles", zh: "确认图片与角色" }, desc: { en: "Start frame / end frame / keyframe sequence.", zh: "首帧 / 尾帧 / 关键帧序列。" } },
+        { id: "mode",    title: { en: "Pick the mode", zh: "选择模式" }, desc: { en: "I2VA for first frame, FL2VA for both frames, L2VA for the final frame only.", zh: "首帧用 I2VA，首尾双帧用 FL2VA，仅尾帧用 L2VA。" } },
+        { id: "compose", title: { en: "Compose the prompt", zh: "构建提示词" }, desc: { en: "Alignment line → blank line → description with timecoded beats → soundscape → music.", zh: "对齐指令行 → 空行 → 带时间码节拍的描述 → 环境音 → 配乐。" } },
+        { id: "verify",  title: { en: "Generate and review", zh: "生成并验收" }, desc: { en: "Identity, beat order, end-frame landing, camera, audio.", zh: "身份、节拍顺序、落帧、运镜、音频。" } },
+      ],
+      outputs: [
+        { en: "Final generation clip (MP4)", zh: "最终生成成片（MP4）" },
+        { en: "The full prompt with alignment line for reuse", zh: "含对齐指令行的完整提示词" },
+      ],
+      modes: [
+        { id: "I2VA",  en: "First-frame locked; text drives the motion.", zh: "首帧锁定，文字驱动动作。" },
+        { id: "FL2VA", en: "Start and end poses both locked; describe the path between.", zh: "首尾双帧锁定，描述其间路径。" },
+        { id: "L2VA",  en: "Only the final frame; reverse-engineer the approach.", zh: "仅尾帧，倒推开场动作。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "I2VA / FL2VA / L2VA", zh: "I2VA / FL2VA / L2VA" },
+          fields: ["keyframe-alignment line", "integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Animating character sheets, product shots, or keyframe montages", zh: "让角色设定图、产品图、关键帧序列动起来" },
+        { en: "Pose-to-pose transitions and exact final-frame landing", zh: "姿态间过渡与精确落帧" },
+      ],
+      notFor: [
+        { en: "Pure-text requests without any image", zh: "没有任何图片的纯文本需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill h3-image2video",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/h3-image2video",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-image2video/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-image2video/SKILL.md",
+        docs: [
+          { label: { en: "prompt-library.md — runnable I2VA/FL2VA/L2VA examples", zh: "prompt-library.md — 可直接运行的图生示例" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/h3-image2video/references/prompt-library.md" },
+        ],
+      },
+    },
+
+    /* ----------------------------------------------------------
      * VIDEO STYLE SKILLS (order follows official README table)
      * ---------------------------------------------------------- */
     {
