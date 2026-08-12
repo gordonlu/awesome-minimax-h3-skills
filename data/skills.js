@@ -808,9 +808,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/natural-ambient-living-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/natural-ambient-living-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/natural-ambient-living-generator/assets/preview.gif",
+        caption: { en: "Actual output: morning forest — mist seeping between trunks and a light shaft sweeping (placeholder; richer motion planned)", zh: "实际成片：晨雾森林——雾涌林间、光柱扫过（占位；后续加强动效）" },
       },
       inputs: [
         { en: "Environment theme: forest / ocean / sky / river / desert / snow / window", zh: "环境主题：森林/海洋/天空/河流/沙漠/雪原/窗前" },
@@ -888,9 +888,9 @@ window.AMHS_DATA = {
       languages: ["en", "zh"],
       preview: {
         poster: "community-skills/kinetic-title-card-generator/assets/poster.webp",
-        video: "",
-        sourceUrl: "",
-        caption: { en: "Placeholder poster — real output clip pending (generate with H3 via the skill)", zh: "占位海报 — 实拍成片待生成（用本 Skill 在 H3 生成）" },
+        video: "community-skills/kinetic-title-card-generator/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/kinetic-title-card-generator/assets/preview.gif",
+        caption: { en: "Actual output: title card 黎明 — punches in with a light flare and holds clean (placeholder; richer motion planned)", zh: "实际成片：片头字卡「黎明」——光爆弹入后干净定格（占位；后续加强动效）" },
       },
       inputs: [
         { en: "The exact text: brand name / film or song title / slogan (≤6 chars per line)", zh: "确切文字：品牌名/片名/歌名/口号（每行 ≤6 字）" },
