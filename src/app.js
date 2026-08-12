@@ -138,7 +138,7 @@
       "fd.structure": "PROMPT STRUCTURE",
       "fd.cta": "Open the full reference",
       "grid.label": "INDEX · VIDEO PRODUCTION SKILLS",
-      "grid.title": "Eight installable video workflows",
+      "grid.title": "19 installable video workflows",
       "grid.note": "Open a card for inputs, workflow & install",
       "home.anth.label": "PROMPT GALLERY",
       "home.anth.title": "Curated prompts, ready to copy",
