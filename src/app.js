@@ -431,6 +431,19 @@
 
   function renderHome() {
     var home = $("#view-home");
+    var modeSet = {}, nModes = 0, nVideos = 0;
+    SKILLS.forEach(function (s) {
+      (s.modes || []).forEach(function (m) { if (!modeSet[m.id]) { modeSet[m.id] = 1; nModes++; } });
+      if (s.preview && s.preview.video) nVideos++;
+    });
+    var heroStats = [
+      { n: SKILLS.length, label: t("hero.stat.skills") },
+      { n: nModes, label: t("hero.stat.modes") },
+      { n: nVideos, label: t("hero.stat.demos") }
+    ];
+    var statsHtml = '<div class="hero-stats">' + heroStats.map(function (st) {
+      return '<div class="stat"><div class="stat-num"><i data-count="' + st.n + '">0</i></div><div class="stat-label">' + st.label + "</div></div>";
+    }).join("") + "</div>";
     home.innerHTML =
       '<section class="hero">' +
       '<div class="hero-bg" aria-hidden="true"><div class="hero-bg-frame">' +
@@ -443,12 +456,8 @@
           '<span class="line"><span>' + t("hero.title.a") + "</span></span>" +
           '<span class="line"><span>' + t("hero.title.b") + "</span></span>" +
         "</h1>" +
-        '<p class="hero-sub">' + t("hero.sub") + "</p>" +
-        '<div class="hero-stats">' +
-          '<div class="stat"><div class="stat-num"><i data-count="9">0</i></div><div class="stat-label">' + t("hero.stat.skills") + "</div></div>" +
-          '<div class="stat"><div class="stat-num"><i data-count="5">0</i></div><div class="stat-label">' + t("hero.stat.modes") + "</div></div>" +
-          '<div class="stat"><div class="stat-num"><i data-count="8">0</i></div><div class="stat-label">' + t("hero.stat.demos") + "</div></div>" +
-        "</div>" +
+        "<p class=\"hero-sub\">" + t("hero.sub") + "</p>" +
+        statsHtml +
         '<div class="hero-flow">' +
           '<span class="flow-step">01 <b>DISCOVER</b> · ' + t("hero.flow.discover") + "</span>" +
           '<span class="flow-arrow">→</span>' +
