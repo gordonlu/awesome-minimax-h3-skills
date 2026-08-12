@@ -208,7 +208,7 @@ window.AMHS_DATA = {
     {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
-      nameZh: "文生宣传片工坊",
+      nameZh: "文生宣传片",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
@@ -288,7 +288,7 @@ window.AMHS_DATA = {
     {
       slug: "h3-keyframe-film",
       name: "H3 Keyframe Film Studio",
-      nameZh: "图生关键帧短片工坊",
+      nameZh: "图生关键帧短片",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
@@ -456,7 +456,7 @@ window.AMHS_DATA = {
       {
       slug: "construction-timelapse-video-generator",
       name: "Construction Timelapse Video Generator",
-      nameZh: "建造延时摄影工坊",
+      nameZh: "建造延时摄影",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
@@ -541,7 +541,7 @@ window.AMHS_DATA = {
       {
       slug: "living-ink-painting-video-generator",
       name: "Living Ink Painting Video Generator",
-      nameZh: "水墨活化工坊",
+      nameZh: "水墨活化",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
@@ -621,7 +621,7 @@ window.AMHS_DATA = {
       {
       slug: "miniature-creature-awakening-video-generator",
       name: "Miniature Creature Awakening Video Generator",
-      nameZh: "微缩生物苏醒工坊",
+      nameZh: "微缩生物苏醒",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
@@ -700,7 +700,7 @@ window.AMHS_DATA = {
       {
       slug: "miniature-world-landscape-generator",
       name: "Miniature World Landscape Generator",
-      nameZh: "微缩世界景观工坊",
+      nameZh: "微缩世界景观",
       sourceType: "community",
       author: { en: "gordonlu", zh: "gordonlu" },
       version: "0.1.0",
