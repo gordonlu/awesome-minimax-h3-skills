@@ -1,0 +1,30 @@
+display-name-zh: 微电影导演
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Micro-Cinematic Director
+- Prompt / Camera & Blocking
+complete-tags-cn:
+- 创意实验 / 微电影导演
+- 提示词 / 机位与走位
+summary-en: Direct one H3 generation as one continuous cinematic event — shot function, blocking, spatial geometry, composition arc, subject-first choreography, camera with a job, visual peak, ending state, and an H3-ready prompt. Fights static, floaty, camera-heavy generations.
+summary-cn: 把一次 H3 生成导成一段完整、可读、有空间、有高潮、有收势的连续电影镜头——镜头功能、走位、空间几何、构图弧、主体优先的动作编排、有理由的摄影机、视觉峰值与明确收尾，最终编译成可直接运行的 H3 提示词。
+desc-en: |
+  Treats each 5–15s H3 window as ONE continuous cinematic event, not a montage.
+  Enforces the rule ladder: one event per clip, subject motion first, camera
+  moves only with a job, at most one dominant camera behavior, blocking before
+  camera. Provides time-grammar for 5s / 6–9s / 10–12s / 13–15s, lens intent,
+  depth design, composition arc, action choreography, camera triggers, peak
+  design, ending state, four motion modes, a Director Plan YAML, prompt compiler,
+  failure repair catalog, and a final quality gate. Not for multi-shot films.
+desc-cn: |
+  把 5–15 秒的 H3 生成窗口当作一个连续电影事件而非蒙太奇。规则阶梯：
+  一片一事件、主体动作优先、摄影机运动必须有理由、单一主导机位行为、
+  先走位后机位。内置 5s/6–9s/10–12s/13–15s 时间语法、焦段意图、纵深设计、
+  构图弧、动作编排、摄影机触发条件、峰值设计、收尾状态、四种运动模式、
+  Director Plan YAML、提示词编译器、故障修复目录与最终质检门。
+  不负责多镜头短片与完整剪辑设计。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
