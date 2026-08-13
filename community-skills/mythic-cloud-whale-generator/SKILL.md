@@ -64,7 +64,7 @@ The whale must complete at least one full arc (burst → curve → re-entry) bef
 ## Texture & Scale Requirements (the epic look)
 
 - **Scale cue inside the first second**: the whale reads as a mountain, not a fish — cloud peaks, cliff-like flanks, broken mist revealing the horizon behind it.
-- **Texture language**: moss, vines, rocks, barnacle-like ridges, star-glitter between scales, water-droplet beads on skin — at least two surface details, visible in the light.
+- **Texture language**: sleek pearl-grey skin with hair-fine scale texture reading as soft satin, star-lights along the spine, cyan bioluminescence on fin edges — smooth and elegant, never rocky or bumpy; keep exactly one subtle surface detail beyond the scales.
 - **Light as a character**: one named light system (volumetric sun shafts / aurora / moonlight through cloud gaps / god rays at golden hour) that actually interacts — beams breaking through, dust igniting, mist glowing.
 - **Atmosphere layer stack**: background cloud sea + mid-ground mist wave + foreground dust/droplet motes. At least two layers must visibly respond to the whale's motion.
 - **Color discipline**: one dominant temperature per clip (golden dusk / lunar blue / dawn rose), plus one accent from the light system.

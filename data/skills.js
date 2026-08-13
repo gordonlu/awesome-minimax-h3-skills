@@ -874,8 +874,8 @@ window.AMHS_DATA = {
         zh: "7 秒史诗级云海巨兽短片——快慢对比节拍 + 单一冲击峰值，拒绝全片慢镜。",
       },
       description: {
-        en: "One continuous 7s shot of a colossal mythological being (cloud whale, sky leviathan, cloud dragon) crossing an endless sea of clouds. Structure: high-altitude drop/push-in establishes scale, an explosive break-through beat at real-time speed, one Impact peak (burst, tail-whip, crash-dive), then a re-entry into a wide pull-back reset — every slow beat is bracketed by fast ones. Epic look enforced by scale cues, surface texture (moss, vines, starlit scales), a named light system and an atmosphere layer stack that visibly responds. Ships with a runnable golden-hour canonical prompt plus lunar and dawn variants. T2VA, no reference material needed.",
-        zh: "单镜头 7 秒：巨大的神话生物（云海巨鲸、天空利维坦、云龙）横渡无尽云海。结构固定为「开场高空俯压/推近建立尺度 → 真实速度的破云爆起 → 唯一冲击峰值（爆起/甩尾/坠海）→ 没入云海定格全景拉远」，慢拍必被快拍夹住。史诗感由尺标、表面质感（苔藓/藤蔓/星辉鳞片）、命名光照系统与多层大气反馈共同保证。内置可直接运行的黄金时刻 canonical prompt 及月夜/晨雾两个变体。仅 T2VA，无参考素材。",
+        en: "One continuous 7s shot of a colossal mythological being (cloud whale, sky leviathan, cloud dragon) crossing an endless sea of clouds. Structure: high-altitude drop/push-in establishes scale, an explosive break-through beat at real-time speed, one Impact peak (burst, tail-whip, crash-dive), then a re-entry into a wide pull-back reset — every slow beat is bracketed by fast ones. Epic look enforced by scale cues, sleek pearl-grey satin skin with hair-fine scales and a starlit spine, a named light system and an atmosphere layer stack that visibly responds. Ships with a runnable golden-hour canonical prompt plus lunar and dawn variants. T2VA, no reference material needed.",
+        zh: "单镜头 7 秒：巨大的神话生物（云海巨鲸、天空利维坦、云龙）横渡无尽云海。结构固定为「开场高空俯压/推近建立尺度 → 真实速度的破云爆起 → 唯一冲击峰值（爆起/甩尾/坠海）→ 没入云海定格全景拉远」，慢拍必被快拍夹住。史诗感由尺标、缎光皮肤与细腻鳞片、脊柱星辉、命名光照系统与多层大气反馈共同保证。内置可直接运行的黄金时刻 canonical prompt 及月夜/晨雾两个变体。仅 T2VA，无参考素材。",
       },
       categories: ["animation", "creative"],
       tags: [
