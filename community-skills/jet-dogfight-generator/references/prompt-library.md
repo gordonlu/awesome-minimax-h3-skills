@@ -67,7 +67,7 @@ integrated_multimodal_description:
 
 overall_soundscape: jet roar building steadily; sharp sonic crack at the crossing; wind hiss fading as the pair separates.
 
-non_diegetic_music: pulsing electronic pulse and low percussion accelerating to the zoom peak, breaking into open air on the wide reset.
+non_diegetic_music: pulsing percussion and strings accelerating to the crossing, breaking into open air as the contrail X settles.
 ```
 
 **WebApp 粘贴版**（先上传参考图，替换 `@图片`）：
@@ -80,7 +80,7 @@ integrated_multimodal_description:
 
 overall_soundscape: jet roar building steadily; sharp sonic crack at the crossing; wind hiss fading as the pair separates.
 
-non_diegetic_music: pulsing electronic pulse and low percussion accelerating to the zoom peak, breaking into open air on the wide reset.
+non_diegetic_music: pulsing percussion and strings accelerating to the crossing, breaking into open air as the contrail X settles.
 ```
 
 **验收**：首秒与参考图同构图同机型；单事件（交汇穿越）；交汇一刻为唯一峰值（~70%）；机头对齐航向、无侧滑；尾迹贴实航迹并随转向平滑弯曲；镜头全程锁定、无垂直运镜；结尾双机远去、尾迹成浅 X、地平线水平；无慢镜、无镜头切换、无文字、无宫格。
@@ -121,7 +121,7 @@ integrated_multimodal_description: [Shot 1] 00:00.0-00:07.0 Golden hour at very 
 
 overall_soundscape: jet roar building steadily; sharp sonic crack at the crossing; wind hiss fading as the pair separates.
 
-non_diegetic_music: pulsing electronic pulse and low percussion accelerating to the zoom peak, breaking into open air on the wide reset.
+non_diegetic_music: pulsing percussion and strings accelerating to the crossing, breaking into open air as the contrail X settles.
 ```
 
 **填充示例（可直接运行）**：无占位符，P1 为完全成品，复制即用。
