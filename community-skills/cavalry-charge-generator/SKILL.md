@@ -47,7 +47,7 @@ If the horses never visibly gallop at full speed with jarring impacts, the gener
 Three camera landmarks, all participating in speed:
 
 1. **Low dolly-in over the sand** — camera skims the ground as the charge builds in the distance (first second).
-2. **Lateral press / side chase** — camera accelerates alongside the front rank, sand-spray over the lens (mid-clip).
+2. **Camera-persona ladder** — every take alternates angles inside the single take: distant low drift-in → side chase (locked focus) → dust veil → low head-on approach, rank filling the frame → horses splitting past the lens → low rear recede. Each reposition is masked by the dust wall washing across the lens; no vertical camera moves.
 3. **Front-rank overtake & wide reset** — at the peak the cavalry surges past the camera, dust swallows the frame; camera rises to a wide overhead as the dust settles (last second).
 
 Camera motion reads fast. Never a static wide with the charge moving inside it.
@@ -65,7 +65,7 @@ Camera motion reads fast. Never a static wide with the charge moving inside it.
 Official three-field layout (see `h3-prompt-writing`):
 
 ```text
-integrated_multimodal_description: [Shot 1] <low opening dolly-in + dust horizon> <charge builds at real-time speed> <side chase, sand-spray over lens> <Impact peak: front rank overtakes, dust swallows frame> <wide reset, dust settling> — time brackets per beat.
+integrated_multimodal_description: [Shot 1] <wide low drift-in, charge grows from the haze> <side chase, locked focus> <dust veil, low head-on approach> <peak: horses split past lens, dust swallows frame> <low rear recede, dust settling> — time brackets per beat.
 
 overall_soundscape: <thunder of hooves in waves> + <metal clatter, banner snap> + <low war-horn at the peak>.
 
