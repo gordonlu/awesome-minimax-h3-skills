@@ -54,7 +54,7 @@ Camera follows G-forces; the horizon tilt reads the load. Never a cruise-by fly-
 
 ## Texture & Scale Requirements (the epic look)
 
-- **Sky as a stage with weather**: named cloud system (stratocumulus deck / thunderhead wall / broken cirrus at altitude) that visibly tears around the jets.
+- **Sky as a stage with weather**: named cloud system (uniform stratus-like sheet layer / thin broken cirrus at altitude — avoid cell-like cumuliform words such as stratocumulus) that visibly tears around the jets.
 - **Speed artifacts**: vapor cone at the canopy, contrail pairs, wing-tip vortices, heat-haze shimmer off the exhaust.
 - **Light as an accent**: sun flare on the canopy, low golden side-light on the airframe, cloud shadows streaking past.
 - **Two surface details minimum**: panel lines and rivets, paint wear, missile rails, pilot helmet silhouette in the canopy.
