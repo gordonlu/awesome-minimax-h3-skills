@@ -12,17 +12,19 @@ summary-en: Create full-speed epic cavalry charges through dust — real-time ga
 summary-cn: 生成全速史诗铁骑冲锋短片——真实速度狂奔、贴地追拍镜头、单一掠阵冲击峰值，全程无慢镜。
 desc-en: |
   Full-speed cavalry charges across dust-scoured plains in one continuous 7s shot. The camera
-  skims the sand on a low dolly-in, presses alongside the front rank, and at the Impact peak the
-  charge overtakes the lens as the dust wall swallows the frame, then holds its line as the pass-by lands
-  reset. Subject slow motion is prohibited; speed is enforced with acceleration events and
-  real-time verbs. Epic texture from a dust system with layered plumes, low golden backlight and
-  two surface details minimum. Ships with a runnable golden-dust canonical prompt plus an ember
-  night variant. T2VA only.
+  holds a locked low establish while the charge grows in frame, then performs its single
+  dominant behavior — a ground-level lateral track slower than the charge — until the front rank
+  thunders past the lens in silhouette at the one Impact peak, and the column recedes to the
+  right distance. Subject slow motion is prohibited; speed is read from scale growth, foreground
+  scroll and the pass-by. Epic texture from a dust system with layered plumes, low golden
+  backlight and two surface details minimum. Ships with a runnable golden-dust canonical prompt
+  plus an ember night variant. I2VA route + T2VA fallback.
 desc-cn: |
-  7 秒单镜头全速铁骑冲锋：镜头贴沙面俯压推进建立尺度 → 侧向贴队追拍 → 尘埃墙吞没镜头（唯一
-  冲击峰值）→ 升空俯瞰的尘落收束。禁止主体慢镜，以加速事件与真实时间动词保证速度感。史诗
-  质感由多层尘暴系统、低角度金色逆光与至少两个表面细节构成。内置可直接运行的「金色尘暴」
-  canonical prompt 与「余烬之夜」变体，仅 T2VA。
+  7 秒单镜头全速铁骑冲锋：镜头锁定低机位建立尺度 → 单一侧向追拍（机速慢于主速）→
+  唯一冲击峰值（前排贴镜而过，~70%）→ 低机位远收、尘落。禁止主体慢镜、禁止机位链与垂直
+  运镜；速度由尺度过镜、前景滚动与掠阵读出。史诗质感由多层尘暴系统、低角度金色逆光与
+  至少两个表面细节构成。内置可直接运行的「金色尘暴」canonical（I2VA）与 T2VA 降级、
+  「余烬之夜」变体。
 author-en: gordonlu
 author-cn: gordonlu
 source: community

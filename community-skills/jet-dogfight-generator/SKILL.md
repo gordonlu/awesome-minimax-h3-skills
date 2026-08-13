@@ -1,6 +1,6 @@
 ---
 name: jet-dogfight-generator
-description: Create cinematic 7-second MiniMax H3 text-to-video clips of high-speed jet dogfights above and through cloud decks. Full real-time speed, vapor cones, contrail arcs, G-load haze and sun flare on canopies; the camera orbits and whips with the airframes. No slow motion, no external footage feel — one continuous aerial shot. T2VA only, no reference material needed.
+description: Create cinematic 7-second MiniMax H3 text-to-video clips of high-speed jet dogfights above and through cloud decks. Full real-time speed, contrail arcs and a clean high-speed merge under a locked camera; no whip or orbit moves, no vapor cones. No slow motion, no external footage feel — one continuous aerial shot with a fixed lens.
 compatibility: Portable to agents that can read local files and use MiniMax H3. Use H3-Base-FL2VA in T2VA mode.
 trigger-words: [jet dogfight, air combat, fighter jet, 空战, 战机, 缠斗, 俯冲, 高空, 凝结尾迹, dogfight, aerial combat]
 ---

@@ -80,9 +80,9 @@ Rules:
 
 ## Acceptance Checklist
 
-- [x] First second: low dolly-in over sand, charge visible on the dust horizon
+- [x] First second: locked low establish, charge growing in frame from the dust horizon
 - [x] Full-gallop real-time speed with visible acceleration; no subject slow motion
-- [x] One Impact peak: front rank overtakes the camera, dust swallows the frame
+- [x] One Impact peak (~70%): front rank thunders past the lens in silhouette
 - [x] Low golden backlight: rim-lit riders, glowing sand
 - [x] Two or more surface details visible in light
 - [x] At least two dust/atmosphere layers respond to the charge

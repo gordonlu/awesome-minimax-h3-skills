@@ -8,21 +8,22 @@ complete-tags-en:
 complete-tags-cn:
 - 动画 / 动作
 - 创意实验 / T2VA
-summary-en: Create cinematic 7s high-speed jet dogfights — head-on merge, orbit whip, vertical zoom peak, vapor cones and contrails. No slow motion.
+summary-en: Create cinematic 7s high-speed jet dogfights — a single lock-camera merge: close, cross with a sonic crack, separate into a contrail X. No slow motion, no whip moves.
 summary-cn: 生成 7 秒电影感高空战机缠斗——对头交汇穿越、音锥与凝结尾迹，全程无慢镜、镜头锁定。
 desc-en: |
-  High-speed jet dogfighting in one continuous 7s aerial shot: a head-on hold with the jets
-  closing at real time, a vapor-cone merge, an orbit whip that carves contrail arcs through the
-  sky, and one Impact peak — the vertical zoom out of the cloud deck with a canopy flare — before
-  a wide reset over the cloud sea. Subject slow motion prohibited; G-loading and horizon tilt
-  carry the speed. Texture from speed artifacts (vapor cone, contrails, wing-tip vortices, heat
-  haze) and a cloud stage that visibly tears around the airframes. Ships with a runnable
-  stratosphere canonical prompt plus a valley variant. T2VA only.
+  High-speed jet dogfighting in one continuous 7s aerial shot under a locked camera: two F-14
+  Tomcats close from opposite corners at real time, hold level with noses locked to their
+  headings, bank into separation, and cross in a clean high-speed merge with a sonic crack —
+  the single Impact peak at 70-90% — before both recede into a shallow contrail X. Subject slow
+  motion prohibited; aircraft grammar enforced (no sideways slide, no pivot in place, contrails
+  attached to the flight path). Texture from speed artifacts (contrail pairs, faint wing-tip
+  filaments, heat haze) and a smooth golden cloud-ocean stage. Ships with a runnable I2VA merge
+  canonical plus T2VA fallback and a canyon variant.
 desc-cn: |
-  7 秒单镜头高空缠斗：双机真实速度对角接近 → 中线闭合 → 分离侧滚 →
-  唯一冲击峰值（交汇穿越、音爆）→ 双机远去、尾迹成浅 X。禁止主体慢镜、禁止侧滑转向，用
-  地平线倾角承载速度感。质感来自速度痕迹（音锥/凝结尾迹/翼尖涡流/热浪）与随战机撕裂的云层舞台。
-  内置可直接运行的「平流层交汇」canonical prompt 与「峡谷内摇」变体，仅 T2VA。
+  7 秒单镜头高空缠斗（镜头全程锁定）：双机真实速度对角接近 → 中线闭合 → 分离侧滚 →
+  唯一冲击峰值（交汇穿越、音爆，70–90%）→ 双机远去、尾迹成浅 X。禁止主体慢镜、禁止
+  侧滑转向与原地转向，凝结尾迹贴实航迹。质感来自速度痕迹（成对尾迹/翼尖细丝/热浪）与
+  平滑金色云海舞台。内置可直接运行的 I2VA「平流层交汇」canonical + T2VA 降级与峡谷变体。
 author-en: gordonlu
 author-cn: gordonlu
 source: community

@@ -128,4 +128,4 @@ non_diegetic_music: low strings and quick taiko drums driving to the ember-wall 
 
 - **换时代/军种**：把 rider/lance/armor 换成 katana samurai、mounted archers、war elephants 等，**保留**「全速 + 真实时间 + 两个加速事件 + 一个越镜峰值」骨架。
 - **换光照**：golden backlight / torch flames 可换成 moonlight、storm flash、sunrise flare，并同步调整色调词。
-- **换镜头**：贴沙俯压、侧向追拍、越镜吞镜、俯瞰收束四个镜头位可改角度，但顺序与职责不变。
+- **换镜头**：锁定低机位建立、单一侧向追拍（机速慢于主速）、贴镜而过峰值、低机位远收——顺序与职责不变，禁止机位链与垂直运镜。
