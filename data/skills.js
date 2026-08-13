@@ -862,6 +862,86 @@ window.AMHS_DATA = {
         ],
       },
     },
+    {
+      slug: "mythic-cloud-whale-generator",
+      name: "Mythic Cloud Whale Generator",
+      nameZh: "云海巨鲸",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Epic 7s cloud-sea clips of colossal mythic beings — fast-slow contrast beats, one impact peak, never all slow-motion.",
+        zh: "7 秒史诗级云海巨兽短片——快慢对比节拍 + 单一冲击峰值，拒绝全片慢镜。",
+      },
+      description: {
+        en: "One continuous 7s shot of a colossal mythological being (cloud whale, sky leviathan, cloud dragon) crossing an endless sea of clouds. Structure: high-altitude drop/push-in establishes scale, an explosive break-through beat at real-time speed, one Impact peak (burst, tail-whip, crash-dive), then a re-entry into a wide pull-back reset — every slow beat is bracketed by fast ones. Epic look enforced by scale cues, surface texture (moss, vines, starlit scales), a named light system and an atmosphere layer stack that visibly responds. Ships with a runnable golden-hour canonical prompt plus lunar and dawn variants. T2VA, no reference material needed.",
+        zh: "单镜头 7 秒：巨大的神话生物（云海巨鲸、天空利维坦、云龙）横渡无尽云海。结构固定为「开场高空俯压/推近建立尺度 → 真实速度的破云爆起 → 唯一冲击峰值（爆起/甩尾/坠海）→ 没入云海定格全景拉远」，慢拍必被快拍夹住。史诗感由尺标、表面质感（苔藓/藤蔓/星辉鳞片）、命名光照系统与多层大气反馈共同保证。内置可直接运行的黄金时刻 canonical prompt 及月夜/晨雾两个变体。仅 T2VA，无参考素材。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Mythic", zh: "神话" },
+        { en: "Epic", zh: "史诗" },
+        { en: "Cloud Sea", zh: "云海" },
+        { en: "T2VA", zh: "T2VA" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/mythic-cloud-whale-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — canonical prompt ready, run P1 in prompt-library.md", zh: "占位海报——canonical prompt 已就绪，运行 prompt-library P1 即可出片" },
+      },
+      inputs: [
+        { en: "Mythic subject: cloud whale / sky leviathan / cloud dragon / manta", zh: "神话主体：云海巨鲸/天空利维坦/云龙/巨鳐" },
+        { en: "Time of day & light system: golden hour / moonlit aurora / rose dawn", zh: "时段与光照系统：黄金时刻/月夜极光/日出玫瑰金" },
+        { en: "Beat placement of the single Impact peak (first half: shock / second half: climax)", zh: "唯一冲击峰值的位置（前半=震撼 / 后半=高潮）" },
+      ],
+      capabilities: [
+        { en: "Enforces one break-through beat at real-time speed — no all-slow-motion output", zh: "强制一个真实速度的破云爆起——禁止全片慢镜" },
+        { en: "Single Impact peak, slow beats bracketed by fast ones", zh: "单一冲击峰值，慢拍被快拍夹住" },
+        { en: "Camera landmarks: drop/push-in → chase/orbit → wide pull-back reset", zh: "镜头位：俯压/推近 → 追拍/环绕 → 全景拉远收束" },
+        { en: "Epic texture: scale cues, surface details, named light, atmosphere layers that respond", zh: "史诗质感：尺标、表面细节、命名光照、响应式大气层次" },
+      ],
+      workflow: [
+        { id: "subject", title: { en: "Pick subject + time", zh: "选主体与时段" }, desc: { en: "One mythic subject, one light system, one temperature.", zh: "一个神话主体、一个光照系统、一个主色调。" } },
+        { id: "beats", title: { en: "Structure fast-slow beats", zh: "编排快慢节拍" }, desc: { en: "Break-through (real-time) → mid glide → one impact peak → re-entry wide reset.", zh: "真实速度爆起 → 中速滑翔 → 唯一峰值 → 没入云海全景收束。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Scale in 1st second; peak physical; textures lit; no cuts; 7s.", zh: "首秒见尺度；峰值真实；细节有光；单镜头；7s。" } },
+      ],
+      outputs: [
+        { en: "A 7s epic mythic cloud-sea clip (MP4)", zh: "一段 7 秒史诗云海巨兽短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Epic · T2VA time-bracketed beats", zh: "史诗 · T2VA 时间括号节拍" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Colossal mythic beings crossing cloud seas (epic spectacle)", zh: "神话巨兽横渡云海的史诗奇观" },
+        { en: "Fast-slow contrast rhythm with one hard peak", zh: "快慢对比节奏 + 单一硬峰值的短片" },
+      ],
+      notFor: [
+        { en: "Miniature / diorama scenes (see miniature-world-landscape-generator)", zh: "微缩/沙盘场景（见 miniature-world-landscape-generator）" },
+        { en: "Calm ambient-only content without a subject acting", zh: "无主体动作的纯氛围内容（见 natural-ambient-living-generator）" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill mythic-cloud-whale-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/mythic-cloud-whale-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/mythic-cloud-whale-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — golden-hour canonical + 2 variants", zh: "prompt-library.md — 黄昏 canonical + 2 变体" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/mythic-cloud-whale-generator/references/prompt-library.md" },
+        ],
+      },
+    },
 
       {
       slug: "kinetic-title-card-generator",
