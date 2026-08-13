@@ -1,0 +1,29 @@
+display-name-zh: 镜头骨架库
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Shot Pattern Library
+- Prompt / Camera Language
+complete-tags-cn:
+- 创意实验 / 镜头骨架库
+- 提示词 / 镜头语言
+summary-en: Companion to h3-micro-cinematic-director. 22 reusable H3 shot skeletons with reliability tiers (A/B/C), duration compatibility, I2V/FL2V/T2V guidance, composition arcs, supporting spatial devices, failure downgrade paths, and a quick selection table.
+summary-cn: h3-micro-cinematic-director 的补充包。22 个可复用的 H3 镜头骨架，带可靠性分级（A/B/C）、时长兼容表、I2V/FL2V/T2V 适配建议、构图弧、空间辅助装置、失败降级路径与快速选择表。
+desc-en: |
+  Solves one problem: after the base director skill decides what the clip
+  expresses, pick a proven shot skeleton instead of inventing camera movement.
+  One primary pattern + 0-1 supporting spatial device per clip. Patterns stay
+  skeleton-level: they never fix character, scene, art style, or emotion.
+  Includes Tier A/B/C reliability ratings against H3's failure modes and
+  explicit downgrade paths (never add prompt words to a failed Tier C pattern —
+  drop to a simpler one).
+desc-cn: |
+  只解决一个问题：基础导演技能确定"这个 clip 要表达什么"之后，选一个成熟
+  的镜头骨架，而不是从头发明摄影机运动。每个 clip 一个主模式 + 0–1 个空间
+  辅助装置。模式只定义空间关系与构图动力，不锁定角色/场景/美术风格。
+  内置针对 H3 失败模式的 A/B/C 可靠性分级与显式降级路径——Tier C 失败时
+  降级到更简单的骨架，而不是继续加词。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
