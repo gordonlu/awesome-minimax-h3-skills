@@ -30,7 +30,15 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；两架战机一左一右对头接近，占据画面对角线两端；中景为白色云海平面；上 1/3 为平流层蓝空。
 
 ```text
-Epic aerial combat film still, ultra-wide 16:9 composition from high altitude. Two fighter jets closing head-on across a flat white stratocumulus cloud deck: one entering the frame from the lower left, one from the upper right, on a collision course, each trailing a pair of long white contrails that curve slightly behind them, already starting to bow outward from the speed. The middle band of the frame is a vast flat cloud plane with soft volumetric relief, thin broken cloud wisps drifting between the two jets. Jet detail: sharp delta wings, panel lines, worn paint with faded stencils, missile rails under the wings, cockpit canopy catching the light, vapor cone just beginning to form at each nose, wing-tip vortices trailing white spirals. Light: low golden side-light raking across the airframes from the right, deep blue stratosphere above deepening to cobalt, cloud deck glowing warm where it catches the low sun, long airframe shadows falling onto the cloud plane. Atmosphere: thin high cirrus, heat haze shimmering faintly off the exhaust, faint dust haze at the horizon. Color grading: stratosphere blue dominant with warm amber accents on the metal, high contrast, deep blacks in the shadows. Quality: photorealistic, hyper-detailed airframe surfaces, physically accurate contrail formation, epic scale with the vast cloud deck emphasizing tiny jets, shot on telephoto lens from great distance, cinematic color grade.
+Scene: High altitude above a flat white stratocumulus cloud deck, stratosphere blue sky deepening to cobalt above; thin broken cloud wisps drifting between the foreground and the deck.
+
+Subject: Two fighter jets closing head-on on a collision course, one entering from the lower left, one from the upper right of a 16:9 frame; each trailing a pair of long white contrails bowing outward behind it. Vapor cone just beginning to form at each nose.
+
+Important details: Panel lines, worn paint with faded stencils, missile rails under the wings, cockpit canopy catching low golden side-light from the right; wing-tip vortices trailing white spirals; cloud deck glowing warm where it catches the low sun; long airframe shadows falling on the cloud plane; heat haze shimmering faintly off the exhaust.
+
+Use case: dramatic photorealistic concept frame / cinematic film still for an aerial combat sequence. Photorealistic.
+
+Constraints: no pilot figures, no text, no watermark; contrails must trail behind the jets, not sideways; keep both jets sharp and in frame.
 ```
 
 ## P1 — I2VA Canonical：平流层交汇

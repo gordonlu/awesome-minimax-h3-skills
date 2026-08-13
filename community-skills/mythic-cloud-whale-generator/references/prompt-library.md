@@ -29,7 +29,15 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；巨鲸侧身占画面右侧约 1/3；云海占据前景与左侧；丁达尔光柱作为主光源。
 
 ```text
-Epic cinematic film still, 16:9 wide composition, shot from a low angle so the sheer mass of the creature looms over the frame. A colossal ancient leviathan rising from an endless sea of clouds, its back towering so high it dominates the right side of the composition and dwarfs the entire cloud deck — the visual weight of a mountain range compressed into one living body, serene but overwhelming, awe-inspiring, nothing tame about it. Its body is pure fluid biological form: seamless slabs of smooth muscle beneath pearl-grey skin fading to deep indigo on the belly, hair-fine scale texture reading as wet satin, light gliding across the huge smooth flank; no ridges, no cliffs, no mountains, no hills, nothing growing on its back — the surface is uninterrupted, like the flank of a great whale seen from a small boat. A single line of faint star-like lights runs along its spine; the edge of its pectoral fin glows soft cyan. Its eye, enormous and ancient, regards the distance with a profound, unhurried gaze. The left side of the frame: one continuous, unbroken sea of clouds like a velvet blanket, solid and seamless, glowing molten gold, stretching to the horizon — not a single broken or fragmented cloud anywhere. Three clean volumetric sun shafts break through wide gaps in the cloud ceiling, dust motes glittering inside the beams. Light: warm golden-hour key light raking across the massive flank from upper left, cool blue fill rising from the cloud deck, a crisp rim light tracing the summit of its spine. Color grading: rich golden amber dominant, deep teal shadows, high dynamic range. Quality: photorealistic, hyper-detailed smooth surface, physically plausible solid cloud rendering, epic scale with tiny distant birds as scale reference, film grain, shot on large-format cinema camera, low-angle hero composition, cinematic color grade.
+Scene: An endless sea of clouds at dusk — one unbroken, solid cloud deck glowing molten gold, stretching flat to the horizon; three clean beams of sunlight break through gaps in the cloud ceiling.
+
+Subject: A colossal whale-like leviathan rising out of the cloud sea, seen from a low angle close to its head so it towers over the frame. Its body is a single smooth, unbroken mass of pearl-grey skin fading to deep indigo on the belly, as seamless as wet silk, with only hair-fine scale texture on the surface. A row of faint star-like lights glows along the top of its spine. No mountains, no rocks, no moss, no plant life anywhere on the body.
+
+Important details: The whale fills the right two-thirds of a 16:9 frame, its head angled toward the camera with one huge, calm, ancient eye; tiny birds circling far below its head establish the scale. Wet-looking skin catches warm golden light from above while cool blue light rises off the cloud deck below; a bright rim light traces the spine. Dust motes glitter inside the sun beams. Camera at waterline level, looking slightly up at the head.
+
+Use case: dramatic photorealistic concept frame / cinematic film still for an epic fantasy sequence. Photorealistic.
+
+Constraints: no mountains, no rocks, no moss, no bumps on the whale; the cloud deck must be one continuous unbroken surface, no fragmented clouds; no text; no watermark.
 ```
 
 ## P1 — I2VA Canonical：黄昏破云

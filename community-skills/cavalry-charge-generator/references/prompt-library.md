@@ -30,7 +30,15 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；低机位；骑兵群自左向右冲锋，前排持矛俯身的骑士占画面中下 1/3；右侧 1/3 为滚动尘墙；金色逆光。
 
 ```text
-Epic cinematic war film still, 16:9 wide composition, extremely low camera angle skimming the sand. A full-speed cavalry charge across a dust-scoured plain, the front rank galloping from left to right across the frame, occupying the lower third; horses at full stride, legs extended, manes and tails streaming, muscle definition visible through wet-looking coats. Lead riders crouch low over their horses' necks with leveled lances, weathered faces lit from behind, dark armor with scratched plates, rivets, and worn leather straps, sword hilts and bow quivers bouncing at their hips; a torn war banner snapping overhead with frayed edges. Sand-spray plumes erupt behind every hoof, low clouds of dust rolling between the galloping legs. The right third of the frame: a towering rolling dust wall catching the low golden backlight, its leading edge roiling with internal texture, sand scuds whipping across its face. Light: strong low-angle golden backlight from behind the charge, rim lighting on helmets, lance tips and horse silhouettes, glowing sand haze, long dramatic shadows stretching toward the camera. Atmosphere: thick dust particles backlit and sparkling, heat shimmer above the ground. Color grading: scorched gold and amber dominant, burnt umber shadows, one accent of steel-blue in the sky strip. Quality: photorealistic, hyper-detailed armor and horse anatomy, epic film still, shot on 24mm wide lens, shallow-to-medium depth of field focused on the front rank, cinematic color grade.
+Scene: A flat dust-scoured plain at dusk, scorched-gold light, a towering rolling dust wall on the right side of the frame with sand scuds whipping across its face; heat shimmer over the ground.
+
+Subject: A full-speed cavalry charge, front rank galloping from left to right across a 16:9 frame, shot from an extremely low camera angle with the lens skimming the sand. Horses at full stride, muscles defined, manes and tails streaming; riders crouched low over their necks with leveled lances, dark worn armor with scratched plates and rivets, a torn war banner snapping overhead. Sand-spray plumes erupt behind every hoof.
+
+Important details: Strong low golden backlight behind the charge, rim light on helmets and lance tips, long dramatic shadows stretching toward the camera; dust particles backlit and sparkling between the galloping legs; weathered faces lit only in glowing sand haze.
+
+Use case: dramatic photorealistic concept frame / cinematic film still for an epic battle sequence. Photorealistic.
+
+Constraints: no blood, no gore, no visible text, no watermark; horses must look anatomically correct at full gallop.
 ```
 
 ## P1 — I2VA Canonical：金色尘暴
