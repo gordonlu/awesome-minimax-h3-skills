@@ -50,6 +50,8 @@ Three camera landmarks, all participating in speed:
 2. **Camera-persona ladder** — every take alternates angles inside the single take: distant low drift-in → side chase (locked focus) → dust veil → low head-on approach, rank filling the frame → horses splitting past the lens → low rear recede. Each reposition is masked by the dust wall washing across the lens; no vertical camera moves.
 3. **Front-rank overtake & wide reset** — at the peak the cavalry surges past the camera, dust swallows the frame; camera rises to a wide overhead as the dust settles (last second).
 
+3. **Grounding kit (anti-float)** — gallop renders as glide when the ground has no handles. Always anchor: ① coarse foreground grain streaking past the bottom of the frame pins speed to the ground; ② explicit hoof-landing + sand-kick per stride; ③ handheld camera jolt riding the hoofbeats; ④ camera never floats — ankle/saddle height only; ⑤ long ground shadows / silhouetted dust backlit by the low sun. No beat exists without at least two of these.
+
 Camera motion reads fast. Never a static wide with the charge moving inside it.
 
 ## Texture & Scale Requirements (the epic look)
