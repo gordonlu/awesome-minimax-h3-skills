@@ -2,7 +2,7 @@
 
 本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的两种任务模式：**参考图路线（I2VA，推荐）** 与 **纯文字降级路线（T2VA，备选）**。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
 
-> 为什么使用参考图：先用图像生成模型锁住交汇瞬间的飞行器形象与速度痕迹（音锥、凝结尾迹、机体质感），再让 H3 按图动起来——质感保底。
+> 为什么使用参考图：先用图像生成模型锁住单机的机型、凝结尾迹与机体质感，再让 H3 按图动起来——质感保底；交汇事件与第二架完全由视频文字驱动（双机构图在图模型中翻车率高，不交给图承担）。
 >
 > 想看更多风格参考？本站整理了官方《使用手册》的精选合辑：
 > [`docs/official-prompt-anthology.md`](../../../docs/official-prompt-anthology.md)。
@@ -29,14 +29,14 @@
 
 ## P-IMG — 参考图（先出这张图）
 
-**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；一架完整 F-14 从左下向右上逼近（画面对焦点），第二架同款仅在右上边缘露出一角机头/机翼，提示对头交汇；中景为白色云海平面；上 1/3 为高空暖色蓝空。
+**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；单架 F-14 从左下向右上逼近（画面对焦点，唯一航空器）；中景为白色云海平面；上 1/3 为高空暖色蓝空。交汇与第二架完全由视频文字驱动。
 
 ```text
 Scene: Golden hour at very high altitude. A vast continuous white cloud ocean stretches flat to the horizon far below. The cloud deck reads as one enormous smooth surface, softly undulating on a very large scale, glowing warm gold where it catches the low sun. No individual cloud cells are visible. No broken clouds, no scattered cloud puffs, no cauliflower texture, no popcorn-like cloud formations.
 
 The low sun sits directly on the far-right horizon. Above the cloud ocean, the sky is completely open and clean, transitioning from pale warm gold near the horizon through clear atmospheric blue to deep cobalt toward the zenith. No secondary cloud layer and no cloud wisps in the foreground.
 
-Subject: A single F-14 Tomcat in swept-wing configuration at very high speed, entering from the lower left of the 16:9 frame and heading toward the upper right — it is the sharp, detailed focus of the image. The nose and leading edge of a second, identical F-14 Tomcat just enter from the upper-right edge of the frame, its body mostly cropped out of frame, its path clearly converging with the first — this carries the sense of an imminent head-on crossing without rendering a second full airframe. Do not draw the second aircraft's full body, wings or details; only the small entering slice at the frame edge.
+Subject: A single F-14 Tomcat in swept-wing configuration at very high speed, entering from the lower left of the 16:9 frame and heading toward the upper right — the only aircraft in frame, sharp and fully detailed. Strong diagonal tension from lower left to upper right across the open sky.
 
 Both aircraft must unmistakably read as F-14 Tomcats: long pointed noses, twin vertical stabilizers, twin-engine rear fuselage, variable-sweep wings positioned in a high-speed swept-back configuration, and authentic naval fighter proportions.
 
@@ -83,7 +83,7 @@ overall_soundscape: jet roar building steadily; sharp sonic crack at the crossin
 non_diegetic_music: pulsing percussion and strings accelerating to the crossing, breaking into open air as the contrail X settles.
 ```
 
-**验收**：首秒与参考图同构图同机型；单事件（交汇穿越）；交汇一刻为唯一峰值（~70%）；机头对齐航向、无侧滑；尾迹贴实航迹并随转向平滑弯曲；镜头全程锁定、无垂直运镜；结尾双机远去、尾迹成浅 X、地平线水平；无慢镜、无镜头切换、无文字、无宫格。
+**验收**：首秒主机位置/机型/光线与参考图一致（第二架由文字在首秒内引入右上角）；单事件（交汇穿越）；交汇一刻为唯一峰值（~70%）；机头对齐航向、无侧滑；尾迹贴实航迹并随转向平滑弯曲；镜头全程锁定、无垂直运镜；结尾双机远去、尾迹成浅 X、地平线水平；无慢镜、无镜头切换、无文字、无宫格。
 
 
 
