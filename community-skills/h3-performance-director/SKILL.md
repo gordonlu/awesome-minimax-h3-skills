@@ -1835,6 +1835,8 @@ armor settle
 
 ---
 
+> 环境与介质的物理事实门禁（浮力、接触、连续性、尺度等八项）见 h3-micro-cinematic-director # 27 真实物理与现实事实门禁；表演类故障（侧滑、橡皮机甲、失重漂浮、姿态瞬移）可在本 Skill 的故障档案内查找修法。
+
 # 39. Final Quality Gate
 
 最终输出前检查：
