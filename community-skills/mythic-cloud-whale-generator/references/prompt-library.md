@@ -29,15 +29,15 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；巨鲸侧身占画面右侧约 1/3；云海占据前景与左侧；丁达尔光柱作为主光源。
 
 ```text
-Scene: An endless sea of clouds at dusk — one unbroken, solid cloud deck glowing molten gold, stretching flat to the horizon; three clean beams of sunlight break through gaps in the cloud ceiling.
+Scene: An endless sea of clouds at dusk, viewed from cloud level — one continuous, solid cloud deck like a velvet blanket glowing molten gold, stretching unbroken to the horizon in every direction. The low sun sits on the horizon at the far left, its warm light raking low across the cloud surface, long soft shadows cast across the cloud tops.
 
-Subject: A colossal whale-like leviathan rising out of the cloud sea, seen from a low angle close to its head so it towers over the frame. Its body is a single smooth, unbroken mass of pearl-grey skin fading to deep indigo on the belly, as seamless as wet silk, with only hair-fine scale texture on the surface. A row of faint star-like lights glows along the top of its spine. No mountains, no rocks, no moss, no plant life anywhere on the body.
+Subject: A colossal whale-like leviathan rising out of the cloud sea near the right side of the frame, seen from a low angle close to its head so it towers over the frame. Its body is a single smooth, unbroken mass of pearl-grey skin fading to deep indigo on the belly, as seamless as wet silk, with only hair-fine scale texture on the surface. A row of faint star-like lights glows along the top of its spine. No mountains, no rocks, no moss, no plant life anywhere on the body.
 
-Important details: The whale fills the right two-thirds of a 16:9 frame, its head angled toward the camera with one huge, calm, ancient eye; tiny birds circling far below its head establish the scale. Wet-looking skin catches warm golden light from above while cool blue light rises off the cloud deck below; a bright rim light traces the spine. Dust motes glitter inside the sun beams. Camera at waterline level, looking slightly up at the head.
+Important details: The whale fills the right two-thirds of a 16:9 frame, its head angled toward the camera with one huge, calm, ancient eye; tiny birds circling far below its head establish the scale. Wet-looking skin catches warm golden light raking in from the left, cool blue fill rising off the cloud deck below; a bright rim light traces the spine. Fine haze and dust motes drift through the raking light above the cloud surface. Camera at cloud-waterline level, looking slightly up at the head.
 
 Use case: dramatic photorealistic concept frame / cinematic film still for an epic fantasy sequence. Photorealistic.
 
-Constraints: no mountains, no rocks, no moss, no bumps on the whale; the cloud deck must be one continuous unbroken surface, no fragmented clouds; no text; no watermark.
+Constraints: only one cloud layer — the sea of clouds beneath the whale, nothing above it except open sky; no beams or light shafts coming down from above; the cloud deck must be one continuous unbroken surface, no fragmented clouds; no text; no watermark.
 ```
 
 ## P1 — I2VA Canonical：黄昏破云
