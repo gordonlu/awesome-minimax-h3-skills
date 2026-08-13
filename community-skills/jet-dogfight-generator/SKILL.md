@@ -31,45 +31,44 @@ These rules override decorative cinematic language. This Skill's whole identity 
 
 ### Motion Ownership
 
-The airframes own all primary motion: the head-on pass, the pull, the vertical zoom. Contrails, vapor cones, cloud tears and heat haze accompany but never replace the move.
+The airframes own all primary motion: the closing approach, the crossing, the separation. Contrails, wing-tip filaments and heat haze accompany but never replace the move.
 
 If the jets never visibly maneuver at real speed with crisp G-loading, the generation fails even if the shot is beautiful.
 
 ### The Speed Rule
 
-- **No slow motion for the subject — ever.** Prefer explicit language: `The jets maneuver at full real-time speed, snapping through the turn at high G.`
-- At least two acceleration events: the head-on merge and the vertical zoom breakaway.
-- Exactly one Impact peak (the vertical zoom out of the cloud deck / canopy flash, placed at 70–90% of the clip).
-- Airframes stay physically coherent: correct wing flex, vapor cone placement, no gliding physics.
+- **No slow motion for the subject — ever.** Prefer explicit language: `Both jets maneuver at full real-time speed, noses locked to their headings.`
+- One continuous event per clip: the merge (close → cross → separate).
+- Exactly one Impact peak — the high-speed crossing at 70–90% of the clip, sonic crack and contrail X.
+- Aircraft grammar: nose always aligned with flight path, no sideways slide, no pivot in place, contrails attached to the actual path and bending smoothly with any bank.
 
 ### Camera
 
-Three camera landmarks, all participating in speed:
+One dominant camera behavior:
 
-1. **High-altitude head-on hold** — camera static against the cloud deck while the jets close fast (first second).
-2. **Orbit whip** — camera whips around the lead airframe as it pulls, contrails carving arcs through the sky (mid-clip).
-3. **Breakaway zoom & wide reset** — at the peak the jets zoom vertically out of the cloud top, sun flare on the canopy; camera pulls back to a wide high shot over the cloud sea (last second).
+1. **Locked high-altitude hold** — the camera holds absolutely still at altitude for the whole clip; closing speed is read from the two airframes growing in frame.
+2. **No whip, no orbit, no vertical moves** — the crossing does the drama; horizon stays level, screen direction never reverses.
 
-Camera follows G-forces; the horizon tilt reads the load. Never a cruise-by fly-over.
+Never follow with the lens what the nose of the aircraft can do on its own.
 
 ## Texture & Scale Requirements (the epic look)
 
 - **Sky as a stage with weather**: named cloud system (uniform stratus-like sheet layer / thin broken cirrus at altitude — avoid cell-like cumuliform words such as stratocumulus) that visibly tears around the jets.
-- **Speed artifacts**: vapor cone at the canopy, contrail pairs, wing-tip vortices, heat-haze shimmer off the exhaust.
+- **Speed artifacts**: contrail pairs, faint wing-tip condensation filaments, heat-haze shimmer off the exhaust — no vapor cones.
 - **Light as an accent**: sun flare on the canopy, low golden side-light on the airframe, cloud shadows streaking past.
 - **Two surface details minimum**: panel lines and rivets, paint wear, missile rails, pilot helmet silhouette in the canopy.
-- **One color temperature** (stratosphere blue / dusk amber / dawn violet) plus one light accent.
+- **One color temperature** (high-altitude golden / dusk amber / dawn violet) plus one light accent.
 
 ## Prompt Structure
 
 Official three-field layout (see `h3-prompt-writing`):
 
 ```text
-integrated_multimodal_description: [Shot 1] <head-on hold, jets closing at real speed> <converge + vapor cone burst> <orbit whip, contrails arc, cloud tears> <Impact peak: vertical zoom out of the deck, canopy flare> <wide reset over the cloud sea> — time brackets per beat.
+integrated_multimodal_description: [Shot 1] <locked hold, jets closing at real speed from opposite corners> <stable level approach toward center, noses locked to headings> <separation banks, contrails bowing> <Impact peak ~70%: clean high-speed crossing + sonic crack, contrail X> <both jets recede to opposite edges, contrail X settles> — time brackets per beat.
 
-overall_soundscape: <jet roar building> + <sonic crack at the merge> + <wind shear hiss during the orbit>.
+overall_soundscape: <jet roar building steadily> + <sharp sonic crack at the crossing> + <wind hiss fading as the pair separates>.
 
-non_diegetic_music: <pulsing electronic pulse and low percussion> accelerating to the peak, breaking into open air on the wide reset.
+non_diegetic_music: <pulsing percussion and strings> accelerating to the crossing, breaking into open air as the contrail X settles.
 ```
 
 Rules:
@@ -80,10 +79,10 @@ Rules:
 
 ## Acceptance Checklist
 
-- [x] First second: head-on hold, jets closing at real speed
-- [x] Full real-time maneuvering with visible G-load; no subject slow motion
-- [x] One Impact peak: vertical zoom out of the cloud deck, canopy flare
-- [x] Vapor cone, contrails and wing-tip vortices visible
+- [x] First second: locked hold, jets closing at real speed from opposite corners
+- [x] Full real-time maneuvering; no subject slow motion
+- [x] One Impact peak: the clean high-speed crossing with sonic crack (~70%)
+- [x] Contrails and faint wing-tip filaments visible; no vapor cones
 - [x] Two or more airframe surface details visible in light
 - [x] Cloud system visibly tears around the jets
 - [x] One color temperature + one light accent
@@ -91,4 +90,4 @@ Rules:
 
 ## Canonical Demo
 
-Runnable now — see `references/prompt-library.md` P1 (Stratosphere Merge). One more variant (Valley Swing) is listed there; swap material slots only. Do not change structure, field order, or labels.
+Runnable now — see `references/prompt-library.md` P1 (I2VA Merge) and P2 (T2VA fallback). One more variant (Canyon Pass) is listed there; swap material slots only. Do not change structure, field order, or labels.

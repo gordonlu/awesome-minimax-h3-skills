@@ -8,20 +8,22 @@ complete-tags-en:
 complete-tags-cn:
 - 动画 / 神话生物
 - 创意实验 / T2VA
-summary-en: Create epic 7s cloud-sea clips of colossal mythic beings with fast-slow contrast beats, volumetric light and layered texture.
-summary-cn: 生成 7 秒史诗级云海巨兽短片：快慢对比节拍、体积光与多层质感，拒绝全片慢镜。
+summary-en: Create epic 7s cloud-sea emergence clips of colossal mythic beings — one heavy fixed-camera rise, spine wave, breath column, single tail-crest peak, with volumetric light and layered texture.
+summary-cn: 生成 7 秒史诗级云海巨兽短片：镜头固定的单次破云而出，脊波、呼吸雾柱、唯一尾鳍扬空峰值，体积光与多层质感。
 desc-en: |
-  Colossal mythological beings (cloud whales, sky leviathans, cloud dragons) crossing an endless
-  sea of clouds. Each clip is one continuous shot with a drop/push-in opening, an explosive
-  break-through beat at real-time speed, one Impact peak (burst, tail-whip, crash-dive), and a
-  re-entry into the wide reset — bracketed fast-slow rhythm, never all slow motion. Epic look
-  enforced by sleek pearl-grey satin skin, a single starlit spine, a named light system and
-  atmosphere layer stack. Ships with a runnable 7s canonical prompt plus two variants. T2VA only.
+  Colossal mythological beings (cloud whales, sky leviathans, cloud dragons) rising from an
+  endless sea of clouds. Each clip is ONE continuous event: the leviathan rises fully out of
+  the cloud deck and sinks back — a heavy real-time surge, spine wave, breath column, and a
+  single Impact peak at the tail crest (70–90%), under a fixed low camera that never moves.
+  No camera chains, no second breach, no tail-stand. Epic look enforced by sleek pearl-grey
+  satin skin, a single starlit spine, a named light system and atmosphere layer stack.
+  Ships with a runnable 7s canonical prompt: P-IMG (I2VA route) plus T2VA fallback.
 desc-cn: |
-  巨大的神话生物（云海巨鲸、天空利维坦、云龙）横渡无尽云海。每片为单镜头：开场高空俯压/推近
-  建立尺度 → 自然速度的破云爆发拍 → 一个冲击峰值（爆起、甩尾、坠海）→ 没入云海的全景收束，
-  用「快-慢-快」节奏夹住慢拍，绝不做全片慢镜。史诗感由尺标、表面质感（苔藓/藤蔓/星辉鳞片）、
-  命名光照系统与大气层次共同保证。内置可直接运行的 7s canonical prompt 与两个变体，仅 T2VA。
+  巨大的神话生物（云海巨鲸、天空利维坦、云龙）自无尽云海中升起。每片为单一连续事件：
+  巨兽完整破出云海再沉回——固定低机位下的一次真实速度重型上浮、脊波逐段展开、呼吸雾柱、
+  唯一冲击峰值（尾鳍扬空，70–90%）、云面闭合收束。禁止机位链、二次破出与倒立甩尾。
+  史诗感由尺标、珍珠灰缎光皮肤、星辉脊柱、命名光照系统与大气层次共同保证。
+  内置可直接运行的 7s canonical prompt：P-IMG 参考图路线 + T2VA 降级。
 author-en: gordonlu
 author-cn: gordonlu
 source: community

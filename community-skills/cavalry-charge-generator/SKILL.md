@@ -44,15 +44,13 @@ If the horses never visibly gallop at full speed with jarring impacts, the gener
 
 ### Camera
 
-Three camera landmarks, all participating in speed:
+One camera behavior over a locked establish:
 
-1. **Low dolly-in over the sand** — camera skims the ground as the charge builds in the distance (first second).
+1. **Locked low establish** — the camera holds low and still at ground level while the charge grows in frame (first ~3s); scale is read from the subject, not the lens.
 2. **One dominant camera behavior** — a single ground-level lateral track at saddle height, triggered when the front rank reaches mid-plain, moving slower than the charge so the riders keep growing in frame; locked focus on the front rank through the pass-by peak. No whip-pans, no head-on insert, no vertical moves, no pushes — never run a camera move chain.
-3. **Front-rank overtake & wide reset** — at the peak the cavalry surges past the camera, dust swallows the frame; camera rises to a wide overhead as the dust settles (last second).
-
 3. **Grounding kit (anti-float)** — gallop renders as glide when the ground has no handles. Always anchor: ① coarse foreground grain streaking past the bottom of the frame pins speed to the ground; ② explicit hoof-landing + sand-kick per stride; ③ handheld camera jolt riding the hoofbeats; ④ camera never floats — ankle/saddle height only; ⑤ long ground shadows / silhouetted dust backlit by the low sun. No beat exists without at least two of these.
 
-Camera motion reads fast. Never a static wide with the charge moving inside it.
+The charge reads everything: scale growth, foreground scroll, the pass-by peak. The camera never rises and never sweeps; the locked early beats make the pass-by land.
 
 ## Texture & Scale Requirements (the epic look)
 
