@@ -43,7 +43,7 @@ Constraints: no blood, no gore, no visible text, no watermark; horses must look 
 
 ## P1 — I2VA Canonical：金色尘暴
 
-**素材**：`@金色尘暴图`（P-IMG 的产出）｜ **模式**：I2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（集结加速）→ 全速（侧向追拍）→ 峰值（越镜吞镜）→ 缓（尘落俯瞰）
+**素材**：`@金色尘暴图`（P-IMG 的产出）｜ **模式**：I2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（远景建立）→ 全速（侧向追拍）→ 全速（正面逼近）→ 峰值（劈镜而过）→ 缓（低机位收束）
 
 ```text
 How the reference picture aligns with the target video — <Picture 1> (from [Shot 1]) aligns with the 0.00-second mark of the target video.
@@ -69,7 +69,7 @@ overall_soundscape: thunder of hooves building in waves; metal clatter and banne
 non_diegetic_music: driving percussion and low brass accelerating to the pass-by, cutting into a low rumble on the wide reset.
 ```
 
-**验收**：首秒与参考图同构图同质感；全速真实时间、无主体慢镜；越镜吞镜为唯一峰值；金色逆光剪影；至少两层尘参与响应；结尾尘落俯瞰；无镜头切换、无文字、无宫格。
+**验收**：首秒与参考图同构图同质感；全速真实时间、无主体慢镜；越镜吞镜为唯一峰值；金色逆光剪影；至少两层尘参与响应；结尾低机位身后收束、无垂直运镜；无镜头切换、无文字、无宫格。
 
 
 
@@ -98,7 +98,7 @@ non_diegetic_music: driving percussion and low brass accelerating to the pass-by
 
 ## P2 — T2VA 降级（备选）：金色尘暴
 
-**素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（集结加速）→ 全速（侧向追拍）→ 峰值（越镜吞镜）→ 缓（尘落俯瞰）
+**素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（远景建立）→ 全速（侧向追拍）→ 全速（正面逼近）→ 峰值（劈镜而过）→ 缓（低机位收束）
 
 ```text
 integrated_multimodal_description: [Shot 1] 00:00.0-00:07.0 Scorched-gold dusk over a dust-scoured plain; the camera skims the sand on a low fast dolly-in, a rolling dust wall on the horizon. 00:00.8-00:02.6 A cavalry mass appears at the dust line and charges at full gallop, natural real-time speed, hooves hammering the ground and kicking sand-spray plumes behind every stride; the camera drifts laterally, letting the charge grow in the frame. 00:02.6-00:04.8 The camera sprints into a side chase alongside the front rank, riders locked in crisp focus, lance-tips cutting through the hanging dust haze, sand glowing gold in the low backlight, metal clatter and banner cloth tearing in the wind. 00:04.8-00:06.2 At the peak the front rank surges past the lens and the trailing dust wall swallows the frame from behind. 00:06.2-00:07.0 The dust clears; the camera holds low behind the charge as it streams away into the haze, dust settling in fading golden light.
@@ -110,7 +110,7 @@ non_diegetic_music: driving percussion and low brass accelerating to the pass-by
 
 **填充示例（可直接运行）**：无占位符，P1 为完全成品，复制即用。
 
-**验收**：首秒低机位贴沙推进 + 尘线可见；全速狂奔真实速度、无主体慢镜；越镜为唯一峰值；金逆光剪影；至少两层尘参与响应；结尾尘落俯瞰；无镜头切换、无文字、无宫格。
+**验收**：首秒低机位贴沙推进 + 尘线可见；全速狂奔真实速度、无主体慢镜；越镜为唯一峰值；金逆光剪影；至少两层尘参与响应；结尾低机位身后收束、无垂直运镜；无镜头切换、无文字、无宫格。
 
 ## P3 — T2VA 变体：余烬之夜
 
