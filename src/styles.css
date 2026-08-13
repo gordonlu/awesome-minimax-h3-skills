@@ -49,23 +49,6 @@ ul { list-style: none; }
 img, video { display: block; max-width: 100%; }
 ::selection { background: var(--accent); color: #0C0C0E; }
 
-/* Film grain */
-.grain {
-  position: fixed; inset: -50%;
-  width: 200%; height: 200%;
-  pointer-events: none; z-index: 2000;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grain-shift 0.9s steps(4) infinite;
-}
-@keyframes grain-shift {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(-1.5%, 1%); }
-  50% { transform: translate(1%, -1.5%); }
-  75% { transform: translate(-1%, -1%); }
-  100% { transform: translate(0, 0); }
-}
-
 /* ==========================================================================
    Header
    ========================================================================== */
@@ -865,7 +848,6 @@ img, video { display: block; max-width: 100%; }
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .grain { animation: none; }
   .marquee-track { animation-duration: 240s; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
   .hero-bg-video { display: none; }
