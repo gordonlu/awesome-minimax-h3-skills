@@ -1,0 +1,32 @@
+display-name-zh: 表演导演
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Performance Director
+- Prompt / Body & Motion Grammar
+complete-tags-cn:
+- 创意实验 / 表演导演
+- 提示词 / 身体与运动语法
+summary-en: Companion to h3-micro-cinematic-director + h3-shot-pattern-library. Directs the subject itself: dramatic intent as visible behavior, movement quality, anticipation/initiation/follow-through/recovery, weight, contact & force, kinetic chain, silhouette readability, and subject-type motion grammar (human / mecha / creature / vehicle / aircraft / transformation).
+summary-cn: h3-micro-cinematic-director 与 h3-shot-pattern-library 的配套参考 Skill。负责主体本身怎么演：意图落成可见行为、运动质量四维语法、预备/启动/主动作/余势/恢复的动作弧、重量与接触力、动力链、剪影可读性，以及分主体类型的运动语法（人/机甲/生物/车辆/飞机/变形）。
+desc-en: |
+  Never describe only what the subject does — describe how it gets there.
+  Emotion is translated into observable behavior (objective → tactic → visible
+  gesture), strong motion needs anticipation + primary action + follow-through +
+  recovery, every force needs a visible consequence (contact / compression /
+  overshoot / surface reaction), and each subject type uses its own motion
+  grammar: aircraft never pivot in place, mecha never feel rubbery, creatures
+  get spine and support, humans move from ground through pelvis to shoulder.
+  Provides Performance Plan YAML, prompt compression rules, a full example per
+  subject type, failure repairs, and a final quality gate.
+desc-cn: |
+  不只写主体做了什么，而写它如何到达那个状态。情绪一律翻译为可见行为
+  （目标 → 策略 → 可见动作）；强动作必须走预备 → 主动作 → 余势 → 恢复；
+  每一股力都要有可见后果（接触/压缩/过冲/地面反应）；每种主体使用各自的
+  运动语法——飞机禁止原地转向、机甲不许橡皮关节、生物讲脊柱与支撑、
+  人的发力从地面经骨盆到肩。内置 Performance Plan YAML、提示词压缩规则、
+  各类主体完整示例、故障修复与最终质检门。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
