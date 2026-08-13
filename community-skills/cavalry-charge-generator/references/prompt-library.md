@@ -69,7 +69,7 @@ overall_soundscape: thunder of hooves building in waves; metal clatter and banne
 non_diegetic_music: driving percussion and low brass accelerating to the pass-by, cutting into a low rumble on the wide reset.
 ```
 
-**验收**：首秒与参考图同构图同质感；全速真实时间、无主体慢镜；越镜吞镜为唯一峰值；金色逆光剪影；至少两层尘参与响应；唯一主导机位行为（侧向追拍）、机速慢于主速、峰值 70% 处贴镜而过、明确收尾（右向远去+尘落）；全程接地（蹄落沙+溅尘+前景滚动）、无慢镜、无垂直运镜、无切换、无文字、无宫格。
+**验收**：首秒与参考图同构图同质感；全速真实时间、无主体慢镜；前排贴镜而过为唯一峰值（~70%）；金色逆光剪影；至少两层尘参与响应；唯一主导机位行为（侧向追拍）、机速慢于主速、峰值 70% 处贴镜而过、明确收尾（右向远去+尘落）；全程接地（蹄落沙+溅尘+前景滚动）、无慢镜、无垂直运镜、无切换、无文字、无宫格。
 
 
 
