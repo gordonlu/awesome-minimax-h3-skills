@@ -29,14 +29,14 @@
 
 ## P-IMG — 参考图（先出这张图）
 
-**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；两架战机一左一右对头接近，占据画面对角线两端；中景为白色云海平面；上 1/3 为平流层蓝空。
+**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；一架完整 F-14 从左下向右上逼近（画面对焦点），第二架同款仅在右上边缘露出一角机头/机翼，提示对头交汇；中景为白色云海平面；上 1/3 为高空暖色蓝空。
 
 ```text
 Scene: Golden hour at very high altitude. A vast continuous white cloud ocean stretches flat to the horizon far below. The cloud deck reads as one enormous smooth surface, softly undulating on a very large scale, glowing warm gold where it catches the low sun. No individual cloud cells are visible. No broken clouds, no scattered cloud puffs, no cauliflower texture, no popcorn-like cloud formations.
 
 The low sun sits directly on the far-right horizon. Above the cloud ocean, the sky is completely open and clean, transitioning from pale warm gold near the horizon through clear atmospheric blue to deep cobalt toward the zenith. No secondary cloud layer and no cloud wisps in the foreground.
 
-Subject: Two F-14 Tomcats closing toward each other at very high speed in a near head-on pass with slight lateral offset. One aircraft enters from the lower left of the 16:9 frame, the second enters from the upper right. Their flight paths visibly converge toward the center of the frame, creating a clear sense of imminent high-speed crossing.
+Subject: A single F-14 Tomcat in swept-wing configuration at very high speed, entering from the lower left of the 16:9 frame and heading toward the upper right — it is the sharp, detailed focus of the image. The nose and leading edge of a second, identical F-14 Tomcat just enter from the upper-right edge of the frame, its body mostly cropped out of frame, its path clearly converging with the first — this carries the sense of an imminent head-on crossing without rendering a second full airframe. Do not draw the second aircraft's full body, wings or details; only the small entering slice at the frame edge.
 
 Both aircraft must unmistakably read as F-14 Tomcats: long pointed noses, twin vertical stabilizers, twin-engine rear fuselage, variable-sweep wings positioned in a high-speed swept-back configuration, and authentic naval fighter proportions.
 
