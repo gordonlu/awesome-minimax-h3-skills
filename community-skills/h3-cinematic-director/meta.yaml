@@ -1,0 +1,28 @@
+display-name-zh: 导演手记
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Cinematic Director
+- Prompt / Camera & Beat Craft
+complete-tags-cn:
+- 创意实验 / 导演手记
+- 提示词 / 机位与节拍
+summary-en: The craft layer above h3-prompt-writing — beat architecture, camera ladder with mask reframes, grounding kit against float, blur levers, lighting discipline, anti-AI glide checklist, physics self-consistency. Local base-skill candidate, not yet published.
+summary-cn: 横跨 h3-prompt-writing 之上的手艺层——节拍架构、机位阶梯与掩体换位、防漂浮的接地五件套、防模糊旋钮、光线纪律、防 AI 滑行清单、物理自洽校对。本地基座候选，尚未发布。
+desc-en: |
+  Not a format skill: h3-keyframe-film / h3-promo-film own base-en.txt compliance.
+  This owns the directing decisions that go inside those beats — a single peak at
+  70-90%, a camera persona ladder hidden inside one continuous take via dust/light/
+  water masks, grounding evidence on every frame, blur levers for fast lateral
+  motion, light pinned before anything else, and a four-way physics cross-check
+  (light-shadow-reflection-particles) for both images and video.
+desc-cn: |
+  不是格式技能：base-en.txt 的合规由 h3-keyframe-film / h3-promo-film 负责。
+  本技能负责放进那些节拍里的导演决策——70-90% 处的单一峰值、单段连续镜头内
+  借尘幕/光爆/水花掩体完成机位换位的机位阶梯、每一帧的接地证据、针对快速横向
+  运动的防模糊旋钮、先钉死再写画面的光源，以及对图与视频同做四向互查的物理
+  自洽校对（光-影-反射-尘埃）。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
