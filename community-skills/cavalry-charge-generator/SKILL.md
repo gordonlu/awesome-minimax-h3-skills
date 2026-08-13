@@ -9,11 +9,21 @@ trigger-words: [cavalry charge, horse charge, 铁骑, 冲锋, 骑兵, 万马奔�
 
 Default:
 - Model: H3-Base-FL2VA
-- Mode: T2VA
+- Mode: I2VA (reference image first); T2VA fallback supported
 - Duration: 7s
 - Aspect ratio: 16:9
 - Primary Motion Owner: the charging cavalry mass
 - Tempo: Energetic — full-speed, real-time; slow motion prohibited for the subject
+
+## Reference-First Workflow（参考图路线，推荐）
+
+优选 **I2VA**：先用图像生成模型产出首帧参考图（见 `references/prompt-library.md` 的 P-IMG），
+再让 H3 按图动起来——冲锋构图、逆光剪影与焦土质感由图保底，文字只负责速度与镜头。
+
+1. 按 P-IMG 的构图要求生成 16:9 参考图（低机位、前排持矛骑士占中下 1/3、右侧 1/3 尘墙、金色逆光）。
+2. 用 P1-I2VA 模板生成 7s 视频；首帧必须与图同构图、同质感。
+3. 没有图像生成条件时，降级 P2-T2VA 纯文字模板（结果取决于文字质感，非首选）。
+
 
 ## Global Motion Principles
 

@@ -1,5 +1,70 @@
 # Jet Dogfight Generator — Runnable Prompt Library
 
+本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的两种任务模式：**参考图路线（I2VA，推荐）** 与 **纯文字降级路线（T2VA，备选）**。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
+
+> 为什么使用参考图：先用图像生成模型锁住交汇瞬间的飞行器形象与速度痕迹（音锥、凝结尾迹、机体质感），再让 H3 按图动起来——质感保底。
+>
+> 想看更多风格参考？本站整理了官方《使用手册》的精选合辑：
+> [`docs/official-prompt-anthology.md`](../../../docs/official-prompt-anthology.md)。
+
+## 速查表
+
+| 编号 | 模式 | 画幅 | 时长 | 所需素材 | 适用场景 |
+| --- | --- | --- | --- | --- | --- |
+| [P-IMG](#p-img-参考图) | 图像生成 | 16:9 | — | 无 | 出「平流层交汇」参考图 |
+| [P1-I2VA](#p1-i2va-canonical-平流层交汇) | I2VA | 16:9 | 7s | `@平流层交汇图` | 主路线：参考图驱动 |
+| [P2-T2VA](#p2-t2va-降级-平流层交汇) | T2VA | 16:9 | 7s | 无（纯文字） | 备选：纯文字降级 |
+| [P3](#p3-t2va-变体-峡谷内摇) | T2VA | 16:9 | 7s | 无（纯文字） | 低空峡谷追击 |
+
+> 使用规则：替换 `<>` 内的素材引用即可，**切勿改动结构、字段名、段落顺序与标签**。所有段落正文用英文撰写。
+
+## 速度铁律（所有案例共用）
+
+1. **主体永远禁止慢镜**——战机必须以真实时间全速机动，G 力感通过「急转」「拉起」动词承载。
+2. **至少两个加速事件**：对头接近的交汇一刻、峰值处的垂直跃升。
+3. **全片只有一个冲击峰值**（跃升穿云顶 / 火力急转），放 70–90% 处。
+4. 结尾 1s 内完成「云端全景收束」，地平线回正。
+
+## P-IMG — 参考图（先出这张图）
+
+**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；两架战机一左一右对头接近，占据画面对角线两端；中景为白色云海平面；上 1/3 为平流层蓝空。
+
+```text
+Ultra-wide cinematic still from high altitude: two fighter jets closing head-on across a flat white stratocumulus cloud deck, one entering the frame from the left, one from the right, each trailing long white contrails, the middle of a 16:9 frame filled with the cloud plane; vapor cones at their canopies, wing-tip vortices, panel lines and paint wear visible on the airframes; stratosphere blue above, low golden side-light raking the flanks; photorealistic, hyper-detailed, epic aerial film still, deep color depth.
+```
+
+## P1 — I2VA Canonical：平流层交汇
+
+**素材**：`@平流层交汇图`（P-IMG 的产出）｜ **模式**：I2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：快（高速接近）→ 全速（交汇）→ 中（环绕甩拍）→ 峰值（跃升爆闪）→ 缓（全景收束）
+
+```text
+How the reference picture aligns with the target video — <Picture 1> (from [Shot 1]) aligns with the 0.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] The target video is a photorealistic aerial combat sequence, stratosphere blue above a flat white cloud deck, matching the composition and airframes of <Picture 1> at 0.00 seconds. From 0.00 to 1.40 seconds, the two jets close head-on at full real-time speed, contrails streaming behind them, closing the distance visibly. From 1.40 to 3.20 seconds, the jets merge in a vapor-cone burst, sonic cracks blooming from their canopies as they pass; the camera whips around the lead airframe, horizon tilting with the G-load, contrail arcs carving through the sky and cloud wisps tearing past the wings. From 3.20 to 4.80 seconds, the lead jet breaks into a tight vertical turn, heat haze shimmering off the exhaust; the second jet pulls in pursuit, wing-tip vortices trailing across the cloud deck. From 4.80 to 6.20 seconds, at the peak the lead jet zooms vertically out of the cloud top, sun flare bursting across the canopy, vapor cone flaring around its nose. From 6.20 to 7.00 seconds, the camera pulls back to a wide high shot; contrails cross in a shallow X above the cloud sea as the jets separate into the distance.
+
+overall_soundscape: jet roar building; sharp sonic crack at the merge; wind-shear hiss through the orbit whip.
+
+non_diegetic_music: pulsing electronic pulse and low percussion accelerating to the zoom peak, breaking into open air on the wide reset.
+```
+
+**WebApp 粘贴版**（先上传参考图，替换 `@图片`）：
+
+```text
+How the reference picture aligns with the target video — <Picture 1> (from [Shot 1]) aligns with the 0.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] The target video is a photorealistic aerial combat sequence, stratosphere blue above a flat white cloud deck, matching the composition and airframes of <Picture 1> at 0.00 seconds. From 0.00 to 1.40 seconds, the two jets close head-on at full real-time speed, contrails streaming behind them, closing the distance visibly. From 1.40 to 3.20 seconds, the jets merge in a vapor-cone burst, sonic cracks blooming from their canopies as they pass; the camera whips around the lead airframe, horizon tilting with the G-load, contrail arcs carving through the sky and cloud wisps tearing past the wings. From 3.20 to 4.80 seconds, the lead jet breaks into a tight vertical turn, heat haze shimmering off the exhaust; the second jet pulls in pursuit, wing-tip vortices trailing across the cloud deck. From 4.80 to 6.20 seconds, at the peak the lead jet zooms vertically out of the cloud top, sun flare bursting across the canopy, vapor cone flaring around its nose. From 6.20 to 7.00 seconds, the camera pulls back to a wide high shot; contrails cross in a shallow X above the cloud sea as the jets separate into the distance.
+
+overall_soundscape: jet roar building; sharp sonic crack at the merge; wind-shear hiss through the orbit whip.
+
+non_diegetic_music: pulsing electronic pulse and low percussion accelerating to the zoom peak, breaking into open air on the wide reset.
+```
+
+**验收**：首秒与参考图同构图同机型；全速真实时间、无主体慢镜；音锥交汇清晰；跃升穿云顶为唯一峰值；尾迹/涡流/热浪可见；云层随战机撕裂；结尾地平线回正全景；无镜头切换、无文字、无宫格。
+
+
+
 本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的单一任务模式（T2VA），按 画幅 / 时长 / 素材 标注。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
 
 > 为什么只有两个案例：变体只是素材不同，结构完全一致——替换素材即可复用同名段落。
@@ -23,7 +88,7 @@
 3. **全片只有一个冲击峰值**（跃升穿云顶 / 火力急转），放 70–90% 处。
 4. 结尾 1s 内完成「云端全景收束」，地平线回正。
 
-## P1 — Canonical：平流层交汇
+## P2 — T2VA 降级（备选）：平流层交汇
 
 **素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：快（高速接近）→ 全速（交汇）→ 中（环绕甩拍）→ 峰值（跃升爆闪）→ 缓（全景收束）
 
@@ -39,7 +104,7 @@ non_diegetic_music: pulsing electronic pulse and low percussion accelerating to 
 
 **验收**：首秒对头接近、全速真实时间；音锥交汇清晰；垂直跃升为唯一峰值；凝结尾迹/翼尖涡流/热浪可见；云层随战机撕裂；结尾地平线回正全景；无镜头切换、无文字、无宫格。
 
-## P2 — 峡谷内摇
+## P3 — T2VA 变体：峡谷内摇
 
 **素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（峡谷缠斗）→ 快（越障急转）→ 峰值（穿桥拉升）→ 缓（出谷全景）
 

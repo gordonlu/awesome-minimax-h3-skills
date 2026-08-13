@@ -1,5 +1,70 @@
 # Cavalry Charge Generator — Runnable Prompt Library
 
+本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的两种任务模式：**参考图路线（I2VA，推荐）** 与 **纯文字降级路线（T2VA，备选）**。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
+
+> 为什么使用参考图：先用图像生成模型锁住冲锋瞬间的构图与质感（逆光剪影、焦土、盔甲磨损），再让 H3 按图动起来——史诗质感的主要部分由图保底。
+>
+> 想看更多风格参考？本站整理了官方《使用手册》的精选合辑：
+> [`docs/official-prompt-anthology.md`](../../../docs/official-prompt-anthology.md)。
+
+## 速查表
+
+| 编号 | 模式 | 画幅 | 时长 | 所需素材 | 适用场景 |
+| --- | --- | --- | --- | --- | --- |
+| [P-IMG](#p-img-参考图) | 图像生成 | 16:9 | — | 无 | 出「金色尘暴」参考图 |
+| [P1-I2VA](#p1-i2va-canonical-金色尘暴) | I2VA | 16:9 | 7s | `@金色尘暴图` | 主路线：参考图驱动 |
+| [P2-T2VA](#p2-t2va-降级-金色尘暴) | T2VA | 16:9 | 7s | 无（纯文字） | 备选：纯文字降级 |
+| [P3](#p3-t2va-变体-余烬之夜) | T2VA | 16:9 | 7s | 无（纯文字） | 夜战火把突袭 |
+
+> 使用规则：替换 `<>` 内的素材引用即可，**切勿改动结构、字段名、段落顺序与标签**。所有段落正文用英文撰写。
+
+## 速度铁律（所有案例共用）
+
+1. **主体永远禁止慢镜**——骑兵必须以全速狂奔，用「真实时间速度 + 明确加速」措辞。
+2. **至少两个加速事件**：尘线集结的冲锋加速、前排越镜的爆发超越。
+3. **全片只有一个冲击峰值**（越镜 + 尘墙吞镜），放 70–90% 处。
+4. 结尾 1s 内完成「尘落 + 俯瞰收束」，不留悬空尾帧。
+
+## P-IMG — 参考图（先出这张图）
+
+**用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；低机位；骑兵群自左向右冲锋，前排持矛俯身的骑士占画面中下 1/3；右侧 1/3 为滚动尘墙；金色逆光。
+
+```text
+Low-angle cinematic still of a full-speed cavalry charge across a dust-scoured plain, viewed from a low camera skimming the sand, the front rank galloping from left to right and occupying the lower third of a 16:9 frame; lead riders crouch low over their horses with leveled lances, dust-scour whipping past; the right third is a towering rolling dust wall catching low golden backlight; sand-spray plumes behind every hoof, rim-lit helmets and worn armor, banner cloth tearing; scorched-gold dusk palette, photorealistic, hyper-detailed, epic film still composition, dramatic volumetric lighting.
+```
+
+## P1 — I2VA Canonical：金色尘暴
+
+**素材**：`@金色尘暴图`（P-IMG 的产出）｜ **模式**：I2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（集结加速）→ 全速（侧向追拍）→ 峰值（越镜吞镜）→ 缓（尘落俯瞰）
+
+```text
+How the reference picture aligns with the target video — <Picture 1> (from [Shot 1]) aligns with the 0.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] The target video is an epic war-sequence in photorealistic style, scorched-gold dusk over a dust-scoured plain, matching the composition, riders and lighting of <Picture 1> at 0.00 seconds. From 0.00 to 1.40 seconds, the cavalry surges forward at full gallop, natural real-time speed, hooves hammering the ground and kicking sand-spray plumes behind every stride; the low camera accelerates into a side chase alongside the front rank. From 1.40 to 3.20 seconds, the riders press low over their horses, lance-tips splitting the dust wall, sand glowing gold in the low backlight; rim-lit helmets and armor wear flash as the rank surges. From 3.20 to 4.80 seconds, the dust wall rolls closer, sand and clods whipping past the lens, banners snapping in the wind. From 4.80 to 6.20 seconds, at the peak the front rank overtakes the camera, surging past the lens as the rolling dust wall swallows the frame. From 6.20 to 7.00 seconds, the dust settles; the camera rises to a wide overhead shot of the charge streaming away across the plain in fading golden light.
+
+overall_soundscape: thunder of hooves building in waves; metal clatter and banner snap; one low war-horn at the pass-by peak.
+
+non_diegetic_music: driving percussion and low brass accelerating to the pass-by, cutting into a low rumble on the wide reset.
+```
+
+**WebApp 粘贴版**（先上传参考图，替换 `@图片`）：
+
+```text
+How the reference picture aligns with the target video — <Picture 1> (from [Shot 1]) aligns with the 0.00-second mark of the target video.
+
+integrated_multimodal_description:
+[Shot 1] The target video is an epic war-sequence in photorealistic style, scorched-gold dusk over a dust-scoured plain, matching the composition, riders and lighting of <Picture 1> at 0.00 seconds. From 0.00 to 1.40 seconds, the cavalry surges forward at full gallop, natural real-time speed, hooves hammering the ground and kicking sand-spray plumes behind every stride; the low camera accelerates into a side chase alongside the front rank. From 1.40 to 3.20 seconds, the riders press low over their horses, lance-tips splitting the dust wall, sand glowing gold in the low backlight; rim-lit helmets and armor wear flash as the rank surges. From 3.20 to 4.80 seconds, the dust wall rolls closer, sand and clods whipping past the lens, banners snapping in the wind. From 4.80 to 6.20 seconds, at the peak the front rank overtakes the camera, surging past the lens as the rolling dust wall swallows the frame. From 6.20 to 7.00 seconds, the dust settles; the camera rises to a wide overhead shot of the charge streaming away across the plain in fading golden light.
+
+overall_soundscape: thunder of hooves building in waves; metal clatter and banner snap; one low war-horn at the pass-by peak.
+
+non_diegetic_music: driving percussion and low brass accelerating to the pass-by, cutting into a low rumble on the wide reset.
+```
+
+**验收**：首秒与参考图同构图同质感；全速真实时间、无主体慢镜；越镜吞镜为唯一峰值；金色逆光剪影；至少两层尘参与响应；结尾尘落俯瞰；无镜头切换、无文字、无宫格。
+
+
+
 本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的单一任务模式（T2VA），按 画幅 / 时长 / 素材 标注。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
 
 > 为什么只有两个案例：变体只是素材不同，结构完全一致——替换素材即可复用同名段落。
@@ -23,7 +88,7 @@
 3. **全片只有一个冲击峰值**（越镜 + 尘墙吞镜），放 70–90% 处。
 4. 结尾 1s 内完成「尘落 + 俯瞰收束」，不留悬空尾帧。
 
-## P1 — Canonical：金色尘暴
+## P2 — T2VA 降级（备选）：金色尘暴
 
 **素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（集结加速）→ 全速（侧向追拍）→ 峰值（越镜吞镜）→ 缓（尘落俯瞰）
 
@@ -39,7 +104,7 @@ non_diegetic_music: driving percussion and low brass accelerating to the pass-by
 
 **验收**：首秒低机位贴沙推进 + 尘线可见；全速狂奔真实速度、无主体慢镜；越镜为唯一峰值；金逆光剪影；至少两层尘参与响应；结尾尘落俯瞰；无镜头切换、无文字、无宫格。
 
-## P2 — 余烬之夜
+## P3 — T2VA 变体：余烬之夜
 
 **素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：快（火光突袭）→ 全速（夜追）→ 峰值（火把墙吞镜）→ 缓（余烬沉降）
 

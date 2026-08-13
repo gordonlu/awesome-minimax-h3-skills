@@ -9,11 +9,21 @@ trigger-words: [cloud whale, sky leviathan, mythic beast, 云海巨鲸, 巨鲸, 
 
 Default:
 - Model: H3-Base-FL2VA
-- Mode: T2VA
+- Mode: I2VA (reference image first); T2VA fallback supported
 - Duration: 7s
 - Aspect ratio: 16:9
 - Primary Motion Owner: the mythic subject (whale / leviathan / dragon)
 - Tempo: Natural-to-Energetic with one Impact peak — slow motion is a seasoning, never the main course
+
+## Reference-First Workflow（参考图路线，推荐）
+
+优选 **I2VA**：先用图像生成模型产出首帧参考图（见 `references/prompt-library.md` 的 P-IMG），
+再让 H3 按图动起来——主体形象与材质由图保底，文字只负责动作节拍、镜头与光线响应。
+
+1. 按 P-IMG 的构图要求生成 16:9 参考图（巨鲸侧身占右 1/3、云海占左 2/3、丁达尔光柱为主光源）。
+2. 用 P1-I2VA 模板生成 7s 视频；首帧必须与图同构图、同材质。
+3. 没有图像生成条件时，降级 P2-T2VA 纯文字模板（结果取决于文字质感，非首选）。
+
 
 ## Global Motion Principles
 
