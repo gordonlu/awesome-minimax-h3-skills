@@ -47,7 +47,7 @@ If the horses never visibly gallop at full speed with jarring impacts, the gener
 Three camera landmarks, all participating in speed:
 
 1. **Low dolly-in over the sand** — camera skims the ground as the charge builds in the distance (first second).
-2. **Camera-persona ladder** — every take alternates angles inside the single take: distant low drift-in → side chase (locked focus) → dust veil → low head-on approach, rank filling the frame → horses splitting past the lens → low rear recede. Each reposition is masked by the dust wall washing across the lens; no vertical camera moves.
+2. **One dominant camera behavior** — a single ground-level lateral track at saddle height, triggered when the front rank reaches mid-plain, moving slower than the charge so the riders keep growing in frame; locked focus on the front rank through the pass-by peak. No whip-pans, no head-on insert, no vertical moves, no pushes — never run a camera move chain.
 3. **Front-rank overtake & wide reset** — at the peak the cavalry surges past the camera, dust swallows the frame; camera rises to a wide overhead as the dust settles (last second).
 
 3. **Grounding kit (anti-float)** — gallop renders as glide when the ground has no handles. Always anchor: ① coarse foreground grain streaking past the bottom of the frame pins speed to the ground; ② explicit hoof-landing + sand-kick per stride; ③ handheld camera jolt riding the hoofbeats; ④ camera never floats — ankle/saddle height only; ⑤ long ground shadows / silhouetted dust backlit by the low sun. No beat exists without at least two of these.
@@ -67,7 +67,7 @@ Camera motion reads fast. Never a static wide with the charge moving inside it.
 Official three-field layout (see `h3-prompt-writing`):
 
 ```text
-integrated_multimodal_description: [Shot 1] <wide low drift-in, charge grows from the haze> <side chase, locked focus> <dust veil, low head-on approach> <peak: horses split past lens, dust swallows frame> <low rear recede, dust settling> — time brackets per beat.
+integrated_multimodal_description: [Shot 1] <stationary low wide, charge grows from the haze> <scale fills frame, foreground grain scrolls> <one lateral track, slower than the charge, locked focus> <peak 70%: pass-by silhouette> <streams away right, dust settles> — time brackets per beat.
 
 overall_soundscape: <thunder of hooves in waves> + <metal clatter, banner snap> + <low war-horn at the peak>.
 
