@@ -53,6 +53,12 @@ MiniMax H3 的基本创作单位不是一场戏，而是一个 **5–15 秒连�
 
 # 2. 本 Skill 负责什么
 
+前置（由 h3-reality-physics-guard 先行完成）：
+
+- Reality Mode 判定（默认 strict_realism）
+- 已知事实核对（禁止脑补）与八类现实检查
+- 产出 Reality Sheet；本 Skill 只在其允许 / 禁止范围内设计
+
 负责：
 
 - Shot Function
@@ -1538,39 +1544,46 @@ Trigger
 
 ---
 
-# 27. 真实物理与现实事实门禁（Real-Physics Gate）
+# 27. 真实物理与现实事实门禁（前置：h3-reality-physics-guard）
 
-当题材涉及**真实环境、真实生物、真实物体**，或场景由真实物理法则主导时，编译 Prompt 前必须先过本检查单；幻想题材只要视觉法则内部自洽且画面明写，可豁免，但「重量、接触、连续性」三条不可豁免。
+涉及真实环境、真实生物、真实物体，或场景由真实物理法则主导时，
+**真实物理与事实核对由 `h3-reality-physics-guard` 在本 Skill 之前完成**，
+产出 Reality Sheet：
 
-## 检查单（每一条必须在最终 Prompt 里有落点，否则先补后编译）
+```yaml
+reality_mode:          # strict_realism | plausible_stylized | deliberate_fantasy
+fact_anchors:          # 已核对的事实锚点（正面行为）
+must_verify:           # 无法核实、禁止脑补的项
+reality_constraints:   # allowed（正面行为）/ forbidden（禁令兜底）
+```
 
-1. **重力与质量 Gravity & Mass**
-   每个主体有持续向下的重力场；速度变化与质量匹配（越重越慢）；无失重漂浮、无瞬间改变速度或方向。
-2. **表面与接触 Surface & Contact**
-   脚/蹄/轮/翼/鳍与地面或介质的每次接触都有可见反应：扬尘、溅沙、挤压、水花（雾/云/沙可用颗粒反应代替）；禁止身体插入地面、穿墙、零接触悬空滑行。
-3. **介质与浮力 Buoyancy & Medium**
-   入水/入云/入沙/落地的过程遵循受力方向：**下沉是上升的逆过程——后露出者先没入，先露出者后没入**；背脊朝上的主体绝不允许「肚皮先着地 / 先没入」；除非姿态真实翻转，否则朝向不突变。
-4. **连续性 Continuity**
-   位置、姿态、光线、颗粒物（雾/沙/烟）不瞬移；尾迹、尘墙、凝结尾迹必须贴着实际运动路径；物体不凭空出现、消失或复制。
-5. **时间与速度 Time & Speed**
-   真实题材使用真实速度拍子；慢镜/加速必须明写并给理由；静止物体不突然滑行；停止需要减速段。
-6. **生物与机械解剖 Anatomy & Mechanics**
-   真生物遵守解剖约束：脊柱弯曲方向、关节活动范围、四足质量从后腿向前腿转移、非蛇类不横向波浪游动；飞机机头对齐航向，禁止侧滑、原地转向、橡皮身体。
-7. **环境反应 Environment Response**
-   主体对介质做功必有介质反应（云被推开、水被排开、沙被扬起、草被压弯）；介质对主体做功也必可见（风、阻力、颠簸、拖尾）。
-8. **尺度 Scale**
-   主体与参照物（云、树、建筑、地平线）的相对大小贯穿整个 clip，不跳变。
+本 Skill 在 Reality Sheet 的允许与禁止范围内设计镜头、走位、峰值与风格。
+任何 spectacle 需求与 Reality Sheet 冲突时，按 Reality Priority 裁决：
 
-## 写法要求
+```text
+Reality / factual correctness
+        > Identity consistency
+        > Subject motion correctness
+        > Spatial readability
+        > Camera design
+        > Effects / spectacle
+```
 
-- 每一条事实优先写成拍子里的**正面可见行为**（「背脊先没入」「云被推开」），负面禁令只作兜底追加，不替代正面行为。
-- 编译完成后回读一遍：任何一条检查项在 Prompt 中没有对应落点，即视为未通过。
+改摄影机、改走位、改光线、改角度，而不是让现实迁就画面。
 
-## 已知失败案例（写入档案）
+无 Reality Sheet 且题材涉现实对象时，先运行门禁，不得跳过。
+
+## 已知失败案例（Reality Sheet 应堵住的坑）
 
 - 鲸鱼「肚皮先落地」：下沉方向写反——「sink back」缺姿态约束。修法：写明「背脊保持朝上、中段先没入、尾鳍最后沉」。
 - 铁骑「漂浮感」：接触反馈缺失。修法：接地五件套（前景纹理滚动 / 蹄落地扬尘 / 手持抖动 / 机位不悬空 / 地面长影）。
 - 战机「侧滑 / 原地转向」：解剖与航向约束缺失。修法：机头对齐航向 + 禁侧滑、禁原地转向。
+
+## 编译后回读
+
+- Reality Sheet 的 `forbidden` 在最终 Prompt 中全部未出现。
+- `allowed` 的每一条「正面可见行为」均有落点。
+- `must_verify` 非空时不得交付。
 
 ---
 

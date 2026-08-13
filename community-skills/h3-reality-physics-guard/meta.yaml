@@ -1,0 +1,40 @@
+display-name-zh: 现实物理门禁
+version: 0.1.0
+tag-en: Creative & Experimental
+tag-cn: 创意实验
+complete-tags-en:
+- Creative & Experimental / Reality Physics Guard
+- Prompt / Fact & Physics Gate
+complete-tags-cn:
+- 创意实验 / 现实物理门禁
+- 提示词 / 事实与物理门禁
+summary-en: Pre-director gate for H3 generations. Runs before h3-micro-cinematic-director: classifies Reality Mode (strict_realism / plausible_stylized / deliberate_fantasy), verifies known facts about real subjects instead of inventing mechanics, runs an eight-category reality check (geometry / gravity-contact / inertia / cause-effect / medium / biology / light / temporal continuity), resolves contradictions against the Reality Priority ladder, and hands the director a Reality Sheet of allowed / forbidden / must-verify constraints. Catches belly-first landings, floating cavalry, sliding aircraft and morphing geometry before credits are spent. Does not write prompts or direct; it only guards.
+summary-cn: H3 生成的导演前置门禁。在 h3-micro-cinematic-director 之前运行：判定现实模式（严格现实 / 合理风格化 / 有意幻想）、核对真实对象的已知事实（禁止脑补机制）、跑八类现实检查（几何结构 / 重力接触 / 惯性 / 因果 / 介质规律 / 生物解剖 / 光影 / 时间连续）、按现实优先级裁决矛盾，最终产出交给导演的 Reality Sheet（允许 / 禁止 / 待核实）。在花掉积分之前拦下肚皮先落地、漂浮铁骑、横滑战机与几何形变。不写 Prompt、不导片，只做门禁。
+desc-en: |
+  A guard, not a director. Before any camera, blocking or performance design it
+  answers: what reality mode is this world in (default strict_realism for real
+  environments / creatures / objects unless the user explicitly overrides);
+  which facts about known species, vehicles, aircraft, machines or phenomena are
+  verified anchors and which are must-verify (never invent mechanics to look cool);
+  then runs eight checks — structural stability, gravity / support / contact,
+  inertia & momentum, cause → effect, medium rules (air / water / smoke / clouds /
+  sand / snow), biology & locomotion, single-source light, and temporal continuity —
+  and resolves every conflict against the fixed priority: factual correctness >
+  identity > subject motion > spatial readability > camera > spectacle. Fantasy is
+  allowed exactly one deliberate law break, never every-law accident: "Break one
+  law intentionally, not every law accidentally." Output is a Reality Sheet
+  consumed by h3-micro-cinematic-director.
+desc-cn: |
+  门禁而非导演。在镜头、走位、表演设计之前先回答三件事：
+  这个世界是什么现实模式（真实环境/生物/物体默认严格现实，用户明确要求才降级）；
+  已知物种/载具/航空器/机器/现象中哪些是已核实的事实锚点、哪些是待核实
+  （绝不为好看而脑补机制）；随后跑八项检查——结构稳定、重力/支撑/接触、
+  惯性动量、因果链条、介质规律（空气/水/烟/云/沙/雪）、生物解剖与步态、
+  单光源一致性、时间连续性——所有冲突按固定优先级裁决：
+  事实正确 > 身份一致 > 主体运动 > 空间可读 > 摄影机 > 特效奇观。
+  幻想模式只允许一次有意的破例，不允许全面失守：
+  "Break one law intentionally, not every law accidentally."
+  交付物是 Reality Sheet，供 h3-micro-cinematic-director 消费。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
