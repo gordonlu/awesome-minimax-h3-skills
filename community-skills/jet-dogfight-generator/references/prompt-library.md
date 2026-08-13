@@ -30,15 +30,15 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；大广角高空视角；两架战机一左一右对头接近，占据画面对角线两端；中景为白色云海平面；上 1/3 为平流层蓝空。
 
 ```text
-Scene: High altitude above a flat white stratocumulus cloud deck, stratosphere blue sky deepening to cobalt above; thin broken cloud wisps drifting between the foreground and the deck.
+Scene: Golden hour at high altitude; the low sun sits on the horizon to the right. A flat white stratocumulus cloud deck stretches far below, glowing warm gold where it catches the low sun; the sky above deepens from pale gold at the horizon to stratosphere blue, then cobalt at the zenith. Thin broken cloud wisps drift in the air between the deck and the foreground.
 
-Subject: Two fighter jets closing head-on on a collision course, one entering from the lower left, one from the upper right of a 16:9 frame; each trailing a pair of long white contrails bowing outward behind it. Vapor cone just beginning to form at each nose.
+Subject: Two fighter jets closing head-on on a collision course, one entering from the lower left, one from the upper right of a 16:9 frame; each trailing a pair of long white contrails bowing outward behind it. A vapor cone is just beginning to form at each nose.
 
-Important details: Panel lines, worn paint with faded stencils, missile rails under the wings, cockpit canopy catching low golden side-light from the right; wing-tip vortices trailing white spirals; cloud deck glowing warm where it catches the low sun; long airframe shadows falling on the cloud plane; heat haze shimmering faintly off the exhaust.
+Important details: Panel lines, worn paint with faded stencils, missile rails under the wings; the cockpit canopies catch warm low golden side-light from the right; wing-tip vortices trail white spirals; long airframe shadows fall onto the cloud deck to the left, away from the sun; heat haze shimmers faintly off the exhaust.
 
 Use case: dramatic photorealistic concept frame / cinematic film still for an aerial combat sequence. Photorealistic.
 
-Constraints: no pilot figures, no text, no watermark; contrails must trail behind the jets, not sideways; keep both jets sharp and in frame.
+Constraints: no pilot figures, no text, no watermark; contrails must trail behind the jets, not sideways; shadows must fall to the left of the jets, opposite the sun; keep both jets sharp and in frame.
 ```
 
 ## P1 — I2VA Canonical：平流层交汇
