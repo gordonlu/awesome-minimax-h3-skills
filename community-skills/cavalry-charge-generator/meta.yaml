@@ -1,0 +1,28 @@
+display-name-zh: 沙暴铁骑
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Action
+- Creative & Experimental / T2VA
+complete-tags-cn:
+- 动画 / 动作
+- 创意实验 / T2VA
+summary-en: Create full-speed epic cavalry charges through dust — real-time gallop, low chase camera, one pass-by impact peak. No slow motion.
+summary-cn: 生成全速史诗铁骑冲锋短片——真实速度狂奔、贴地追拍镜头、单一掠阵冲击峰值，全程无慢镜。
+desc-en: |
+  Full-speed cavalry charges across dust-scoured plains in one continuous 7s shot. The camera
+  skims the sand on a low dolly-in, presses alongside the front rank, and at the Impact peak the
+  charge overtakes the lens as the dust wall swallows the frame, then rises to a wide overhead
+  reset. Subject slow motion is prohibited; speed is enforced with acceleration events and
+  real-time verbs. Epic texture from a dust system with layered plumes, low golden backlight and
+  two surface details minimum. Ships with a runnable golden-dust canonical prompt plus an ember
+  night variant. T2VA only.
+desc-cn: |
+  7 秒单镜头全速铁骑冲锋：镜头贴沙面俯压推进建立尺度 → 侧向贴队追拍 → 尘埃墙吞没镜头（唯一
+  冲击峰值）→ 升空俯瞰的尘落收束。禁止主体慢镜，以加速事件与真实时间动词保证速度感。史诗
+  质感由多层尘暴系统、低角度金色逆光与至少两个表面细节构成。内置可直接运行的「金色尘暴」
+  canonical prompt 与「余烬之夜」变体，仅 T2VA。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

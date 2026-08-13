@@ -942,6 +942,166 @@ window.AMHS_DATA = {
         ],
       },
     },
+    {
+      slug: "cavalry-charge-generator",
+      name: "Cavalry Charge Generator",
+      nameZh: "沙暴铁骑",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Full-speed epic cavalry charges through dust — real-time gallop, low chase camera, one pass-by impact peak, no slow motion.",
+        zh: "全速史诗铁骑冲锋——真实速度狂奔、贴地追拍、单一掠阵峰值、全程无慢镜。",
+      },
+      description: {
+        en: "One continuous 7s shot of a full-speed cavalry charge across a dust-scoured plain. Camera landmarks: low dolly-in over the sand (scale in the first second), a lateral side chase alongside the front rank, the Impact peak where the charge overtakes the lens and the dust wall swallows the frame, then a wide overhead reset as dust settles. Subject slow motion is prohibited; speed is enforced by at least two acceleration events and real-time verbs. Epic texture via a dust system with layered plumes, low golden backlight, and two surface details minimum. Ships with a runnable golden-dust canonical prompt plus an ember-night variant. T2VA, no reference material needed.",
+        zh: "7 秒单镜头全速铁骑冲锋：贴沙俯压推进建立尺度 → 侧向贴队追拍 → 前排越镜、尘墙吞镜（唯一冲击峰值）→ 尘落俯瞰收束。主体禁止慢镜，以至少两个加速事件与真实时间动词强制速度感。史诗质感由多层尘暴、低角度金色逆光与至少两个表面细节构成。内置可直接运行的「金色尘暴」canonical prompt 与「余烬之夜」变体。仅 T2VA，无参考素材。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Action", zh: "动作" },
+        { en: "Epic", zh: "史诗" },
+        { en: "Cavalry", zh: "铁骑" },
+        { en: "T2VA", zh: "T2VA" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/cavalry-charge-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — canonical prompt ready, run P1 in prompt-library.md", zh: "占位海报——canonical prompt 已就绪，运行 prompt-library P1 即可出片" },
+      },
+      inputs: [
+        { en: "Era & unit: riders / samurai / mounted archers / war elephants", zh: "时代与兵种：骑兵/武士/弓骑/战象" },
+        { en: "Light system: golden backlight / ember night / moonlit / storm flash", zh: "光照系统：金色逆光/余烬之夜/月光/雷闪" },
+        { en: "Placement of the single pass-by Impact peak (70–90% of the clip)", zh: "越镜冲击峰值的位置（片长 70–90%）" },
+      ],
+      capabilities: [
+        { en: "Prohibits subject slow motion — full-gallop real-time speed enforced", zh: "禁止主体慢镜——强制全速真实时间狂奔" },
+        { en: "Enforces two acceleration events + one pass-by impact peak", zh: "强制两个加速事件 + 单一越镜冲击峰值" },
+        { en: "Camera landmarks: low dolly-in → side chase → overtake & wide reset", zh: "镜头位：贴沙俯压 → 侧向追拍 → 越镜吞镜与俯瞰收束" },
+        { en: "Epic texture: dust system, low golden backlight, surface details", zh: "史诗质感：尘暴系统、金色逆光、表面细节" },
+      ],
+      workflow: [
+        { id: "unit", title: { en: "Pick unit + light", zh: "选兵种与光照" }, desc: { en: "One era, one light system, one temperature.", zh: "一个时代、一个光照系统、一个主色调。" } },
+        { id: "speed", title: { en: "Build the speed line", zh: "构建速度线" }, desc: { en: "Dust-line build → full gallop → overtake peak → dust-settle reset.", zh: "尘线集结 → 全速狂奔 → 越镜峰值 → 尘落收束。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Real-time gallop; two acceleration events; one peak; dust responds.", zh: "真实速度狂奔；两个加速事件；单一峰值；尘埃响应。" } },
+      ],
+      outputs: [
+        { en: "A 7s full-speed cavalry charge clip (MP4)", zh: "一段 7 秒全速铁骑冲锋短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Action · T2VA speed-enforced beats", zh: "动作 · T2VA 速度强制节拍" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "Epic full-speed charges with dust and low-backlight texture", zh: "尘暴逆光质感的史诗全速冲锋" },
+        { en: "Real-time speed sequences where the camera chases the action", zh: "镜头追拍动作的真实速度序列" },
+      ],
+      notFor: [
+        { en: "Miniature / diorama scenes (see miniature-world-landscape-generator)", zh: "微缩/沙盘场景（见 miniature-world-landscape-generator）" },
+        { en: "Ambient-only content without a subject acting (see natural-ambient-living-generator)", zh: "无主体动作的纯氛围内容（见 natural-ambient-living-generator）" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill cavalry-charge-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/cavalry-charge-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/cavalry-charge-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — golden-dust canonical + ember-night variant", zh: "prompt-library.md — 金色尘暴 canonical + 余烬之夜变体" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/cavalry-charge-generator/references/prompt-library.md" },
+        ],
+      },
+    },
+    {
+      slug: "jet-dogfight-generator",
+      name: "Jet Dogfight Generator",
+      nameZh: "高空机群缠斗",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Cinematic 7s high-speed jet dogfights — head-on merge, orbit whip, vertical zoom peak, vapor cones and contrails, no slow motion.",
+        zh: "7 秒电影感高空战机缠斗——对头交汇、环绕甩拍、垂直跃升峰值、音锥尾迹，无慢镜。",
+      },
+      description: {
+        en: "One continuous 7s aerial shot of a high-speed jet dogfight. Beat line: a head-on hold with jets closing at real time, a vapor-cone merge, an orbit whip carving contrail arcs while cloud wisps tear past the wings, one Impact peak — the vertical zoom out of the cloud deck with a canopy flare — then a wide reset over the cloud sea. Subject slow motion prohibited; G-loading, horizon tilt and speed artifacts (vapor cone, contrails, wing-tip vortices, heat haze) carry the speed. Ships with a runnable stratosphere canonical prompt plus a canyon variant. T2VA, no reference material needed.",
+        zh: "7 秒单镜头高空缠斗：对头悬停接敌（真实速度接近）→ 音锥交汇 → 环绕甩拍划出尾迹弧线、云絮撕裂过翼 → 唯一冲击峰值（垂直跃升穿云顶、舱盖爆闪）→ 云海全景收束。禁止主体慢镜，以 G 力加载、地平线倾角与速度痕迹（音锥/尾迹/翼尖涡流/热浪）承载速度感。内置可直接运行的「平流层交汇」canonical prompt 与「峡谷内摇」变体。仅 T2VA，无参考素材。",
+      },
+      categories: ["animation", "creative"],
+      tags: [
+        { en: "Action", zh: "动作" },
+        { en: "Aerial", zh: "空战" },
+        { en: "Speed", zh: "高速" },
+        { en: "T2VA", zh: "T2VA" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/jet-dogfight-generator/assets/poster.webp",
+        video: "",
+        sourceUrl: "",
+        caption: { en: "Placeholder poster — canonical prompt ready, run P1 in prompt-library.md", zh: "占位海报——canonical prompt 已就绪，运行 prompt-library P1 即可出片" },
+      },
+      inputs: [
+        { en: "Platform: fighter jet / stealth bomber / helicopter chase / space fighter", zh: "飞行器：战斗机/隐身轰炸机/武直追猎/太空战机" },
+        { en: "Stage: stratocumulus deck / thunderhead wall / canyon / city skyline", zh: "舞台：层积云层/雷暴云墙/峡谷/城市天际线" },
+        { en: "Light system: stratosphere blue / dusk amber / dawn violet / storm flash", zh: "光照系统：平流层蓝/黄昏琥珀/黎明紫/雷闪" },
+      ],
+      capabilities: [
+        { en: "Prohibits subject slow motion — real-time maneuvering with G-load enforced", zh: "禁止主体慢镜——强制真实时间 G 力机动" },
+        { en: "Enforces two acceleration events (merge, vertical zoom) + one impact peak", zh: "强制两个加速事件（交汇、跃升）+ 单一冲击峰值" },
+        { en: "Camera landmarks: head-on hold → orbit whip → zoom & wide reset", zh: "镜头位：对头悬停 → 环绕甩拍 → 跃升与全景收束" },
+        { en: "Speed artifacts: vapor cone, contrails, wing-tip vortices, heat haze", zh: "速度痕迹：音锥、凝结尾迹、翼尖涡流、热浪" },
+      ],
+      workflow: [
+        { id: "platform", title: { en: "Pick platform + stage", zh: "选飞行器与舞台" }, desc: { en: "One airframe, one cloud/terrain stage, one temperature.", zh: "一种飞行器、一个云/地形舞台、一个主色调。" } },
+        { id: "line", title: { en: "Lay the combat line", zh: "铺设战斗线" }, desc: { en: "Head-on close → merge → orbit whip → vertical zoom → wide reset.", zh: "对头接近 → 交汇 → 环绕甩拍 → 垂直跃升 → 全景收束。" } },
+        { id: "qc", title: { en: "Generate and QC", zh: "生成并验收" }, desc: { en: "Real-time speed; vapor cone at merge; one peak; clouds tear; 7s.", zh: "真实时间速度；交汇有音锥；单一峰值；云层撕裂；7s。" } },
+      ],
+      outputs: [
+        { en: "A 7s cinematic jet dogfight clip (MP4)", zh: "一段 7 秒电影感空战短片（MP4）" },
+        { en: "Filled prompt template for reuse", zh: "填充好的可复用提示词模板" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Primary mode: pure text, no reference material.", zh: "主模式：纯文本，无参考素材。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "Action · T2VA speed-enforced beats", zh: "动作 · T2VA 速度强制节拍" },
+          fields: ["integrated_multimodal_description", "overall_soundscape", "non_diegetic_music"],
+        },
+      ],
+      bestFor: [
+        { en: "High-speed aerial combat with clean speed artifacts", zh: "带清晰速度痕迹的高速空战" },
+        { en: "Epic cloud-sea stages where weather responds to the airframes", zh: "云海舞台随战机做出响应的史诗场景" },
+      ],
+      notFor: [
+        { en: "Cavalry or ground-chase action (see cavalry-charge-generator)", zh: "地面冲锋动作（见 cavalry-charge-generator）" },
+        { en: "Ambient-only content without a subject acting (see natural-ambient-living-generator)", zh: "无主体动作的纯氛围内容（见 natural-ambient-living-generator）" },
+        { en: "Requests carrying reference images or videos", zh: "携带参考图或参考视频的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill jet-dogfight-generator",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/jet-dogfight-generator",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/jet-dogfight-generator/SKILL.md",
+        skillCnMd: "",
+        docs: [
+          { label: { en: "prompt-library.md — stratosphere canonical + canyon variant", zh: "prompt-library.md — 平流层交汇 canonical + 峡谷内摇变体" }, url: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/jet-dogfight-generator/references/prompt-library.md" },
+        ],
+      },
+    },
 
       {
       slug: "kinetic-title-card-generator",

@@ -1,0 +1,28 @@
+display-name-zh: 高空机群缠斗
+version: 0.1.0
+tag-en: Animation
+tag-cn: 动画
+complete-tags-en:
+- Animation / Action
+- Creative & Experimental / T2VA
+complete-tags-cn:
+- 动画 / 动作
+- 创意实验 / T2VA
+summary-en: Create cinematic 7s high-speed jet dogfights — head-on merge, orbit whip, vertical zoom peak, vapor cones and contrails. No slow motion.
+summary-cn: 生成 7 秒电影感高空战机缠斗——对头交汇、环绕甩拍、垂直跃升峰值、音锥与凝结尾迹，全程无慢镜。
+desc-en: |
+  High-speed jet dogfighting in one continuous 7s aerial shot: a head-on hold with the jets
+  closing at real time, a vapor-cone merge, an orbit whip that carves contrail arcs through the
+  sky, and one Impact peak — the vertical zoom out of the cloud deck with a canopy flare — before
+  a wide reset over the cloud sea. Subject slow motion prohibited; G-loading and horizon tilt
+  carry the speed. Texture from speed artifacts (vapor cone, contrails, wing-tip vortices, heat
+  haze) and a cloud stage that visibly tears around the airframes. Ships with a runnable
+  stratosphere canonical prompt plus a valley variant. T2VA only.
+desc-cn: |
+  7 秒单镜头高空缠斗：对头悬停接敌（战机真实速度接近）→ 音锥交汇 → 环绕甩拍拍出凝结尾迹弧线 →
+  唯一冲击峰值（垂直跃升穿出云顶、舱盖爆闪）→ 云海上空全景收束。禁止主体慢镜，用 G 力加载与
+  地平线倾角承载速度感。质感来自速度痕迹（音锥/凝结尾迹/翼尖涡流/热浪）与随战机撕裂的云层舞台。
+  内置可直接运行的「平流层交汇」canonical prompt 与「峡谷内摇」变体，仅 T2VA。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

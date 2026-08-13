@@ -1,0 +1,58 @@
+# Cavalry Charge Generator — Runnable Prompt Library
+
+本库提供**可直接运行**的 MiniMax H3 生成 Prompt，覆盖本 Skill 的单一任务模式（T2VA），按 画幅 / 时长 / 素材 标注。语法严格遵循官方 `h3-prompt-writing` 指南（`base-en.txt`）。
+
+> 为什么只有两个案例：变体只是素材不同，结构完全一致——替换素材即可复用同名段落。
+>
+> 想看更多风格参考？本站整理了官方《使用手册》的精选合辑：
+> [`docs/official-prompt-anthology.md`](../../../docs/official-prompt-anthology.md)。
+
+## 速查表
+
+| 编号 | 模式 | 画幅 | 时长 | 所需素材 | 适用场景 |
+| --- | --- | --- | --- | --- | --- |
+| [P1](#p1-canonical-金色尘暴) | T2VA | 16:9 | 7s | 无（纯文字） | 黄昏逆光全速冲锋——主路线 |
+| [P2](#p2-余烬之夜) | T2VA | 16:9 | 7s | 无（纯文字） | 夜战火把余烬中的突袭冲锋 |
+
+> 使用规则：替换 `<>` 内的素材引用即可，**切勿改动结构、字段名、段落顺序与标签**。所有段落正文用英文撰写。
+
+## 速度铁律（所有案例共用）
+
+1. **主体永远禁止慢镜**——骑兵必须以全速狂奔，用「真实时间速度 + 明确加速」措辞。
+2. **至少两个加速事件**：尘线集结的冲锋加速、前排越镜的爆发超越。
+3. **全片只有一个冲击峰值**（越镜 + 尘墙吞镜），放 70–90% 处。
+4. 结尾 1s 内完成「尘落 + 俯瞰收束」，不留悬空尾帧。
+
+## P1 — Canonical：金色尘暴
+
+**素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：全速（集结加速）→ 全速（侧向追拍）→ 峰值（越镜吞镜）→ 缓（尘落俯瞰）
+
+```text
+integrated_multimodal_description: [Shot 1] 00:00.0-00:07.0 Scorched-gold dusk over a dust-scoured plain; the camera skims the sand on a low fast dolly-in, a rolling dust wall on the horizon. 00:00.8-00:02.6 A cavalry mass appears at the dust line and charges at full gallop, natural real-time speed, hooves hammering the ground and kicking sand-spray plumes behind every stride; the camera accelerates into a side chase alongside the front rank. 00:02.6-00:04.8 The riders press low over their horses, lance-tips splitting the dust wall, sand glowing gold in the low backlight; rim-lit helmets and armor wear flash as the rank surges, metal clatter and banner cloth tearing in the wind. 00:04.8-00:06.2 At the peak the front rank overtakes the camera, surging past the lens as the rolling dust wall swallows the frame. 00:06.2-00:07.0 The dust settles; the camera rises to a wide overhead shot of the charge streaming away across the plain in fading golden light.
+
+overall_soundscape: thunder of hooves building in waves; metal clatter and banner snap; one low war-horn at the pass-by peak.
+
+non_diegetic_music: driving percussion and low brass accelerating to the pass-by, cutting into a low rumble on the wide reset.
+```
+
+**填充示例（可直接运行）**：无占位符，P1 为完全成品，复制即用。
+
+**验收**：首秒低机位贴沙推进 + 尘线可见；全速狂奔真实速度、无主体慢镜；越镜为唯一峰值；金逆光剪影；至少两层尘参与响应；结尾尘落俯瞰；无镜头切换、无文字、无宫格。
+
+## P2 — 余烬之夜
+
+**素材**：无 ｜ **模式**：T2VA ｜ **画幅**：16:9 ｜ **时长**：7s ｜ **节奏**：快（火光突袭）→ 全速（夜追）→ 峰值（火把墙吞镜）→ 缓（余烬沉降）
+
+```text
+integrated_multimodal_description: [Shot 1] 00:00.0-00:07.0 Ash-silver night over a scorched battlefield lit by burning debris; the camera skims low and fast over ember-lit sand toward a column of torchlight on the horizon. 00:00.8-00:02.6 The raid erupts: a cavalry column charges at full gallop from the flames, natural real-time speed, torch flames streaming backwards, embers spiraling through the dust haze; the camera banks into a fast side chase. 00:02.6-00:04.8 Riders lean into the charge, dark armor glinting with firelight, sword edges and horse muscle visible in the flicker; dust and embers whip past the lens, a burning standard trailing sparks. 00:04.8-00:06.2 At the peak the column surges past the camera and the torchlight wall swallows the frame in a burst of ember spray. 00:06.2-00:07.0 Embers drift down as the camera rises to a wide overhead; the charge vanishes into the dark plain, fires guttering behind it.
+
+overall_soundscape: rolling hoof thunder against crackling fire; blade hiss and ember pop; a distant war horn at the peak.
+
+non_diegetic_music: low strings and quick taiko drums driving to the ember-wall peak, resolving into a single sustained low note on the reset.
+```
+
+## 修改指南
+
+- **换时代/军种**：把 rider/lance/armor 换成 katana samurai、mounted archers、war elephants 等，**保留**「全速 + 真实时间 + 两个加速事件 + 一个越镜峰值」骨架。
+- **换光照**：golden backlight / torch flames 可换成 moonlight、storm flash、sunrise flare，并同步调整色调词。
+- **换镜头**：贴沙俯压、侧向追拍、越镜吞镜、俯瞰收束四个镜头位可改角度，但顺序与职责不变。
