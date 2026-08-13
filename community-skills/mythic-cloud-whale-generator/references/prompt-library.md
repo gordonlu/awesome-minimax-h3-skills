@@ -29,15 +29,25 @@
 **用途**：作为 I2VA 的首帧参考。**构图要求**：16:9 横幅；巨鲸侧身占画面右侧约 1/3；云海占据前景与左侧；丁达尔光柱作为主光源。
 
 ```text
-Scene: An endless sea of clouds at dusk, viewed from cloud level — one continuous, solid cloud deck like a velvet blanket glowing molten gold, stretching unbroken to the horizon in every direction. The low sun sits on the horizon at the far left, its warm light raking low across the cloud surface, long soft shadows cast across the cloud tops.
+Scene: An endless sea of clouds at dusk, forming one continuous, unbroken cloud ocean stretching flat to the horizon. The cloud surface is broad, smooth and softly rolling, with only very large-scale gentle formations — no fragmented clouds, no small puffs, no cauliflower-like cloud texture. Above the cloud sea is a vast open sky with clear atmospheric haze and no second cloud layer.
 
-Subject: A colossal whale-like leviathan rising out of the cloud sea near the right side of the frame, seen from a low angle close to its head so it towers over the frame. Its body is a single smooth, unbroken mass of pearl-grey skin fading to deep indigo on the belly, as seamless as wet silk, with only hair-fine scale texture on the surface. A row of faint star-like lights glows along the top of its spine. No mountains, no rocks, no moss, no plant life anywhere on the body.
+Lighting: a low sunset outside the upper-left edge of the frame casts warm golden light across the cloud sea. Three broad, soft, naturally diffused shafts of sunlight descend diagonally through atmospheric haze, subtle and partially dissolved rather than sharply defined. No visible holes in clouds, no spotlight effect, no vertical light columns. Fine suspended moisture glows faintly inside the light.
 
-Important details: The whale fills the right two-thirds of a 16:9 frame, its head angled toward the camera with one huge, calm, ancient eye; tiny birds circling far below its head establish the scale. Wet-looking skin catches warm golden light raking in from the left, cool blue fill rising off the cloud deck below; a bright rim light traces the spine. Fine haze and dust motes drift through the raking light above the cloud surface. Camera at cloud-waterline level, looking slightly up at the head.
+Subject: A colossal whale-like leviathan rising out of the cloud sea, viewed from a low angle close to its head so it towers over the frame. The whale fills the right two-thirds of the 16:9 composition. Its head turns slightly toward the camera, revealing one huge, calm, ancient eye.
 
-Use case: dramatic photorealistic concept frame / cinematic film still for an epic fantasy sequence. Photorealistic.
+Its body is one elegant, continuous mass of smooth pearl-grey skin fading gradually into deep indigo along the underside, seamless like wet silk. Surface detail is extremely restrained: only subtle hair-fine skin texture and almost imperceptible microscopic scales. No ridges, no bumps, no armor plates.
 
-Constraints: only one cloud layer — the sea of clouds beneath the whale, nothing above it except open sky; no beams or light shafts coming down from above; the cloud deck must be one continuous unbroken surface, no fragmented clouds; no text; no watermark.
+A sparse row of tiny, faint star-like bioluminescent points follows the curve of its upper spine.
+
+Tiny distant birds circle far beneath the whale's head to establish its immense scale.
+
+Warm golden sunset light brushes the upper surfaces of the whale, while soft cool blue ambient light from the cloud sea fills its underside. A thin natural rim light traces the upper silhouette.
+
+Composition: monumental negative space, simple large shapes, calm visual hierarchy, uncluttered frame, majestic and serene rather than chaotic.
+
+Photorealistic cinematic film still, physically plausible atmospheric scattering, realistic volumetric clouds, natural sunlight, large-format cinema camera, restrained HDR, subtle film grain, epic fantasy scale.
+
+Constraints: only one cloud layer, no overhead cloud ceiling, no storm clouds, no cloud holes, no spotlight beams, no fragmented clouds, no small cloud puffs, no mountains, no rocks, no moss, no vegetation, no structures, no bumps on the whale, no text, no watermark.
 ```
 
 ## P1 — I2VA Canonical：黄昏破云
