@@ -1,0 +1,12 @@
+# Cache policy: HTML must always revalidate so new deploys show up;
+# mutable JS/CSS get a short cache; images and vendor libs may cache long.
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*
+  Cache-Control: public, max-age=3600, must-revalidate
+/src/vendor/*
+  Cache-Control: public, max-age=604800, immutable
+/data/anthology-images/*
+  Cache-Control: public, max-age=604800, immutable
+/og-cover.jpg
+  Cache-Control: public, max-age=604800, immutable
