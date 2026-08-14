@@ -24,7 +24,6 @@
 
   var I18N = window.AMHS_I18N || {};
 
-  var LANGS = ["zh", "en", "ko"];
   var lang = (location.search.match(/[?&]lang=(zh|en|ko)/) || [])[1] || localStorage.getItem("amhs-lang") || "zh";
   function t(key) { return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
   function L(field) {
@@ -1028,9 +1027,8 @@
   /* ============================ HEADER / LANG ============================ */
 
   function syncHeader() {
-    document.querySelectorAll(".lang-opt").forEach(function (el) {
-      el.classList.toggle("active", el.dataset.lang === lang);
-    });
+    var sel = document.querySelector("#lang-select");
+    if (sel) sel.value = lang;
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.dataset.i18n);
     });
@@ -1038,8 +1036,8 @@
   }
 
   function init() {
-    $("#lang-toggle").addEventListener("click", function () {
-      lang = LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length];
+    $("#lang-select").addEventListener("change", function () {
+      lang = this.value;
       localStorage.setItem("amhs-lang", lang);
       syncHeader();
       // full re-render of current view in the new language

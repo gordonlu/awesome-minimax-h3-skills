@@ -87,18 +87,32 @@ img, video { display: block; max-width: 100%; }
   position: relative;
 }
 .nav-link:hover { color: var(--ink); }
-.lang-toggle {
-  display: flex; align-items: center; gap: 4px;
-  font-family: var(--font-mono); font-size: 12px;
+.lang-wrap {
+  position: relative;
+  display: inline-flex; align-items: center;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
-  padding: 5px 12px;
-  color: var(--muted);
-  transition: border-color 0.25s, color 0.25s;
+  transition: border-color 0.25s;
 }
-.lang-toggle:hover { border-color: var(--accent); color: var(--ink); }
-.lang-opt.active { color: var(--accent); font-weight: 700; }
-.lang-sep { color: var(--faint); }
+.lang-wrap:hover { border-color: var(--accent); }
+.lang-select {
+  appearance: none; -webkit-appearance: none;
+  background: transparent; border: 0; outline: 0;
+  font-family: var(--font-mono); font-size: 12px;
+  color: var(--muted);
+  padding: 5px 26px 5px 14px;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: color 0.25s;
+}
+.lang-select:hover { color: var(--ink); }
+.lang-select option { color: var(--ink); background: var(--bg); }
+.lang-caret {
+  position: absolute; right: 10px; top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px; color: var(--faint);
+  pointer-events: none;
+}
 .nav-gh { color: var(--muted); display: grid; place-items: center; transition: color 0.25s; }
 .nav-gh:hover { color: var(--ink); }
 .nav-gh--official { color: var(--accent); }
@@ -193,6 +207,14 @@ img, video { display: block; max-width: 100%; }
 .hero-title .line > span { display: inline-block; will-change: transform; }
 .hero-title .accent { color: var(--accent); }
 .hero-title i { color: var(--accent); }
+/* Korean is space-less and full-width: the 7.2vw cap overflows the masked
+   .line (clipped by overflow:hidden). Scope a smaller size + roomier
+   line-height to ko only so zh/en keep their layout. */
+html[lang="ko"] .hero-title {
+  font-size: clamp(34px, 5.2vw, 66px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
 .hero-sub {
   margin-top: 26px;
   max-width: 560px;
