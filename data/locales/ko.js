@@ -3,6 +3,28 @@
 // To add: translate new keys here; do not run sync_locales.mjs expecting ko output.
 window.AMHS_LOCALES = window.AMHS_LOCALES || {};
 window.AMHS_LOCALES.ko = {
+// Skill display names (English msgid → localized). Not part of en_keys; hand-maintained, safe from sync_locales.mjs.
+"H3 Prompt Writing": "H3 프롬프트 작성",
+"Reference Motion Transfer": "동작 참조 전이",
+"H3 Promo Film Studio": "H3 프로모 필름 스튜디오",
+"H3 Keyframe Film Studio": "H3 키프레임 필름 스튜디오",
+"Cinematic Key Art Animator": "시네마틱 키 아트 애니메이터",
+"Construction Timelapse Video Generator": "건설 타임랩스 영상 생성기",
+"Living Ink Painting Video Generator": "수묵 활성화 영상 생성기",
+"Miniature Creature Awakening Video Generator": "미니어처 생물 각성 영상 생성기",
+"Miniature World Landscape Generator": "미니어처 월드 랜드스케이프 생성기",
+"Natural Ambient Living Generator": "내추럴 앰비언트 생성기",
+"Mythic Cloud Whale Generator": "신화 구름고래 생성기",
+"Cavalry Charge Generator": "기병 돌격 생성기",
+"Kinetic Title Card Generator": "키네틱 타이틀 카드 생성기",
+"Minimalist Product Ad Generator": "미니멀 제품 광고 생성기",
+"3D Animation Short Generator": "3D 애니메이션 숏 생성기",
+"Papercraft Stop-Motion Explainer": "종이공예 스톱모션 설명 생성기",
+"Brand Promo Video Generator": "브랜드 프로모 영상 생성기",
+"Music Video Subtitle Generator": "뮤직비디오 자막 생성기",
+"Co-op Game Intro Generator": "협동 게임 인트로 생성기",
+"Paper Collage Explainer Generator": "종이 콜라주 설명 생성기",
+"Handdrawn Live-Action Fusion Video Generator": "손그림 실사 융합 영상 생성기",
 "MiniMax": "MiniMax",
 "Write structured MiniMax H3 video generation prompts for all five generation modes.": "다섯 가지 H3 생성 모드 전부에 맞춰 구조화된 MiniMax H3 영상 생성 프롬프트를 작성합니다.",
 "The foundation skill shared by every H3 video workflow. It rewrites multimodal requests into H3's prompt structure — integrated_multimodal_description, overall_soundscape, and non_diegetic_music — aligns keyframes with exact timestamps, and defines consistent reference labels for images, videos, and audio. Portable to any agent that can read local files: no external API calls or proprietary runtime required.": "모든 H3 영상 워크플로가 공유하는 기반 스킬. 다중 모달 요청을 H3 프롬프트 구조(integrated_multimodal_description, overall_soundscape, non_diegetic_music)로 재작성하고, 키프레임을 정확한 타임스탬프에 정렬하며, 이미지·영상·오디오에 일관된 참조 라벨을 정의합니다. 로컬 파일을 읽을 수 있는 모든 에이전트에 이식 가능하며, 외부 API 호출이나 독점 런타임이 필요 없습니다.",

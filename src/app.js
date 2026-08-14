@@ -24,7 +24,7 @@
 
   var I18N = window.AMHS_I18N || {};
 
-  var lang = (location.search.match(/[?&]lang=(zh|en|ko)/) || [])[1] || localStorage.getItem("amhs-lang") || "zh";
+  var lang = (location.search.match(/[?&]lang=(zh|en|ko|de|ja|es)/) || [])[1] || localStorage.getItem("amhs-lang") || "zh";
   function t(key) { return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
   function L(field) {
     if (field == null) return "";
@@ -1026,7 +1026,7 @@
 
   /* ============================ HEADER / LANG ============================ */
 
-  var LANG_NAMES = { zh: "中文", en: "EN", ko: "한국어" };
+  var LANG_NAMES = { zh: "中文", en: "EN", ko: "한국어", de: "Deutsch", ja: "日本語", es: "Español" };
 
   function setLang(next) {
     if (!LANG_NAMES[next] || next === lang) return;
@@ -1061,7 +1061,7 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.dataset.i18n);
     });
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang === "ko" ? "ko" : "en";
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang === "ko" ? "ko" : lang === "de" ? "de" : lang === "ja" ? "ja" : lang === "es" ? "es" : "en";
   }
 
   function init() {

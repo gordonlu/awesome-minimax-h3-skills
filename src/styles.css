@@ -227,13 +227,20 @@ img, video { display: block; max-width: 100%; }
 .hero-title .line > span { display: inline-block; will-change: transform; }
 .hero-title .accent { color: var(--accent); }
 .hero-title i { color: var(--accent); }
-/* Korean is space-less and full-width: the 7.2vw cap overflows the masked
-   .line (clipped by overflow:hidden). Scope a smaller size + roomier
-   line-height to ko only so zh/en keep their layout. */
-html[lang="ko"] .hero-title {
+/* Korean / Japanese are space-less and full-width: the 7.2vw cap overflows
+   the masked .line (clipped by overflow:hidden). Scope a smaller size +
+   roomier line-height to ko/ja only so zh/en keep their layout. German
+   gets a mild reduction because its hero line runs long. */
+html[lang="ko"] .hero-title,
+html[lang="ja"] .hero-title {
   font-size: clamp(34px, 5.2vw, 66px);
   line-height: 1.15;
   letter-spacing: -0.01em;
+}
+html[lang="de"] .hero-title {
+  font-size: clamp(34px, 6.8vw, 92px);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 .hero-sub {
   margin-top: 26px;
