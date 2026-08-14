@@ -1,6 +1,6 @@
 /* ==========================================================================
    Awesome MiniMax H3 Skills — App
-   Vanilla JS · hash router · bilingual · GSAP motion
+   Vanilla JS · history router · multilingual · GSAP motion
    ========================================================================== */
 (function () {
   "use strict";
@@ -139,7 +139,7 @@
   function renderMarquee() {
     var items = videoSkills().map(function (s, i) {
       return (
-        '<a class="marquee-item" href="#/skill/' + s.slug + '" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
+        '<a class="marquee-item" href="/skill/' + s.slug + '" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
           '<img src="' + esc(s.preview.poster) + '" alt="' + esc(s.name) + ' demo" loading="' + (i < 4 ? "eager" : "lazy") + '" decoding="async">' +
           '<span class="mq-label">' + esc(L({ en: s.name, zh: s.nameZh })) + "</span>" +
         "</a>"
@@ -171,7 +171,7 @@
           '<p class="section-label">' + t("fd.label") + "</p>" +
           '<h2 class="section-title">' + t("fd.title") + "</h2>" +
         "</div>" + '<span class="section-note">' + t("fd.note") + "</span></div>" +
-        '<a class="foundation-card js-reveal" href="#/skill/' + s.slug + '">' +
+        '<a class="foundation-card js-reveal" href="/skill/' + s.slug + '">' +
           "<div>" +
             '<span class="foundation-badge">' + t("fd.badge") + "</span>" +
             '<h3 class="foundation-name">' + esc(L({ en: s.name, zh: s.nameZh })) + "</h3>" +
@@ -329,7 +329,7 @@
         '<div class="section-head"><div>' +
           '<p class="section-label">' + t("home.anth.label") + "</p>" +
         "</div>" + '<span class="section-note">' + t("home.anth.note") + "</span></div>" +
-        '<a class="anth-banner js-reveal" href="#/anthology">' +
+        '<a class="anth-banner js-reveal" href="/anthology">' +
           '<div class="anth-banner-glow" aria-hidden="true"></div>' +
           '<div class="anth-banner-body">' +
             '<p class="anth-banner-kicker"><span class="dot"></span>' + t("home.anth.kicker") + "</p>" +
@@ -348,7 +348,7 @@
         (groups
           ? '<div class="anth-banner-chips js-reveal">' +
               window.AMHS_ANTHOLOGY.groups.map(function (g, i) {
-                return '<a class="anth-index-chip" data-anchor="anth-' + g.id + '" href="#/anthology">' +
+                return '<a class="anth-index-chip" data-anchor="anth-' + g.id + '" href="/anthology">' +
                   '<span class="anth-index-num">' + String(i + 1).padStart(2, "0") + "</span>" +
                   "<span>" + esc(L(g.title)) + "</span></a>";
               }).join("") +
@@ -440,7 +440,10 @@
 
   function bindCards(root) {
     Array.prototype.forEach.call(root.querySelectorAll(".skill-card"), function (card) {
-      function go() { location.hash = "#/skill/" + card.dataset.slug; }
+      function go() {
+        history.pushState(null, "", "/skill/" + card.dataset.slug + (location.search || ""));
+        route();
+      }
       card.addEventListener("click", go);
       card.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
@@ -481,11 +484,16 @@
       });
     });
     Array.prototype.forEach.call(home.querySelectorAll(".anth-banner-chips a"), function (chip) {
-      chip.addEventListener("click", function () {
-        setTimeout(function () {
-          var target = document.getElementById(chip.dataset.anchor);
-          if (target) target.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
-        }, 80);
+      chip.addEventListener("click", function (ev) {
+        if (!ev.metaKey && !ev.ctrlKey && !ev.shiftKey && !ev.altKey) {
+          ev.preventDefault();
+          history.pushState(null, "", "/anthology" + (location.search || ""));
+          route();
+          setTimeout(function () {
+            var target = document.getElementById(chip.dataset.anchor);
+            if (target) target.scrollIntoView({ behavior: REDUCED ? "auto" : "smooth", block: "start" });
+          }, 80);
+        }
       });
     });
   }
@@ -547,7 +555,7 @@
   function renderDetail(slug) {
     var s = DATA.skills.filter(function (x) { return x.slug === slug; })[0];
     var view = $("#view-detail");
-    if (!s) { location.hash = "#/"; return; }
+    if (!s) { history.pushState(null, "", "/" + (location.search || "")); route(); return; }
 
     var idx = DATA.skills.indexOf(s);
     var prev = DATA.skills[idx - 1];
@@ -615,13 +623,35 @@
         '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>' +
         "<span>" + t("detail.copy") + "</span></button></div>");
 
+    if (s.modes && s.modes.length) {
+      sections += detailSection(n++, "detail.modes",
+        '<div class="mode-badges">' + s.modes.map(function (m) {
+          return '<span class="mode-badge">' + esc(m.id) + "</span>";
+        }).join("") + "</div>");
+    }
+
+    var related = DATA.skills.filter(function (x) {
+      return x.slug !== s.slug && x.categories.some(function (c) { return s.categories.indexOf(c) !== -1; });
+    }).slice(0, 3);
+    if (related.length) {
+      sections += detailSection(n++, "detail.related",
+        '<div class="related-grid">' + related.map(function (r) {
+          return (
+            '<a class="related-card" href="/skill/' + r.slug + '">' +
+              '<span class="related-name">' + esc(L({ en: r.name, zh: r.nameZh })) + "</span>" +
+              '<span class="related-sum">' + esc(stripHtml(L(r.summary))) + "</span>" +
+            "</a>"
+          );
+        }).join("") + "</div>");
+    }
+
     sections += detailSection(n++, s.sourceType === "community" ? "detail.sourcesCommunity" : "detail.sources", sourceLinks(s));
 
     var langNote = (lang === "zh" && s.languageNote) ? '<p class="detail-desc-alt">' + esc(L(s.languageNote)) + "</p>" : "";
 
     view.innerHTML =
       '<div class="wrap detail-hero">' +
-        '<a class="detail-back" href="#/">← ' + t("detail.back") + "</a>" +
+        '<a class="detail-back" href="/">← ' + t("detail.back") + "</a>" +
         '<div class="detail-top">' +
           "<div>" +
             '<p class="detail-kicker">' + s.categories.map(function (id) { return esc(L(CATS[id])).toUpperCase(); }).join(" · ") + "</p>" +
@@ -647,10 +677,10 @@
         sections +
         '<nav class="detail-nav" aria-label="More skills">' +
           (prev
-            ? '<a href="#/skill/' + prev.slug + '"><span class="dn-dir">← ' + t("detail.prev") + '</span><span class="dn-name">' + esc(L({ en: prev.name, zh: prev.nameZh })) + "</span></a>"
-            : '<a class="disabled"><span class="dn-dir">' + t("detail.prev") + '</span><span class="dn-name">—</span></a>') +
+? '<a href="/skill/' + prev.slug + '"><span class="dn-dir">← ' + t("detail.prev") + '</span><span class="dn-name">' + esc(L({ en: prev.name, zh: prev.nameZh })) + "</span></a>"
+            : '<span class="dn-name dn-name--empty"></span>') +
           (next
-            ? '<a class="next" href="#/skill/' + next.slug + '"><span class="dn-dir">' + t("detail.next") + ' →</span><span class="dn-name">' + esc(L({ en: next.name, zh: next.nameZh })) + "</span></a>"
+            ? '<a class="next" href="/skill/' + next.slug + '"><span class="dn-dir">' + t("detail.next") + ' →</span><span class="dn-name">' + esc(L({ en: next.name, zh: next.nameZh })) + "</span></a>"
             : '<a class="next disabled"><span class="dn-dir">' + t("detail.next") + '</span><span class="dn-name">—</span></a>') +
         "</nav>" +
       "</div>";
@@ -660,7 +690,20 @@
     });
     observeVideos(view);
     animateDetail(view);
-    document.title = L({ en: s.name, zh: s.nameZh }) + " — Awesome MiniMax H3 Skills";
+    var skillName = L({ en: s.name, zh: s.nameZh });
+    document.title = lang === "zh"
+      ? skillName + " – MiniMax H3 技能 | H3 Skills"
+      : skillName + " – MiniMax H3 Skill | H3 Skills";
+    setCanonical("/skill/" + s.slug);
+    setMetaDescription(stripHtml(L(s.summary)) + " — MiniMax H3 Skill, install and workflow.");
+    setJsonLd("ld-breadcrumb", {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "H3 Skills", item: "https://h3skills.com/" },
+        { "@type": "ListItem", position: 2, name: skillName, item: "https://h3skills.com/skill/" + s.slug }
+      ]
+    });
   }
 
   /* ============================ ANIMATION ============================ */
@@ -967,6 +1010,61 @@
 
   var ANCHORS = { "#skills": 1, "#foundation": 1, "#about": 1 };
 
+  function setCanonical(path) {
+    var link = document.querySelector('link[rel="canonical"]');
+    if (!link) {
+      link = document.createElement("link");
+      link.rel = "canonical";
+      document.head.appendChild(link);
+    }
+    link.href = "https://h3skills.com" + path;
+  }
+
+  function setMetaDescription(content) {
+    var m = document.querySelector('meta[name="description"]');
+    if (!m) {
+      m = document.createElement("meta");
+      m.name = "description";
+      document.head.appendChild(m);
+    }
+    m.content = content;
+  }
+
+  function setJsonLd(id, obj) {
+    var el = document.getElementById(id);
+    if (!el) {
+      el = document.createElement("script");
+      el.type = "application/ld+json";
+      el.id = id;
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(obj);
+  }
+
+  function stripHtml(s) {
+    return s.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+  }
+
+  function show404() {
+    $("#view-home").hidden = true;
+    $("#view-detail").hidden = true;
+    $("#view-anthology").hidden = true;
+    document.title = "404 — H3 Skills";
+    var wrap = $("#not-found");
+    if (!wrap) {
+      wrap = document.createElement("main");
+      wrap.id = "not-found";
+      document.body.appendChild(wrap);
+    }
+    wrap.hidden = false;
+    wrap.innerHTML =
+      '<div class="wrap not-found">' +
+        "<h1>404</h1>" +
+        "<p>" + (lang === "zh" ? "页面不存在或已被移动。" : "Page not found or moved.") + "</p>" +
+        '<a class="btn" href="/">' + (lang === "zh" ? "回到首页" : "Back to home") + "</a>" +
+      "</div>";
+  }
+
   function showHome(anchor) {
     $("#view-detail").hidden = true;
     $("#view-anthology").hidden = true;
@@ -976,6 +1074,7 @@
       : lang === "ko"
         ? "Awesome MiniMax H3 Skills — 비주얼 디스커버리 인덱스"
         : "Awesome MiniMax H3 Skills — Visual Discovery Index";
+    setCanonical("/");
     if (!$("#view-home").innerHTML) renderHome();
     else if (viewCtx) { viewCtx.revert(); viewCtx = null; animateHome($("#view-home")); }
     if (anchor && $(anchor)) {
@@ -1002,16 +1101,36 @@
     var a = $("#view-anthology");
     a.hidden = false;
     window.scrollTo(0, 0);
+    setCanonical("/anthology");
+    setMetaDescription(lang === "zh"
+      ? "MiniMax H3 官方提示词合辑 — 49 个可直接复制的示例 Prompt。"
+      : "MiniMax H3 official prompt gallery — 49 copy-ready example prompts.");
     renderAnthology();
     initAnthHeroBg(a);
     animateAnthology(a);
   }
 
   function route() {
-    var hash = location.hash || "#/";
-    if (hash === "#/anthology") { showAnthology(); return; }
-    if (ANCHORS[hash]) { showHome(hash); return; }
-    var m = hash.match(/^#\/skill\/([a-z0-9-]+)$/);
+    var oldHash = location.hash;
+    if (oldHash === "#/anthology") {
+      history.replaceState(null, "", "/anthology" + (location.search || ""));
+      showAnthology();
+      return;
+    }
+    var om = oldHash.match(/^#\/skill\/([a-z0-9-]+)$/);
+    if (om) {
+      history.replaceState(null, "", "/skill/" + om[1] + (location.search || ""));
+      $("#view-home").hidden = true;
+      $("#view-anthology").hidden = true;
+      var d = $("#view-detail");
+      d.hidden = false;
+      window.scrollTo(0, 0);
+      renderDetail(om[1]);
+      return;
+    }
+    var p = (location.pathname || "/").replace(/\/+$/, "") || "/";
+    if (p === "/anthology") { showAnthology(); return; }
+    var m = p.match(/^\/skill\/([a-z0-9-]+)$/);
     if (m) {
       $("#view-home").hidden = true;
       $("#view-anthology").hidden = true;
@@ -1021,7 +1140,10 @@
       renderDetail(m[1]);
       return;
     }
-    showHome(null);
+    var hash = location.hash;
+    if (ANCHORS[hash]) { showHome(hash); return; }
+    if (p === "/") { showHome(null); return; }
+    show404();
   }
 
   /* ============================ HEADER / LANG ============================ */
@@ -1090,7 +1212,7 @@
         if (ev.key === "Escape") closeLangMenu();
       });
     }
-    window.addEventListener("hashchange", route);
+    window.addEventListener("popstate", route);
     syncHeader();
     route();
   }

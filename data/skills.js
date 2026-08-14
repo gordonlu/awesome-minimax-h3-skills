@@ -1103,6 +1103,7 @@ window.AMHS_DATA = {
 
 {
       slug: "minimalist-product-ad-generator",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, ],
       name: "Minimalist Product Ad Generator",
       nameZh: "极简产品广告生成器",
       sourceType: "official",
@@ -1187,6 +1188,7 @@ window.AMHS_DATA = {
 
     {
       slug: "3d-animation-short-generator",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, ],
       name: "3D Animation Short Generator",
       nameZh: "3D 动画短片生成器",
       sourceType: "official",
@@ -1270,6 +1272,7 @@ window.AMHS_DATA = {
 
     {
       slug: "papercraft-stop-motion-explainer",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, ],
       name: "Papercraft Stop-Motion Explainer",
       nameZh: "纸艺定格科普视频生成器",
       sourceType: "official",
@@ -1353,6 +1356,7 @@ window.AMHS_DATA = {
 
     {
       slug: "brand-promo-video-generator",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, { id: "T2VA", en: "Builds the full audiovisual timeline from text.", zh: "从文本构建完整视听时间线。" }, ],
       name: "Brand Promo Video Generator",
       nameZh: "品牌宣传短片生成器",
       sourceType: "official",
@@ -1434,6 +1438,7 @@ window.AMHS_DATA = {
 
     {
       slug: "music-video-subtitle-generator",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, ],
       name: "Music Video Subtitle Generator",
       nameZh: "音乐 MV 动态字幕生成器",
       sourceType: "official",
@@ -1514,6 +1519,7 @@ window.AMHS_DATA = {
 
     {
       slug: "co-op-game-intro-generator",
+      modes: [ { id: "I2VA", en: "Starts from the first frame and develops forward.", zh: "从首帧出发，向前发展画面。" }, ],
       name: "Co-op Game Intro Generator",
       nameZh: "双人游戏开场视频生成器",
       sourceType: "official",
@@ -1591,6 +1597,7 @@ window.AMHS_DATA = {
 
     {
       slug: "paper-collage-explainer-generator",
+      modes: [ { id: "L2VA", en: "Infers a plausible opening and converges to the supplied last frame.", zh: "推断合理开场，收敛至给定尾帧。" }, ],
       name: "Paper Collage Explainer Generator",
       nameZh: "纸拼贴讲解动画生成器",
       sourceType: "official",
@@ -1670,6 +1677,7 @@ window.AMHS_DATA = {
 
     {
       slug: "handdrawn-live-video-generator",
+      modes: [ { id: "T2VA", en: "Builds the full audiovisual timeline from text.", zh: "从文本构建完整视听时间线。" }, ],
       name: "Handdrawn Live-Action Fusion Video Generator",
       nameZh: "手绘实拍融合视频生成器",
       sourceType: "official",

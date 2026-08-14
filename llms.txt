@@ -1,0 +1,40 @@
+# Awesome MiniMax H3 Skills
+
+> Visual discovery index for installable MiniMax H3 video-generation skills — 21 workflow cards, each with real output clips, inputs, workflow, and install commands. Curated from the official MiniMax-AI/MiniMax-H3 repository plus community builds. UI languages: Chinese (default), English, Korean, German, Japanese, Spanish (switch via the language menu; `?lang=xx` works too).
+
+## Notable
+
+- [Skill index](https://h3skills.com/): home page — every skill with its demo clip, inputs, workflow, and install command
+- [Prompt gallery](https://h3skills.com/anthology): 49 prompt examples curated from the official MiniMax H3 handbook, one-click copy
+- [Official repo](https://github.com/MiniMax-AI/MiniMax-H3): MiniMax H3 + official skills source
+- [Community repo](https://github.com/gordonlu/awesome-minimax-h3-skills): this site's source
+
+## Skills
+
+- [H3 Prompt Writing](https://h3skills.com/skill/h3-prompt-writing): foundation skill — structured prompts for all five H3 generation modes (T2VA / I2VA / FL2VA / L2VA / Ref2VA)
+- [Reference Motion Transfer](https://h3skills.com/skill/reference-motion-transfer): recreate a character or animal with the exact dance routine from a reference clip (Ref2VA)
+- [H3 Promo Film Studio](https://h3skills.com/skill/h3-promo-film): text-to-video promo & trailer prompts — food promos, product films, cinematic teasers from text alone
+- [H3 Keyframe Film Studio](https://h3skills.com/skill/h3-keyframe-film): keyframe-driven image-to-video shorts — montages, first-last frame transitions, final-frame landings
+- [Cinematic Key Art Animator](https://h3skills.com/skill/cinematic-key-art-animator): one character key-art becomes a 7–8s moving-key-art clip — Living Key Art or Action Burst
+- [Construction Timelapse Video Generator](https://h3skills.com/skill/construction-timelapse-video-generator): 7–8s accelerated build-from-zero timelapse with persistent build state
+- [Living Ink Painting Video Generator](https://h3skills.com/skill/living-ink-painting-video-generator): ink-wash subject comes alive inside the painting, then breaks free from the paper
+- [Miniature Creature Awakening Video Generator](https://h3skills.com/skill/miniature-creature-awakening-video-generator): a small creature image wakes, acts, interacts, and lands a final pose
+- [Miniature World Landscape Generator](https://h3skills.com/skill/miniature-world-landscape-generator): cinematic miniature landscapes with one hero effect each
+- [Natural Ambient Living Generator](https://h3skills.com/skill/natural-ambient-living-generator): real-scale nature clips where one environmental system owns the motion
+- [Mythic Cloud Whale Generator](https://h3skills.com/skill/mythic-cloud-whale-generator): epic 7s cloud-sea shorts of a colossal mythic whale rising from a golden-hour cloud deck
+- [Cavalry Charge Generator](https://h3skills.com/skill/cavalry-charge-generator): full-speed cavalry charges across a dust-scoured plain at golden dusk
+- [Kinetic Title Card Generator](https://h3skills.com/skill/kinetic-title-card-generator): brand names, film/song titles, slogans as kinetic title cards with spell-perfect text
+- [Minimalist Product Ad Generator](https://h3skills.com/skill/minimalist-product-ad-generator): product images + ad requirements → minimalist product ad shorts (Apple-style)
+- [3D Animation Short Generator](https://h3skills.com/skill/3d-animation-short-generator): a story idea becomes a complete stylized 3D animated short
+- [Papercraft Stop-Motion Explainer](https://h3skills.com/skill/papercraft-stop-motion-explainer): production-ready papercraft stop-motion explainer package from a knowledge topic
+- [Brand Promo Video Generator](https://h3skills.com/skill/brand-promo-video-generator): verified brand assets → polished promotional short video with provenance manifest
+- [Music Video Subtitle Generator](https://h3skills.com/skill/music-video-subtitle-generator): beat-synced MV prompts and lyric typography plans from music and lyrics
+- [Co-op Game Intro Generator](https://h3skills.com/skill/co-op-game-intro-generator): co-op game intro from player details, character references, and an approved menu style
+- [Paper Collage Explainer Generator](https://h3skills.com/skill/paper-collage-explainer-generator): narration or abstract ideas → tactile paper-collage explainer animations
+- [Handdrawn Live-Action Fusion Video Generator](https://h3skills.com/skill/handdrawn-live-video-generator): H3-ready prompts for hand-drawn animation interacting with live-action scenes
+
+## Notes
+
+- Every skill page lists inputs (what you provide), workflow steps, outputs, best-for / not-for cases, and the install command (`npx skills add ...`).
+- The prompt gallery entries are adapted from the official handbook; entries marked 「非完全Prompt」 are official placeholders meant to be extended.
+- Install any skill into an agent that can read SKILL.md via the skills CLI (Claude Code, Cursor, Codex, etc.).

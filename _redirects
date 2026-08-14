@@ -1,0 +1,5 @@
+# SPA fallback: every path serves the app shell; JS renders the matching view.
+# Canonicalize alternate hosts to the apex domain (Cloudflare Pages also serves these).
+https://www.h3skills.com/*    https://h3skills.com/:splat    301
+https://*.pages.dev/*         https://h3skills.com/:splat    301
+/*    /index.html   200
