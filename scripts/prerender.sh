@@ -15,13 +15,29 @@ TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
 cat > "$TMP/spa_server.py" <<'PYEOF'
-import http.server, os, sys, threading
+import http.server, os, sys, threading, re
 os.chdir(sys.argv[1])
+def clean(html):
+    # strip runtime state a prerendered snapshot may have baked into the
+    # working-tree index.html, so snapshots never accumulate stale attributes
+    html = re.sub(r'\sstyle="translate: none; rotate: none; scale: none;[^"]*"', '', html)
+    html = re.sub(r'\sstyle="opacity: 0;"', '', html)
+    html = re.sub(r'\sdata-bound="1"', '', html)
+    return html
 class H(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         path = self.path.split('?')[0]
         if not os.path.isfile(path.lstrip('/')):
             self.path = '/index.html'
+        elif path == '/index.html':
+            raw = open(path.lstrip('/'), encoding='utf-8').read()
+            body = clean(raw).encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/html')
+            self.send_header('Content-Length', str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         return super().do_GET()
     def log_message(self, *a): pass
 srv = http.server.HTTPServer(('127.0.0.1', int(sys.argv[2])), H)

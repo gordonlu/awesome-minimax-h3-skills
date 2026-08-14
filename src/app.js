@@ -43,6 +43,7 @@
 
   var state = { query: "", source: "all", category: "all" };
   var viewCtx = null; // gsap context for the active view
+  var homeBound = false; // true once events/hero are bound on a snapshot-rendered home
 
   /* ============================ helpers ============================ */
 
@@ -1078,8 +1079,8 @@
     var home = $("#view-home");
     if (!home.innerHTML) renderHome();
     else {
-      if (home.dataset.bound !== "1") {
-        home.dataset.bound = "1";
+      if (!homeBound) {
+        homeBound = true;
         bindHomeEvents(home);
         renderGrid();
         initHeroBg(home);
