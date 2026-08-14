@@ -24,7 +24,8 @@
 
   var I18N = window.AMHS_I18N || {};
 
-  var lang = localStorage.getItem("amhs-lang") || "zh";
+  var LANGS = ["zh", "en", "ko"];
+  var lang = (location.search.match(/[?&]lang=(zh|en|ko)/) || [])[1] || localStorage.getItem("amhs-lang") || "zh";
   function t(key) { return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
   function L(field) {
     if (field == null) return "";
@@ -34,7 +35,7 @@
   }
   function LAlt(field) {
     if (field == null || typeof field === "string") return "";
-    var other = lang === "zh" ? "en" : "zh";
+    var other = lang === "en" ? "zh" : "en";
     var loc = (window.AMHS_LOCALES && window.AMHS_LOCALES[other]) || {};
     return loc[field.en] || field[other] || "";
   }
@@ -206,7 +207,7 @@
           '<p class="card-name-alt">' + esc(LAlt({ en: s.name, zh: s.nameZh })) + "</p>" +
           '<p class="card-summary">' + esc(L(s.summary)) + "</p>" +
           '<div class="card-foot"><div class="card-tags">' + tags + "</div>" +
-          '<span class="card-go">' + (lang === "zh" ? "查看" : "OPEN") + ' <span aria-hidden="true">→</span></span></div>' +
+          '<span class="card-go">' + (lang === "zh" ? "查看" : lang === "ko" ? "보기" : "OPEN") + ' <span aria-hidden="true">→</span></span></div>' +
         "</div>" +
       "</article>"
     );
@@ -556,7 +557,7 @@
     var meta = [];
     if (s.version) meta.push('<span class="meta-chip">' + t("version") + " <b>v" + esc(s.version) + "</b></span>");
     meta.push('<span class="meta-chip">' + t("author") + " <b>" + esc(L(s.author)) + "</b></span>");
-    var langText = s.languages.indexOf("zh") !== -1 ? "EN + 中文" : "EN";
+    var langText = s.languages.indexOf("ko") !== -1 ? "KO + EN" : s.languages.indexOf("zh") !== -1 ? "EN + 中文" : "EN";
     meta.push('<span class="meta-chip">' + t("languages") + " <b>" + langText + "</b></span>");
     s.categories.forEach(function (id) {
       var c = CATS[id];
@@ -861,7 +862,7 @@
       });
     });
 
-    document.title = (lang === "zh" ? "官方提示词合辑 — " : "Prompt Gallery — ") + "Awesome MiniMax H3 Skills";
+    document.title = (lang === "zh" ? "官方提示词合辑 — " : lang === "ko" ? "프롬프트 갤러리 — " : "Prompt Gallery — ") + "Awesome MiniMax H3 Skills";
   }
 
   /* ---- Anthology hero: random landscape reference images, masked left ---- */
@@ -973,7 +974,9 @@
     $("#view-home").hidden = false;
     document.title = lang === "zh"
       ? "Awesome MiniMax H3 Skills — 官方 Skill 可视化发现"
-      : "Awesome MiniMax H3 Skills — Visual Discovery Index";
+      : lang === "ko"
+        ? "Awesome MiniMax H3 Skills — 비주얼 디스커버리 인덱스"
+        : "Awesome MiniMax H3 Skills — Visual Discovery Index";
     if (!$("#view-home").innerHTML) renderHome();
     else if (viewCtx) { viewCtx.revert(); viewCtx = null; animateHome($("#view-home")); }
     if (anchor && $(anchor)) {
@@ -1031,12 +1034,12 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.dataset.i18n);
     });
-    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : lang === "ko" ? "ko" : "en";
   }
 
   function init() {
     $("#lang-toggle").addEventListener("click", function () {
-      lang = lang === "zh" ? "en" : "zh";
+      lang = LANGS[(LANGS.indexOf(lang) + 1) % LANGS.length];
       localStorage.setItem("amhs-lang", lang);
       syncHeader();
       // full re-render of current view in the new language
