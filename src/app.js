@@ -1077,7 +1077,11 @@
         : "Awesome MiniMax H3 Skills — Visual Discovery Index";
     setCanonical("/");
     var home = $("#view-home");
-    if (!home.innerHTML) renderHome();
+    if (!home.innerHTML || lang !== "zh") {
+      home.innerHTML = "";
+      renderHome();
+      homeBound = true;
+    }
     else {
       if (!homeBound) {
         homeBound = true;
