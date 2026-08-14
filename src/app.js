@@ -1026,9 +1026,38 @@
 
   /* ============================ HEADER / LANG ============================ */
 
+  var LANG_NAMES = { zh: "中文", en: "EN", ko: "한국어" };
+
+  function setLang(next) {
+    if (!LANG_NAMES[next] || next === lang) return;
+    lang = next;
+    localStorage.setItem("amhs-lang", lang);
+    syncHeader();
+    // full re-render of current view in the new language
+    $("#view-home").innerHTML = "";
+    $("#view-anthology").innerHTML = "";
+    if (viewCtx) { viewCtx.revert(); viewCtx = null; }
+    route();
+  }
+
+  function closeLangMenu() {
+    var dd = $("#lang-dd");
+    if (!dd) return;
+    dd.classList.remove("open");
+    var trig = $("#lang-trigger");
+    if (trig) trig.setAttribute("aria-expanded", "false");
+    var menu = $("#lang-menu");
+    if (menu) menu.hidden = true;
+  }
+
   function syncHeader() {
-    var sel = document.querySelector("#lang-select");
-    if (sel) sel.value = lang;
+    var cur = $("#lang-cur");
+    if (cur) cur.textContent = LANG_NAMES[lang] || "EN";
+    document.querySelectorAll('#lang-menu [role="option"]').forEach(function (el) {
+      var on = el.dataset.lang === lang;
+      el.classList.toggle("active", on);
+      el.setAttribute("aria-selected", on ? "true" : "false");
+    });
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       el.textContent = t(el.dataset.i18n);
     });
@@ -1036,16 +1065,31 @@
   }
 
   function init() {
-    $("#lang-select").addEventListener("change", function () {
-      lang = this.value;
-      localStorage.setItem("amhs-lang", lang);
-      syncHeader();
-      // full re-render of current view in the new language
-      $("#view-home").innerHTML = "";
-      $("#view-anthology").innerHTML = "";
-      if (viewCtx) { viewCtx.revert(); viewCtx = null; }
-      route();
-    });
+    var trig = $("#lang-trigger");
+    var menu = $("#lang-menu");
+    if (trig && menu) {
+      trig.addEventListener("click", function () {
+        if (menu.hidden) {
+          menu.hidden = false;
+          $("#lang-dd").classList.add("open");
+          trig.setAttribute("aria-expanded", "true");
+        } else {
+          closeLangMenu();
+        }
+      });
+      menu.addEventListener("click", function (ev) {
+        var opt = ev.target.closest('[role="option"]');
+        if (!opt) return;
+        setLang(opt.dataset.lang);
+        closeLangMenu();
+      });
+      document.addEventListener("click", function (ev) {
+        if (!ev.target.closest("#lang-dd")) closeLangMenu();
+      });
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape") closeLangMenu();
+      });
+    }
     window.addEventListener("hashchange", route);
     syncHeader();
     route();
