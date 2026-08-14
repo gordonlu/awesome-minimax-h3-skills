@@ -1075,8 +1075,18 @@
         ? "Awesome MiniMax H3 Skills — 비주얼 디스커버리 인덱스"
         : "Awesome MiniMax H3 Skills — Visual Discovery Index";
     setCanonical("/");
-    if (!$("#view-home").innerHTML) renderHome();
-    else if (viewCtx) { viewCtx.revert(); viewCtx = null; animateHome($("#view-home")); }
+    var home = $("#view-home");
+    if (!home.innerHTML) renderHome();
+    else {
+      if (home.dataset.bound !== "1") {
+        home.dataset.bound = "1";
+        bindHomeEvents(home);
+        renderGrid();
+        initHeroBg(home);
+      }
+      if (viewCtx) { viewCtx.revert(); viewCtx = null; }
+      animateHome(home);
+    }
     if (anchor && $(anchor)) {
       requestAnimationFrame(function () { $(anchor).scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" }); });
     } else {
