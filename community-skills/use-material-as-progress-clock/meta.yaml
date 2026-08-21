@@ -1,0 +1,27 @@
+display-name-zh: 材料即时间 · 非遗工艺纪录广告
+version: 0.1.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Heritage Craft
+- Commercial Ad / Material as Clock
+complete-tags-cn:
+- 商业广告 / 非遗工艺
+- 商业广告 / 材料即时间
+summary-en: Generate a heritage-craft documentary ad where the material's own appearance is the clock of the film.
+summary-cn: 生成一支"材料自身外观就是影片时钟"的非遗工艺纪录广告。
+desc-en: |
+  For creators who want an intangible-heritage craft documentary ad in which the material's own appearance is
+  the film's clock — a 15s 9:16 vertical following a Miao silversmith forging an ornament through eight steps,
+  with "silver-white" spreading from zero to everywhere as time passes. The Skill locks the finished silver
+  piece to a single reference image (no added decorations), keeps silver-light from real metal and real light
+  (no glow VFX), drives the story with a single restrained subtitle card, and uses on-site sound only (no music,
+  no narration). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要非遗工艺纪录广告、以材料自身外观作为影片时间指针的创作者——15 秒 9:16 竖版，跟随苗族银匠
+  以八道工序锻造银饰，"银白"随时间从无到有、越来越多地占据画面。Skill 将最终银饰锁死单张参考图
+  （不加不存在的装饰），银光必须来自真实金属与真实光线（无发光特效），用一块克制的字幕牌驱动叙事，
+  仅现场原声（无音乐、无旁白）。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

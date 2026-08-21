@@ -1,0 +1,26 @@
+display-name-zh: 第一人称实测产品 · UGC 食品测评
+version: 0.1.0
+tag-en: E-Commerce
+tag-cn: 电商
+complete-tags-en:
+- E-Commerce / UGC Food Review
+- E-Commerce / First-Person Test
+complete-tags-cn:
+- 电商 / UGC 食品测评
+- 电商 / 第一人称实测
+summary-en: Generate an authentic first-person UGC food-tasting review (iPhone vlog style) from a single product reference image.
+summary-cn: 从一张产品参考图生成真实第一人称 UGC 食品试吃测评（iPhone vlog 质感）。
+desc-en: |
+  For creators who want an authentic first-person UGC food review in iPhone selfie-vlog style — handheld,
+  natural light, fast jump cuts, TikTok/Reels aesthetic. The Skill locks the food product (bun shape, filling
+  thickness, juice state, toppings, proportions) to a single reference image in every shot across 8 fast shots,
+  with Mandarin spoken lines. It keeps the review authentically casual: no commercial staging, no cinematic
+  grade, no CGI food. Includes a verified 15.08s output.
+desc-cn: |
+  面向想要真实第一人称 UGC 食品测评的创作者：iPhone 自拍 vlog 质感、手持、自然光、快速跳切、
+  抖音/Reels 审美。Skill 在 8 个快速分镜中把食品产品（白吉馍形状、卤肉厚度、腊汁状态、配菜、比例）
+  锁死单张参考图，配普通话对白。保持测评的真实随意感：不做商业摆拍、不做电影感调色、不做 CGI 食品。
+  附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

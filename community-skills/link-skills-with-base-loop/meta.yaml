@@ -1,0 +1,26 @@
+display-name-zh: 技能联动 · 角色设定展示图
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Character Showcase
+- Creative / Base Loop
+complete-tags-cn:
+- 创意实验 / 角色设定图
+- 创意实验 / 基础循环
+summary-en: Generate a magazine-grade character showcase sheet from one reference image as a near-static 4s shot.
+summary-cn: 从一张参考图生成杂志级角色设定展示图，近乎静止的 4 秒镜头。
+desc-en: |
+  For creators who want a character setting / showcase board built from a single reference image: a hero key
+  visual plus detail grid, three-view turnaround, palette board and nameplate, held as a near-static 4s shot
+  with only the slightest living motion (fabric, hair, ink edges). The Skill locks the character's face, body,
+  proportions, hairstyle, skin tone and outfit to the reference; no second character, no camera movement, no
+  large motion. Cel-shaded 3D / semi-real CGI with print-grade detail. Includes a verified 4.46s output.
+desc-cn: |
+  面向想要从单张参考图构建角色设定展示板的创作者：英雄主视觉 + 细节网格 + 三视图 + 配色板 + 名牌，
+  以近乎静止的 4 秒镜头呈现，仅衣摆、发丝与泼墨边缘有极轻微呼吸感动态。Skill 将角色脸、体型、比例、
+  发型、肤色与服装锁死参考图；无第二人物、无镜头移动、无大幅运动。赛璐璐 3D / 半写实 CGI，印刷级细节。
+  附带一条已跑通的 4.46 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

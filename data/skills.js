@@ -289,6 +289,219 @@ window.AMHS_DATA = {
     },
 
     {
+      slug: "link-skills-with-base-loop",
+      name: "Link Skills with Base Loop — Character Showcase Sheet",
+      nameZh: "技能联动 · 角色设定展示图",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a magazine-grade character showcase sheet from one reference image as a near-static 4s shot.",
+        zh: "从一张参考图生成杂志级角色设定展示图，近乎静止的 4 秒镜头。",
+      },
+      description: {
+        en: "For creators who want a character setting / showcase board built from a single reference image: a hero key visual plus detail grid, three-view turnaround, palette board and nameplate, held as a near-static 4s shot with only the slightest living motion (fabric, hair, ink edges). The Skill locks the character's face, body, proportions, hairstyle, skin tone and outfit to the reference; no second character, no camera movement, no large motion. Cel-shaded 3D / semi-real CGI with print-grade detail.",
+        zh: "面向想要从单张参考图构建角色设定展示板的创作者：英雄主视觉 + 细节网格 + 三视图 + 配色板 + 名牌，以近乎静止的 4 秒镜头呈现，仅衣摆、发丝与泼墨边缘有极轻微呼吸感动态。Skill 将角色脸、体型、比例、发型、肤色与服装锁死参考图；无第二人物、无镜头移动、无大幅运动。赛璐璐 3D / 半写实 CGI，印刷级细节。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Character Showcase", zh: "角色设定图" },
+        { en: "Base Loop", zh: "基础循环" },
+        { en: "Near-Static", zh: "近静态" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/link-skills-with-base-loop/assets/poster.webp",
+        video: "community-skills/link-skills-with-base-loop/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/link-skills-with-base-loop/assets/preview.mp4",
+        caption: { en: "Actual output: 4.46s / 1376×768 / 24fps generated on MiniMax H3", zh: "实际成片：4.46s / 1376×768 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One character reference image — locks face, body, proportions, hairstyle, skin and outfit", zh: "一张角色参考图——锁定脸、体型、比例、发型、肤色与服装" },
+        { en: "Optional: character name and copy lines for the nameplate and tagline", zh: "可选：角色名与名牌 / 标语文案" },
+      ],
+      capabilities: [
+        { en: "Builds a hero key visual + detail grid + three-view turnaround + palette board from one image", zh: "从单张图构建英雄主视觉 + 细节网格 + 三视图 + 配色板" },
+        { en: "Holds the frame near-static with only slight breathing motion on fabric/hair/ink edges", zh: "画面近静态，仅衣摆 / 发丝 / 泼墨边缘有极轻微呼吸感动态" },
+        { en: "No second character, no camera movement, no large motion", zh: "无第二人物、无镜头移动、无大幅运动" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock the character", zh: "锁定角色" }, desc: { en: "Pin face/body/proportions/hairstyle/skin/outfit to the reference.", zh: "将脸、体型、比例、发型、肤色、服装钉死参考图。" } },
+        { id: "board",   title: { en: "Compose the board", zh: "构建版面" }, desc: { en: "Hero key visual + DETAILS insets + TURNAROUND three-view + PALETTE + nameplate.", zh: "英雄主视觉 + DETAILS 特写 + TURNAROUND 三视图 + PALETTE 配色板 + 名牌。" } },
+        { id: "still",   title: { en: "Hold the frame", zh: "保持静止" }, desc: { en: "Near-static 4s shot, only slight breathing motion; no camera move, no second character.", zh: "近静态 4 秒镜头，仅轻微呼吸动态；无镜头移动、无第二人物。" } },
+      ],
+      outputs: [
+        { en: "A near-static character showcase sheet MP4", zh: "近乎静止的角色设定展示图 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the character reference locks the character; not used as the first frame unless explicitly requested.", zh: "图生视频：角色参考图锁定角色；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Character setting / showcase boards for games, anime and series", zh: "游戏、动漫、系列作品的角色设定展示板" },
+        { en: "Near-static character introduction cards", zh: "近乎静态的角色介绍卡" },
+      ],
+      notFor: [
+        { en: "Animated scenes, fights or story sequences", zh: "动画场景、打斗或故事片段" },
+        { en: "Real-photography looks (this is cel-shaded CGI)", zh: "真人摄影质感（本 Skill 是赛璐璐 CGI）" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill link-skills-with-base-loop",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/link-skills-with-base-loop",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/link-skills-with-base-loop/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/link-skills-with-base-loop/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "prove-product-through-first-person-test",
+      name: "Prove Product Through First-Person Test — UGC Food Review",
+      nameZh: "第一人称实测产品 · UGC 食品测评",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate an authentic first-person UGC food-tasting review (iPhone vlog style) from a single product reference image.",
+        zh: "从一张产品参考图生成真实第一人称 UGC 食品试吃测评（iPhone vlog 质感）。",
+      },
+      description: {
+        en: "For creators who want an authentic first-person UGC food review in iPhone selfie-vlog style — handheld, natural light, fast jump cuts, TikTok/Reels aesthetic. The Skill locks the food product (bun shape, filling thickness, juice state, toppings, proportions) to a single reference image in every shot across 8 fast shots, with Mandarin spoken lines. It keeps the review authentically casual: no commercial staging, no cinematic grade, no CGI food.",
+        zh: "面向想要真实第一人称 UGC 食品测评的创作者：iPhone 自拍 vlog 质感、手持、自然光、快速跳切、抖音/Reels 审美。Skill 在 8 个快速分镜中把食品产品（白吉馍形状、卤肉厚度、腊汁状态、配菜、比例）锁死单张参考图，配普通话对白。保持测评的真实随意感：不做商业摆拍、不做电影感调色、不做 CGI 食品。",
+      },
+      categories: ["e-commerce"],
+      tags: [
+        { en: "UGC Food Review", zh: "UGC 食品测评" },
+        { en: "First-Person Test", zh: "第一人称实测" },
+        { en: "Mandarin", zh: "普通话" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/prove-product-through-first-person-test/assets/poster.webp",
+        video: "community-skills/prove-product-through-first-person-test/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/prove-product-through-first-person-test/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1376×768 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1376×768 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One food-product reference image — locks the product in every shot", zh: "一张食品产品参考图——每个镜头锁定产品" },
+        { en: "Optional: reviewer description and spoken lines (Mandarin)", zh: "可选：测评者描述与普通话对白" },
+      ],
+      capabilities: [
+        { en: "Builds an 8-shot first-person tasting review with Mandarin spoken lines", zh: "构建 8 分镜第一人称试吃测评，含普通话对白" },
+        { en: "Locks the food product to the reference in every shot", zh: "每个镜头把食品产品锁死参考图" },
+        { en: "Keeps authentic UGC style: handheld, natural light, fast jump cuts, no commercial staging", zh: "保持真实 UGC 质感：手持、自然光、快速跳切、无商业摆拍" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock the product", zh: "锁定产品" }, desc: { en: "Pin bun/filling/juice/toppings/proportions to the reference in every shot.", zh: "每个镜头将白吉馍 / 卤肉 / 腊汁 / 配菜 / 比例钉死参考图。" } },
+        { id: "shots",   title: { en: "Build 8 fast shots", zh: "构建 8 个快速分镜" }, desc: { en: "Bag → open → push-in → juice drip → bite & reaction → b-roll → toast → freeze with text.", zh: "纸袋 → 开袋 → 推近 → 淌汁 → 咬与反应 → b-roll → 干杯 → 定格加文字。" } },
+        { id: "voice",   title: { en: "Write Mandarin lines", zh: "写普通话对白" }, desc: { en: "Authentic casual spoken lines, no commercial script tone.", zh: "真实随意的口语对白，无商业脚本腔。" } },
+      ],
+      outputs: [
+        { en: "An 8-shot UGC food review MP4 with Mandarin voice", zh: "一段 8 分镜 UGC 食品测评 MP4，含普通话人声" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the product reference locks the product; not used as the first frame unless explicitly requested.", zh: "图生视频：产品参考图锁定产品；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "UGC / KOC-style food reviews for e-commerce and social", zh: "电商 / 社交的 UGC、KOC 风食品测评" },
+        { en: "First-person product-tasting shorts", zh: "第一人称产品试吃短视频" },
+      ],
+      notFor: [
+        { en: "Cinematic commercial-grade food ads", zh: "电影级商业食品广告" },
+        { en: "Professional studio talking-head content", zh: "专业影棚真人口播" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill prove-product-through-first-person-test",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/prove-product-through-first-person-test",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/prove-product-through-first-person-test/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/prove-product-through-first-person-test/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "use-material-as-progress-clock",
+      name: "Use Material as Progress Clock — Heritage Craft Documentary Ad",
+      nameZh: "材料即时间 · 非遗工艺纪录广告",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a heritage-craft documentary ad where the material's own appearance is the clock of the film.",
+        zh: "生成一支「材料自身外观就是影片时钟」的非遗工艺纪录广告。",
+      },
+      description: {
+        en: "For creators who want an intangible-heritage craft documentary ad in which the material's own appearance is the film's clock — a 15s 9:16 vertical following a Miao silversmith forging an ornament through eight steps, with silver-white spreading from zero to everywhere as time passes. The Skill locks the finished silver piece to a single reference image, keeps silver-light from real metal and real light (no glow VFX), drives the story with a single restrained subtitle card, and uses on-site sound only (no music, no narration).",
+        zh: "面向想要非遗工艺纪录广告、以材料自身外观作为影片时间指针的创作者——15 秒 9:16 竖版，跟随苗族银匠以八道工序锻造银饰，银白随时间从无到有、越来越多地占据画面。Skill 将最终银饰锁死单张参考图，银光必须来自真实金属与真实光线（无发光特效），用一块克制的字幕牌驱动叙事，仅现场原声（无音乐、无旁白）。",
+      },
+      categories: ["commercial-ad"],
+      tags: [
+        { en: "Heritage Craft", zh: "非遗工艺" },
+        { en: "Material as Clock", zh: "材料即时间" },
+        { en: "9:16 Vertical", zh: "9:16 竖版" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/use-material-as-progress-clock/assets/poster.webp",
+        video: "community-skills/use-material-as-progress-clock/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/use-material-as-progress-clock/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 768×1376 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 768×1376 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One reference image of the finished craft piece", zh: "一张最终工艺成物参考图" },
+        { en: "Workshop & packaging scenes described in text", zh: "工坊与包装场景纯文字描述" },
+      ],
+      capabilities: [
+        { en: "Uses the material's own transformation as the film's time marker (silver-white from zero to everywhere)", zh: "以材料自身转化为影片时间标记（银白从无到有、越来越多）" },
+        { en: "Locks the finished piece to one reference image; silver-light from real metal, no glow VFX", zh: "成物锁死单张参考图；银光来自真实金属，无发光特效" },
+        { en: "Subtitle-card-driven storytelling with on-site sound only (no music / narration)", zh: "字幕牌驱动叙事，仅现场原声（无音乐 / 无旁白）" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock the finished piece", zh: "锁定成物" }, desc: { en: "Pin form/proportion/silver color/pattern to the reference; no added decorations.", zh: "将造型、比例、银面、纹样钉死参考图；不加不存在的装饰。" } },
+        { id: "steps",   title: { en: "Eight timed steps", zh: "八道工序" }, desc: { en: "Beat → sheet → first pattern → chisel → finish → solder peak → polish reveal → box → shelf.", zh: "锤坯 → 成片 → 起纹 → 錾刻 → 成形 → 焊接高潮 → 擦亮显银 → 入盒 → 上架。" } },
+        { id: "sound",   title: { en: "On-site sound design", zh: "现场声设计" }, desc: { en: "Material-real sounds only; the solder moment is the audio peak.", zh: "仅真实材料声；焊接瞬间为全片声音高潮。" } },
+      ],
+      outputs: [
+        { en: "A 15s 9:16 heritage-craft documentary ad MP4", zh: "一段 15 秒 9:16 非遗工艺纪录广告 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the finished-piece reference locks the piece; not used as the first frame unless explicitly requested.", zh: "图生视频：成物参考图锁定成物；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "字幕牌规则", "配色与光线", "声音", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Intangible-heritage craft ads and process documentaries", zh: "非遗工艺广告与工艺纪录" },
+        { en: "From-nothing-to-finished-object brand films", zh: "从无到有成物的品牌片" },
+      ],
+      notFor: [
+        { en: "Flashy national-style VFX shows or tourism promos", zh: "华丽国潮特效秀或旅游宣传片" },
+        { en: "Museum-style exhibition films", zh: "博物馆式展览片" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill use-material-as-progress-clock",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/use-material-as-progress-clock",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/use-material-as-progress-clock/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/use-material-as-progress-clock/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
       nameZh: "文生宣传片",
