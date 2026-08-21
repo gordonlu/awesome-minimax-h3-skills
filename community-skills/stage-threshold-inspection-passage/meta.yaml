@@ -1,0 +1,29 @@
+display-name-zh: 舞台临界 · 考察穿越
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Expedition Documentary
+- Creative / Threshold Crossing
+complete-tags-cn:
+- 创意实验 / 科考纪录
+- 创意实验 / 临界穿越
+summary-en: Generate a 15s first-person expedition documentary of volcanologists inspecting a newly formed lava tube at dawn.
+summary-cn: 生成一段 15 秒第一人称科考纪录：火山学家在清晨钻进新形成的熔岩管勘察。
+desc-en: |
+  For creators who want a first-person scientific-expedition documentary: a 15s 16:9 hyper-real short of two
+  volcanologists squeezing into a newly formed lava tube on a misty volcanic wasteland at 5:30-5:45 and recording
+  it before its structure changes — entry, wall reveal, steam-anomaly discovery, cautious check, marking and
+  retreat toward the mouth-light. The Skill mixes first-person urgency with a second follow camera, keeps
+  headlamp-light pools sweeping the rock and breathing/footsteps always audible, and enforces calm professional
+  field demeanor. Rock walls must read as real solid volcanic rock; no fantasy, no supernatural, no impossible
+  cave geometry, no text or logo. T2VA (pure text generation). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要第一人称科考纪录短片的创作者：15 秒 16:9 超写实短片，两名火山学家在清晨 5:30-5:45 于薄雾的
+  火山荒原上钻进一处新形成的熔岩管，在它结构变化前记录它——挤入洞口、洞壁展现、岩缝热气异动、后退检查、
+  标记撤离。Skill 混合第一人称紧迫感与第二机位跟拍，让头灯光斑在岩壁上扫动、呼吸声与脚步声始终清晰，
+  并强制全程冷静专业的科考姿态。岩壁质感必须像真实坚实的火山岩；无奇幻、无超自然、无不可能的洞穴几何、
+  无文字无 Logo。T2VA（纯文字生成）。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

@@ -1,0 +1,34 @@
+display-name-zh: 高定工坊广告风格
+version: 0.1.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Haute Couture
+- Commercial Ad / Heritage Craft
+- Commercial Ad / Embroidery
+complete-tags-cn:
+- 商业广告 / 高定
+- 商业广告 / 非遗工艺
+- 商业广告 / 刺绣
+summary-en: Generate a top-tier haute-couture ad of one Chinese high-embroidery piece — macro craft-film lens language, warm-gold light, restrained bilingual title — as a 15s 16:9 24fps short.
+summary-cn: 生成顶级高定时装广告——以工艺片微距镜头语言呈现一幅中国高级刺绣、暖金主光、克制中英双语落版——15 秒 / 16:9 / 24fps。
+desc-en: |
+  For creators who want a luxury fashion / high-atelier brand film: one large Chinese high-embroidery piece
+  (ruyi clouds, twining-lotus, koi and leaf-scroll motifs on cinnabar-red / ink-blue / jet-black silk) presented
+  in a dark luxury space with the lens language of Dior Haute Couture, Chanel Métiers d'Art, Valentino Haute
+  Couture and Hermès craft films — five-color thread sheen, ordered fine stitching, gold couching and laid-gold
+  opulence, layered dimensional embroidery. Warm-gold key light with soft side-rim light and macro highlights,
+  dramatic chiaroscuro on dark grounds; slow pushes and lateral moves with soft dissolves; no narration; a
+  restrained bilingual (Chinese calligraphy + elegant serif) title once at the end. Hard rules: keep one single
+  embroidery work throughout, no voice-over, no tacky guofeng / china-chic / tourism feel, no real brand logos.
+  T2VA (pure text-to-video, no reference image). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要高奢时装 / 高级工坊品牌片的创作者：在深色高奢空间里，以 Dior Haute Couture、Chanel Métiers d'Art、
+  Valentino Haute Couture、Hermès 工艺影像的镜头语言呈现一大幅中国高级刺绣（如意纹、缠枝莲纹、锦鲤与卷草纹，
+  绣于朱砂红 / 黛蓝 / 墨黑高级丝绸底料）——五彩丝线细腻光泽、细密针脚秩序、金线勾边与盘金贵气、立体绣花层次。
+  暖金主光 + 柔和侧逆光 + 微距高光扫面，深色背景中的戏剧性明暗；缓慢推近与横移、柔和叠化切镜；无旁白；结尾仅一次
+  克制排版的中英双语落版（中文书法 + 优雅衬线体）。硬性规则：全片保持同一幅刺绣作品、无旁白、不要俗套古风 /
+  廉价国潮 / 旅游宣传片感、无真实品牌 Logo。T2VA（纯文字生成，无参考图）。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

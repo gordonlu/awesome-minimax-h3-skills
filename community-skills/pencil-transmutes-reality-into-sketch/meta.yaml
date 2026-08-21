@@ -1,0 +1,33 @@
+display-name-zh: 铅笔将现实转化为素描
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Magic Pencil
+- Creative / Live-to-Animation
+- Creative / City Transmutation
+complete-tags-cn:
+- 创意实验 / 魔法铅笔
+- 创意实验 / 实拍转动画
+- 创意实验 / 都市转化
+summary-en: Generate a POV magic-pencil film — an orange pencil transmutes a train, a street cat, a taxi and a woman into 2D hand-drawn animation while keeping their natural motion — as a 10s 16:9 24fps short in real Hong Kong.
+summary-cn: 生成 POV 魔法铅笔短片——橙色铅笔把列车、街猫、出租车与女性依次转化为 2D 手绘动画并保留自然运动——10 秒 / 16:9 / 24fps，真实香港环境。
+desc-en: |
+  For creators who want a magic-pencil effect: a hand-held orange pencil points at moving subjects in real Hong
+  Kong and completely transmutes each into animated 2D hand-drawn illustration while the subject keeps its
+  natural motion — an MTR train into black-and-white pencil sketch, a tong-lau street cat into white pencil
+  sketch, a red taxi into pastel cartoon art, and a woman on a park bench into flat-color animation, against a
+  bright realistic city environment. The conversion is total (no live-action color, material or light residue,
+  no half-real-half-sketch states) and synchronous (the pencil starts drawing the instant the subject enters
+  frame, never late); it applies only to the pointed subject and never spreads to the environment; converted
+  subjects keep moving naturally; camera motion stays consistent with no jump cuts. T2VA (pure text-to-video,
+  no reference image). Includes a verified 10.13s output.
+desc-cn: |
+  面向想要魔法铅笔效果的创作者：一只手握橙色铅笔，笔尖指向真实香港中的移动主体，将其彻底转化为动画化 2D 手绘
+  插图并保留自然运动——港铁列车变黑白铅笔素描、唐楼街猫变白色铅笔素描、红色出租车变粉彩卡通、公园长椅女性变
+  平涂色块动画，背景是明亮写实的城市环境。转化是彻底的（不留任何实拍颜色、材质与光影残留，绝无"半实拍半素描"
+  中间态）且同步（主体一入画铅笔立即动笔，绝不迟滞）；只作用于铅笔所指主体、绝不蔓延到环境；转化后主体继续
+  自然运动；摄像机运动全程一致、无跳切。T2VA（纯文字生成，无参考图）。附带一条已跑通的 10.13 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

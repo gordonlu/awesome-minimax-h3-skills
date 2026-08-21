@@ -1,0 +1,30 @@
+display-name-zh: 舞台真诚 · 换新机位移
+version: 0.1.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Retro TV Spot
+- Commercial Ad / Technicolor 1950s
+complete-tags-cn:
+- 商业广告 / 复古电视广告
+- 商业广告 / 1950 染印法
+summary-en: Generate a 15s 1:1 24fps 1950s Technicolor TV commercial with tripod-locked camera, one slow dolly and exactly four hard cuts.
+summary-cn: 生成一段 15 秒 1:1 24fps 的 1950 年代染印法电视广告：三脚架锁定机位、一次缓慢推轨、恰好 4 次硬切。
+desc-en: |
+  For creators who want a 1950s three-strip Technicolor TV commercial that feels like a genuine mid-century
+  live-action spot: 15s 1:1 (1440×1440) 24fps, a family upgrading their beloved old TRITON thinking machine to
+  the bigger TITAN while the boy who won't let go gets dragged across the polished floor. The Skill locks the
+  formal look — tripod-locked camera, one slow dolly, exactly four hard cuts, warm saturated high-key light,
+  chrome, film grain, mono optical-soundtrack warmth — restricts all text to a single static end card
+  ("AMBER MIND INC. / The Future Arrives Thursday."), bans modern objects and humanoid robots, and includes
+  a complete 1950 voiceover script. T2VA (pure text generation). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要 1950 年代三段式染印法（Technicolor）电视广告、且必须像真正的中世纪真人实拍广告的创作者：
+  15 秒 1:1（1440×1440）24fps，一家人把心爱的旧思考机器 TRITON 升级到更大的 TITAN，而死死抱着旧机不放的
+  小男孩被拖过抛光地板。Skill 锁定正式质感——三脚架锁定机位、一次缓慢推轨、恰好 4 次硬切、暖饱和高调光、
+  镀铬、胶片颗粒、单声道光学声带暖感；全片文字只允许出现在唯一的静止结束卡上（"AMBER MIND INC. /
+  The Future Arrives Thursday."）；禁止现代物品与人形机器人；附完整 1950 配音台词。T2VA（纯文字生成）。
+  附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

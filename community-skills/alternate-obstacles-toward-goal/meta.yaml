@@ -1,0 +1,31 @@
+display-name-zh: 交替障碍趋目标
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Disaster Action
+- Creative / One-Take Escape
+- Creative / Sci-Fi Industrial
+complete-tags-cn:
+- 创意实验 / 灾难动作
+- 创意实验 / 一镜到底逃生
+- 创意实验 / 科幻工业
+summary-en: Generate a one-take realistic disaster-action escape — an engineer fleeing fuel-fire waves toward a blast-door seal — as a continuous 15s 16:9 24fps shot.
+summary-cn: 生成一镜到底的写实灾难逃生片——女机师逃过燃料火浪、冲向封舱闸板——连续 15 秒 / 16:9 / 24fps。
+desc-en: |
+  For creators who want a realistic disaster-action scene with a single continuous take: a female flight
+  engineer sprints alone through a star-freighter reactor corridor while crimson fuel-fire waves erupt from
+  floor grates and severed pipes burst into sparks, throwing her body onto a huge seal lever to close a
+  blast-proof shutter between herself and the fire. One goal, one storyline, one unbroken shot with no cuts;
+  fast clear action, no slow motion, no facial close-ups, no text or logo. A hard rule keeps the engineer
+  inside the blast-door safe zone after it seals. Realistic industrial texture with red emergency lighting,
+  T2VA (pure text-to-video, no reference image). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要写实灾难动作、单一连续镜头的创作者：星际货运飞船女机师独自在反应堆通道狂奔，炽红燃料火浪
+  从地板格栅喷涌、破损管线爆裂火花四溅，她整个身体压上巨大的封舱拉杆，把防爆闸板合拢在自己与大火
+  之间。一个目标、一条故事线、一镜到底无切镜；动作快而清晰，无慢动作、无面部特写、无文字无 Logo。
+  硬性规则保证闸板合拢后女机师始终位于闸板内侧安全区。写实工业质感 + 红色应急照明，T2VA（纯文字生成，
+  无参考图）。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

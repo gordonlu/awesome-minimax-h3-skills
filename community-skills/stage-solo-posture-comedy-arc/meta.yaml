@@ -1,0 +1,27 @@
+display-name-zh: 舞台单人 · 坐姿喜剧弧
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Talking-Head Comedy
+- Creative / Self-Deprecating Monologue
+complete-tags-cn:
+- 创意实验 / 口播喜剧
+- 创意实验 / 自嘲独白
+summary-en: Generate a 12s single-person talking-head comedy where a young man deadpans self-deprecating fitness jokes on a sofa.
+summary-cn: 生成一段 12 秒单人口播喜剧：年轻人坐在沙发上面无表情地吐槽健身、讲自嘲式笑话。
+desc-en: |
+  For creators who want a "talk about X, but make jokes" solo comedy spot: a 12s 16:9 single-person
+  talking-head short in which a young man in his twenties sits alone on a sofa facing camera and casually
+  riffs about fitness with 2-3 self-deprecating jokes. The Skill keeps it a natural deadpan chat — homey
+  lighting, natural performance, stable camera with slight push-ins at each punchline — and enforces a
+  one-character frame with no subtitles, no BGM, no canned laughter and no reality-show exaggeration.
+  T2VA (pure text generation). Includes a verified 12.25s output.
+desc-cn: |
+  面向想要"聊某个话题，但讲笑话"单人喜剧的创作者：12 秒 16:9 单人口播短片，一个二十多岁的年轻人独自
+  坐在沙发上、面朝镜头，用随口吐槽的方式聊健身，讲出 2-3 个自嘲式笑点。Skill 将表演锁定为自然吐槽式闲聊——
+  家常布光、自然表演、稳定机位并在笑点处轻微推近；全片只出现这一个角色，无字幕、无 BGM、无罐头笑声、
+  无真人秀式夸张反应。T2VA（纯文字生成）。附带一条已跑通的 12.25 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

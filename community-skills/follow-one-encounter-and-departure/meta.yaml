@@ -1,0 +1,32 @@
+display-name-zh: 跟随一人·相遇与离去
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Street Documentary
+- Creative / Cinema Vérité
+- Creative / 16mm Film
+complete-tags-cn:
+- 创意实验 / 街头纪实
+- 创意实验 / 真实电影
+- 创意实验 / 16mm 胶片
+summary-en: Generate a 1970s Greenwich Village cinéma-vérité street follow — a 16mm camera tailing one woman past children and into the crowd — as a 15s 4:3 24fps short with raw film grain and handheld shake.
+summary-cn: 生成 1970 年代格林尼治村真实电影街头跟拍——16mm 镜头尾随一名女子经过孩子、没入人群——15 秒 / 4:3 / 24fps，粗粝胶片颗粒与手持晃动。
+desc-en: |
+  For creators who want a cinéma-vérité street follow: a 16mm film camera tails a twenty-something completely
+  make-up-free young woman through 1970s Greenwich Village streets and a square, brushing past a group of
+  children and dissolving into the moving street. Raw 16mm film texture with heavy organic grain, pure natural
+  daylight, shoulder-held heavy shake, no stabilization, occasional focus loss and slight light leaks; the frame
+  stays unsettled until the very end. Ordinary cuts. No subtitles or logo, no music — only on-location sound
+  (street voices, children, pigeons, footsteps, wind, distant traffic); no modern digital quality; no on-screen
+  text; 4:3 framing with 16mm grain kept throughout. T2VA (pure text-to-video, no reference image). Includes a
+  verified 15.08s 4:3 output.
+desc-cn: |
+  面向想要真实电影式街头跟拍的创作者：16mm 胶片摄影机贴身追随一位二十多岁、完全素颜的年轻女子走过 1970
+  年代格林尼治村的街巷与小广场，与一群孩子擦肩而过，最后没入流动街景。粗粝 16mm 胶片质感、浓重有机颗粒、
+  纯自然日光、肩扛大幅晃动、无防抖、偶发失焦、轻微漏光；结尾前画面始终不安定。普通切镜。无字幕无 Logo、
+  无配乐——只保留现场声（街头人声、孩子叫喊、鸽子振翅、脚步、风与远处车声）；不要现代数码画质；画面无任何
+  文字；全程保持 4:3 画幅与 16mm 颗粒质感。T2VA（纯文字生成，无参考图）。附带一条已跑通的 15.08 秒 4:3 成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

@@ -1,0 +1,32 @@
+display-name-zh: 跨媒介反应
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Cross-Medium
+- Creative / 2D Sticker
+- Creative / Comedy Gag
+complete-tags-cn:
+- 创意实验 / 跨媒介
+- 创意实验 / 2D 贴纸
+- 创意实验 / 喜剧整活
+summary-en: Generate a cross-medium comedy — a flat 2D sticker Shiba Inu stealing chili, getting bonked and spicy-fired inside real night-market footage — as a 10s 16:9 24fps continuous POV take.
+summary-cn: 生成跨媒介喜剧——扁平 2D 贴纸柴犬在真实夜市实拍里偷辣椒、被敲头、被辣翻——10 秒 / 16:9 / 24fps 连续 POV 一镜到底。
+desc-en: |
+  For creators who want a comedy clip where a completely flat 2D sticker character shares a real live-action
+  frame and reacts to it: the sticker Shiba Inu 旺财 steals chili powder into a real stir-fry wok, gets bonked
+  lightly on the head by the live-action spatula, gets fed a spicy bite, and comically spits a little flame
+  and flips off its stool like a sheet of paper. Shot as the vendor's slightly-downward first-person wok-tossing
+  POV — one continuous 10s take, fixed wide composition, no cuts or zoom. Hard rules: only one live-action hand
+  at a time (never two in the same frame); the sticker stays perfectly flat 2D with no 3D volume, realistic fur,
+  shadow or clay; left hand never touches the spatula, right hand never holds the jar; no dialogue. T2VA (pure
+  text-to-video, no reference image). Includes a verified 10.13s output.
+desc-cn: |
+  面向想要扁平 2D 贴纸角色与真实实拍同框互动的喜剧短片的创作者：贴纸柴犬旺财往真实炒粉铁锅里偷倒辣椒面，
+  被实拍锅铲轻轻敲头，被喂了一口辣味，最后夸张地喷出小火焰、像纸片一样翻下矮凳。以摊主略向下俯视的第一人称
+  颠锅视角拍摄——连续 10 秒一镜到底、固定宽幅构图、无切镜无变焦。硬性规则：一次只出现一只实拍手（绝不与另一
+  只手同框）；贴纸保持完全扁平 2D——无 3D 体积、写实毛发、阴影或黏土质感；左手绝不碰锅铲、右手绝不端罐；
+  全片无对白。T2VA（纯文字生成，无参考图）。附带一条已跑通的 10.13 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

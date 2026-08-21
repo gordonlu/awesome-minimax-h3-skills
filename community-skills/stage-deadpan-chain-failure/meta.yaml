@@ -1,0 +1,29 @@
+display-name-zh: 舞台冷笑话 · 连锁崩坏
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Absurdist Comedy
+- Creative / Single-Joke Stage
+complete-tags-cn:
+- 创意实验 / 荒诞喜剧
+- 创意实验 / 单笑点舞台
+summary-en: Generate a 10s hyper-real absurdist circus-ostrich runway comedy with one character and one escalating joke.
+summary-cn: 生成一段 10 秒超写实荒诞喜剧：马戏团鸵鸟走秀，一个角色一个笑点逐级升级。
+desc-en: |
+  For creators who want a single-joke, single-character absurdist stage comedy: a 10s 16:9 hyper-real
+  cinematic short inside a luxury circus big-top, starring ONE male ostrich whose runway strut escalates
+  into controlled chaos (fanning a spotlight sideways, knocking a mannequin off stage) and ends in a deadpan
+  "shed-the-cape mic-drop" that breaks the audience. The Skill locks the ostrich's proportions, style and
+  features consistent from first frame to last; only one ostrich, one tent, one main joke; no gore, no
+  horror, no text or logo, no cartoon style, no slow-motion, no celebrity faces. T2VA (pure text generation).
+  Includes a verified 10.13s output.
+desc-cn: |
+  面向想要单笑点、单角色荒诞舞台喜剧的创作者：10 秒 16:9 超写实电影感短片，发生在豪华马戏团大帐篷内，
+  主角只有一只雄性鸵鸟——它的走秀登台逐级升级为可控的混乱（扇翅拍歪追光灯、撞落人台模特），最后以
+  面无表情的"脱壳 mic-drop"彻底引爆全场。Skill 将鸵鸟的比例、风格与特征锁定为从第一帧到最后一帧一致；
+  全片只出现一只鸵鸟、一个帐篷、一个主要笑点；无血腥、无恐怖、无文字无 Logo、无卡通风格、无慢动作、
+  无名人脸。T2VA（纯文字生成）。附带一条已跑通的 10.13 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

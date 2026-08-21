@@ -1,0 +1,30 @@
+display-name-zh: 舞台渐进 · 角色揭示
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Character Reveal
+- Creative / Cinematic Entrance
+complete-tags-cn:
+- 创意实验 / 角色揭示
+- 创意实验 / 电影感登场
+summary-en: Generate a 15s cinematic character-entrance from one reference image as a four-stage progressive reveal (detail to hero frame).
+summary-cn: 从一张参考图生成 15 秒电影感角色登场，以"细节到英雄帧"四段渐进揭示。
+desc-en: |
+  For creators who want a "progressive reveal / slow unveiling" character entrance: a 15s 16:9 cinematic short
+  built from a single character reference image as a four-stage reveal — defining detail (e.g. a lantern, boots,
+  hands) → partial body → face close-up → full-body hero frame — for a game, anime or film intro, e.g. a
+  fog-harbor lantern-bearer slowly ascending the steps. The Skill locks the character's face, body proportions,
+  hairstyle, outfit, colors, materials and overall silhouette to @图片1 (no redesign, no simplification, no
+  replacement of any defining feature), keeps camera movement smooth, restrained and purposeful, and matches
+  the render style to the reference. I2VA, @图片1 as character reference only, never as the first frame.
+  Includes a verified 15.08s output.
+desc-cn: |
+  面向想要"渐进式揭示 / 缓慢亮相"角色登场的创作者：15 秒 16:9 电影感短片，由单张角色参考图构建，以四段
+  渐进揭示呈现——界定性细节（如提灯、靴子、手）→ 部分身体 → 面部特写 → 全身英雄帧——适用于游戏、动漫或
+  电影片头，例如雾港的掌灯人缓步登阶。Skill 将角色的脸、身材比例、发型、服装、配色、材质与整体剪影锁死
+  @图片1（不重新设计、不简化、不替换任何界定性特征），保持镜头平滑、克制、有目的，并使渲染风格与参考图
+  一致。I2VA，@图片1 仅作人物参考，不作为首帧。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

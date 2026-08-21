@@ -1,0 +1,32 @@
+display-name-zh: 不完美记忆直录
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Found Footage
+- Creative / MiniDV Camcorder
+- Creative / Nostalgic Farewell
+complete-tags-cn:
+- 创意实验 / 原始素材
+- 创意实验 / MiniDV 摄像机
+- 创意实验 / 怀旧送别
+summary-en: Generate a forgotten 1998 MiniDV home-video style farewell — a young woman waiting at a seaside station and waving goodbye — as a 15s 16:9 24fps clip with full 90s camcorder artifacts.
+summary-cn: 生成一段被遗忘的 1998 年 MiniDV 家庭录像式送别——女生在滨海小站等车挥手告别——15 秒 / 16:9 / 24fps，完整 90 年代摄像机质感。
+desc-en: |
+  For creators who want a memory-style film that looks like a forgotten old camcorder tape: a quiet autumn 1998
+  goodbye at a small seaside station in Kamakura, a 20-year-old Japanese woman waiting on the platform, watching
+  the sea, and waving to the lens before boarding. The whole film wears full 90s Sony MiniDV camcorder texture —
+  violent handheld shake, off-frame compositions, auto-focus hunting between the train and her face, exposure
+  riding on the daylight, faded color, soft contrast, slight motion blur, MiniDV compression, no stabilization.
+  No music and no narration — only ambient sound (waves, seagulls, wind, station announcements); no on-screen text;
+  identity, clothing and hairstyle stay consistent throughout. T2VA (pure text-to-video, no reference image).
+  Includes a verified 15.08s output.
+desc-cn: |
+  面向想要"被遗忘的老摄像机磁带"式记忆影片的创作者：1998 年秋天镰仓一座滨海小站的安静送别，20 岁日本女生
+  在月台等车、看海、上车前对镜头挥手。全片穿戴完整 90 年代 Sony MiniDV 摄像机质感——剧烈手持抖动、构图
+  不准、自动对焦在电车与她的脸之间来回拉、曝光随日光起伏、色彩褪色、对比柔和、轻微运动模糊、MiniDV 压缩
+  痕迹、无防抖。无音乐无旁白，只保留环境声（海浪、海鸥、轻风、车站广播）；画面无任何文字；身份、服装、发型
+  全程一致。T2VA（纯文字生成，无参考图）。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

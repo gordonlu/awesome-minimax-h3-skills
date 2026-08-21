@@ -642,6 +642,766 @@ window.AMHS_DATA = {
     },
 
     {
+      slug: "alternate-obstacles-toward-goal",
+      name: "Alternate Obstacles Toward Goal — Fire-Wall Escape Run",
+      nameZh: "障碍交替 · 火墙逃生奔跑",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a one-take realistic disaster-action film — a female freight-ship engineer escaping a reactor corridor fire-wave — as a continuous 15s 16:9 24fps shot.",
+        zh: "一段式写实灾难动作片：货运飞船女机师穿越反应堆走廊火浪逃生，连续 15 秒 / 16:9 / 24fps。",
+      },
+      description: {
+        en: "For creators who want a realistic disaster-action scene with a single continuous take: a protagonist racing through an industrial corridor toward one clear goal while fire and debris keep cutting the path ahead and sealing the route behind. The Skill enforces one shot with no cuts, a single main character, fast and clear action (no slow motion), no facial close-ups, and a hard end-state rule — the engineer must always stay inside the blast-door safe zone after the door seals. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要单镜头连续真实灾难动作场景的创作者：主角奔过工业走廊奔向一个明确目标，前方不断被火焰与碎片切断、后方退路不断被封死。Skill 强制执行一镜到底无切镜、单一主角、快而清晰的动作（无慢动作）、无面部特写，以及硬性终态规则——防爆闸板合拢后机师必须始终在安全区内侧。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Disaster Action", zh: "灾难动作" },
+        { en: "One Continuous Take", zh: "一镜到底" },
+        { en: "Sci-Fi Industrial", zh: "科幻工业" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/alternate-obstacles-toward-goal/assets/poster.webp",
+        video: "community-skills/alternate-obstacles-toward-goal/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/alternate-obstacles-toward-goal/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Single continuous take with no cuts", zh: "一镜到底无切镜" },
+        { en: "Escalating fire obstacles sealing the route behind", zh: "不断升级的火浪障碍、后方退路被封死" },
+        { en: "Hard end-state: protagonist stays inside the blast-door safe zone", zh: "硬性终态：主角始终在防爆闸板内侧安全区" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the three-segment prompt", zh: "构建三段式提示词" }, desc: { en: "Low-wide run → side follow → frontal push to the seal, with positive/negative per beat.", zh: "低角度奔跑 → 侧面跟拍 → 正面冲向封舱，每节拍带正反向。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check no cuts, one character, no slow-mo, and the blast-door end-state.", zh: "核对无切镜、单一角色、无慢动作与闸板终态。" } },
+      ],
+      outputs: [
+        { en: "A 15s one-take disaster-action MP4", zh: "一段 15 秒一镜到底灾难动作 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Cinematic disaster / escape scenes", zh: "电影感灾难 / 逃生场景" },
+        { en: "Industrial sci-fi corridor runs", zh: "科幻工业走廊奔跑" },
+      ],
+      notFor: [
+        { en: "Multi-shot action sequences", zh: "多镜头动作序列" },
+        { en: "Superhero / superhuman physics", zh: "超级英雄 / 超人物理" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill alternate-obstacles-toward-goal",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/alternate-obstacles-toward-goal",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/alternate-obstacles-toward-goal/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/alternate-obstacles-toward-goal/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "create-cross-medium-reaction",
+      name: "Create Cross-Medium Reaction — 2D Sticker vs Real Scene",
+      nameZh: "跨媒介反应 · 2D 贴纸角色 vs 实拍",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a cross-medium comedy: a flat 2D sticker character interacting with a real filmed scene — a sticker shiba sneaking chili flakes into a night-market stir-fry, in 10s 16:9.",
+        zh: "跨媒介喜剧短片：扁平 2D 贴纸角色与实拍场景同框互动——贴纸柴犬在夜市炒粉摊偷倒辣椒面，10 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a cross-medium hybrid: a fully flat 2D sticker character co-existing with a real filmed scene in one fixed handheld POV (first-person wok-view). The Skill keeps the sticker perfectly flat (no 3D volume, no realistic shadows), allows only one real hand on screen at a time (never two, no mirrored or extra hands), keeps hand/job roles strict (left never stir-fries, right never holds the jar, left never touches the spatula), and drives a six-beat comedy of stealing chili → handover → head tap → feeding → spicy flip → freeze frame. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要跨媒介混合画面的创作者：完全扁平的 2D 贴纸角色与实拍场景共存于一个固定手持 POV（第一人称颠锅视角）。Skill 保持贴纸完全扁平（无 3D 体积、无写实投影），同一时刻只允许一只实拍手出现（绝不同框两只、无镜像手、无多余手掌），严格执行手的职责分工（左手绝不炒粉、右手绝不端罐、左手绝不碰锅铲），并驱动六节拍喜剧：偷倒辣椒 → 换手交接 → 敲头 → 喂食 → 辣翻 → 定格。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Cross-Medium", zh: "跨媒介" },
+        { en: "2D Sticker", zh: "2D 贴纸" },
+        { en: "Comedy", zh: "喜剧" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/create-cross-medium-reaction/assets/poster.webp",
+        video: "community-skills/create-cross-medium-reaction/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/create-cross-medium-reaction/assets/preview.mp4",
+        caption: { en: "Actual output: 10.13s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：10.13s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Coexists a flat 2D sticker character with a real filmed scene", zh: "扁平 2D 贴纸角色与实拍场景同框共存" },
+        { en: "Strict one-hand rule and role separation", zh: "严格的单手规则与职责分工" },
+        { en: "Six-beat sticker comedy arc with a freeze-frame ending", zh: "六节拍贴纸喜剧弧线，定格收尾" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the six-beat prompt", zh: "构建六节拍提示词" }, desc: { en: "Steal chili → handover → head tap → feed → spicy flip → freeze.", zh: "偷倒辣椒 → 换手 → 敲头 → 喂食 → 辣翻 → 定格。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check sticker flatness, one-hand rule, role separation, no cross-beat glitches.", zh: "核对贴纸扁平、单手规则、职责分工、无节拍穿帮。" } },
+      ],
+      outputs: [
+        { en: "A 10s cross-medium comedy MP4", zh: "一段 10 秒跨媒介喜剧 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "2D sticker / flat character interacting with real footage", zh: "2D 贴纸 / 扁平角色与实拍互动" },
+        { en: "Cross-medium comedy shorts", zh: "跨媒介喜剧短片" },
+      ],
+      notFor: [
+        { en: "Full 3D animated scenes", zh: "全 3D 动画场景" },
+        { en: "Realistic creature effects", zh: "写实生物特效" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill create-cross-medium-reaction",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/create-cross-medium-reaction",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/create-cross-medium-reaction/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/create-cross-medium-reaction/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "direct-imperfect-memory-farewell",
+      name: "Direct Imperfect Memory Farewell — MiniDV Send-Off",
+      nameZh: "直接不完美记忆告别 · MiniDV 送别",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a hyper-realistic documentary-style short: a forgotten 1998 MiniDV family video of a young woman waving goodbye at a seaside station, 15s 16:9.",
+        zh: "超写实纪录片风格短片：一段被遗忘的 1998 年 MiniDV 家庭录像，记录海边小站年轻女生挥手告别，15 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want an authentic nostalgic MiniDV look: a 90s Sony camcorder aesthetic — heavy handheld shake, imperfect framing, autofocus hunting between train and face, exposure drifting with daylight, faded colors, soft contrast, slight motion blur, DV compression, no stabilization. The Skill recreates a mundane, unpolished farewell at a seaside station over five ordinary cuts, with on-site sound only (no music, no narration). T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要真实怀旧 MiniDV 质感的创作者：90 年代 Sony 摄像机质感——剧烈手持抖动、构图不准、自动对焦在电车与脸之间来回拉、曝光随日光起伏、色彩褪色、对比柔和、轻微运动模糊、DV 压缩、无防抖。Skill 用五个普通切镜重现场边小站的平淡而不完美的送别，仅现场环境声（无音乐、无旁白）。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "MiniDV Nostalgia", zh: "MiniDV 怀旧" },
+        { en: "Documentary", zh: "纪录片" },
+        { en: "Imperfect Handheld", zh: "不完美手持" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/direct-imperfect-memory-farewell/assets/poster.webp",
+        video: "community-skills/direct-imperfect-memory-farewell/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/direct-imperfect-memory-farewell/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Authentic 90s MiniDV look with autofocus hunting and imperfect framing", zh: "真实的 90 年代 MiniDV 质感，含对焦搜寻与构图不准" },
+        { en: "Five ordinary cuts across a quiet seaside farewell", zh: "五个普通切镜，海边安静的送别" },
+        { en: "On-site ambient sound only (no music, no narration)", zh: "仅现场环境声（无音乐、无旁白）" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the five-beat prompt", zh: "构建五节拍提示词" }, desc: { en: "Waiting → breeze & timetable → tea by the sea → train arrives → board & wave.", zh: "等车 → 海风与时刻表 → 海边饮茶 → 电车进站 → 上车挥手。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check DV texture, imperfect handheld, no stabilization, identity consistency.", zh: "核对 DV 质感、不完美手持、无防抖、身份一致。" } },
+      ],
+      outputs: [
+        { en: "A 15s nostalgic MiniDV send-off MP4", zh: "一段 15 秒怀旧 MiniDV 送别 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Nostalgic family-video / memory shorts", zh: "怀旧家庭录像 / 记忆短片" },
+        { en: "90s camcorder aesthetic recreations", zh: "90 年代摄像机质感复刻" },
+      ],
+      notFor: [
+        { en: "Stable cinematic productions", zh: "稳定电影级制作" },
+        { en: "Modern smartphone look", zh: "现代手机质感" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill direct-imperfect-memory-farewell",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/direct-imperfect-memory-farewell",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/direct-imperfect-memory-farewell/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/direct-imperfect-memory-farewell/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "follow-one-encounter-and-departure",
+      name: "Follow One Encounter and Departure — Cinéma Vérité Street Walk",
+      nameZh: "尾随一次相遇与离开 · 真实电影街头跟拍",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 1970s New York street cinéma-vérité documentary: a shoulder-mounted 16mm camera follows a plain young woman through Greenwich Village until she merges into the flow — 15s 4:3.",
+        zh: "1970 年代纽约街头真实电影纪录片：肩扛 16mm 摄影机贴身跟拍一位素颜年轻女子穿过格林尼治村直至没入人流——15 秒 4:3。",
+      },
+      description: {
+        en: "For creators who want a rough cinéma-vérité documentary feel: 1970s Greenwich Village street, a 16mm film camera look — heavy organic grain, pure natural daylight, shoulder-mounted handheld sway, no stabilization, occasional defocus, slight light leaks, elegant and full of life. A plain young woman is followed intimately until she merges into the moving street, sharing one brief glance with a child. 4:3 frame, on-site sound only. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要粗粝真实电影纪录片质感的创作者：1970 年代格林尼治村街头、16mm 胶片摄影机质感——浓重有机颗粒、纯自然日光、肩扛手持大幅晃动、无防抖、偶发失焦、轻微漏光、优雅而充满生活气息。素颜年轻女子被贴身追随直至没入流动街景，途中与一个孩子短暂交换眼神。4:3 画幅，仅现场声。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Cinéma Vérité", zh: "真实电影" },
+        { en: "16mm Film", zh: "16mm 胶片" },
+        { en: "4:3 Documentary", zh: "4:3 纪录片" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/follow-one-encounter-and-departure/assets/poster.webp",
+        video: "community-skills/follow-one-encounter-and-departure/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/follow-one-encounter-and-departure/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 928×672 (4:3) / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 928×672（4:3）/ 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Authentic 16mm cinéma-vérité look with organic grain and handheld sway", zh: "真实 16mm 真实电影质感，有机颗粒与手持晃动" },
+        { en: "Intimate follow shot until the subject merges into the street", zh: "贴身跟拍直至主体没入街景" },
+        { en: "4:3 frame, on-site sound only", zh: "4:3 画幅，仅现场声" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the four-beat prompt", zh: "构建四节拍提示词" }, desc: { en: "Close follow → unsteady tailing → kids cross → rough merge into the flow.", zh: "贴身跟拍 → 不稳尾随 → 孩子横穿 → 粗粝没入人流。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check grain, handheld, 4:3, no modern elements, on-site sound.", zh: "核对颗粒、手持、4:3、无现代元素、现场声。" } },
+      ],
+      outputs: [
+        { en: "A 15s 4:3 cinéma-vérité street MP4", zh: "一段 15 秒 4:3 真实电影街头 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Documentary-style street follow shorts", zh: "纪录片风街头跟拍短片" },
+        { en: "16mm film-look recreations", zh: "16mm 胶片质感复刻" },
+      ],
+      notFor: [
+        { en: "Stable polished productions", zh: "稳定精致的制作" },
+        { en: "Modern digital look", zh: "现代数码画质" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill follow-one-encounter-and-departure",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/follow-one-encounter-and-departure",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/follow-one-encounter-and-departure/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/follow-one-encounter-and-departure/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "haute-couture-atelier-ad-style",
+      name: "Haute Couture Atelier Ad Style — Chinese Embroidery Luxury Ad",
+      nameZh: "高定工坊广告风格 · 中式刺绣高奢广告",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a top-tier Western haute-couture ad style: close-up macro shots of a Chinese silk-embroidery masterpiece (ruyi & tangled-lotus motifs on vermilion/navy silk), 15s 16:9.",
+        zh: "顶级西方高定广告风格：中国高级刺绣精品（朱砂红/黛蓝丝绸上的如意缠枝莲纹）局部微距特写，15 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a luxury fashion-film look in the vein of Dior Haute Couture / Chanel Métiers d'Art / Valentino / Hermès ateliers: a large Chinese silk-embroidery piece (ruyi, tangled-lotus, koi and tendril motifs on vermilion-red / navy / ink-black silk) shot in repeated close-up macro with warm-gold key light, soft rim-light and fine-stitch detail. The Skill keeps one and the same work throughout (no pattern swaps), reads as wearable jewelry, and uses a single restrained bilingual end-card. No voice-over, no cheap national-style look. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要 Dior 高定 / Chanel 高级手工坊 / Valentino / Hermès 工坊质感奢侈时尚影片的创作者：大幅中国刺绣精品（朱砂红 / 黛蓝 / 墨黑丝绸上的如意纹、缠枝莲纹、锦鲤与卷草纹）以重复的微距特写呈现，暖金主光、柔和侧逆光、细腻针脚细节。Skill 全片保持同一幅作品（不换图样）、呈现「可穿戴珠宝」般华丽、使用一次克制的双语落版。无旁白、无俗套国潮感。纯文生 T2VA，无参考图。",
+      },
+      categories: ["commercial-ad"],
+      tags: [
+        { en: "Haute Couture", zh: "高定" },
+        { en: "Chinese Embroidery", zh: "中式刺绣" },
+        { en: "Luxury Fashion Film", zh: "奢侈时尚影片" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/haute-couture-atelier-ad-style/assets/poster.webp",
+        video: "community-skills/haute-couture-atelier-ad-style/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/haute-couture-atelier-ad-style/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Atelier-grade macro look at silk embroidery with warm-gold light", zh: "工坊级丝绸刺绣微距质感，暖金主光" },
+        { en: "Keeps one embroidery work throughout (no pattern swaps)", zh: "全片保持同一幅刺绣作品（不换图样）" },
+        { en: "Single restrained bilingual end-card, no voice-over", zh: "一次克制的双语落版，无旁白" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the four-beat prompt", zh: "构建四节拍提示词" }, desc: { en: "Macro establish → gold-thread detail → mid view → end-card reveal.", zh: "微距建立 → 金线特写 → 气韵中景 → 落版收束。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check same work, no pattern swap, no cheap national-style, no voice-over.", zh: "核对同一作品、不换图样、无俗套国潮、无旁白。" } },
+      ],
+      outputs: [
+        { en: "A 15s luxury embroidery fashion-film MP4", zh: "一段 15 秒奢侈刺绣时尚影片 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要", "非叙事性音乐"] },
+      ],
+      bestFor: [
+        { en: "Luxury fashion-film style ads", zh: "奢侈时尚影片风广告" },
+        { en: "Craft / atelier / heritage-skill brand films", zh: "工艺 / 工坊 / 非遗品牌片" },
+      ],
+      notFor: [
+        { en: "Cheap national-style VFX", zh: "廉价国潮特效" },
+        { en: "Tourism promo look", zh: "旅游宣传片感" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill haute-couture-atelier-ad-style",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/haute-couture-atelier-ad-style",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/haute-couture-atelier-ad-style/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/haute-couture-atelier-ad-style/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "pencil-transmutes-reality-into-sketch",
+      name: "Pencil Transmutes Reality Into Sketch — Magic Pencil POV",
+      nameZh: "铅笔点石成画 · 魔法铅笔 POV",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a POV magic-pencil film: a pencil pointed at real Hong Kong subjects transmutes them fully into animated 2D illustrations — MTR train, rooftop cat, red taxi, park woman — 10s 16:9.",
+        zh: "POV 魔法铅笔短片：笔尖指向香港现实主体，将其彻底转化为动画 2D 手绘——港铁列车、唐楼街猫、红的士、公园长椅女性——10 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a POV magic-pencil effect: a hand holding an orange pencil points at moving real-world subjects and transmutes each one completely into animated 2D hand-drawn illustration while preserving its natural motion. The Skill requires full transformation (all real colors/materials disappear, pencil lines only, no half-live/half-sketch states) and synchronous timing (the pencil starts drawing the instant the subject enters frame, never after a delay). Four Hong Kong subjects convert in sequence. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要 POV 魔法铅笔特效的创作者：手持橙色铅笔指向移动的现实主体，将每个主体彻底转化为动画 2D 手绘插图，同时保留其自然运动。Skill 要求完全转化（实拍颜色与材质全部消失、仅铅笔线条、无半实拍半素描状态）与同步时机（主体一入画铅笔立即动笔，不得迟滞）。四个香港主体依次转化。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Magic Pencil", zh: "魔法铅笔" },
+        { en: "2D Illustration", zh: "2D 插画" },
+        { en: "Full Transformation", zh: "彻底转化" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/pencil-transmutes-reality-into-sketch/assets/poster.webp",
+        video: "community-skills/pencil-transmutes-reality-into-sketch/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/pencil-transmutes-reality-into-sketch/assets/preview.mp4",
+        caption: { en: "Actual output: 10.13s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：10.13s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Fully transmutes real subjects into 2D illustrations with natural motion preserved", zh: "将现实主体彻底转化为 2D 插画，保留自然运动" },
+        { en: "Synchronous timing: pencil draws the instant the subject enters frame", zh: "同步时机：主体一入画铅笔立即动笔" },
+        { en: "Four Hong Kong subjects convert in sequence", zh: "四个香港主体依次转化" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the five-beat prompt", zh: "构建五节拍提示词" }, desc: { en: "POV establish + MTR train → rooftop cat → red taxi → park woman → magic circle end.", zh: "POV 建立 + 港铁 → 街猫 → 红的士 → 长椅女性 → 魔法圈收尾。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check full transformation (no residual color), sync timing, no spread to environment.", zh: "核对完全转化（无残留颜色）、同步时机、不蔓延到环境。" } },
+      ],
+      outputs: [
+        { en: "A 10s magic-pencil POV MP4", zh: "一段 10 秒魔法铅笔 POV MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Magic-pencil / hand-drawn transmutation effects", zh: "魔法铅笔 / 手绘转化特效" },
+        { en: "Real-to-illustration POV shorts", zh: "实拍到插画的 POV 短片" },
+      ],
+      notFor: [
+        { en: "Partial / soft transformation effects", zh: "部分 / 柔和转化特效" },
+        { en: "Fully animated scenes without a live base", zh: "无实拍底的全动画场景" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill pencil-transmutes-reality-into-sketch",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/pencil-transmutes-reality-into-sketch",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/pencil-transmutes-reality-into-sketch/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/pencil-transmutes-reality-into-sketch/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "stage-deadpan-chain-failure",
+      name: "Stage Deadpan Chain Failure — Ostrich Runway Comedy",
+      nameZh: "舞台面瘫连锁失败 · 鸵鸟走秀喜剧",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a hyper-realistic absurd comedy: a male ostrich in an opulent cape struts a circus runway, knocks a spotlight askew, topples a mannequin, then mic-drops its cape — 10s 16:9.",
+        zh: "超写实荒诞喜剧：一只披着华丽斗篷的雄性鸵鸟在马戏团走秀，拍歪追光灯、撞落人台模特，最后甩落斗篷 mic-drop——10 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a one-scene, one-joke absurd comedy with a single protagonist: a male ostrich struts a luxurious circus big-top runway in an opulent cape, huge top hat and sparkling jewels, then chaos escalates — wing-slap knocks a spotlight askew, a turn topples a mannequin — before a perfect supermodel freeze pose and a cape-fling mic-drop that ends the show. Realistic cinematic look (not cartoon, not slow-motion), one character, one tent, one joke, character features consistent throughout. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要单场景、单笑点、单一主角的荒诞喜剧创作者：一只雄性鸵鸟披着夸张华丽斗篷、超大圆顶礼帽与闪亮珠宝在豪华马戏团大帐篷走秀，随后混乱升级——扇翅拍歪追光灯、转身撞落人台模特——最终完美超模定格并甩脱斗篷 mic-drop 收场。写实电影感（非卡通、非慢动作）、单一角色、一个帐篷、一个笑点、角色特征前后一致。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Absurd Comedy", zh: "荒诞喜剧" },
+        { en: "Runway Walk", zh: "走秀" },
+        { en: "Single-Joke Scene", zh: "单笑点场景" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/stage-deadpan-chain-failure/assets/poster.webp",
+        video: "community-skills/stage-deadpan-chain-failure/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-deadpan-chain-failure/assets/preview.mp4",
+        caption: { en: "Actual output: 10.13s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：10.13s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Single-protagonist one-scene absurd comedy", zh: "单一主角单场景荒诞喜剧" },
+        { en: "Escalating chain-failure chaos from wing-slap to mic-drop", zh: "从扇翅到 mic-drop 的连锁失败升级" },
+        { en: "Realistic cinematic look, consistent character features", zh: "写实电影感，角色特征前后一致" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the three-beat prompt", zh: "构建三节拍提示词" }, desc: { en: "Grand entrance → chaos escalation → freeze pose & mic-drop.", zh: "霸气登场 → 混乱升级 → 定格与甩斗篷。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check one character, one tent, one joke, no cartoon / slow-mo.", zh: "核对单一角色、一个帐篷、一个笑点、无卡通 / 慢动作。" } },
+      ],
+      outputs: [
+        { en: "A 10s absurd runway comedy MP4", zh: "一段 10 秒荒诞走秀喜剧 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Animal protagonists in human comedy situations", zh: "动物主角的人性喜剧情境" },
+        { en: "One-joke absurd short comedies", zh: "单笑点荒诞喜剧短片" },
+      ],
+      notFor: [
+        { en: "Cartoon / animated style (this is realistic)", zh: "卡通 / 动画风（本 Skill 是写实）" },
+        { en: "Horror or gore", zh: "恐怖或血腥" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill stage-deadpan-chain-failure",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-deadpan-chain-failure",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-deadpan-chain-failure/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-deadpan-chain-failure/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "stage-earnest-upgrade-displacement",
+      name: "Stage Earnest Upgrade Displacement — 1950 Technicolor TV Ad",
+      nameZh: "舞台郑重升级置换 · 1950 染印法电视广告",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 1950s three-strip Technicolor TV ad: a family admires the TRITON thinking machine, the bigger TITAN is wheeled in, and the boy clutching the old one is dragged across the floor — 15s 1:1.",
+        zh: "1950 年代三段式染印法电视广告：一家人欣赏老式思考机器 TRITON，更庞大的 TITAN 被推入，抱着旧机器不放的小男孩被拖过地板——15 秒 1:1。",
+      },
+      description: {
+        en: "For creators who want a period-perfect 1950s Technicolor TV commercial: a bright appliance showroom, a family admiring an old cabinet thinking-machine (TRITON), a bigger and shinier TITAN wheeled in by two workers, the old one pushed away while the boy who hugs it is dragged across the polished floor — the boy mildly puzzled, never distressed. Four hard cuts on a locked tripod with one slow dolly, warm saturated high-key lighting, chrome, polished floors, film grain and gentle flicker. Voice-over: 1950s American mid-Atlantic male narrator (words locked, one perfect take). Only the end card carries text: AMBER MIND INC. / The Future Arrives Thursday. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要年代精确的 1950 年代染印法电视广告的创作者：明亮电器展厅，一家人欣赏老式柜式思考机器 TRITON，两名工人推入更庞大闪亮、双琥珀眼的新款 TITAN，旧机被推走而抱着它的小男孩被拖过抛光地板——男孩只是轻微困惑、绝不痛苦。三脚架锁定 + 一次缓慢推轨，4 次硬切，暖饱和高调布光、镀铬、抛光地板、胶片颗粒与轻微颤动。画外音：1950 美国中大西洋口音男中音（台词锁定、一遍到位）。仅结束卡带文字：AMBER MIND INC. / The Future Arrives Thursday。纯文生 T2VA，无参考图。",
+      },
+      categories: ["commercial-ad"],
+      tags: [
+        { en: "1950s Technicolor", zh: "1950 染印法" },
+        { en: "Retro TV Ad", zh: "复古电视广告" },
+        { en: "1:1 Square", zh: "1:1 方形" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/stage-earnest-upgrade-displacement/assets/poster.webp",
+        video: "community-skills/stage-earnest-upgrade-displacement/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-earnest-upgrade-displacement/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 800×800 (1:1) / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 800×800（1:1）/ 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Period-perfect 1950s three-strip Technicolor look", zh: "年代精确的 1950 三段式染印法质感" },
+        { en: "Four hard cuts on a locked tripod with one slow dolly", zh: "三脚架锁定 + 一次缓慢推轨，4 次硬切" },
+        { en: "Locked 1950s voice-over copy and a single text end card", zh: "锁定的 1950 画外音台词与唯一文字结束卡" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the four-cut prompt", zh: "构建四切镜提示词" }, desc: { en: "Locked wide → mid on the boy → TITAN wheeled in → applause & slow dolly → static end card.", zh: "锁定全景 → 男孩中景 → TITAN 进场 → 掌声与推轨 → 静止结束卡。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check no modern objects, boy not distressed, ≤4 cuts, voice-over locked.", zh: "核对无现代物件、男孩不痛苦、≤4 次切镜、画外音锁定。" } },
+      ],
+      outputs: [
+        { en: "A 15s 1:1 1950s TV ad MP4", zh: "一段 15 秒 1:1 1950 电视广告 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要", "非叙事性音乐"] },
+      ],
+      bestFor: [
+        { en: "Period retro TV ads", zh: "年代复古电视广告" },
+        { en: "Deadpan comedy with period voice-over", zh: "带年代画外音的冷面喜剧" },
+      ],
+      notFor: [
+        { en: "Modern tech / sci-fi looks", zh: "现代科技 / 科幻质感" },
+        { en: "Humanoid robots or digital screens", zh: "人形机器人或数字屏幕" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill stage-earnest-upgrade-displacement",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-earnest-upgrade-displacement",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-earnest-upgrade-displacement/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-earnest-upgrade-displacement/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "stage-solo-posture-comedy-arc",
+      name: "Stage Solo Posture Comedy Arc — Fitness Rant",
+      nameZh: "舞台独坐姿势喜剧弧 · 健身吐槽",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a single-person seated talking-head comedy: a twentysomething riffing on fitness with 2–3 self-deprecating jokes, natural performance, slight push-ins at each laugh — 12s 16:9.",
+        zh: "单人口播喜剧：一个二十多岁的年轻人坐在沙发上随口吐槽健身，讲 2–3 个自嘲式笑点，自然表演、笑点处轻微推近——12 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a minimal single-person talking-head comedy: a twentysomething seated on a sofa facing camera, riffing on fitness with 2–3 self-deprecating jokes in a natural, casual, off-the-cuff delivery. Home lighting, natural performance, locked camera with a slight push-in at each laugh line. No subtitles, no laugh track, no background music, no exaggerated reality-show reactions — just one character and an authentic rant. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要极简单人口播喜剧的创作者：一个二十多岁的年轻人坐在沙发上、面朝镜头，用随口吐槽的方式聊健身，讲出 2–3 个自嘲式笑点。家常布光、自然表演、稳定机位、每个笑点轻微推近。无字幕、无罐头笑声、无背景音乐、无真人秀式夸张反应——只有一个角色和一段真实的吐槽。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Talking-Head Comedy", zh: "口播喜剧" },
+        { en: "Self-Deprecating", zh: "自嘲" },
+        { en: "Single Character", zh: "单一角色" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/stage-solo-posture-comedy-arc/assets/poster.webp",
+        video: "community-skills/stage-solo-posture-comedy-arc/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-solo-posture-comedy-arc/assets/preview.mp4",
+        caption: { en: "Actual output: 12.25s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：12.25s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Single seated talking-head with 2–3 self-deprecating jokes", zh: "单一坐姿口播，2–3 个自嘲笑点" },
+        { en: "Natural casual delivery, slight push-ins at each laugh", zh: "自然随意的表演，笑点处轻微推近" },
+        { en: "No subtitles / laugh track / BGM / exaggerated reactions", zh: "无字幕 / 罐头笑声 / 背景音乐 / 夸张反应" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the three-beat prompt", zh: "构建三节拍提示词" }, desc: { en: "Mid → push-in → closer push-in with a closing joke.", zh: "中景 → 推近 → 再推近收尾笑点。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check single character, natural delivery, no laugh track.", zh: "核对单一角色、自然表演、无罐头笑声。" } },
+      ],
+      outputs: [
+        { en: "A 12s talking-head comedy MP4", zh: "一段 12 秒口播喜剧 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Minimal single-person comedy shorts", zh: "极简单人喜剧短片" },
+        { en: "Authentic talking-head rants", zh: "真实口播吐槽" },
+      ],
+      notFor: [
+        { en: "Multi-character scenes", zh: "多角色场景" },
+        { en: "Studio talk shows", zh: "演播室脱口秀" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill stage-solo-posture-comedy-arc",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-solo-posture-comedy-arc",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-solo-posture-comedy-arc/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-solo-posture-comedy-arc/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "stage-threshold-inspection-passage",
+      name: "Stage Threshold Inspection Passage — Lava Tube Survey",
+      nameZh: "舞台阈值检查通道 · 熔岩管科考",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a hyper-realistic first-person science survey: two volcanologists enter a fresh lava tube before its structure changes, documenting it — 15s 16:9.",
+        zh: "超写实第一人称科考纪录：两名火山学家钻进一处新形成的熔岩管，在其内部结构进一步变化前记录它——15 秒 16:9。",
+      },
+      description: {
+        en: "For creators who want a grounded first-person science-survey documentary: two volcanologists in hiking boots, helmets and headlamps squeeze into a fresh lava tube at dawn on a misty volcanic plain, documenting basalt flow-lines, glassy walls and steam seeping from cracks before the structure changes. First-person exploration mixed with a second camera, headlamp light sweeping the rock, clear breath and footsteps throughout. Real solid volcanic rock, natural light diffusion, no fantasy, no impossible geometry, no panic — calm professional survey. T2VA (text-to-video) only, no reference image.",
+        zh: "面向想要落地的第一人称科考纪录片的创作者：清晨薄雾火山荒原上，两名身穿防滑登山靴、头盔与头灯的火山学家钻进一处新形成的熔岩管，在结构变化前记录玄武岩流纹、玻璃质岩壁与岩缝渗出的热气。第一人称探险混合第二机位跟拍，头灯光斑扫过岩壁，呼吸声与脚步声始终清晰。真实坚实的火山岩、光自然漫射、无奇幻、无不可能几何、无恐慌——冷静专业的科考。纯文生 T2VA，无参考图。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "First-Person Survey", zh: "第一人称科考" },
+        { en: "Volcanology", zh: "火山学" },
+        { en: "Documentary", zh: "纪录片" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/stage-threshold-inspection-passage/assets/poster.webp",
+        video: "community-skills/stage-threshold-inspection-passage/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-threshold-inspection-passage/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "Text-only prompt (no reference image)", zh: "纯文字提示词（无参考图）" },
+      ],
+      capabilities: [
+        { en: "Grounded first-person science survey with headlamp-lit rock", zh: "落地第一人称科考，头灯照亮岩壁" },
+        { en: "Real volcanic rock, natural light, no fantasy or impossible geometry", zh: "真实火山岩、自然光、无奇幻或不可能几何" },
+        { en: "Calm professional survey arc: enter → reveal → notice → inspect → mark & exit", zh: "冷静专业科考弧线：进入 → 展现 → 发现 → 检查 → 标记撤离" },
+      ],
+      workflow: [
+        { id: "compose", title: { en: "Compose the five-beat prompt", zh: "构建五节拍提示词" }, desc: { en: "Squeeze in → wall reveal → anomaly notice → back-up check → mark & exit.", zh: "挤入 → 洞壁展现 → 异动发现 → 后退检查 → 标记撤离。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "Check real rock, natural light, no fantasy, no panic.", zh: "核对真实岩石、自然光、无奇幻、无恐慌。" } },
+      ],
+      outputs: [
+        { en: "A 15s first-person survey MP4", zh: "一段 15 秒第一人称科考 MP4" },
+      ],
+      modes: [
+        { id: "T2VA", en: "Text-to-video: pure text, no reference image.", zh: "文生视频：纯文字，无参考图。" },
+      ],
+      promptStructures: [
+        { label: { en: "T2VA · three-part structure", zh: "T2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "First-person exploration / survey documentaries", zh: "第一人称探险 / 科考纪录片" },
+        { en: "Realistic cave / lava-tube environments", zh: "写实洞穴 / 熔岩管环境" },
+      ],
+      notFor: [
+        { en: "Fantasy or supernatural environments", zh: "奇幻或超自然环境" },
+        { en: "Action or horror sequences", zh: "动作或恐怖序列" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill stage-threshold-inspection-passage",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-threshold-inspection-passage",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-threshold-inspection-passage/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-threshold-inspection-passage/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "stage-progressive-character-reveal",
+      name: "Stage Progressive Character Reveal — Cinematic Entrance",
+      nameZh: "舞台渐进角色揭示 · 电影感登场",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 15s cinematic character-entrance from one reference image as a four-stage progressive reveal (detail to hero frame), e.g. a fog-harbor lantern-bearer.",
+        zh: "从一张参考图生成 15 秒电影感角色登场，以「细节到英雄帧」四段渐进揭示，例如雾港掌灯人。",
+      },
+      description: {
+        en: "For creators who want a progressive-reveal character entrance for a game, anime or film intro: a 15s 16:9 cinematic short built from a single character reference image as a four-stage reveal — defining detail (e.g. a lantern, boots, hands) → partial body → face close-up → full-body hero frame. The Skill locks the character's face, body proportions, hairstyle, outfit, colors, materials and overall silhouette to the reference (no redesign, no simplification), keeps camera movement smooth, restrained and purposeful, and matches the render style to the reference. I2VA, @图片1 as character reference only, never as the first frame.",
+        zh: "面向想要游戏 / 动漫 / 电影片头「渐进式揭示」角色登场的创作者：15 秒 16:9 电影感短片，由单张角色参考图构建，以四段渐进揭示呈现——界定性细节（如提灯、靴子、手）→ 部分身体 → 面部特写 → 全身英雄帧。Skill 将角色的脸、身材比例、发型、服装、配色、材质与整体剪影锁死参考图（不重新设计、不简化），保持镜头平滑、克制、有目的，渲染风格与参考图一致。I2VA，@图片1 仅作角色参考，不作为首帧。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Character Reveal", zh: "角色揭示" },
+        { en: "Cinematic Entrance", zh: "电影感登场" },
+        { en: "Progressive Reveal", zh: "渐进揭示" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/stage-progressive-character-reveal/assets/poster.webp",
+        video: "community-skills/stage-progressive-character-reveal/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-progressive-character-reveal/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One character reference image — locks face, proportions, outfit, colors, materials and silhouette", zh: "一张角色参考图——锁定脸、比例、服装、配色、材质与剪影" },
+      ],
+      capabilities: [
+        { en: "Four-stage progressive reveal: detail → partial body → face close-up → hero frame", zh: "四段渐进揭示：细节 → 部分身体 → 面部特写 → 英雄帧" },
+        { en: "Locks the character to the reference (no redesign, no simplification)", zh: "角色锁死参考图（不重新设计、不简化）" },
+        { en: "Smooth, restrained, purposeful camera matched to the reference style", zh: "平滑克制有目的的镜头，与参考图风格一致" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock the character", zh: "锁定角色" }, desc: { en: "Pin face/proportions/outfit/colors/materials/silhouette to the reference.", zh: "将脸 / 比例 / 服装 / 配色 / 材质 / 剪影钉死参考图。" } },
+        { id: "reveal",  title: { en: "Four-stage reveal", zh: "四段揭示" }, desc: { en: "Defining detail → partial body → face close-up → full hero frame.", zh: "界定细节 → 部分身体 → 面部特写 → 全身英雄帧。" } },
+        { id: "still",   title: { en: "Restrained camera", zh: "克制镜头" }, desc: { en: "Smooth, purposeful moves; clean final hero pose.", zh: "平滑有目的的运动；干净的最终英雄姿势。" } },
+      ],
+      outputs: [
+        { en: "A 15s cinematic character-entrance MP4", zh: "一段 15 秒电影感角色登场 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the character reference locks the character; not used as the first frame unless explicitly requested.", zh: "图生视频：角色参考图锁定角色；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Game / anime / film character entrance intros", zh: "游戏 / 动漫 / 电影角色登场片头" },
+        { en: "Progressive reveal / slow unveiling of a designed character", zh: "设计角色的渐进揭示 / 缓慢亮相" },
+      ],
+      notFor: [
+        { en: "Action-packed entrances", zh: "动作密集的登场" },
+        { en: "Requests without a character reference image", zh: "没有角色参考图的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill stage-progressive-character-reveal",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-progressive-character-reveal",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-progressive-character-reveal/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-progressive-character-reveal/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
       nameZh: "文生宣传片",
