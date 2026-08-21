@@ -59,6 +59,13 @@ MiniMax H3、官方 H3 Skills 及相关媒体素材版权归 MiniMax 所有，�
 协议约束（见 `third_party/MiniMax-H3/LICENSE`）。本项目原创代码以 MIT
 协议发布。
 
+Third-party community materials (e.g. third-party Community Skills and their
+demo media) retain their original authorship and source attribution; repository
+licenses apply only to content authored by this project unless otherwise stated.
+
+第三方社区材料（如第三方 Community Skills 及其演示素材）保留原作者署名与来源
+标注；本仓库许可证仅适用于本项目原创内容，另有声明除外。
+
 Every skill page marks its origin as:
 **Official MiniMax H3 Skill · Source: MiniMax-AI/MiniMax-H3**
 

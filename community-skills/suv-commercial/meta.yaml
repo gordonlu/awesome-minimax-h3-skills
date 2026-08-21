@@ -1,0 +1,31 @@
+display-name-zh: 豪华 SUV 广告
+version: 0.1.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Luxury SUV
+- Commercial Ad / Vehicle Reference
+complete-tags-cn:
+- 商业广告 / 豪华 SUV
+- 商业广告 / 车辆参考
+summary-en: Generate a top-tier future luxury SUV commercial as one continuous 15s 16:9 24fps film from a single vehicle reference image.
+summary-cn: 从单张车辆参考图生成一段 15 秒 / 16:9 / 24fps 的顶级未来豪华 SUV 广告成片。
+desc-en: |
+  For creators who want a future luxury SUV / car commercial that feels elegant, expensive, restrained and
+  real — like an international luxury car brand spot. The Skill locks the vehicle to a single reference
+  image (no redesign, no second interior), enforces LEFT-HAND DRIVE consistency in every interior shot,
+  restricts the palette to a night Brutalist showroom look, allows only five typography lines with soft-fade
+  motion, and uses NO BGM — pure cinematic SFX. Covers a continuous 12-CUT narrative: admire → caress →
+  open the left front door → sit in → leather detail → ignition → instrument & console boot → deep-blue
+  ambient light → headlight ignition → drive off. Original prompt by Flkrstudio; packaged with a verified
+  15s output. Not for tech-demo / racing-game car shots or requests without a vehicle reference image.
+desc-cn: |
+  面向想要未来豪华 SUV / 汽车广告、必须优雅昂贵克制真实、如国际豪华汽车品牌正式商业片的创作者。
+  Skill 将车辆锁定单张参考图（禁止重新设计、禁止第二套内饰），全片强约束左舵一致性，配色限于夜间
+  Brutalist 展厅质感，只允许五组细字重文字的柔和淡入淡出动画，NO BGM——纯电影级 SFX。覆盖连续 12
+  CUT 叙事：欣赏车身 → 轻抚 → 开左前门 → 入座 → 皮革细节 → 启动 → 仪表与中控点亮 → 深蓝氛围灯 →
+  前灯点亮 → 驶离。原始 prompt 由 Flkrstudio 创作；附带一条已跑通的 15 秒成片。不适用于科技 Demo /
+  赛车游戏感车拍，或没有车辆参考图的需求。
+author-en: Flkrstudio
+author-cn: Flkrstudio
+source: community

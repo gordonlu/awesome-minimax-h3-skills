@@ -553,6 +553,26 @@
     }).join("") + "</div>";
   }
 
+  function attributionBlock(s) {
+    var a = s.attribution;
+    if (!a) return "";
+    var license = a.license || "Not specified";
+    var previewVal;
+    if (s.preview) {
+      previewVal = '<span class="tp-val">' + esc(t("detail.tp.previewCollected")) + "</span>";
+    } else {
+      previewVal = '<a class="tp-link" href="' + esc(a.originalPost) + '" target="_blank" rel="noopener noreferrer">' + esc(t("detail.tp.previewOriginal")) + " ↗</a>";
+    }
+    return '<div class="tp-grid">' +
+      '<div class="tp-row"><span class="tp-label">' + esc(t("detail.tp.author")) + '</span><span class="tp-val">' + esc(a.author) + "</span></div>" +
+      '<div class="tp-row"><span class="tp-label">' + esc(t("detail.tp.source")) + '</span><span class="tp-val">' + esc(a.source) + "</span></div>" +
+      '<div class="tp-row"><span class="tp-label">' + esc(t("detail.tp.post")) + '</span><a class="tp-link" href="' + esc(a.originalPost) + '" target="_blank" rel="noopener noreferrer">' + esc(a.originalPost) + " ↗</a></div>" +
+      '<div class="tp-row"><span class="tp-label">License</span><span class="tp-val">' + esc(license) + "</span></div>" +
+      '<div class="tp-row"><span class="tp-label">' + esc(t("detail.tp.prompt")) + '</span><span class="tp-val">' + esc(t("detail.tp.promptCollected")) + "</span></div>" +
+      '<div class="tp-row"><span class="tp-label">' + esc(t("detail.tp.preview")) + "</span>" + previewVal + "</div>" +
+    "</div>";
+  }
+
   function renderDetail(slug) {
     var s = DATA.skills.filter(function (x) { return x.slug === slug; })[0];
     var view = $("#view-detail");
@@ -647,6 +667,10 @@
     }
 
     sections += detailSection(n++, s.sourceType === "community" ? "detail.sourcesCommunity" : "detail.sources", sourceLinks(s));
+
+    if (s.attribution) {
+      sections += detailSection(n++, "detail.tp.title", attributionBlock(s));
+    }
 
     var langNote = (lang === "zh" && s.languageNote) ? '<p class="detail-desc-alt">' + esc(L(s.languageNote)) + "</p>" : "";
 

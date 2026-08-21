@@ -206,6 +206,89 @@ window.AMHS_DATA = {
     },
 
     {
+      slug: "suv-commercial",
+      name: "SUV Commercial — Future Luxury Vehicle Ad",
+      nameZh: "豪华 SUV 广告",
+      sourceType: "community",
+      author: { en: "Flkrstudio (packaged by gordonlu)", zh: "Flkrstudio（gordonlu 打包）" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a top-tier future luxury SUV commercial as one continuous 15s 16:9 24fps film from a single vehicle reference image — elegant, restrained, real, with NO BGM.",
+        zh: "从单张车辆参考图生成一段 15 秒 / 16:9 / 24fps 的顶级未来豪华 SUV 广告——优雅、克制、真实，无 BGM。",
+      },
+      description: {
+        en: "For creators who want a future luxury SUV / car commercial that feels elegant, expensive, restrained and real — like an international luxury car brand spot. The Skill locks the vehicle to a single reference image (no redesign, no second interior), enforces LEFT-HAND DRIVE consistency in every interior shot, restricts the palette to a night Brutalist showroom look, allows only five typography lines with soft-fade motion, and uses NO BGM — pure cinematic SFX. Covers a continuous 12-CUT narrative: admire → caress → open the left front door → sit in → leather detail → ignition → instrument & console boot → deep-blue ambient light → headlight ignition → drive off. Original prompt by Flkrstudio; packaged with reference-locking rules, a Chinese localisation, and a verified 15s output.",
+        zh: "面向想要未来豪华 SUV / 汽车广告、必须优雅昂贵克制真实、如国际豪华汽车品牌正式商业片的创作者。Skill 将车辆锁定单张参考图（禁止重新设计、禁止第二套内饰），全片强约束左舵一致性，配色限于夜间 Brutalist 展厅质感，只允许五组细字重文字的柔和淡入淡出动画，NO BGM——纯电影级 SFX。覆盖连续 12 CUT 叙事：欣赏车身 → 轻抚 → 开左前门 → 入座 → 皮革细节 → 启动 → 仪表与中控点亮 → 深蓝氛围灯 → 前灯点亮 → 驶离。原始 prompt 由 Flkrstudio 创作；打包了参考锁定规则、中文本地化与一条已跑通的 15 秒成片。",
+      },
+      categories: ["commercial-ad"],
+      tags: [
+        { en: "Luxury SUV", zh: "豪华 SUV" },
+        { en: "Vehicle Reference Lock", zh: "车辆参考锁定" },
+        { en: "Left-Hand Drive", zh: "左舵一致性" },
+        { en: "No BGM", zh: "无 BGM" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/suv-commercial/assets/poster.webp",
+        video: "community-skills/suv-commercial/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/suv-commercial/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1376×768 / 24fps generated on MiniMax H3 from the packaged prompt and reference", zh: "实际成片：15.08s / 1376×768 / 24fps，由打包 prompt + 参考图在 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One vehicle reference image — the ONLY reference for the vehicle", zh: "一张车辆参考图——车辆的唯一参考" },
+        { en: "Optional: female driver description (face, blue-gray eyes, dark long hair, black minimal outfit)", zh: "可选：女司机文字描述（脸、蓝灰色眼睛、深色长发、黑色极简服装）" },
+        { en: "Target duration 15s, aspect 16:9, 24fps, cinematic 4K-grade look", zh: "目标时长 15s、画幅 16:9、24fps、电影级 4K 质感" },
+      ],
+      capabilities: [
+        { en: "Locks the vehicle to the reference image: body, doors, glass, wheels, lights, bumpers, interior — no redesign, no second interior", zh: "车辆锁定参考图：车身、车门、玻璃、轮毂、灯组、保险杠、内饰——禁止重新设计、禁止第二套内饰" },
+        { en: "Enforces LEFT-HAND DRIVE consistency in every interior shot (no mirroring / RHD / flipped interior)", zh: "全片强约束左舵一致性（禁止镜像 / 右舵 / 内饰翻转）" },
+        { en: "Restricts the palette to a night Brutalist showroom look with a single deep-blue ambient-light accent", zh: "配色限于夜间 Brutalist 展厅质感，仅深蓝氛围灯点睛" },
+        { en: "Allows only five soft-fade typography lines, NO BGM — pure cinematic SFX", zh: "只允许五组柔和淡入淡出文字，无 BGM——纯电影级 SFX" },
+        { en: "Ships a verified 15s output with a continuous 12-CUT narrative", zh: "附带已跑通的 15 秒成片（连续 12 CUT 叙事）" },
+      ],
+      workflow: [
+        { id: "assets", title: { en: "Confirm the vehicle reference", zh: "确认车辆参考图" }, desc: { en: "One vehicle image; confirm plate text (家越07) and optional driver description.", zh: "一张车辆图；确认车牌文案（家越07）与可选的女司机描述。" } },
+        { id: "lock",    title: { en: "Lock the vehicle & LHD rules", zh: "锁定车辆与左舵规则" }, desc: { en: "Pin body/interior to the reference; steering fixed left, driver front-left, console centered.", zh: "车身与内饰钉死参考；方向盘固定左、司机左前、Console 居中。" } },
+        { id: "compose", title: { en: "Compose the three-part prompt", zh: "构建三段式提示词" }, desc: { en: "Reference locking → core concept (environment, palette, typography) → 12-CUT timecoded shot list with negative rules and NO BGM.", zh: "参考锁定 → 核心创意（环境、配色、字体）→ 12 CUT 带时间码分镜表 + 反向约束 + NO BGM。" } },
+        { id: "generate", title: { en: "Generate & verify", zh: "生成并验收" }, desc: { en: "I2VA on MiniMax H3; check vehicle lock, LHD consistency, lighting order (lights before motion), typography and SFX.", zh: "MiniMax H3 图生视频；核对车辆锁定、左舵一致、灯光顺序（先亮灯再移动）、文字与 SFX。" } },
+      ],
+      outputs: [
+        { en: "One continuous 15s luxury SUV commercial (MP4) with native audio", zh: "一段连续 15 秒豪华 SUV 广告成片（MP4），原生音频" },
+        { en: "The full three-part prompt for reuse", zh: "可复用的完整三段式提示词" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the vehicle reference locks the vehicle; not used as the first frame unless explicitly requested.", zh: "图生视频：车辆参考图锁定车辆；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        {
+          label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" },
+          fields: ["参考素材说明", "核心创意", "画面过程描述", "只允许文字", "音乐/音效", "不想要"],
+        },
+      ],
+      bestFor: [
+        { en: "Future luxury SUV / car brand commercials and showroom films", zh: "未来豪华 SUV / 汽车品牌广告与展厅电影" },
+        { en: "Car launch / journey-begins films with interior detail and ambient lighting", zh: "新车发布 / 旅程开始的影片，含内饰细节与氛围灯" },
+      ],
+      notFor: [
+        { en: "Tech-demo / sci-fi HUD overloaded car shots", zh: "科技 Demo / 科幻 HUD 堆满的车拍" },
+        { en: "Racing-game style dynamic car chases", zh: "赛车游戏式动态追车" },
+        { en: "Requests without a vehicle reference image", zh: "没有车辆参考图的需求" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill suv-commercial",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/suv-commercial",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/suv-commercial/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/suv-commercial/SKILL.cn.md",
+        docs: [
+          { label: { en: "Original prompt — Flkrstudio on X", zh: "原始 prompt — Flkrstudio 的 X 帖" }, url: "https://x.com/Flkrstudio/status/2090230972851835104" },
+        ],
+      },
+    },
+
+    {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
       nameZh: "文生宣传片",
