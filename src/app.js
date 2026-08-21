@@ -263,17 +263,30 @@
     );
   }
 
-  function renderHome() {
-    var home = $("#view-home");
+  function computeHomeStats() {
     var modeSet = {}, nModes = 0, nVideos = 0;
     DATA.skills.forEach(function (s) {
       (s.modes || []).forEach(function (m) { if (!modeSet[m.id]) { modeSet[m.id] = 1; nModes++; } });
       if (s.preview && s.preview.video) nVideos++;
     });
+    return { skills: DATA.skills.length, modes: nModes, videos: nVideos };
+  }
+
+  function refreshHomeStats(home) {
+    var st = computeHomeStats();
+    var vals = [st.skills, st.modes, st.videos];
+    home.querySelectorAll(".hero-stats [data-count]").forEach(function (el, i) {
+      if (i < vals.length) { el.dataset.count = String(vals[i]); el.textContent = "0"; }
+    });
+  }
+
+  function renderHome() {
+    var home = $("#view-home");
+    var st = computeHomeStats();
     var heroStats = [
-      { n: DATA.skills.length, label: t("hero.stat.skills") },
-      { n: nModes, label: t("hero.stat.modes") },
-      { n: nVideos, label: t("hero.stat.demos") }
+      { n: st.skills, label: t("hero.stat.skills") },
+      { n: st.modes, label: t("hero.stat.modes") },
+      { n: st.videos, label: t("hero.stat.demos") }
     ];
     var statsHtml = '<div class="hero-stats">' + heroStats.map(function (st) {
       return '<div class="stat"><div class="stat-num"><i data-count="' + st.n + '">0</i></div><div class="stat-label">' + st.label + "</div></div>";
@@ -1107,6 +1120,7 @@
       homeBound = true;
     }
     else {
+      refreshHomeStats(home);
       if (!homeBound) {
         homeBound = true;
         bindHomeEvents(home);
@@ -1150,6 +1164,7 @@
   }
 
   function route() {
+    refreshHomeStats($("#view-home"));
     var oldHash = location.hash;
     if (oldHash === "#/anthology") {
       history.replaceState(null, "", "/anthology" + (location.search || ""));
