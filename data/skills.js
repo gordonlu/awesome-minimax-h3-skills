@@ -211,6 +211,7 @@ window.AMHS_DATA = {
       nameZh: "豪华 SUV 广告",
       sourceType: "community",
       author: { en: "Flkrstudio (packaged by gordonlu)", zh: "Flkrstudio（gordonlu 打包）" },
+      authorUrl: "https://x.com/Flkrstudio",
       version: "0.1.0",
       summary: {
         en: "Generate a top-tier future luxury SUV commercial as one continuous 15s 16:9 24fps film from a single vehicle reference image — elegant, restrained, real, with NO BGM.",
@@ -294,6 +295,7 @@ window.AMHS_DATA = {
       nameZh: "技能联动 · 角色设定展示图",
       sourceType: "community",
       author: { en: "techiebysa", zh: "techiebysa" },
+      authorUrl: "https://x.com/techiebysa",
       version: "0.1.0",
       summary: {
         en: "Generate a magazine-grade character showcase sheet from one reference image as a near-static 4s shot.",
@@ -364,7 +366,8 @@ window.AMHS_DATA = {
       name: "Prove Product Through First-Person Test — UGC Food Review",
       nameZh: "第一人称实测产品 · UGC 食品测评",
       sourceType: "community",
-      author: { en: "oggii-0", zh: "oggii-0" },
+      author: { en: "oggii_0", zh: "oggii_0" },
+      authorUrl: "https://x.com/oggii_0",
       version: "0.1.0",
       summary: {
         en: "Generate an authentic first-person UGC food-tasting review (iPhone vlog style) from a single product reference image.",
@@ -435,7 +438,8 @@ window.AMHS_DATA = {
       name: "Use Material as Progress Clock — Heritage Craft Documentary Ad",
       nameZh: "材料即时间 · 非遗工艺纪录广告",
       sourceType: "community",
-      author: { en: "derek-wall90176", zh: "derek-wall90176" },
+      author: { en: "derek_wall90176", zh: "derek_wall90176" },
+      authorUrl: "https://x.com/derek_wall90176",
       version: "0.1.0",
       summary: {
         en: "Generate a heritage-craft documentary ad where the material's own appearance is the clock of the film.",
@@ -507,6 +511,7 @@ window.AMHS_DATA = {
       nameZh: "结构化产品发布证明 · h3skills.com 旗舰发布广告",
       sourceType: "community",
       author: { en: "abulu8", zh: "abulu8" },
+      authorUrl: "https://x.com/abulu8",
       version: "0.1.0",
       summary: {
         en: "Generate a flagship 9-hard-cut product-launch ad branded h3skills.com from a single style reference image.",
@@ -576,7 +581,8 @@ window.AMHS_DATA = {
       name: "Redirect Mass with Leverage — Grounded Tavern Brawl",
       nameZh: "以巧劲制体重 · 落地式酒馆打斗",
       sourceType: "community",
-      author: { en: "craftian-keskin", zh: "craftian-keskin" },
+      author: { en: "craftian_keskin", zh: "craftian_keskin" },
+      authorUrl: "https://x.com/craftian_keskin",
       version: "0.1.0",
       summary: {
         en: "Generate a grounded hyper-realistic dark-fantasy tavern brawl from a two-character reference image.",
@@ -647,6 +653,7 @@ window.AMHS_DATA = {
       nameZh: "单目标逃生｜前后灾害交替逼近",
       sourceType: "community",
       author: { en: "decat2025", zh: "decat2025" },
+      authorUrl: "https://x.com/decat2025",
       version: "0.1.0",
       summary: {
         en: "Generate a one-take realistic disaster-action film — a female freight-ship engineer escaping a reactor corridor fire-wave — as a continuous 15s 16:9 24fps shot.",
@@ -712,10 +719,11 @@ window.AMHS_DATA = {
 
     {
       slug: "create-cross-medium-reaction",
-      name: "2D Character — Real Contact Triggers Three-Stage Reaction",
-      nameZh: "二维角色｜真人接触三级反应",
+      name: "2D Sticker × Real Night-Market Interaction",
+      nameZh: "2D 贴纸 × 实拍夜市互动",
       sourceType: "community",
       author: { en: "Reddit", zh: "Reddit" },
+      authorUrl: "https://www.reddit.com/comments/1vgynd7/",
       version: "0.1.0",
       summary: {
         en: "Generate a cross-medium comedy: a flat 2D sticker character interacting with a real filmed scene — a sticker shiba sneaking chili flakes into a night-market stir-fry, in 10s 16:9.",
@@ -785,6 +793,7 @@ window.AMHS_DATA = {
       nameZh: "复古手持｜日常送别回眸",
       sourceType: "community",
       author: { en: "zephyraleigh", zh: "zephyraleigh" },
+      authorUrl: "https://x.com/zephyraleigh",
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic documentary-style short: a forgotten 1998 MiniDV family video of a young woman waving goodbye at a seaside station, 15s 16:9.",
@@ -854,6 +863,7 @@ window.AMHS_DATA = {
       nameZh: "纪实跟拍｜行进中偶遇再离开",
       sourceType: "community",
       author: { en: "techhalla", zh: "techhalla" },
+      authorUrl: "https://x.com/techhalla",
       version: "0.1.0",
       summary: {
         en: "Generate a 1970s New York street cinéma-vérité documentary: a shoulder-mounted 16mm camera follows a plain young woman through Greenwich Village until she merges into the flow — 15s 4:3.",
@@ -1061,6 +1071,7 @@ window.AMHS_DATA = {
       nameZh: "反差喜剧｜越从容越失控",
       sourceType: "community",
       author: { en: "decat2025", zh: "decat2025" },
+      authorUrl: "https://x.com/decat2025",
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic absurd comedy: a male ostrich in an opulent cape struts a circus runway, knocks a spotlight askew, topples a mannequin, then mic-drops its cape — 10s 16:9.",
@@ -1130,6 +1141,7 @@ window.AMHS_DATA = {
       nameZh: "升级讽刺｜新物登场旧爱被移走",
       sourceType: "community",
       author: { en: "dheepanratnam", zh: "dheepanratnam" },
+      authorUrl: "https://x.com/dheepanratnam",
       version: "0.1.0",
       summary: {
         en: "Generate a 1950s three-strip Technicolor TV ad: a family admires the TRITON thinking machine, the bigger TITAN is wheeled in, and the boy clutching the old one is dragged across the floor — 15s 1:1.",
@@ -1199,6 +1211,7 @@ window.AMHS_DATA = {
       nameZh: "单人表演弧｜坐起前倾再释放",
       sourceType: "community",
       author: { en: "gizakdag", zh: "gizakdag" },
+      authorUrl: "https://x.com/gizakdag",
       version: "0.1.0",
       summary: {
         en: "Generate a single-person seated talking-head comedy: a twentysomething riffing on fitness with 2–3 self-deprecating jokes, natural performance, slight push-ins at each laugh — 12s 16:9.",
@@ -1267,7 +1280,8 @@ window.AMHS_DATA = {
       name: "First-Person Expedition — Inspect After Crossing the Threshold",
       nameZh: "第一视角探险｜穿越后巡检",
       sourceType: "community",
-      author: { en: "strength04-x", zh: "strength04-x" },
+      author: { en: "strength04_x", zh: "strength04_x" },
+      authorUrl: "https://x.com/strength04_x",
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic first-person science survey: two volcanologists enter a fresh lava tube before its structure changes, documenting it — 15s 16:9.",
@@ -1337,6 +1351,7 @@ window.AMHS_DATA = {
       nameZh: "角色登场｜细节到全身揭晓",
       sourceType: "community",
       author: { en: "aimikoda", zh: "aimikoda" },
+      authorUrl: "https://x.com/aimikoda",
       version: "0.1.0",
       summary: {
         en: "Generate a 15s cinematic character-entrance from one reference image as a four-stage progressive reveal (detail to hero frame), e.g. a fog-harbor lantern-bearer.",
@@ -1397,6 +1412,77 @@ window.AMHS_DATA = {
         skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/stage-progressive-character-reveal",
         skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-progressive-character-reveal/SKILL.md",
         skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/stage-progressive-character-reveal/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "verify-recurring-identity-board",
+      name: "Blonde Pilot — Coast Highway Vintage Car Fashion Film",
+      nameZh: "金发女飞行员｜海岸公路复古跑车时尚短片",
+      sourceType: "community",
+      author: { en: "imastudio_ai", zh: "imastudio_ai" },
+      authorUrl: "https://x.com/imastudio_ai",
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 15s 16:9 anime fashion short that keeps one character locked to a reference image across the whole clip — a blonde female pilot beside a parked emerald vintage car on a California coast highway at sunset.",
+        zh: "生成一段 15 秒 16:9 动漫时尚短片，全程将单一角色锁死参考图——日落时分加州海岸公路旁，金发女飞行员倚着一辆停稳的祖母绿复古跑车。",
+      },
+      description: {
+        en: "For creators who want a character-consistent showcase: a 15s 16:9 cinematic anime fashion short where ONE character stays identical from start to finish. A blonde female pilot (leather jacket, aviator sunglasses, emerald scarf) leans on a parked emerald vintage sports car on a California coast highway at sunset, adjusts her scarf, walks a few steps, adjusts her sunglasses, and freezes on a hero-frame portrait. High-end anime PV + retro travel-fashion + road-movie look, sea-blue and warm-gold palette, cinematic sunset backlight, shallow depth of field, smooth camera. The Skill locks the character to the reference (face, body, hair, outfit, colors, silhouette — never redesigned), keeps the car static as a backdrop (no driving, no reverse, no driverless motion), and uses only smooth purposeful moves. I2VA (one character reference, image only, never first frame).",
+        zh: "面向想要「同一角色跨镜头身份一致」展示的创作者：15 秒 16:9 动漫风电影感时尚短片，从头到尾只有一个角色、身份绝不漂移。金发女飞行员（皮夹克、复古飞行墨镜、墨绿丝巾）在日落加州海岸公路旁倚着一辆停稳的祖母绿复古跑车，整理丝巾、走几步、调整飞行墨镜，最后定格在英雄帧肖像。高端动漫 PV + 复古旅行时尚 + 公路电影质感，海蓝与暖金配色，电影感日落逆光，浅景深，平滑镜头。Skill 把角色锁死参考图（脸、身材、发型、服装、配色、剪影，绝不重新设计），跑车始终静止作背景（不行驶、不倒车、无无人驾驶移动），只使用平滑有目的的运镜。I2VA（单张角色参考图，仅参考，不作为首帧）。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Character Consistency", zh: "角色一致性" },
+        { en: "Anime Fashion Film", zh: "动漫时尚片" },
+        { en: "Road Movie", zh: "公路电影" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/verify-recurring-identity-board/assets/poster.webp",
+        video: "community-skills/verify-recurring-identity-board/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/verify-recurring-identity-board/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One character reference image — locks face, body, outfit, colors, silhouette", zh: "一张角色参考图——锁定脸、身材、服装、配色、剪影" },
+      ],
+      capabilities: [
+        { en: "Locks one character to the reference across the whole clip (no identity drift)", zh: "全程将单一角色锁死参考图（身份不漂移）" },
+        { en: "Static parked car backdrop — no driving, no reverse, no driverless motion", zh: "跑车静止作背景——不行驶、不倒车、无无人驾驶移动" },
+        { en: "Smooth purposeful camera, golden sunset backlight, shallow DOF", zh: "平滑有目的的镜头、金色日落逆光、浅景深" },
+      ],
+      workflow: [
+        { id: "lock", title: { en: "Lock the character", zh: "锁定角色" }, desc: { en: "Pin face/body/hair/outfit/colors/silhouette to the reference.", zh: "将脸 / 身材 / 发型 / 服装 / 配色 / 剪影钉死参考图。" } },
+        { id: "showcase", title: { en: "Four-beat showcase", zh: "四节拍展示" }, desc: { en: "Lean → walk → sunglasses → hero-frame freeze.", zh: "靠车 → 行走 → 墨镜 → 英雄帧定格。" } },
+        { id: "still", title: { en: "Static backdrop", zh: "静止背景" }, desc: { en: "Car stays parked; smooth camera only.", zh: "跑车始终停稳；仅平滑运镜。" } },
+      ],
+      outputs: [
+        { en: "A 15s anime fashion MP4 with one consistent character", zh: "一段 15 秒、单一角色一致的动漫时尚 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the character reference locks the character; not used as the first frame unless explicitly requested.", zh: "图生视频：角色参考图锁定角色；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Character showcases that must keep one identity", zh: "需要「同一角色跨镜头一致」的展示" },
+        { en: "Anime PV / retro travel-fashion / road-movie looks", zh: "动漫 PV / 复古旅行时尚 / 公路电影质感" },
+      ],
+      notFor: [
+        { en: "Multi-character scenes", zh: "多角色场景" },
+        { en: "Action-heavy or stunt sequences", zh: "动作密集或特技段落" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill verify-recurring-identity-board",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/verify-recurring-identity-board",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/verify-recurring-identity-board/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/verify-recurring-identity-board/SKILL.cn.md",
         docs: [],
       },
     },

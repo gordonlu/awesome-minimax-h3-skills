@@ -1,0 +1,29 @@
+display-name-zh: 金发女飞行员｜海岸公路复古跑车时尚短片
+version: 0.1.0
+tag-en: Character Showcase
+tag-cn: 角色展示
+complete-tags-en:
+- Character Showcase / Anime Fashion
+- Identity-Locked / Reference Image
+complete-tags-cn:
+- 角色展示 / 动漫时尚
+- 身份锁定 / 参考图
+summary-en: Generate a 15s 16:9 anime fashion short that keeps one character locked to a reference across the whole clip.
+summary-cn: 生成一段 15 秒 16:9 动漫时尚短片，全程将单一角色锁死参考图、身份一致。
+desc-en: |
+  For creators who want a 15s 16:9 cinematic anime fashion short where ONE character stays identical from
+  start to finish: a blonde female pilot (leather jacket, aviator sunglasses, emerald scarf) beside a parked
+  emerald vintage sports car on a California coast highway at sunset. The Skill locks the character to the
+  reference image (face, body, hair, outfit, colors, silhouette — never redesigned), keeps the car static as a
+  backdrop (no driving, no reverse, no driverless motion), and uses only smooth purposeful camera moves with
+  golden sunset backlight and shallow DOF. T2VA / I2VA with one character reference image (reference only,
+  never first frame). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要 15 秒 16:9 动漫风电影感时尚短片、且核心卖点是"同一角色从头到尾身份不变"的创作者：日落时分加州海岸
+  公路旁，金发女飞行员（皮夹克、复古飞行墨镜、墨绿丝巾）倚着一辆停稳的祖母绿复古跑车。Skill 把角色锁死在参考图上
+  （脸、身材、发型、服装、配色、剪影，绝不重新设计），跑车始终作为静止背景（不行驶、不倒车、无无人驾驶移动），
+  只用平滑而有目的的镜头，金色日落逆光、浅景深。T2VA / I2VA 单张角色参考图（仅参考，不作为首帧）。附带一条已跑通的
+  15.08 秒成片。
+author-en: imastudio_ai
+author-cn: imastudio_ai
+source: community

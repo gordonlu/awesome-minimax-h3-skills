@@ -597,7 +597,9 @@
 
     var meta = [];
     if (s.version) meta.push('<span class="meta-chip">' + t("version") + " <b>v" + esc(s.version) + "</b></span>");
-    meta.push('<span class="meta-chip">' + t("author") + " <b>" + esc(L(s.author)) + "</b></span>");
+    var authorHtml = esc(L(s.author));
+    if (s.authorUrl) authorHtml = '<a href="' + esc(s.authorUrl) + '" target="_blank" rel="noopener noreferrer" class="author-link">' + authorHtml + " ↗</a>";
+    meta.push('<span class="meta-chip">' + t("author") + " <b>" + authorHtml + "</b></span>");
     var langText = s.languages.indexOf("ko") !== -1 ? "KO + EN" : s.languages.indexOf("zh") !== -1 ? "EN + 中文" : "EN";
     meta.push('<span class="meta-chip">' + t("languages") + " <b>" + langText + "</b></span>");
     s.categories.forEach(function (id) {
