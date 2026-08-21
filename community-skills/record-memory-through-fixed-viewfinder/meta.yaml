@@ -1,0 +1,30 @@
+display-name-zh: CCD 取景器记忆｜2009 校园 vlog
+version: 0.1.0
+tag-en: Nostalgic Memory
+tag-cn: 怀旧记忆
+complete-tags-en:
+- Nostalgic Memory / CCD Camera
+- Found Footage / Home Video
+complete-tags-cn:
+- 怀旧记忆 / CCD 相机
+- 被翻出的素材 / 家庭录像
+summary-en: Generate a 15s 4:3 CCD-camera memory short styled like old recovered memory-card footage.
+summary-cn: 生成一段 15 秒 4:3 的 CCD 相机记忆短片，质感如翻出的旧存储卡录像。
+desc-en: |
+  For creators who want a 15s 4:3 nostalgic CCD-camera memory short: a young East Asian woman films herself with an
+  early-2000s Sony Cyber-shot point-and-shoot, the whole frame styled like old memory-card footage pulled out years
+  later. The viewer always sees the glowing LCD viewfinder in a dark room — screen edges fade to dark and blur — while
+  a persistent camera UI overlay (REC, focus box, battery, timestamp "8.1.2009 3:15 AM", "1/30 F3.4 ISO100") stays on
+  screen. Embrace the imperfections on purpose: direct-flash hard light, slight skin overexposure, soft grain, digital
+  compression artifacts, LCD pixel texture, slightly wrong white balance, occasional autofocus hunting. The character
+  (face, body, hair, age, outfit) stays identical across all 8 beats. I2VA with one character reference image (reference
+  only, never first frame). Includes a verified 15.08s output.
+desc-cn: |
+  面向想要 15 秒 4:3 怀旧 CCD 相机记忆短片的创作者：一位年轻东亚女生用 2000 年代初的 Sony Cyber-shot 卡片机自拍，
+  整段画面像多年后翻出的旧存储卡录像。观众始终看到暗室里亮着的 LCD 取景器——屏幕边缘向黑暗与模糊淡出——而持续的相机
+  UI 叠加层（REC、对焦框、电池、时间戳 "8.1.2009 3:15 AM"、"1/30 F3.4 ISO100"）始终在屏。刻意保留不完美：直闪硬光、
+  皮肤轻微过曝、柔颗粒、数字压缩伪影、LCD 像素纹理、轻微白平衡偏差、偶发自动对焦搜索。角色（脸、身材、发型、年龄、服装）
+  在 8 个节拍中完全一致。I2VA 单张角色参考图（仅参考，不作为首帧）。附带一条已跑通的 15.08 秒成片。
+author-en: aripratama293
+author-cn: aripratama293
+source: community

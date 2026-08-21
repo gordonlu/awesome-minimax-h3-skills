@@ -1488,6 +1488,78 @@ window.AMHS_DATA = {
     },
 
     {
+      slug: "record-memory-through-fixed-viewfinder",
+      name: "CCD Viewfinder Memory — 2009 Campus Vlog",
+      nameZh: "CCD 取景器记忆｜2009 校园 vlog",
+      sourceType: "community",
+      author: { en: "aripratama293", zh: "aripratama293" },
+      authorUrl: "https://x.com/aripratama293",
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 15s 4:3 CCD-camera memory short styled like old recovered memory-card footage: a young woman films herself with an early-2000s Sony Cyber-shot, persistent camera UI overlay, direct-flash nostalgia.",
+        zh: "生成一段 15 秒 4:3 的 CCD 相机记忆短片，质感如翻出的旧存储卡录像：一位女生用 2000 年代初 Sony Cyber-shot 自拍，持续相机 UI 叠加层，直闪怀旧感。",
+      },
+      description: {
+        en: "For creators who want a handheld, imperfect, deeply nostalgic look: a 15s 4:3 cinematic short where the viewer always sees the glowing LCD viewfinder of a pocket digital camera in a dark room — screen edges fade to dark and blur while a persistent camera UI overlay (REC, focus box, battery, timestamp \"8.1.2009 3:15 AM\", \"1/30 F3.4 ISO100\") stays on screen. Direct-flash hard light, slight skin overexposure, soft grain, digital compression artifacts, LCD pixel texture, slightly wrong white balance, tiny autofocus search — the flaws of an old pocket cam, on purpose. A young East Asian woman films herself walking through a 2009 campus (library, manga shelf, stairs, glass corridor, outdoor quad, mall bookstore, shop window), talking softly in Chinese, then waves and the REC icon blinks to black. The character (face, body, hair, age, outfit) stays identical across all 8 beats. I2VA (one character reference, image only, never first frame).",
+        zh: "面向想要手持、不完美、高度怀旧质感的创作者：15 秒 4:3 短片，观众始终看到暗室里一台口袋数码相机亮着的 LCD 取景器——屏幕边缘向黑暗与模糊淡出，而持续的相机 UI 叠加层（REC、对焦框、电池、时间戳 \"8.1.2009 3:15 AM\"、\"1/30 F3.4 ISO100\"）始终在屏。直闪硬光、皮肤轻微过曝、柔颗粒、数字压缩伪影、LCD 像素纹理、轻微白平衡偏差、微小自动对焦搜索——旧卡片机的瑕疵，刻意保留。一位年轻东亚女生自拍着走过 2009 年的校园（图书馆、漫画书架、楼梯、玻璃走廊、户外校区、商场书店、店铺玻璃），用中文轻声对镜头说话，最后挥手、REC 图标闪烁切黑。角色（脸、身材、发型、年龄、服装）在 8 个节拍中完全一致。I2VA（单张角色参考图，仅参考，不作为首帧）。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Nostalgic Memory", zh: "怀旧记忆" },
+        { en: "CCD Camera", zh: "CCD 相机" },
+        { en: "Found Footage", zh: "被翻出的素材" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/record-memory-through-fixed-viewfinder/assets/poster.webp",
+        video: "community-skills/record-memory-through-fixed-viewfinder/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/record-memory-through-fixed-viewfinder/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 928×672 (4:3) / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 928×672（4:3）/ 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One character reference image — locks the woman's face, body, outfit", zh: "一张角色参考图——锁定女生的脸、身材、服装" },
+        { en: "One storyboard reference image — locks framing/composition (optional)", zh: "一张故事板参考图——锁定构图（可选）" },
+      ],
+      capabilities: [
+        { en: "Glowing-LCD viewfinder look with persistent camera UI overlay", zh: "亮起 LCD 取景器观感 + 持续相机 UI 叠加层" },
+        { en: "On-purpose CCD flaws: flash, grain, compression, wrong white balance", zh: "刻意保留 CCD 瑕疵：直闪、颗粒、压缩、白平衡偏差" },
+        { en: "One character identical across all 8 beats", zh: "单一角色在 8 个节拍中完全一致" },
+      ],
+      workflow: [
+        { id: "lock", title: { en: "Lock the character", zh: "锁定角色" }, desc: { en: "Pin face/body/hair/age/outfit to the reference.", zh: "将脸 / 身材 / 发型 / 年龄 / 服装钉死参考图。" } },
+        { id: "ui", title: { en: "Persistent viewfinder UI", zh: "持续取景器 UI" }, desc: { en: "REC, focus box, battery, timestamp, exposure readout on screen.", zh: "REC、对焦框、电池、时间戳、曝光读数常驻画面。" } },
+        { id: "flaw", title: { en: "Embrace the flaws", zh: "保留瑕疵" }, desc: { en: "Handheld shake, AF search, grain, flash hard light.", zh: "手持晃动、对焦搜索、颗粒、直闪硬光。" } },
+      ],
+      outputs: [
+        { en: "A 15s nostalgic CCD memory MP4", zh: "一段 15 秒怀旧 CCD 记忆 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the character reference locks the character; not used as the first frame unless explicitly requested.", zh: "图生视频：角色参考图锁定角色；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Nostalgic memory / home-video aesthetics", zh: "怀旧记忆 / 家庭录像质感" },
+        { en: "Early-2000s CCD / Cyber-shot point-and-shoot looks", zh: "2000 年代初 CCD / Cyber-shot 卡片机观感" },
+      ],
+      notFor: [
+        { en: "Polished cinematic productions", zh: "精致电影级制作" },
+        { en: "Modern smartphone look", zh: "现代手机质感" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill record-memory-through-fixed-viewfinder",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/record-memory-through-fixed-viewfinder",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/record-memory-through-fixed-viewfinder/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/record-memory-through-fixed-viewfinder/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
       nameZh: "文生宣传片",
