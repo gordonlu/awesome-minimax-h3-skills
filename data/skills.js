@@ -502,6 +502,146 @@ window.AMHS_DATA = {
     },
 
     {
+      slug: "structure-product-proof-launch",
+      name: "Structure Product Proof Launch — Flagship Launch Ad (h3skills.com)",
+      nameZh: "结构化产品发布证明 · h3skills.com 旗舰发布广告",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a flagship 9-hard-cut product-launch ad branded h3skills.com from a single style reference image.",
+        zh: "从一张风格参考图生成一支 h3skills.com 品牌旗舰 9 连硬切产品发布广告。",
+      },
+      description: {
+        en: "For creators who want a flagship product-launch ad with an escalating 9-hard-cut structure, branded h3skills.com / H3SKILLS — deep navy-black base, electric-cyan, incandescent-white text, glowing particles on every frame. The Skill locks the visual language to a single style/composition reference, keeps the text razor-sharp and exact (only the listed brand strings), and spends the budget on escalating energy and expensive futurism — never cheap, messy or retro.",
+        zh: "面向想要能量持续升高的 9 连硬切旗舰产品发布广告、品牌为 h3skills.com / H3SKILLS 的创作者——深海军蓝近黑底、电光青、炽白文字、发光粒子贯穿每一帧。Skill 将视觉语言锁死单张风格/构图参考图，文字始终锐利精确（只允许列出的品牌字符串），把预算花在持续升高的能量与昂贵的未来感上——绝不小气、绝不杂乱、绝不复古。",
+      },
+      categories: ["commercial-ad"],
+      tags: [
+        { en: "Product Launch", zh: "产品发布" },
+        { en: "h3skills.com", zh: "h3skills.com" },
+        { en: "9 Hard Cuts", zh: "9 连硬切" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/structure-product-proof-launch/assets/poster.webp",
+        video: "community-skills/structure-product-proof-launch/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/structure-product-proof-launch/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One style/composition reference image — provides the visual language", zh: "一张风格/构图参考图——提供视觉语言" },
+      ],
+      capabilities: [
+        { en: "Builds an escalating 9-hard-cut launch ad with locked brand strings (h3skills.com / H3SKILLS)", zh: "构建能量持续升高的 9 连硬切发布广告，品牌字符串锁定（h3skills.com / H3SKILLS）" },
+        { en: "Locks the visual language to a single style reference", zh: "视觉语言锁死单张风格参考" },
+        { en: "Keeps text razor-sharp and exact — no blur, ghosting or scaling", zh: "文字始终锐利精确——无模糊、重影或缩放" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock the visual language", zh: "锁定视觉语言" }, desc: { en: "Pin navy-black / electric-cyan / white text / glowing particles to the reference.", zh: "将海军蓝黑 / 电光青 / 白字 / 发光粒子钉死参考图。" } },
+        { id: "shots",   title: { en: "Build 9 escalating shots", zh: "构建 9 连升格镜" }, desc: { en: "Shockwave wordmark → glass panels → combo mark → edit UI → full-speed peak → GOING LIVE → cards → grid → final lock.", zh: "冲击波字标 → 玻璃面板 → 组合标 → 剪辑界面 → 全速峰值 → GOING LIVE → 卡片 → 四宫格 → 终帧落定。" } },
+        { id: "strings", title: { en: "Lock the brand strings", zh: "锁定品牌字符串" }, desc: { en: "Only the listed strings; razor-sharp, fully opaque, no extras.", zh: "只允许列出的字符串；锐利完整满不透明，无额外文字。" } },
+      ],
+      outputs: [
+        { en: "A 15s flagship launch ad MP4 branded h3skills.com", zh: "一段 h3skills.com 品牌旗舰发布广告 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the style reference locks the visual language; not used as the first frame unless explicitly requested.", zh: "图生视频：风格参考图锁定视觉语言；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "文字锁定", "配乐与音效", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Product / platform launch commercials", zh: "产品 / 平台发布广告" },
+        { en: "GOING LIVE / LAUNCHING NOW brand films", zh: "GOING LIVE / LAUNCHING NOW 品牌片" },
+      ],
+      notFor: [
+        { en: "Calm, minimal or organic aesthetics", zh: "平静、极简或有机美学" },
+        { en: "Retro or lo-fi looks", zh: "复古或低保真质感" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill structure-product-proof-launch",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/structure-product-proof-launch",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/structure-product-proof-launch/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/structure-product-proof-launch/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
+      slug: "redirect-mass-with-leverage",
+      name: "Redirect Mass with Leverage — Grounded Tavern Brawl",
+      nameZh: "以巧劲制体重 · 落地式酒馆打斗",
+      sourceType: "community",
+      author: { en: "gordonlu", zh: "gordonlu" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a grounded hyper-realistic dark-fantasy tavern brawl from a two-character reference image.",
+        zh: "从一张双人参考图生成一段落地、超写实暗黑奇幻酒馆打斗。",
+      },
+      description: {
+        en: "For creators who want a grounded, hyper-realistic dark-fantasy tavern brawl: an elf ranger uses speed, footwork and leverage to take down a massive half-orc bruiser in a crowded seaside tavern, from a two-character reference image. The Skill locks both characters' look to the reference, keeps every hit physically believable (real weight, real momentum, grounded handheld camera), and spends the budget on realism — never floaty, never anime-exaggerated, never superhuman. Six timecoded beats over 15s.",
+        zh: "面向想要落地、超写实暗黑奇幻酒馆打斗的创作者：精灵游侠用速度、走位与巧劲在拥挤海港酒馆放倒巨型半兽人壮汉，从一张双人参考图出发。Skill 将两人的形象锁死参考图，每一击物理可信（真实体重、真实动量、接地气手持运镜），把预算花在真实感上——绝不漂浮、绝不动漫夸张、绝不超人。15 秒内六个带时间码节拍。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Tavern Brawl", zh: "酒馆打斗" },
+        { en: "Two-Character Reference", zh: "双人参考" },
+        { en: "Real Physics", zh: "真实物理" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/redirect-mass-with-leverage/assets/poster.webp",
+        video: "community-skills/redirect-mass-with-leverage/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/redirect-mass-with-leverage/assets/preview.mp4",
+        caption: { en: "Actual output: 15.08s / 1056×608 / 24fps generated on MiniMax H3", zh: "实际成片：15.08s / 1056×608 / 24fps，由 MiniMax H3 生成" },
+      },
+      inputs: [
+        { en: "One two-character reference image — locks both fighters' look and build", zh: "一张双人参考图——锁定两人的形象与体型" },
+      ],
+      capabilities: [
+        { en: "Locks both characters to a two-character reference image", zh: "双角色形象锁死双人参考图" },
+        { en: "Keeps every hit physically believable: real weight, real momentum, grounded handheld camera", zh: "每一击物理可信：真实体重、真实动量、接地气手持运镜" },
+        { en: "Six timecoded beats over 15s, from tension to pinning climax", zh: "15 秒内六个带时间码节拍，从对峙到制敌高潮" },
+      ],
+      workflow: [
+        { id: "lock",    title: { en: "Lock both characters", zh: "锁定双角色" }, desc: { en: "Pin the elf ranger and the half-orc bruiser to the two-character reference.", zh: "将精灵游侠与半兽人壮汉钉死双人参考图。" } },
+        { id: "beats",   title: { en: "Six grounded beats", zh: "六个落地节拍" }, desc: { en: "Wide establish → eye-lock tension → eruption → surge → leverage win → pinning climax.", zh: "大远景建立 → 对峙 → 爆发 → 升级 → 巧劲制敌 → 制伏高潮。" } },
+        { id: "physics", title: { en: "Enforce real physics", zh: "强制执行真实物理" }, desc: { en: "No floating, no anime rolls, no superhuman, no slow-mo, no clipping.", zh: "无漂浮、无动漫翻滚、无超人、无慢动作、无穿模。" } },
+      ],
+      outputs: [
+        { en: "A grounded 15s tavern-brawl MP4 with both characters locked", zh: "一段落地 15 秒酒馆打斗 MP4，双角色形象锁定" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the two-character reference locks both fighters; not used as the first frame unless explicitly requested.", zh: "图生视频：双人参考图锁定两位打斗者；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要", "音乐/音效"] },
+      ],
+      bestFor: [
+        { en: "Grounded physical fight scenes and tavern brawls", zh: "落地写实打斗场景与酒馆斗殴" },
+        { en: "David-vs-Goliath melee with real weight", zh: "有真实体重的以小博大近身格斗" },
+      ],
+      notFor: [
+        { en: "Floaty, anime-style or superhuman fights", zh: "漂浮、动漫式或超人的打斗" },
+        { en: "Non-physical, magic-heavy battles", zh: "非物理、魔法为主的战斗" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill redirect-mass-with-leverage",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/redirect-mass-with-leverage",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/redirect-mass-with-leverage/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/redirect-mass-with-leverage/SKILL.cn.md",
+        docs: [],
+      },
+    },
+
+    {
       slug: "h3-promo-film",
       name: "H3 Promo Film Studio",
       nameZh: "文生宣传片",

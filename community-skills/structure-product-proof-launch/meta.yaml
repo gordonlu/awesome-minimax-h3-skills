@@ -1,0 +1,26 @@
+display-name-zh: 结构化产品发布证明 · h3skills.com 旗舰发布广告
+version: 0.1.0
+tag-en: Commercial Ad
+tag-cn: 商业广告
+complete-tags-en:
+- Commercial Ad / Product Launch
+- Commercial Ad / h3skills.com
+complete-tags-cn:
+- 商业广告 / 产品发布
+- 商业广告 / h3skills.com
+summary-en: Generate a flagship 9-hard-cut product-launch ad branded h3skills.com from a single style reference image.
+summary-cn: 从一张风格参考图生成一支 h3skills.com 品牌旗舰 9 连硬切产品发布广告。
+desc-en: |
+  For creators who want a flagship product-launch ad with an escalating 9-hard-cut structure, branded
+  h3skills.com / H3SKILLS — deep navy-black base, electric-cyan, incandescent-white text, glowing particles on
+  every frame. The Skill locks the visual language to a single style/composition reference, keeps the text
+  razor-sharp and exact (only the listed brand strings), and spends the budget on escalating energy and
+  expensive futurism — never cheap, messy or retro. Includes a verified 15.08s output.
+desc-cn: |
+  面向想要能量持续升高的 9 连硬切旗舰产品发布广告、品牌为 h3skills.com / H3SKILLS 的创作者——深海军蓝
+  近黑底、电光青、炽白文字、发光粒子贯穿每一帧。Skill 将视觉语言锁死单张风格 / 构图参考图，文字始终
+  锐利精确（只允许列出的品牌字符串），把预算花在持续升高的能量与昂贵的未来感上——绝不小气、绝不杂乱、
+  绝不复古。附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community

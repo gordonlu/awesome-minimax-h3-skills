@@ -1,0 +1,27 @@
+display-name-zh: 以巧劲制体重 · 落地式酒馆打斗
+version: 0.1.0
+tag-en: Creative
+tag-cn: 创意实验
+complete-tags-en:
+- Creative / Tavern Brawl
+- Creative / Two-Character Reference
+complete-tags-cn:
+- 创意实验 / 酒馆打斗
+- 创意实验 / 双人参考
+summary-en: Generate a grounded hyper-realistic dark-fantasy tavern brawl from a two-character reference image.
+summary-cn: 从一张双人参考图生成一段落地、超写实暗黑奇幻酒馆打斗。
+desc-en: |
+  For creators who want a grounded, hyper-realistic dark-fantasy tavern brawl: an elf ranger uses speed,
+  footwork and leverage to take down a massive half-orc bruiser in a crowded seaside tavern, from a
+  two-character reference image. The Skill locks both characters' look to the reference, keeps every hit
+  physically believable (real weight, real momentum, grounded handheld camera), and spends the budget on
+  realism — never floaty, never anime-exaggerated, never superhuman. Six timecoded beats over 15s.
+  Includes a verified 15.08s output.
+desc-cn: |
+  面向想要落地、超写实暗黑奇幻酒馆打斗的创作者：精灵游侠用速度、走位与巧劲在拥挤海港酒馆放倒巨型
+  半兽人壮汉，从一张双人参考图出发。Skill 将两人的形象锁死参考图，每一击物理可信（真实体重、真实动量、
+  接地气手持运镜），把预算花在真实感上——绝不漂浮、绝不动漫夸张、绝不超人。15 秒内六个带时间码节拍。
+  附带一条已跑通的 15.08 秒成片。
+author-en: gordonlu
+author-cn: gordonlu
+source: community
