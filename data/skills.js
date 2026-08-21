@@ -293,7 +293,7 @@ window.AMHS_DATA = {
       name: "Link Skills with Base Loop — Character Showcase Sheet",
       nameZh: "技能联动 · 角色设定展示图",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "techiebysa", zh: "techiebysa" },
       version: "0.1.0",
       summary: {
         en: "Generate a magazine-grade character showcase sheet from one reference image as a near-static 4s shot.",
@@ -364,7 +364,7 @@ window.AMHS_DATA = {
       name: "Prove Product Through First-Person Test — UGC Food Review",
       nameZh: "第一人称实测产品 · UGC 食品测评",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "oggii-0", zh: "oggii-0" },
       version: "0.1.0",
       summary: {
         en: "Generate an authentic first-person UGC food-tasting review (iPhone vlog style) from a single product reference image.",
@@ -435,7 +435,7 @@ window.AMHS_DATA = {
       name: "Use Material as Progress Clock — Heritage Craft Documentary Ad",
       nameZh: "材料即时间 · 非遗工艺纪录广告",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "derek-wall90176", zh: "derek-wall90176" },
       version: "0.1.0",
       summary: {
         en: "Generate a heritage-craft documentary ad where the material's own appearance is the clock of the film.",
@@ -506,7 +506,7 @@ window.AMHS_DATA = {
       name: "Structure Product Proof Launch — Flagship Launch Ad (h3skills.com)",
       nameZh: "结构化产品发布证明 · h3skills.com 旗舰发布广告",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "abulu8", zh: "abulu8" },
       version: "0.1.0",
       summary: {
         en: "Generate a flagship 9-hard-cut product-launch ad branded h3skills.com from a single style reference image.",
@@ -576,7 +576,7 @@ window.AMHS_DATA = {
       name: "Redirect Mass with Leverage — Grounded Tavern Brawl",
       nameZh: "以巧劲制体重 · 落地式酒馆打斗",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "craftian-keskin", zh: "craftian-keskin" },
       version: "0.1.0",
       summary: {
         en: "Generate a grounded hyper-realistic dark-fantasy tavern brawl from a two-character reference image.",
@@ -643,10 +643,10 @@ window.AMHS_DATA = {
 
     {
       slug: "alternate-obstacles-toward-goal",
-      name: "Alternate Obstacles Toward Goal — Fire-Wall Escape Run",
-      nameZh: "障碍交替 · 火墙逃生奔跑",
+      name: "Single-Goal Escape — Disasters Alternate Front and Back",
+      nameZh: "单目标逃生｜前后灾害交替逼近",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "decat2025", zh: "decat2025" },
       version: "0.1.0",
       summary: {
         en: "Generate a one-take realistic disaster-action film — a female freight-ship engineer escaping a reactor corridor fire-wave — as a continuous 15s 16:9 24fps shot.",
@@ -712,10 +712,10 @@ window.AMHS_DATA = {
 
     {
       slug: "create-cross-medium-reaction",
-      name: "Create Cross-Medium Reaction — 2D Sticker vs Real Scene",
-      nameZh: "跨媒介反应 · 2D 贴纸角色 vs 实拍",
+      name: "2D Character — Real Contact Triggers Three-Stage Reaction",
+      nameZh: "二维角色｜真人接触三级反应",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "Reddit", zh: "Reddit" },
       version: "0.1.0",
       summary: {
         en: "Generate a cross-medium comedy: a flat 2D sticker character interacting with a real filmed scene — a sticker shiba sneaking chili flakes into a night-market stir-fry, in 10s 16:9.",
@@ -781,10 +781,10 @@ window.AMHS_DATA = {
 
     {
       slug: "direct-imperfect-memory-farewell",
-      name: "Direct Imperfect Memory Farewell — MiniDV Send-Off",
-      nameZh: "直接不完美记忆告别 · MiniDV 送别",
+      name: "Retro Handheld — Everyday Farewell Glance-Back",
+      nameZh: "复古手持｜日常送别回眸",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "zephyraleigh", zh: "zephyraleigh" },
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic documentary-style short: a forgotten 1998 MiniDV family video of a young woman waving goodbye at a seaside station, 15s 16:9.",
@@ -850,10 +850,10 @@ window.AMHS_DATA = {
 
     {
       slug: "follow-one-encounter-and-departure",
-      name: "Follow One Encounter and Departure — Cinéma Vérité Street Walk",
-      nameZh: "尾随一次相遇与离开 · 真实电影街头跟拍",
+      name: "Documentary Follow — Encounter Then Depart on the Move",
+      nameZh: "纪实跟拍｜行进中偶遇再离开",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "techhalla", zh: "techhalla" },
       version: "0.1.0",
       summary: {
         en: "Generate a 1970s New York street cinéma-vérité documentary: a shoulder-mounted 16mm camera follows a plain young woman through Greenwich Village until she merges into the flow — 15s 4:3.",
@@ -1057,10 +1057,10 @@ window.AMHS_DATA = {
 
     {
       slug: "stage-deadpan-chain-failure",
-      name: "Stage Deadpan Chain Failure — Ostrich Runway Comedy",
-      nameZh: "舞台面瘫连锁失败 · 鸵鸟走秀喜剧",
+      name: "Contrast Comedy — Calmer Yet More Out of Control",
+      nameZh: "反差喜剧｜越从容越失控",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "decat2025", zh: "decat2025" },
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic absurd comedy: a male ostrich in an opulent cape struts a circus runway, knocks a spotlight askew, topples a mannequin, then mic-drops its cape — 10s 16:9.",
@@ -1126,10 +1126,10 @@ window.AMHS_DATA = {
 
     {
       slug: "stage-earnest-upgrade-displacement",
-      name: "Stage Earnest Upgrade Displacement — 1950 Technicolor TV Ad",
-      nameZh: "舞台郑重升级置换 · 1950 染印法电视广告",
+      name: "Upgrade Satire — New Arrival, Old Love Moved Away",
+      nameZh: "升级讽刺｜新物登场旧爱被移走",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "dheepanratnam", zh: "dheepanratnam" },
       version: "0.1.0",
       summary: {
         en: "Generate a 1950s three-strip Technicolor TV ad: a family admires the TRITON thinking machine, the bigger TITAN is wheeled in, and the boy clutching the old one is dragged across the floor — 15s 1:1.",
@@ -1195,10 +1195,10 @@ window.AMHS_DATA = {
 
     {
       slug: "stage-solo-posture-comedy-arc",
-      name: "Stage Solo Posture Comedy Arc — Fitness Rant",
-      nameZh: "舞台独坐姿势喜剧弧 · 健身吐槽",
+      name: "Solo Performance Arc — Sit Up, Lean In, Release",
+      nameZh: "单人表演弧｜坐起前倾再释放",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "gizakdag", zh: "gizakdag" },
       version: "0.1.0",
       summary: {
         en: "Generate a single-person seated talking-head comedy: a twentysomething riffing on fitness with 2–3 self-deprecating jokes, natural performance, slight push-ins at each laugh — 12s 16:9.",
@@ -1264,10 +1264,10 @@ window.AMHS_DATA = {
 
     {
       slug: "stage-threshold-inspection-passage",
-      name: "Stage Threshold Inspection Passage — Lava Tube Survey",
-      nameZh: "舞台阈值检查通道 · 熔岩管科考",
+      name: "First-Person Expedition — Inspect After Crossing the Threshold",
+      nameZh: "第一视角探险｜穿越后巡检",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "strength04-x", zh: "strength04-x" },
       version: "0.1.0",
       summary: {
         en: "Generate a hyper-realistic first-person science survey: two volcanologists enter a fresh lava tube before its structure changes, documenting it — 15s 16:9.",
@@ -1333,10 +1333,10 @@ window.AMHS_DATA = {
 
     {
       slug: "stage-progressive-character-reveal",
-      name: "Stage Progressive Character Reveal — Cinematic Entrance",
-      nameZh: "舞台渐进角色揭示 · 电影感登场",
+      name: "Character Entrance — From Detail to Full-Body Reveal",
+      nameZh: "角色登场｜细节到全身揭晓",
       sourceType: "community",
-      author: { en: "gordonlu", zh: "gordonlu" },
+      author: { en: "aimikoda", zh: "aimikoda" },
       version: "0.1.0",
       summary: {
         en: "Generate a 15s cinematic character-entrance from one reference image as a four-stage progressive reveal (detail to hero frame), e.g. a fog-harbor lantern-bearer.",

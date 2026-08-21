@@ -1,4 +1,4 @@
-display-name-zh: 舞台渐进 · 角色揭示
+display-name-zh: 角色登场｜细节到全身揭晓
 version: 0.1.0
 tag-en: Creative
 tag-cn: 创意实验
@@ -25,6 +25,6 @@ desc-cn: |
   电影片头，例如雾港的掌灯人缓步登阶。Skill 将角色的脸、身材比例、发型、服装、配色、材质与整体剪影锁死
   @图片1（不重新设计、不简化、不替换任何界定性特征），保持镜头平滑、克制、有目的，并使渲染风格与参考图
   一致。I2VA，@图片1 仅作人物参考，不作为首帧。附带一条已跑通的 15.08 秒成片。
-author-en: gordonlu
-author-cn: gordonlu
+author-en: aimikoda
+author-cn: aimikoda
 source: community
