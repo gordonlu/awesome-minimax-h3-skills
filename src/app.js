@@ -44,6 +44,7 @@
   var state = { query: "", source: "all", category: "all" };
   var viewCtx = null; // gsap context for the active view
   var homeBound = false; // true once events/hero are bound on a snapshot-rendered home
+  var booted = false; // false until the first route() finishes on a pristine snapshot
 
   /* ============================ helpers ============================ */
 
@@ -748,7 +749,8 @@
 
   /* ============================ ANIMATION ============================ */
 
-  function animateHome(home) {
+  function animateHome(home, intro) {
+    if (intro === undefined) intro = true;
     if (!HAS_GSAP || REDUCED) {
       home.querySelectorAll(".js-reveal").forEach(function (el) { el.classList.add("revealed"); });
       home.querySelectorAll("[data-count]").forEach(function (el) { el.textContent = el.dataset.count; });
@@ -756,22 +758,27 @@
     }
     if (viewCtx) viewCtx.revert();
     viewCtx = gsap.context(function () {
-      var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.from(".hero-kicker", { y: 18, opacity: 0, duration: 0.7 })
-        .from(".hero-title .line > span", { yPercent: 110, duration: 0.9, stagger: 0.12 }, "-=0.35")
-        .from(".hero-sub", { y: 22, opacity: 0, duration: 0.7 }, "-=0.45")
-        .from(".hero-stats .stat", { y: 24, opacity: 0, duration: 0.6, stagger: 0.09 }, "-=0.4")
-        .from(".hero-flow .flow-step, .hero-flow .flow-arrow", { y: 14, opacity: 0, duration: 0.5, stagger: 0.07 }, "-=0.35")
-        .from(".marquee", { opacity: 0, duration: 0.8 }, "-=0.3")
-        .from(".hero-bg-frame", { opacity: 0, duration: 1.6, ease: "power2.out" }, 0.5);
+      if (intro) {
+        var tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.from(".hero-kicker", { y: 18, opacity: 0, duration: 0.7 })
+          .from(".hero-title .line > span", { yPercent: 110, duration: 0.9, stagger: 0.12 }, "-=0.35")
+          .from(".hero-sub", { y: 22, opacity: 0, duration: 0.7 }, "-=0.45")
+          .from(".hero-stats .stat", { y: 24, opacity: 0, duration: 0.6, stagger: 0.09 }, "-=0.4")
+          .from(".hero-flow .flow-step, .hero-flow .flow-arrow", { y: 14, opacity: 0, duration: 0.5, stagger: 0.07 }, "-=0.35")
+          .from(".marquee", { opacity: 0, duration: 0.8 }, "-=0.3")
+          .from(".hero-bg-frame", { opacity: 0, duration: 1.6, ease: "power2.out" }, 0.5);
 
-      home.querySelectorAll("[data-count]").forEach(function (el) {
-        var target = parseInt(el.dataset.count, 10);
-        gsap.fromTo(el, { textContent: 0 }, {
-          textContent: target, duration: 1.4, delay: 0.5, ease: "power2.out",
-          snap: { textContent: 1 },
+        home.querySelectorAll("[data-count]").forEach(function (el) {
+          var target = parseInt(el.dataset.count, 10);
+          gsap.fromTo(el, { textContent: 0 }, {
+            textContent: target, duration: 1.4, delay: 0.5, ease: "power2.out",
+            snap: { textContent: 1 },
+          });
         });
-      });
+      } else {
+        // boot on a pristine snapshot: no hero replay, stats shown instantly
+        home.querySelectorAll("[data-count]").forEach(function (el) { el.textContent = el.dataset.count; });
+      }
 
       gsap.utils.toArray(".section-head, .foundation-card, .anth-banner, .anth-banner-chips").forEach(function (el) {
         el.classList.add("revealed");
@@ -1122,6 +1129,7 @@
       homeBound = true;
     }
     else {
+      var firstBoot = !booted;
       refreshHomeStats(home);
       if (!homeBound) {
         homeBound = true;
@@ -1130,7 +1138,7 @@
         initHeroBg(home);
       }
       if (viewCtx) { viewCtx.revert(); viewCtx = null; }
-      animateHome(home);
+      animateHome(home, !firstBoot);
     }
     if (anchor && $(anchor)) {
       requestAnimationFrame(function () { $(anchor).scrollIntoView({ behavior: REDUCED ? "auto" : "smooth" }); });
@@ -1271,6 +1279,9 @@
     window.addEventListener("popstate", route);
     syncHeader();
     route();
+    var bootHide = document.getElementById("boot-hide");
+    if (bootHide && bootHide.parentNode) bootHide.parentNode.removeChild(bootHide);
+    booted = true;
   }
 
   if (document.readyState === "loading") {

@@ -86,8 +86,15 @@ for u in "${urls[@]}"; do
 import re, sys
 p = sys.argv[1]
 html = open(p).read()
+# dedupe <base href="/"> accumulated by repeated document.write + snapshot cycles
+html = re.sub(r'(?:<base href="/">\s*)+', '<base href="/">', html)
 html = re.sub(r'\sstyle="translate: none; rotate: none; scale: none;[^"]*"', '', html)
 html = re.sub(r'\sstyle="opacity: 0;"', '', html)
+# early language boot: hide body until app.js renders the saved non-zh language,
+# so visitors never see the zh snapshot flash before the swap
+BOOT = '<script>(function(){try{var l=localStorage.getItem("amhs-lang");if(l&&l!=="zh"){var s=document.createElement("style");s.id="boot-hide";s.textContent="body{visibility:hidden!important}";document.head.appendChild(s);setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},2500)}}catch(e){}})();</script>'
+if 'boot-hide' not in html:
+    html = re.sub(r'(<meta charset="UTF-8">)', r'\1\n  ' + BOOT, html, count=1)
 open(p, "w").write(html)
 PYEOF
     echo "OK    $rel ($(wc -c < "$dest") bytes)"
