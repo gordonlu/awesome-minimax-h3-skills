@@ -3103,5 +3103,74 @@ window.AMHS_DATA = {
         docs: [],
       },
     },
+    {
+      slug: "jk-shanghai-frozen-run",
+      name: "Anime JK × Real Shanghai — Bullet-Time One-Shot",
+      nameZh: "二次元JK × 实景上海｜子弹时间一镜到底",
+      sourceType: "community",
+      author: { en: "community", zh: "community" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 15s 16:9 mixed-media one-shot: a 2D anime JK schoolgirl runs through photorealistic Shanghai, trips, and time freezes as the camera orbits her in bullet-time.",
+        zh: "生成一段 15 秒 16:9 混合媒介一镜到底：二次元 JK 女生跑过实景上海，绊倒瞬间时间冻结，镜头以子弹时间环绕她。",
+      },
+      description: {
+        en: "For creators who want a 15s 16:9 'mixed media' one-shot: a crisp 2D anime JK schoolgirl lives inside an otherwise photorealistic, documentary-style modern Shanghai street. She runs urgently through real pedestrians, trips on a curb, and at the first instant of the fall TIME FREEZES while the same handheld camera smoothly becomes a precise bullet-time rig that orbits her at waist-to-head height — threading through her suspended school bag, books and instant-photo prints — then widens, returns to the original angle and time resumes as she catches herself on one knee. One unbroken physical camera trajectory, no cuts. I2VA: one character reference image locks the girl's face, body, outfit and anime style (reference only, never first frame). Includes a verified 15s output.",
+        zh: "面向想要 15 秒 16:9「混合媒介」一镜到底的创作者：干净的二次元 JK 女生置身于写实的、纪录片质感的现代上海街景。她匆忙跑过真实路人，被路沿绊倒，在失衡的第一瞬间时间冻结；同一台手持相机平滑变为精确的子弹时间装置，在腰到头高度环绕她——穿过悬浮的书包、课本与拍立得照片——再拉宽、回到原角度，时间恢复，她单手撑地跪稳。一条不间断的物理镜头轨迹，无切镜。I2VA：一张角色参考图锁定女生的脸、身材、服装与二次元风格（仅参考，不作为首帧）。附带一条已跑通的 15 秒成片。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Mixed Media", zh: "混合媒介" },
+        { en: "Bullet Time", zh: "子弹时间" },
+        { en: "Anime × Real", zh: "二次元×实景" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/jk-shanghai-frozen-run/assets/poster.webp",
+        video: "community-skills/jk-shanghai-frozen-run/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/jk-shanghai-frozen-run/assets/preview.mp4",
+        caption: { en: "Actual output: 15s / 16:9 / 24fps generated on MiniMax H3 (I2VA)", zh: "实际成片：15s / 16:9 / 24fps，由 MiniMax H3 生成（I2VA）" },
+      },
+      inputs: [
+        { en: "One character reference image — locks the JK girl's face, body, outfit and anime style", zh: "一张角色参考图——锁定 JK 女生的脸、身材、服装与二次元风格" },
+      ],
+      capabilities: [
+        { en: "Mixed-media: 2D anime character inside photorealistic Shanghai", zh: "混合媒介：二次元角色置身于写实上海" },
+        { en: "Bullet-time orbit at waist-to-head height, girl as center", zh: "腰到头高度子弹时间环绕，女生居中" },
+        { en: "One continuous unbroken camera trajectory, no cuts", zh: "一条不间断的镜头轨迹，无切镜" },
+      ],
+      workflow: [
+        { id: "lock", title: { en: "Lock the character", zh: "锁定角色" }, desc: { en: "Pin face/body/hair/outfit to the reference; keep 2D anime.", zh: "将脸/身材/发型/服装钉死参考图；保持二次元。" } },
+        { id: "freeze", title: { en: "Early-fall freeze + orbit", zh: "早跌冻结 + 环绕" }, desc: { en: "Freeze at first lost balance, then bullet-time orbit through her belongings.", zh: "在失衡第一瞬间冻结，再以子弹时间穿过她的物品环绕。" } },
+        { id: "resume", title: { en: "Resume naturally", zh: "自然恢复" }, desc: { en: "Return to side angle; time resumes, she catches herself on one knee.", zh: "回到侧角度；时间恢复，她单手撑地跪稳。" } },
+      ],
+      outputs: [
+        { en: "A 15s 16:9 mixed-media bullet-time MP4", zh: "一段 15 秒 16:9 混合媒介子弹时间 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the character reference locks the character; not used as the first frame unless explicitly requested.", zh: "图生视频：角色参考图锁定角色；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Mixed-media anime × real-environment shorts", zh: "混合媒介：动漫×真实环境短片" },
+        { en: "Bullet-time / frozen-time orbit around a subject", zh: "子弹时间 / 冻结时间环绕主体" },
+      ],
+      notFor: [
+        { en: "Multi-scene edited montages", zh: "多场景剪辑蒙太奇" },
+        { en: "Fully animated / fully photorealistic looks", zh: "全动画 / 全写实观感" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill jk-shanghai-frozen-run",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/jk-shanghai-frozen-run",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/jk-shanghai-frozen-run/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/jk-shanghai-frozen-run/SKILL.cn.md",
+        docs: [],
+      },
+    },
   ],
 };
