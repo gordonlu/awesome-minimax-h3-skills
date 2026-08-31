@@ -3291,10 +3291,10 @@ window.AMHS_DATA = {
         { en: "10s MP4 at 800×1056 (3:4), 24fps", zh: "10 秒 MP4，800×1056 (3:4)，24fps" },
       ],
       workflow: [
-        { en: "Load or generate the reference diorama image", zh: "加载或生成参考立体模型图" },
-        { en: "Compose the H3 prompt with isometric camera lock and three-phase launch choreography", zh: "编写 H3 提示词，锁定等距机位并编排三阶段发射" },
-        { en: "Submit to MiniMax H3 (T2VA or I2VA mode)", zh: "提交至 MiniMax H3（T2VA 或 I2VA 模式）" },
-        { en: "Review the 10s output for maquette fidelity, exhaust/smoke timing, and camera stability", zh: "审核 10 秒成片的模型质感、尾焰/烟雾时序和机位稳定性" },
+        { id: "load", title: { en: "Load reference", zh: "加载参考图" }, desc: { en: "Load or generate the reference diorama image.", zh: "加载或生成参考立体模型图。" } },
+        { id: "compose", title: { en: "Compose prompt", zh: "编写提示词" }, desc: { en: "Compose the H3 prompt with isometric camera lock and three-phase launch choreography.", zh: "编写 H3 提示词，锁定等距机位并编排三阶段发射。" } },
+        { id: "submit", title: { en: "Submit to H3", zh: "提交至 H3" }, desc: { en: "Submit to MiniMax H3 (T2VA or I2VA mode).", zh: "提交至 MiniMax H3（T2VA 或 I2VA 模式）。" } },
+        { id: "review", title: { en: "Review output", zh: "审核成片" }, desc: { en: "Review the 10s output for maquette fidelity, exhaust/smoke timing, and camera stability.", zh: "审核 10 秒成片的模型质感、尾焰/烟雾时序和机位稳定性。" } },
       ],
       inputs: [
         { type: "image", required: false, description: { zh: "参考图——微缩火箭发射场模型", en: "Reference image — miniature rocket launch diorama" } },
