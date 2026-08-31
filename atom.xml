@@ -6,7 +6,7 @@
   <link href="https://h3skills.com/atom.xml" rel="self"/>
   <link href="https://h3skills.com"/>
   <id>https://h3skills.com/</id>
-  <updated>2026-08-31T06:28:26Z</updated>
+  <updated>2026-08-31T07:40:46Z</updated>
   <author>
     <name>gordonlu</name>
   </author>
@@ -14,14 +14,14 @@
     <title>H3 提示词写作</title>
     <link href="https://h3skills.com/skill/h3-prompt-writing"/>
     <id>https://h3skills.com/skill/h3-prompt-writing</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>为全部五种 H3 生成模式撰写结构化视频生成提示词。</summary>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/h3-prompt-writing&quot;&gt;H3 提示词写作&lt;/a&gt;</content>
   </entry>  <entry>
     <title>动作参考迁移</title>
     <link href="https://h3skills.com/skill/reference-motion-transfer"/>
     <id>https://h3skills.com/skill/reference-motion-transfer</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>让任意角色/动物完整复刻参考视频中的舞蹈动作——参考图锁形象，参考视频锁动作，节奏节拍级对齐。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/reference-motion-transfer/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/reference-motion-transfer&quot;&gt;动作参考迁移&lt;/a&gt;</content>
@@ -29,7 +29,7 @@
     <title>豪华 SUV 广告</title>
     <link href="https://h3skills.com/skill/suv-commercial"/>
     <id>https://h3skills.com/skill/suv-commercial</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从单张车辆参考图生成一段 15 秒 / 16:9 / 24fps 的顶级未来豪华 SUV 广告——优雅、克制、真实，无 BGM。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/suv-commercial/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/suv-commercial&quot;&gt;豪华 SUV 广告&lt;/a&gt;</content>
@@ -37,7 +37,7 @@
     <title>技能联动 · 角色设定展示图</title>
     <link href="https://h3skills.com/skill/link-skills-with-base-loop"/>
     <id>https://h3skills.com/skill/link-skills-with-base-loop</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从一张参考图生成杂志级角色设定展示图，近乎静止的 4 秒镜头。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/link-skills-with-base-loop/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/link-skills-with-base-loop&quot;&gt;技能联动 · 角色设定展示图&lt;/a&gt;</content>
@@ -45,7 +45,7 @@
     <title>第一人称实测产品 · UGC 食品测评</title>
     <link href="https://h3skills.com/skill/prove-product-through-first-person-test"/>
     <id>https://h3skills.com/skill/prove-product-through-first-person-test</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从一张产品参考图生成真实第一人称 UGC 食品试吃测评（iPhone vlog 质感）。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/prove-product-through-first-person-test/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/prove-product-through-first-person-test&quot;&gt;第一人称实测产品 · UGC 食品测评&lt;/a&gt;</content>
@@ -53,7 +53,7 @@
     <title>材料即时间 · 非遗工艺纪录广告</title>
     <link href="https://h3skills.com/skill/use-material-as-progress-clock"/>
     <id>https://h3skills.com/skill/use-material-as-progress-clock</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>生成一支「材料自身外观就是影片时钟」的非遗工艺纪录广告。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/use-material-as-progress-clock/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/use-material-as-progress-clock&quot;&gt;材料即时间 · 非遗工艺纪录广告&lt;/a&gt;</content>
@@ -61,7 +61,7 @@
     <title>结构化产品发布证明 · h3skills.com 旗舰发布广告</title>
     <link href="https://h3skills.com/skill/structure-product-proof-launch"/>
     <id>https://h3skills.com/skill/structure-product-proof-launch</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从一张风格参考图生成一支 h3skills.com 品牌旗舰 9 连硬切产品发布广告。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/structure-product-proof-launch/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/structure-product-proof-launch&quot;&gt;结构化产品发布证明 · h3skills.com 旗舰发布广告&lt;/a&gt;</content>
@@ -69,7 +69,7 @@
     <title>以巧劲制体重 · 落地式酒馆打斗</title>
     <link href="https://h3skills.com/skill/redirect-mass-with-leverage"/>
     <id>https://h3skills.com/skill/redirect-mass-with-leverage</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从一张双人参考图生成一段落地、超写实暗黑奇幻酒馆打斗。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/redirect-mass-with-leverage/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/redirect-mass-with-leverage&quot;&gt;以巧劲制体重 · 落地式酒馆打斗&lt;/a&gt;</content>
@@ -77,7 +77,7 @@
     <title>单目标逃生｜前后灾害交替逼近</title>
     <link href="https://h3skills.com/skill/alternate-obstacles-toward-goal"/>
     <id>https://h3skills.com/skill/alternate-obstacles-toward-goal</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>一段式写实灾难动作片：货运飞船女机师穿越反应堆走廊火浪逃生，连续 15 秒 / 16:9 / 24fps。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/alternate-obstacles-toward-goal/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/alternate-obstacles-toward-goal&quot;&gt;单目标逃生｜前后灾害交替逼近&lt;/a&gt;</content>
@@ -85,7 +85,7 @@
     <title>2D 贴纸 × 实拍夜市互动</title>
     <link href="https://h3skills.com/skill/create-cross-medium-reaction"/>
     <id>https://h3skills.com/skill/create-cross-medium-reaction</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>跨媒介喜剧短片：扁平 2D 贴纸角色与实拍场景同框互动——贴纸柴犬在夜市炒粉摊偷倒辣椒面，10 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/create-cross-medium-reaction/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/create-cross-medium-reaction&quot;&gt;2D 贴纸 × 实拍夜市互动&lt;/a&gt;</content>
@@ -93,7 +93,7 @@
     <title>复古手持｜日常送别回眸</title>
     <link href="https://h3skills.com/skill/direct-imperfect-memory-farewell"/>
     <id>https://h3skills.com/skill/direct-imperfect-memory-farewell</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>超写实纪录片风格短片：一段被遗忘的 1998 年 MiniDV 家庭录像，记录海边小站年轻女生挥手告别，15 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/direct-imperfect-memory-farewell/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/direct-imperfect-memory-farewell&quot;&gt;复古手持｜日常送别回眸&lt;/a&gt;</content>
@@ -101,7 +101,7 @@
     <title>纪实跟拍｜行进中偶遇再离开</title>
     <link href="https://h3skills.com/skill/follow-one-encounter-and-departure"/>
     <id>https://h3skills.com/skill/follow-one-encounter-and-departure</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>1970 年代纽约街头真实电影纪录片：肩扛 16mm 摄影机贴身跟拍一位素颜年轻女子穿过格林尼治村直至没入人流——15 秒 4:3。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/follow-one-encounter-and-departure/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/follow-one-encounter-and-departure&quot;&gt;纪实跟拍｜行进中偶遇再离开&lt;/a&gt;</content>
@@ -109,7 +109,7 @@
     <title>高定工坊广告风格 · 中式刺绣高奢广告</title>
     <link href="https://h3skills.com/skill/haute-couture-atelier-ad-style"/>
     <id>https://h3skills.com/skill/haute-couture-atelier-ad-style</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>顶级西方高定广告风格：中国高级刺绣精品（朱砂红/黛蓝丝绸上的如意缠枝莲纹）局部微距特写，15 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/haute-couture-atelier-ad-style/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/haute-couture-atelier-ad-style&quot;&gt;高定工坊广告风格 · 中式刺绣高奢广告&lt;/a&gt;</content>
@@ -117,7 +117,7 @@
     <title>铅笔点石成画 · 魔法铅笔 POV</title>
     <link href="https://h3skills.com/skill/pencil-transmutes-reality-into-sketch"/>
     <id>https://h3skills.com/skill/pencil-transmutes-reality-into-sketch</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>POV 魔法铅笔短片：笔尖指向香港现实主体，将其彻底转化为动画 2D 手绘——港铁列车、唐楼街猫、红的士、公园长椅女性——10 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/pencil-transmutes-reality-into-sketch/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/pencil-transmutes-reality-into-sketch&quot;&gt;铅笔点石成画 · 魔法铅笔 POV&lt;/a&gt;</content>
@@ -125,7 +125,7 @@
     <title>反差喜剧｜越从容越失控</title>
     <link href="https://h3skills.com/skill/stage-deadpan-chain-failure"/>
     <id>https://h3skills.com/skill/stage-deadpan-chain-failure</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>超写实荒诞喜剧：一只披着华丽斗篷的雄性鸵鸟在马戏团走秀，拍歪追光灯、撞落人台模特，最后甩落斗篷 mic-drop——10 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/stage-deadpan-chain-failure/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/stage-deadpan-chain-failure&quot;&gt;反差喜剧｜越从容越失控&lt;/a&gt;</content>
@@ -133,7 +133,7 @@
     <title>升级讽刺｜新物登场旧爱被移走</title>
     <link href="https://h3skills.com/skill/stage-earnest-upgrade-displacement"/>
     <id>https://h3skills.com/skill/stage-earnest-upgrade-displacement</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>1950 年代三段式染印法电视广告：一家人欣赏老式思考机器 TRITON，更庞大的 TITAN 被推入，抱着旧机器不放的小男孩被拖过地板——15 秒 1:1。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/stage-earnest-upgrade-displacement/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/stage-earnest-upgrade-displacement&quot;&gt;升级讽刺｜新物登场旧爱被移走&lt;/a&gt;</content>
@@ -141,7 +141,7 @@
     <title>单人表演弧｜坐起前倾再释放</title>
     <link href="https://h3skills.com/skill/stage-solo-posture-comedy-arc"/>
     <id>https://h3skills.com/skill/stage-solo-posture-comedy-arc</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>单人口播喜剧：一个二十多岁的年轻人坐在沙发上随口吐槽健身，讲 2–3 个自嘲式笑点，自然表演、笑点处轻微推近——12 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/stage-solo-posture-comedy-arc/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/stage-solo-posture-comedy-arc&quot;&gt;单人表演弧｜坐起前倾再释放&lt;/a&gt;</content>
@@ -149,7 +149,7 @@
     <title>第一视角探险｜穿越后巡检</title>
     <link href="https://h3skills.com/skill/stage-threshold-inspection-passage"/>
     <id>https://h3skills.com/skill/stage-threshold-inspection-passage</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>超写实第一人称科考纪录：两名火山学家钻进一处新形成的熔岩管，在其内部结构进一步变化前记录它——15 秒 16:9。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/stage-threshold-inspection-passage/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/stage-threshold-inspection-passage&quot;&gt;第一视角探险｜穿越后巡检&lt;/a&gt;</content>
@@ -157,7 +157,7 @@
     <title>角色登场｜细节到全身揭晓</title>
     <link href="https://h3skills.com/skill/stage-progressive-character-reveal"/>
     <id>https://h3skills.com/skill/stage-progressive-character-reveal</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从一张参考图生成 15 秒电影感角色登场，以「细节到英雄帧」四段渐进揭示，例如雾港掌灯人。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/stage-progressive-character-reveal/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/stage-progressive-character-reveal&quot;&gt;角色登场｜细节到全身揭晓&lt;/a&gt;</content>
@@ -165,7 +165,7 @@
     <title>金发女飞行员｜海岸公路复古跑车时尚短片</title>
     <link href="https://h3skills.com/skill/verify-recurring-identity-board"/>
     <id>https://h3skills.com/skill/verify-recurring-identity-board</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>生成一段 15 秒 16:9 动漫时尚短片，全程将单一角色锁死参考图——日落时分加州海岸公路旁，金发女飞行员倚着一辆停稳的祖母绿复古跑车。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/verify-recurring-identity-board/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/verify-recurring-identity-board&quot;&gt;金发女飞行员｜海岸公路复古跑车时尚短片&lt;/a&gt;</content>
@@ -173,7 +173,7 @@
     <title>CCD 取景器记忆｜2009 校园 vlog</title>
     <link href="https://h3skills.com/skill/record-memory-through-fixed-viewfinder"/>
     <id>https://h3skills.com/skill/record-memory-through-fixed-viewfinder</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>生成一段 15 秒 4:3 的 CCD 相机记忆短片，质感如翻出的旧存储卡录像：一位女生用 2000 年代初 Sony Cyber-shot 自拍，持续相机 UI 叠加层，直闪怀旧感。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/record-memory-through-fixed-viewfinder/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/record-memory-through-fixed-viewfinder&quot;&gt;CCD 取景器记忆｜2009 校园 vlog&lt;/a&gt;</content>
@@ -181,7 +181,7 @@
     <title>文生宣传片</title>
     <link href="https://h3skills.com/skill/h3-promo-film"/>
     <id>https://h3skills.com/skill/h3-promo-film</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>纯文本写出可直接运行的 H3 宣传/预告片提示词——产品宣传、影视预告一条龙，风格句开头、时间码节拍、配乐一次写齐。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/h3-promo-film/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/h3-promo-film&quot;&gt;文生宣传片&lt;/a&gt;</content>
@@ -189,7 +189,7 @@
     <title>图生关键帧短片</title>
     <link href="https://h3skills.com/skill/h3-keyframe-film"/>
     <id>https://h3skills.com/skill/h3-keyframe-film</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>关键帧驱动的图生短片：多关键帧蒙太奇、首尾帧过渡、尾帧落定——图片锁形象，文字锁动作。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/h3-keyframe-film/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/h3-keyframe-film&quot;&gt;图生关键帧短片&lt;/a&gt;</content>
@@ -197,7 +197,7 @@
     <title>影视级主视觉动画</title>
     <link href="https://h3skills.com/skill/cinematic-key-art-animator"/>
     <id>https://h3skills.com/skill/cinematic-key-art-animator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>一张角色主视觉/立绘变 7–8 秒动态主视觉——氛围化 Living Key Art 或高密度 Action Burst，身份全程锁定。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/cinematic-key-art-animator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/cinematic-key-art-animator&quot;&gt;影视级主视觉动画&lt;/a&gt;</content>
@@ -205,7 +205,7 @@
     <title>建造延时摄影</title>
     <link href="https://h3skills.com/skill/construction-timelapse-video-generator"/>
     <id>https://h3skills.com/skill/construction-timelapse-video-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>7–8 秒从零建造的加速延时——强制「建造状态持续」，已完成部分绝不消失、重置或改设计。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/construction-timelapse-video-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/construction-timelapse-video-generator&quot;&gt;建造延时摄影&lt;/a&gt;</content>
@@ -213,7 +213,7 @@
     <title>水墨活化</title>
     <link href="https://h3skills.com/skill/living-ink-painting-video-generator"/>
     <id>https://h3skills.com/skill/living-ink-painting-video-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>画中水墨主体先灵动游走，再骤然加速突破纸面，化作流动的水墨生灵。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/living-ink-painting-video-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/living-ink-painting-video-generator&quot;&gt;水墨活化&lt;/a&gt;</content>
@@ -221,7 +221,7 @@
     <title>微缩生物苏醒</title>
     <link href="https://h3skills.com/skill/miniature-creature-awakening-video-generator"/>
     <id>https://h3skills.com/skill/miniature-creature-awakening-video-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>小生物图肉眼可见地苏醒，完成明确肢体动作，与周围互动，并以可读姿态收尾。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/miniature-creature-awakening-video-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/miniature-creature-awakening-video-generator&quot;&gt;微缩生物苏醒&lt;/a&gt;</content>
@@ -229,7 +229,7 @@
     <title>微缩世界景观</title>
     <link href="https://h3skills.com/skill/miniature-world-landscape-generator"/>
     <id>https://h3skills.com/skill/miniature-world-landscape-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>电影感微缩景观短片（自然/城市/历史/奇幻/生态缸），每片只选一个清晰可见的英雄特效。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/miniature-world-landscape-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/miniature-world-landscape-generator&quot;&gt;微缩世界景观&lt;/a&gt;</content>
@@ -237,7 +237,7 @@
     <title>自然微动治愈</title>
     <link href="https://h3skills.com/skill/natural-ambient-living-generator"/>
     <id>https://h3skills.com/skill/natural-ambient-living-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>真实尺度的自然场景「活着」——环境系统（风/光/水/云）是唯一主要动作载体。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/natural-ambient-living-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/natural-ambient-living-generator&quot;&gt;自然微动治愈&lt;/a&gt;</content>
@@ -245,7 +245,7 @@
     <title>云海巨鲸</title>
     <link href="https://h3skills.com/skill/mythic-cloud-whale-generator"/>
     <id>https://h3skills.com/skill/mythic-cloud-whale-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>7 秒云海巨兽短片：黄昏金光之下，巨鲸从无尽云海中破云而出，附演示视频。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/mythic-cloud-whale-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/mythic-cloud-whale-generator&quot;&gt;云海巨鲸&lt;/a&gt;</content>
@@ -253,7 +253,7 @@
     <title>沙暴铁骑</title>
     <link href="https://h3skills.com/skill/cavalry-charge-generator"/>
     <id>https://h3skills.com/skill/cavalry-charge-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>金色黄昏尘土平原上的全速铁骑冲锋，附演示视频。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/cavalry-charge-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/cavalry-charge-generator&quot;&gt;沙暴铁骑&lt;/a&gt;</content>
@@ -261,7 +261,7 @@
     <title>片头字效</title>
     <link href="https://h3skills.com/skill/kinetic-title-card-generator"/>
     <id>https://h3skills.com/skill/kinetic-title-card-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>文字当主角——品牌名、片名、歌名做成动态片头字卡，文字拼写必须一字不差。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/kinetic-title-card-generator/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/kinetic-title-card-generator&quot;&gt;片头字效&lt;/a&gt;</content>
@@ -269,7 +269,7 @@
     <title>极简产品广告生成器</title>
     <link href="https://h3skills.com/skill/minimalist-product-ad-generator"/>
     <id>https://h3skills.com/skill/minimalist-product-ad-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>基于产品图片和广告需求，完成卖点提炼、英文文案与节拍分镜设计，输出极简产品广告短片。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/minimalist-product-ad-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/minimalist-product-ad-generator&quot;&gt;极简产品广告生成器&lt;/a&gt;</content>
@@ -277,7 +277,7 @@
     <title>3D 动画短片生成器</title>
     <link href="https://h3skills.com/skill/3d-animation-short-generator"/>
     <id>https://h3skills.com/skill/3d-animation-short-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>根据故事创意，完成人物与场景设定、镜头规划、分镜生成和视频合成，输出风格统一的 3D 动画短片。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/3d-animation-short-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/3d-animation-short-generator&quot;&gt;3D 动画短片生成器&lt;/a&gt;</content>
@@ -285,7 +285,7 @@
     <title>纸艺定格科普视频生成器</title>
     <link href="https://h3skills.com/skill/papercraft-stop-motion-explainer"/>
     <id>https://h3skills.com/skill/papercraft-stop-motion-explainer</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>根据知识主题，完成纸偶、分层布景、分镜与提示词设计，输出可执行的纸艺定格科普视频创作包。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/papercraft-stop-motion-explainer.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/papercraft-stop-motion-explainer&quot;&gt;纸艺定格科普视频生成器&lt;/a&gt;</content>
@@ -293,7 +293,7 @@
     <title>品牌宣传短片生成器</title>
     <link href="https://h3skills.com/skill/brand-promo-video-generator"/>
     <id>https://h3skills.com/skill/brand-promo-video-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>基于品牌素材与推广目标，完成事实核验、创意方向、分镜和音画合成，输出可展示的品牌宣传短片。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/brand-promo-video-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/brand-promo-video-generator&quot;&gt;品牌宣传短片生成器&lt;/a&gt;</content>
@@ -301,7 +301,7 @@
     <title>音乐 MV 动态字幕生成器</title>
     <link href="https://h3skills.com/skill/music-video-subtitle-generator"/>
     <id>https://h3skills.com/skill/music-video-subtitle-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>基于音乐和歌词，完成节奏拆解、镜头设计与动态字幕方案，适用于 AI MV 创作。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/music-video-subtitle-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/music-video-subtitle-generator&quot;&gt;音乐 MV 动态字幕生成器&lt;/a&gt;</content>
@@ -309,7 +309,7 @@
     <title>双人游戏开场视频生成器</title>
     <link href="https://h3skills.com/skill/co-op-game-intro-generator"/>
     <id>https://h3skills.com/skill/co-op-game-intro-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>根据玩家信息、角色参考图和视觉风格，完成首图确认与界面动效设计，输出双人游戏开场视频。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/co-op-game-intro-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/co-op-game-intro-generator&quot;&gt;双人游戏开场视频生成器&lt;/a&gt;</content>
@@ -317,7 +317,7 @@
     <title>纸拼贴讲解动画生成器</title>
     <link href="https://h3skills.com/skill/paper-collage-explainer-generator"/>
     <id>https://h3skills.com/skill/paper-collage-explainer-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>基于文案或抽象概念，完成隐喻设计、拼贴分镜和动画生成，适用于讲解类内容。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/paper-collage-explainer-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/paper-collage-explainer-generator&quot;&gt;纸拼贴讲解动画生成器&lt;/a&gt;</content>
@@ -325,7 +325,7 @@
     <title>手绘实拍融合视频生成器</title>
     <link href="https://h3skills.com/skill/handdrawn-live-video-generator"/>
     <id>https://h3skills.com/skill/handdrawn-live-video-generator</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>基于场景创意，生成手绘动画与实拍接触变形的 15 秒视频，适用于创意短片制作。</summary>
     <media:thumbnail url="https://h3skills.com/third_party/MiniMax-H3/previews/handdrawn-live-video-generator.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/handdrawn-live-video-generator&quot;&gt;手绘实拍融合视频生成器&lt;/a&gt;</content>
@@ -333,7 +333,7 @@
     <title>二次元JK × 实景上海｜子弹时间一镜到底</title>
     <link href="https://h3skills.com/skill/jk-shanghai-frozen-run"/>
     <id>https://h3skills.com/skill/jk-shanghai-frozen-run</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>生成一段 15 秒 16:9 混合媒介一镜到底：二次元 JK 女生跑过实景上海，绊倒瞬间时间冻结，镜头以子弹时间环绕她。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/jk-shanghai-frozen-run/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/jk-shanghai-frozen-run&quot;&gt;二次元JK × 实景上海｜子弹时间一镜到底&lt;/a&gt;</content>
@@ -341,7 +341,7 @@
     <title>黏土咖啡店｜温暖定格动画</title>
     <link href="https://h3skills.com/skill/clay-cafe-stop-motion"/>
     <id>https://h3skills.com/skill/clay-cafe-stop-motion</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>生成一段 15 秒温馨黏土咖啡店短片——手工定格动画风格，柔和自然光，细腻纸黏土质感，精致微距摄影。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/clay-cafe-stop-motion/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/clay-cafe-stop-motion&quot;&gt;黏土咖啡店｜温暖定格动画&lt;/a&gt;</content>
@@ -349,7 +349,7 @@
     <title>微缩火箭发射场</title>
     <link href="https://h3skills.com/skill/miniature-rocket-launch-diorama"/>
     <id>https://h3skills.com/skill/miniature-rocket-launch-diorama</id>
-    <updated>2026-08-31T06:28:26Z</updated>
+    <updated>2026-08-31T07:40:46Z</updated>
     <summary>从单张参考图生成 10 秒微缩火箭发射场——固定等距视角，手工模型质感。</summary>
     <media:thumbnail url="https://h3skills.com/community-skills/miniature-rocket-launch-diorama/assets/poster.webp"/>
     <content type="html">&lt;a href=&quot;https://h3skills.com/skill/miniature-rocket-launch-diorama&quot;&gt;微缩火箭发射场&lt;/a&gt;</content>

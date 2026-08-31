@@ -99,6 +99,20 @@ main_urls.append({
     "priority": "0.8",
 })
 
+# License page
+main_urls.append({
+    "loc": f"{SITE}/license",
+    "lastmod": page_lastmod("license/index.html") if (ROOT / "license/index.html").exists() else now,
+    "changefreq": "monthly",
+    "priority": "0.5",
+})
+main_urls.append({
+    "loc": f"{SITE}/en/license",
+    "lastmod": page_lastmod("en/license/index.html") if (ROOT / "en/license/index.html").exists() else now,
+    "changefreq": "monthly",
+    "priority": "0.5",
+})
+
 # Skill pages (zh + en)
 for s in skills:
     slug = s["slug"]

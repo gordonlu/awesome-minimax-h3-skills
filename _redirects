@@ -1,3 +1,7 @@
+# Static standalone pages (must come before /en/* catch-all)
+/license    /license/index.html   200
+/en/license    /en/license/index.html   200
+
 # Language-based routing: serve /en/ and /zh/ static snapshots
 # /en/* → en/index.html (English snapshot)
 # /zh/* → root index.html (Chinese snapshot, the default)

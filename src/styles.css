@@ -687,6 +687,12 @@ html[lang="de"] .hero-title {
 }
 .detail-media-cap a { color: var(--muted); border-bottom: 1px solid var(--line-strong); transition: color 0.25s; }
 .detail-media-cap a:hover { color: var(--accent); }
+.ai-badge {
+  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.06em;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 3px; white-space: nowrap;
+  border: 1px solid rgba(255,108,55,0.18);
+}
 
 /* Modes panel (prompt-writing detail) */
 .modes-grid {
@@ -884,6 +890,8 @@ html[lang="de"] .hero-title {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em;
   color: var(--faint);
 }
+.footer-license-link { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-license-link:hover { color: var(--accent); }
 
 /* ==========================================================================
    Entrance animation defaults (JS/GSAP hooks)
