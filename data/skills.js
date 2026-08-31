@@ -3297,7 +3297,7 @@ window.AMHS_DATA = {
         { id: "review", title: { en: "Review output", zh: "审核成片" }, desc: { en: "Review the 10s output for maquette fidelity, exhaust/smoke timing, and camera stability.", zh: "审核 10 秒成片的模型质感、尾焰/烟雾时序和机位稳定性。" } },
       ],
       inputs: [
-        { type: "image", required: false, description: { zh: "参考图——微缩火箭发射场模型", en: "Reference image — miniature rocket launch diorama" } },
+        { en: "Reference image — miniature rocket launch diorama (optional)", zh: "参考图——微缩火箭发射场模型（可选）" },
       ],
       preview: {
         poster: "community-skills/miniature-rocket-launch-diorama/assets/poster.webp",
