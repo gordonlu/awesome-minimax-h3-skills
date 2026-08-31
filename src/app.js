@@ -872,17 +872,27 @@
         .from(".detail-media", { y: 30, opacity: 0, scale: 0.985, duration: 0.8 }, "-=0.7");
 
       gsap.utils.toArray(".detail-section-head, .detail-nav").forEach(function (el) {
-        gsap.from(el, {
-          y: 28, opacity: 0, duration: 0.7, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 90%" },
-        });
+        var inView = el.getBoundingClientRect().top < window.innerHeight * 0.9;
+        if (inView) {
+          gsap.from(el, { y: 28, opacity: 0, duration: 0.7, ease: "power3.out" });
+        } else {
+          gsap.from(el, {
+            y: 28, opacity: 0, duration: 0.7, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 90%" },
+          });
+        }
       });
       gsap.utils.toArray("#view-detail .js-reveal").forEach(function (el) {
         el.classList.add("revealed");
-        gsap.from(el, {
-          y: 26, opacity: 0, duration: 0.65, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 92%" },
-        });
+        var inView = el.getBoundingClientRect().top < window.innerHeight * 0.92;
+        if (inView) {
+          gsap.from(el, { y: 26, opacity: 0, duration: 0.65, ease: "power3.out" });
+        } else {
+          gsap.from(el, {
+            y: 26, opacity: 0, duration: 0.65, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 92%" },
+          });
+        }
       });
     }, view);
   }
