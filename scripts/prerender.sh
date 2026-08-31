@@ -100,7 +100,7 @@ for u in "${urls[@]}"; do
   fi
   mkdir -p "$(dirname "$dest")"
   google-chrome --headless=new --disable-gpu --no-sandbox \
-    --virtual-time-budget=8000 --dump-dom "http://127.0.0.1:$PORT$u" 2>/dev/null \
+    --virtual-time-budget=15000 --dump-dom "http://127.0.0.1:$PORT$u" 2>/dev/null \
     > "$dest"
   if [ ! -s "$dest" ] || [ "$(wc -c < "$dest")" -lt 500 ]; then
     echo "FAIL  $rel (empty/small)"
@@ -188,7 +188,7 @@ def inject_seo(html, lang, page_type, slug=None):
             og_desc = page_desc
             og_url = canonical
             if sm["poster"]:
-                og_image = f"{SITE}/{sm['poster']}"
+                og_image = f"{SITE}/og/{slug}.png"
             # VideoObject structured data
             if sm["video"]:
                 vo = {
@@ -359,8 +359,20 @@ print(f"\nPost-processing complete.")
 PYEOF
 
 # ── Step 7: Copy results to repo root ──────────────────────────────────
+# Preserve manually-created /en/ pages (faq, prompts) that aren't part of prerender
+EN_MANUAL=""
+for d in en/faq en/prompts; do [ -d "$ROOT/$d" ] && EN_MANUAL="$EN_MANUAL $d"; done
+if [ -n "$EN_MANUAL" ]; then
+  mkdir -p "$TMP/manual"
+  for d in $EN_MANUAL; do cp -r "$ROOT/$d" "$TMP/manual/$(basename $d)"; done
+fi
 rm -rf "$ROOT/anthology" "$ROOT/skill" "$ROOT/en"
 cp -r "$TMP/out/." "$ROOT/"
+# Restore manually-created /en/ pages
+if [ -n "$EN_MANUAL" ]; then
+  mkdir -p "$ROOT/en"
+  for d in $EN_MANUAL; do cp -r "$TMP/manual/$(basename $d)" "$ROOT/$d"; done
+fi
 
 total_zh=$(find "$ROOT/skill" "$ROOT/anthology" -name index.html 2>/dev/null | wc -l)
 total_en=$(find "$ROOT/en" -name index.html 2>/dev/null | wc -l)

@@ -3250,6 +3250,8 @@ window.AMHS_DATA = {
       foundation: false,
       sourceType: "official",
       author: "gordonlu",
+      version: "1.0.0",
+      languages: ["en", "zh"],
       categories: ["animation"],
       modes: [
         { id: "T2VA", label: "T2VA" },
