@@ -3281,6 +3281,21 @@ window.AMHS_DATA = {
         { en: "Full-scale real launch footage", zh: "全尺寸真实发射画面" },
         { en: "Fast-paced action montage", zh: "快节奏动作蒙太奇" },
       ],
+      capabilities: [
+        { en: "Locks the isometric camera angle throughout the entire 10s sequence", zh: "全程锁定等距俯视机位" },
+        { en: "Preserves handcrafted maquette textures: launch tower, service structures, lattice towers, sandy terrain", zh: "保留手工模型质感：发射塔、服务结构、桁架塔、沙地" },
+        { en: "Choreographs a three-phase launch: 0–3s liftoff, 3–7s tower climb, 7–10s upper frame exit", zh: "编排三阶段发射：0–3s 升空、3–7s 爬塔、7–10s 出画" },
+        { en: "Generates secondary motion: flag flutter, dust push-out, smoke curl, warm metal reflections", zh: "生成次要运动：旗帜飘动、灰尘外扬、烟雾卷绕、金属暖色反射" },
+      ],
+      outputs: [
+        { en: "10s MP4 at 800×1056 (3:4), 24fps", zh: "10 秒 MP4，800×1056 (3:4)，24fps" },
+      ],
+      workflow: [
+        { en: "Load or generate the reference diorama image", zh: "加载或生成参考立体模型图" },
+        { en: "Compose the H3 prompt with isometric camera lock and three-phase launch choreography", zh: "编写 H3 提示词，锁定等距机位并编排三阶段发射" },
+        { en: "Submit to MiniMax H3 (T2VA or I2VA mode)", zh: "提交至 MiniMax H3（T2VA 或 I2VA 模式）" },
+        { en: "Review the 10s output for maquette fidelity, exhaust/smoke timing, and camera stability", zh: "审核 10 秒成片的模型质感、尾焰/烟雾时序和机位稳定性" },
+      ],
       inputs: [
         { type: "image", required: false, description: { zh: "参考图——微缩火箭发射场模型", en: "Reference image — miniature rocket launch diorama" } },
       ],
