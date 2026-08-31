@@ -122,12 +122,55 @@
     return DATA.skills.filter(function (s) { return !s.foundation; });
   }
 
+  /* ---- Fuse.js fuzzy search ---- */
+  var fuse = null;
+  function getFuse() {
+    if (fuse) return fuse;
+    if (typeof Fuse === "undefined") return null;
+    var list = DATA.skills.map(function (s) {
+      return {
+        slug: s.slug,
+        name: s.name, nameZh: s.nameZh,
+        summary: L(s.summary), summaryAlt: LAlt(s.summary),
+        description: L(s.description), descriptionAlt: LAlt(s.description),
+        tags: s.tags.map(L).join(" "),
+        categories: s.categories.map(function (id) { return L(CATS[id]) + " " + LAlt(CATS[id]); }).join(" "),
+        bestFor: s.bestFor.map(L).join(" "),
+        sourceType: s.sourceType,
+        cats: s.categories,
+      };
+    });
+    fuse = new Fuse(list, {
+      keys: [
+        { name: "name", weight: 0.3 },
+        { name: "nameZh", weight: 0.3 },
+        { name: "tags", weight: 0.2 },
+        { name: "summary", weight: 0.1 },
+        { name: "summaryAlt", weight: 0.05 },
+        { name: "categories", weight: 0.05 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+      minMatchCharLength: 1,
+    });
+    return fuse;
+  }
+
   function filteredSkills() {
     var q = state.query.trim().toLowerCase();
     return videoSkills().filter(function (s) {
       if (state.source !== "all" && s.sourceType !== state.source) return false;
       if (state.category !== "all" && s.categories.indexOf(state.category) === -1) return false;
       if (!q) return true;
+      /* try Fuse.js fuzzy search first */
+      var f = getFuse();
+      if (f) {
+        var results = f.search(q);
+        var slugs = {};
+        results.forEach(function (r) { slugs[r.item.slug] = true; });
+        return slugs[s.slug];
+      }
+      /* fallback to indexOf */
       var hay = [
         s.slug, s.name, s.nameZh, L(s.summary), LAlt(s.summary), L(s.description),
         s.tags.map(L).join(" "),
