@@ -13,7 +13,7 @@ cd "$(dirname "$0")/.."
 PORT=8037
 ROOT="$PWD"
 TMP="$(mktemp -d)"
-SITE_VERSION="20260831"
+SITE_VERSION="20260831b"
 trap 'rm -rf "$TMP"' EXIT
 
 # ── Step 1: Extract skill metadata to JSON for post-processing ─────────
@@ -42,7 +42,7 @@ process.stdout.write(JSON.stringify(out));
 echo "Extracted $(python3 -c "import json; print(len(json.load(open('$TMP/skills_meta.json'))))")" skill metadata entries
 
 # ── Step 1b: Stamp unified version on root index.html before serving ───
-sed -i 's/?v=[0-9]*/?v='"$SITE_VERSION"'/g' "$ROOT/index.html"
+sed -i 's/?v=[0-9]\+[a-z]*\b/?v='"$SITE_VERSION"'/g' "$ROOT/index.html"
 
 # ── Step 2: Start local HTTP server ────────────────────────────────────
 cat > "$TMP/spa_server.py" <<'PYEOF'
@@ -382,7 +382,7 @@ fi
 # Every static HTML file gets the same SITE_VERSION so we never forget
 # to bump individual files — one variable controls all cache invalidation.
 find "$ROOT" -name '*.html' -not -path '*/node_modules/*' -exec \
-  sed -i 's/?v=[0-9]*/?v='"$SITE_VERSION"'/g' {} +
+  sed -i 's/?v=[0-9]\+[a-z]*\b/?v='"$SITE_VERSION"'/g' {} +
 
 total_zh=$(find "$ROOT/skill" "$ROOT/anthology" -name index.html 2>/dev/null | wc -l)
 total_en=$(find "$ROOT/en" -name index.html 2>/dev/null | wc -l)
