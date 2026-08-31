@@ -338,8 +338,8 @@
     home.innerHTML =
       '<section class="hero">' +
       '<div class="hero-bg" aria-hidden="true"><div class="hero-bg-frame">' +
-        '<video class="hero-bg-video" muted loop playsinline preload="auto"></video>' +
-        '<video class="hero-bg-video" muted loop playsinline preload="auto"></video>' +
+        '<video class="hero-bg-video" muted loop playsinline preload="none"></video>' +
+        '<video class="hero-bg-video" muted loop playsinline preload="none"></video>' +
       "</div></div>" +
       '<div class="wrap hero-inner">' +
         '<p class="hero-kicker"><span class="dot"></span>' + t("hero.kicker") + "</p>" +
@@ -427,8 +427,8 @@
     var frame = $(".hero-bg-frame", home);
     if (!frame) return;
 
-    // shuffled playlist of the official demo reels
-    var pool = videoSkills().map(function (s) { return s.preview; });
+    // shuffled playlist of the official demo reels (cap at 6 to limit bandwidth)
+    var pool = videoSkills().slice(0, 6).map(function (s) { return s.preview; });
     for (var i = pool.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
       var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
@@ -448,6 +448,12 @@
     var idx = 0, front = 0, playing = true;
 
     function loadInto(v, p) { v.dataset.for = p.video; v.poster = p.poster; v.src = p.video; v.load(); }
+
+    // preload first poster for faster LCP
+    var pl = document.createElement("link");
+    pl.rel = "preload"; pl.as = "image"; pl.href = pool[0].poster;
+    document.head.appendChild(pl);
+
     function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
     function kenBurns(v) {
       gsap.fromTo(v, { scale: 1.03 }, { scale: 1.11, duration: 9, ease: "none", overwrite: "auto" });
