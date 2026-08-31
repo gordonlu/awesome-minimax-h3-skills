@@ -3172,5 +3172,74 @@ window.AMHS_DATA = {
         docs: [],
       },
     },
+    {
+      slug: "clay-cafe-stop-motion",
+      name: "Clay Café Stop-Motion — Cozy Claymation",
+      nameZh: "黏土咖啡店｜温暖定格动画",
+      sourceType: "community",
+      author: { en: "community", zh: "community" },
+      version: "0.1.0",
+      summary: {
+        en: "Generate a 15s cozy claymation café short — handcrafted stop-motion style with soft natural lighting, tactile paper-and-clay texture, and delicate macro cinematography.",
+        zh: "生成一段 15 秒温馨黏土咖啡店短片——手工定格动画风格，柔和自然光，细腻纸黏土质感，精致微距摄影。",
+      },
+      description: {
+        en: "For creators who want a 15s cozy claymation café short: a handcrafted stop-motion animation where a coffee shop scene is rendered in warm, cute paper-clay and ceramic textures. The camera stays mostly fixed with a gentle, slow macro breathing push-in, maintaining generous white space and the original composition. Barista makes coffee, customers sip and chat, steam drifts like cotton, plant leaves sway, a wooden sign rocks, and hand-drawn scrapbook doodles (hearts, stars, coffee beans) occasionally pop and flicker. Soft natural warm-white daylight, ivory/beige/sage/terracotta low-saturation palette. Premium handcrafted claymation, miniature stop-motion, tactile texture, shallow depth of field, delicate macro cinematography.",
+        zh: "面向想要 15 秒温馨黏土咖啡店短片的创作者：手工定格动画，整个场景用温暖可爱的纸黏土与陶土质感呈现。镜头基本固定，只做轻微缓慢的微距呼吸式推进，保持大量留白。吧台后店员制作咖啡，顾客轻抬杯子品尝、转头交谈，咖啡蒸汽如棉絮飘动，绿植叶片微风轻摇，木质招牌左右摆动，背景手绘爱心、星星、咖啡豆偶尔弹动闪现。柔和自然暖白日光，象牙白/米色/鼠尾草绿/陶土色低饱和配色。高级手工定格动画广告质感：温暖、安静、精致、略带童话感。",
+      },
+      categories: ["creative"],
+      tags: [
+        { en: "Claymation", zh: "黏土动画" },
+        { en: "Stop-Motion", zh: "定格动画" },
+        { en: "Cozy Atmosphere", zh: "温馨氛围" },
+      ],
+      languages: ["en", "zh"],
+      preview: {
+        poster: "community-skills/clay-cafe-stop-motion/assets/poster.webp",
+        video: "community-skills/clay-cafe-stop-motion/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/clay-cafe-stop-motion/assets/preview.mp4",
+        caption: { en: "Actual output: 15s / 640×832 (3:4) / 24fps generated on MiniMax H3 (I2VA)", zh: "实际成片：15s / 640×832（3:4）/ 24fps，由 MiniMax H3 生成（I2VA）" },
+      },
+      inputs: [
+        { en: "One reference image — locks the café composition and visual style", zh: "一张参考图——锁定咖啡店构图与视觉风格" },
+      ],
+      capabilities: [
+        { en: "Handcrafted claymation / stop-motion with tactile paper-clay texture", zh: "手工黏土动画/定格动画，细腻纸黏土质感" },
+        { en: "Cozy café atmosphere with soft natural lighting", zh: "温馨咖啡店氛围，柔和自然光" },
+        { en: "Delicate macro cinematography with shallow depth of field", zh: "精致微距摄影，浅景深" },
+      ],
+      workflow: [
+        { id: "lock", title: { en: "Lock the composition", zh: "锁定构图" }, desc: { en: "Pin café layout, furniture, plants, signage to the reference.", zh: "将咖啡店布局、家具、植物、招牌钉死参考图。" } },
+        { id: "animate", title: { en: "Animate with stop-motion rhythm", zh: "定格动画节奏" }, desc: { en: "Subtle frame-by-frame movement, slight stutter, cozy and healing.", zh: "微妙逐帧运动，轻微停顿，温馨治愈。" } },
+        { id: "detail", title: { en: "Add living doodles", zh: "加入活起来的手绘" }, desc: { en: "Hearts, stars, coffee beans pop/flicker/extend then restore.", zh: "爱心、星星、咖啡豆弹动/闪现/延伸后恢复。" } },
+      ],
+      outputs: [
+        { en: "A 15s cozy claymation café MP4", zh: "一段 15 秒温馨黏土咖啡店 MP4" },
+      ],
+      modes: [
+        { id: "I2VA", en: "Image-to-video: the reference image locks the composition; not used as the first frame unless explicitly requested.", zh: "图生视频：参考图锁定构图；除非明确要求，不作为首帧。" },
+      ],
+      promptStructures: [
+        { label: { en: "I2VA · three-part structure", zh: "I2VA · 三段式结构" }, fields: ["参考素材说明", "核心创意", "画面过程描述", "不想要"] },
+      ],
+      bestFor: [
+        { en: "Claymation / stop-motion café scenes", zh: "黏土动画/定格动画咖啡店场景" },
+        { en: "Warm, cozy, healing atmospheres", zh: "温暖、温馨、治愈的氛围" },
+      ],
+      notFor: [
+        { en: "Photorealistic live-action", zh: "写实真人实拍" },
+        { en: "Fast-paced action or montage", zh: "快节奏动作或蒙太奇" },
+      ],
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill clay-cafe-stop-motion",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/clay-cafe-stop-motion",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/clay-cafe-stop-motion/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/clay-cafe-stop-motion/SKILL.cn.md",
+        docs: [],
+      },
+    },
   ],
 };
