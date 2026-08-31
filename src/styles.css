@@ -687,11 +687,15 @@ html[lang="de"] .hero-title {
 }
 .detail-media-cap a { color: var(--muted); border-bottom: 1px solid var(--line-strong); transition: color 0.25s; }
 .detail-media-cap a:hover { color: var(--accent); }
+.ai-badge-row {
+  padding: 8px 16px 0;
+}
 .ai-badge {
-  font-family: var(--font-mono); font-size: 9.5px; letter-spacing: 0.06em;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em;
   color: var(--accent); background: var(--accent-soft);
-  padding: 2px 7px; border-radius: 3px; white-space: nowrap;
+  padding: 3px 10px; border-radius: 3px; white-space: nowrap;
   border: 1px solid rgba(255,108,55,0.18);
+  display: inline-block;
 }
 
 /* Modes panel (prompt-writing detail) */

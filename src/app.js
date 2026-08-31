@@ -660,13 +660,13 @@
     var mediaBlock;
     if (s.preview) {
       var aiBadge = s.generatedBy
-        ? '<span class="ai-badge">' + esc(s.generatedBy === "MiniMax H3" ? (lang === "en" ? "AI-generated with MiniMax H3" : "由 MiniMax H3 AI 生成") : esc(s.generatedBy)) + '</span>'
+        ? '<div class="ai-badge-row"><span class="ai-badge">' + esc(s.generatedBy === "MiniMax H3" ? (lang === "en" ? "AI-generated with MiniMax H3" : "由 MiniMax H3 AI 生成") : esc(s.generatedBy)) + '</span></div>'
         : "";
       mediaBlock =
         '<div class="detail-media">' +
           videoTag(s.preview, "detail-video") +
-          '<div class="detail-media-cap"><span>' + esc(L(s.preview.caption)) + '</span>' + aiBadge + '<a href="' + esc(s.preview.sourceUrl) + '" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div>' +
-        "</div>";
+          '<div class="detail-media-cap"><span>' + esc(L(s.preview.caption)) + '</span><a href="' + esc(s.preview.sourceUrl) + '" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div>' +
+        "</div>" + aiBadge;
     } else {
       mediaBlock =
         '<div class="detail-media" style="padding:22px">' +
