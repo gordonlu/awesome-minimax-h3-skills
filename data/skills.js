@@ -3241,5 +3241,66 @@ window.AMHS_DATA = {
         docs: [],
       },
     },
+
+    /* ---- 43. miniature-rocket-launch-diorama ---- */
+    {
+      slug: "miniature-rocket-launch-diorama",
+      name: "Miniature Rocket Launch Diorama",
+      nameZh: "微缩火箭发射场",
+      foundation: false,
+      sourceType: "official",
+      author: "gordonlu",
+      categories: ["animation"],
+      modes: [
+        { id: "T2VA", label: "T2VA" },
+        { id: "I2VA", label: "I2VA" },
+      ],
+      tags: [
+        { en: "miniature", zh: "微缩模型" },
+        { en: "rocket", zh: "火箭" },
+        { en: "launch site", zh: "发射场" },
+        { en: "isometric", zh: "等距视角" },
+        { en: "stop-motion", zh: "定格动画" },
+      ],
+      summary: {
+        en: "Generate a 10s miniature diorama rocket launch from a single reference image — fixed isometric camera, handcrafted maquette style.",
+        zh: "从单张参考图生成 10 秒微缩火箭发射场——固定等距视角，手工模型质感。",
+      },
+      description: {
+        en: "Preserves the exact rocket design, launch tower, red service structures, lattice towers, support buildings, roads, sandy terrain, and handcrafted architectural-maquette appearance. Camera fixed in elevated 3/4 isometric composition. 0–3s rocket lifts off with exhaust, 3–7s climbs above tower, 7–10s reaches upper frame. Secondary motion: flags flutter, dust pushed outward, smoke curls around structures, warm reflections on metal.",
+        zh: "完整保留火箭设计、发射塔、红色服务结构、桁架塔、支撑建筑、道路、沙地和手工建筑模型外观。摄像机全程保持俯视 3/4 等距构图。0–3 秒火箭带尾焰升空，3–7 秒攀升超过发射塔，7–10 秒到达画面上方。次要运动：旗帜飘动、灰尘外扬、烟雾卷绕结构、金属暖色反射。",
+      },
+      bestFor: [
+        { en: "Miniature launch scenes", zh: "微缩模型发射场景" },
+        { en: "Architectural model animation", zh: "建筑模型动画" },
+        { en: "Diorama videos", zh: "立体模型短片" },
+      ],
+      notFor: [
+        { en: "Full-scale real launch footage", zh: "全尺寸真实发射画面" },
+        { en: "Fast-paced action montage", zh: "快节奏动作蒙太奇" },
+      ],
+      inputs: [
+        { type: "image", required: false, description: { zh: "参考图——微缩火箭发射场模型", en: "Reference image — miniature rocket launch diorama" } },
+      ],
+      preview: {
+        poster: "community-skills/miniature-rocket-launch-diorama/assets/poster.webp",
+        video: "community-skills/miniature-rocket-launch-diorama/assets/preview.mp4",
+        sourceUrl: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-rocket-launch-diorama/assets/preview.mp4",
+        caption: {
+          zh: "实际成片：10s / 800×1056 (3:4) / 24fps，由 MiniMax H3 生成（I2VA）",
+          en: "Actual output: 10s / 800×1056 (3:4) / 24fps generated on MiniMax H3 (I2VA)",
+        },
+      },
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill miniature-rocket-launch-diorama",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/miniature-rocket-launch-diorama",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-rocket-launch-diorama/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-rocket-launch-diorama/SKILL.cn.md",
+        docs: [],
+      },
+    },
   ],
 };

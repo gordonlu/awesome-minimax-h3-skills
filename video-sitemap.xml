@@ -534,4 +534,17 @@
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>
+  <url>
+    <loc>https://h3skills.com/skill/miniature-rocket-launch-diorama</loc>
+    <lastmod>2026-08-31</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://h3skills.com/community-skills/miniature-rocket-launch-diorama/assets/poster.webp</video:thumbnail_loc>
+      <video:title>微缩火箭发射场</video:title>
+      <video:description>从单张参考图生成 10 秒微缩火箭发射场——固定等距视角，手工模型质感。</video:description>
+      <video:content_loc>https://h3skills.com/community-skills/miniature-rocket-launch-diorama/assets/preview.mp4</video:content_loc>
+      <video:duration>15</video:duration>
+      <video:publication_date>2026-08-31</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+    </video:video>
+  </url>
 </urlset>

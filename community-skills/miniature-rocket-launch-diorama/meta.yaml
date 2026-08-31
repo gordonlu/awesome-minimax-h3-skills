@@ -1,0 +1,40 @@
+slug: miniature-rocket-launch-diorama
+nameZh: 微缩火箭发射场
+name: Miniature Rocket Launch Diorama
+author: gordonlu
+sourceType: official
+categories: [animation]
+tags:
+  - zh: 微缩模型
+    en: miniature
+  - zh: 发射场
+    en: launch site
+  - zh: 火箭
+    en: rocket
+  - zh: 定格动画
+    en: stop-motion
+  - zh: 等距视角
+    en: isometric
+modes: [T2VA, I2VA]
+bestFor:
+  - zh: 微缩模型发射场景
+    en: miniature launch scenes
+  - zh: 建筑模型动画
+    en: architectural model animation
+inputs:
+  - type: image
+    required: false
+    description:
+      zh: 参考图——微缩火箭发射场模型
+      en: Reference image — miniature rocket launch diorama
+duration: 10
+aspect: "3:4"
+resolution: 800x1056
+fps: 24
+preview:
+  poster: community-skills/miniature-rocket-launch-diorama/assets/poster.webp
+  video: community-skills/miniature-rocket-launch-diorama/assets/preview.mp4
+  sourceUrl: https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/miniature-rocket-launch-diorama/assets/preview.mp4
+  caption:
+    zh: 实际成片：10s / 800×1056 (3:4) / 24fps，由 MiniMax H3 生成（I2VA）
+    en: Actual output: 10s / 800×1056 (3:4) / 24fps generated on MiniMax H3 (I2VA)
