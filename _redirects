@@ -1,5 +1,12 @@
-# SPA fallback: every path serves the app shell; JS renders the matching view.
-# Canonicalize alternate hosts to the apex domain (Cloudflare Pages also serves these).
+# Language-based routing: serve /en/ and /zh/ static snapshots
+# /en/* → en/index.html (English snapshot)
+# /zh/* → root index.html (Chinese snapshot, the default)
+/en/*    /en/index.html   200
+/zh/*    /index.html   200
+
+# Canonicalize alternate hosts to the apex domain
 https://www.h3skills.com/*    https://h3skills.com/:splat    301
 https://*.pages.dev/*         https://h3skills.com/:splat    301
+
+# SPA fallback: every other path serves the app shell; JS renders the matching view.
 /*    /index.html   200

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://h3skills.com/sitemap.xml
+Sitemap: https://h3skills.com/sitemap-index.xml
