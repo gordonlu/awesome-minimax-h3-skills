@@ -83,4 +83,5 @@ affiliation, endorsement, or agency with them.
 
 - Skills & demo media: https://github.com/MiniMax-AI/MiniMax-H3
 - MiniMax H3 model: https://huggingface.co/MiniMaxAI/MiniMax-H3
+- AI video project workspace: https://github.com/gordonlu/h3mise
 - Animation: GSAP — https://gsap.com
