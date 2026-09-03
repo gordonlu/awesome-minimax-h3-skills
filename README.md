@@ -12,7 +12,7 @@ reference site for the official MiniMax H3 Skills.
 > Independent community project — not an official MiniMax website.
 > 独立社区项目，并非 MiniMax 官方网站。
 
-![Awesome MiniMax H3 Skills — homepage](docs/screenshot-home.jpg)
+![Awesome MiniMax H3 Skills — homepage](docs/screenshot-home.png)
 
 ## Online / 在线访问
 
