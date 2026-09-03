@@ -4,6 +4,8 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fh3skills.com&label=h3skills.com%20online)](https://h3skills.com)
 [![Last Commit](https://img.shields.io/github/last-commit/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
 
+[English](README.en.md)
+
 MiniMax H3 的可视化 Skills 索引与提示词参考站点。
 
 **先看到效果，再理解做法。See what it makes — then learn how it's made.**
