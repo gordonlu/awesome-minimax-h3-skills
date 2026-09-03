@@ -4,8 +4,7 @@
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fh3skills.com&label=h3skills.com%20online)](https://h3skills.com)
 [![Last Commit](https://img.shields.io/github/last-commit/gordonlu/awesome-minimax-h3-skills)](https://github.com/gordonlu/awesome-minimax-h3-skills)
 
-MiniMax H3 官方 Skills 的可视化发现与参考站点 · A visual discovery and
-reference site for the official MiniMax H3 Skills.
+MiniMax H3 的可视化 Skills 索引与提示词参考站点。
 
 **先看到效果，再理解做法。See what it makes — then learn how it's made.**
 
@@ -19,9 +18,17 @@ reference site for the official MiniMax H3 Skills.
 - Main: **https://h3skills.com**
 - Fallback: https://awesome-minimax-h3-skills.pages.dev
 
+## What's included / 内容概览
+
+- **43 Skills** — 9 个官方 Skill + 34 个社区原创 Skill，每个都有真实成片视频、输入要求、工作流和一键安装方式
+- **49 条提示词** — 精选自 MiniMax H3 官方《使用手册》，按 10 个场景分类，支持一键复制
+- **6 种语言** — 中文 / English / 한국어 / Deutsch / 日本語 / Español
+- **SEO** — 每个 Skill 页都有独立的 meta、Open Graph、VideoObject 结构化数据和中英双语快照
+- **License 合规** — /license 页面声明 MiniMax H3 Community License 条款，视频标注 AI-generated
+
 ## Run / 运行
 
-Pure static site, no build step. Any static server works:
+纯静态站点，无需构建。任意静态服务器即可：
 
 ```bash
 # from the project root
@@ -32,52 +39,51 @@ python3 -m http.server 8000
 ## What's inside / 目录结构
 
 ```
-├── index.html              # site entry (MIT)
-├── src/                    # original source code (MIT)
-│   ├── app.js
-│   ├── styles.css
-│   └── vendor/             # GSAP, © GreenSock — see NOTICE
-├── data/                   # manually curated skill summaries (MIT)
-│   └── skills.js
+├── index.html              # SPA 入口 (MIT)
+├── src/                    # 原创前端代码 (MIT)
+│   ├── app.js              # 路由 · 渲染 · GSAP 动画 · Fuse.js 搜索
+│   ├── styles.css          # 设计系统
+│   └── vendor/             # GSAP, © GreenSock
+├── data/                   # 手工整理的 Skill 数据 (MIT)
+│   ├── skills.js           # 43 个 Skill 元数据
+│   ├── anthology.js        # 官方提示词合辑
+│   ├── i18n.js             # 六语言 UI 翻译
+│   └── locales/            # Skill 文本翻译
+├── community-skills/       # 社区 Skill 源文件 + 资产
+├── scripts/                # 构建工具
+│   ├── prerender.sh        # Chrome 快照 + SEO 后处理
+│   ├── generate_sitemaps.py
+│   └── generate_atom.py
+├── skill/<slug>/           # 预渲染的中文详情页
+├── en/                     # 预渲染的英文快照
+├── og/                     # 社交分享图 (1200×630)
 ├── third_party/
-│   └── MiniMax-H3/         # official demo media, © MiniMax
-│       ├── LICENSE         # MiniMax H3 Community License Agreement (copy)
-│       ├── README.md       # provenance & modification notes
-│       └── previews/       # re-encoded from official GIFs (marked as modified)
-├── LICENSE                 # MIT — this project's original code only
-└── NOTICE                  # required third-party notices
+│   └── MiniMax-H3/         # 官方演示素材, © MiniMax
+├── /license                # License & Attribution 页
+├── /faq                    # 常见问题
+├── /prompts                # 提示词落地页
+├── sitemap.xml
+├── atom.xml
+├── LICENSE                 # MIT — 仅限本项目原创代码
+└── _redirects              # Cloudflare Pages 路由
 ```
 
 ## Licensing / 许可说明
 
 MiniMax H3, official H3 Skills, and related media assets are © MiniMax and
 remain subject to their original license terms (MiniMax H3 Community License
-Agreement — see `third_party/MiniMax-H3/LICENSE`). This project's original
-source code is licensed under MIT.
+Agreement — see [LICENSE](https://huggingface.co/MiniMaxAI/MiniMax-H3/blob/main/LICENSE)).
+This project's original source code is licensed under MIT.
 
-MiniMax H3、官方 H3 Skills 及相关媒体素材版权归 MiniMax 所有，仍受其原始
-协议约束（见 `third_party/MiniMax-H3/LICENSE`）。本项目原创代码以 MIT
-协议发布。
-
-Third-party community materials (e.g. third-party Community Skills and their
-demo media) retain their original authorship and source attribution; repository
-licenses apply only to content authored by this project unless otherwise stated.
-
-第三方社区材料（如第三方 Community Skills 及其演示素材）保留原作者署名与来源
-标注；本仓库许可证仅适用于本项目原创内容，另有声明除外。
-
-Every skill page marks its origin as:
-**Official MiniMax H3 Skill · Source: MiniMax-AI/MiniMax-H3**
+第三方社区材料保留原作者署名与来源标注；本仓库许可证仅适用于本项目原创内容。
 
 ## Disclaimer / 免责声明
 
-The prompt gallery page reuses example images from the official MiniMax H3
-handbook for learning and showcase purposes. Brand marks appearing inside
-those examples belong to their respective owners; this project has no
-affiliation, endorsement, or agency with them.
+H3Skills is not an official MiniMax website. The "Official" mark means a skill
+ships in the MiniMax-AI/MiniMax-H3 repository — it does not mean this site is
+run by MiniMax.
 
-合辑页的示例图片来自 MiniMax H3 官方《使用手册》，仅用于学习与展示。其中
-出现的品牌标识归其各自所有者所有，本项目与其无任何关联、授权或代言关系。
+提示词合辑页的示例图片来自 MiniMax H3 官方《使用手册》，仅用于学习与展示。
 
 ## Credits / 数据来源
 
