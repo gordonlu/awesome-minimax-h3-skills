@@ -13,7 +13,7 @@ cd "$(dirname "$0")/.."
 PORT=8037
 ROOT="$PWD"
 TMP="$(mktemp -d)"
-SITE_VERSION="20260831b"
+SITE_VERSION="20260908a"
 trap 'rm -rf "$TMP"' EXIT
 
 # ── Step 1: Extract skill metadata to JSON for post-processing ─────────
