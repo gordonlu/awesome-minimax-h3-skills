@@ -3372,6 +3372,7 @@ window.AMHS_DATA = {
       author: "gordonlu",
       generatedBy: "MiniMax H3",
       version: "0.1.0",
+      languages: ["en", "zh"],
       categories: ["education", "animation"],
       modes: [
         { id: "T2VA", label: "T2VA" },
