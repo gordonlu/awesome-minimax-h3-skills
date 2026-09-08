@@ -756,4 +756,5 @@ window.AMHS_LOCALES.ko = {
 "Hitchcock zoom + singing": "히치콕 줌 + 노래",
 "Voice timbre": "음색",
 "Hand-drawn 2.0 · seaside market": "손그림 2.0 · 해변 시장",
+"XYZ ABC Learning Video": "XYZ 알파벳 학습 영상"
 };

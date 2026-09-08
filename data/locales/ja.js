@@ -756,4 +756,5 @@ window.AMHS_LOCALES.ja = {
 "Hitchcock zoom + singing": "ヒッチコックズーム + 歌唱",
 "Voice timbre": "声の音色",
 "Hand-drawn 2.0 · seaside market": "手描き2.0 · 海辺の市場",
+"XYZ ABC Learning Video": "XYZ ABC学習動画"
 };

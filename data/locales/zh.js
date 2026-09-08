@@ -732,5 +732,6 @@ window.AMHS_LOCALES.zh = {
   "Capybara meme": "动作参考 · 水豚表情包",
   "Hitchcock zoom + singing": "运镜参考 · 希区柯克 + 唱歌",
   "Voice timbre": "音色参考 · 角色说话",
-  "Hand-drawn 2.0 · seaside market": "手绘 2.0 · 海边小集市"
+  "Hand-drawn 2.0 · seaside market": "手绘 2.0 · 海边小集市",
+  "XYZ ABC Learning Video": "XYZ 字母教学动画"
 };

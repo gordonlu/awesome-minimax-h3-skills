@@ -732,5 +732,6 @@ window.AMHS_LOCALES.en = {
   "Capybara meme": "Capybara meme",
   "Hitchcock zoom + singing": "Hitchcock zoom + singing",
   "Voice timbre": "Voice timbre",
-  "Hand-drawn 2.0 · seaside market": "Hand-drawn 2.0 · seaside market"
+  "Hand-drawn 2.0 · seaside market": "Hand-drawn 2.0 · seaside market",
+  "XYZ ABC Learning Video": "XYZ ABC Learning Video"
 };

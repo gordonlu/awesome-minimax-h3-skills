@@ -756,4 +756,5 @@ window.AMHS_LOCALES.de = {
 "Hitchcock zoom + singing": "Hitchcock-Zoom + Gesang",
 "Voice timbre": "Stimmklangfarbe",
 "Hand-drawn 2.0 · seaside market": "Handgezeichnet 2.0 · Strandmarkt",
+"XYZ ABC Learning Video": "XYZ ABC Lernvideo"
 };

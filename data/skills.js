@@ -3362,5 +3362,82 @@ window.AMHS_DATA = {
         docs: [],
       },
     },
+
+    /* ---- 44. xyz-abc-learning-video ---- */
+    {
+      slug: "xyz-abc-learning-video",
+      name: "XYZ ABC Learning Video",
+      nameZh: "XYZ 字母教学动画",
+      sourceType: "community",
+      author: "gordonlu",
+      generatedBy: "MiniMax H3",
+      version: "0.1.0",
+      categories: ["education", "animation"],
+      modes: [
+        { id: "T2VA", label: "T2VA" },
+        { id: "I2VA", label: "I2VA" },
+      ],
+      tags: [
+        { en: "ABC Learning", zh: "ABC 教学" },
+        { en: "Children Education", zh: "儿童教育" },
+        { en: "3D Animation", zh: "3D 动画" },
+        { en: "Letter X Y Z", zh: "字母 X Y Z" },
+        { en: "Pastel Style", zh: "柔和色调" },
+      ],
+      summary: {
+        en: "Generate a 15s animated ABC learning video teaching letters X, Y, Z to children ages 3–6 — adorable rounded 3D style with soft pastel colors and premium minimalist aesthetic.",
+        zh: "生成 15 秒 ABC 字母教学动画（X、Y、Z），面向 3–6 岁儿童——可爱圆润 3D 风格，柔和色调，极简高级质感。",
+      },
+      description: {
+        en: "A 15-second animated educational video for children ages 3–6, teaching the letters X, Y, and Z following the pattern: LETTER → SOUND → OBJECT → PLAYFUL ACTION → OBJECT NAME. X transforms into a cute X-ray card, Y stretches into a yo-yo, Z expands into a zoo entrance. Soft pastel 3D toy-like aesthetic with clean off-white backgrounds, stable camera, and slow child-friendly pacing.",
+        zh: "15 秒儿童教育动画，教 3–6 岁儿童学习字母 X、Y、Z，遵循「字母→发音→物体→动作→名称」教学节奏。X 变成可爱 X 光卡片，Y 拉伸成溜溜球，Z 展开为动物园入口。柔和色调 3D 玩具质感，干净米白背景，稳定镜头，适合儿童的缓慢节奏。",
+      },
+      bestFor: [
+        { en: "Children's ABC learning content", zh: "儿童 ABC 教学内容" },
+        { en: "Educational 3D animation for kids", zh: "儿童教育 3D 动画" },
+        { en: "Preschool letter recognition videos", zh: "学前字母识别视频" },
+      ],
+      notFor: [
+        { en: "Older children or adult education", zh: "大龄儿童或成人教育" },
+        { en: "Fast-paced or high-energy content", zh: "快节奏或高能量内容" },
+      ],
+      capabilities: [
+        { en: "Teaches X, Y, Z using LETTER → SOUND → OBJECT → ACTION → NAME pattern", zh: "用字母→发音→物体→动作→名称模式教授 X、Y、Z" },
+        { en: "Rounded 3D pastel toy-like aesthetic with premium minimalist backgrounds", zh: "圆润 3D 柔和色调玩具质感，极简高级背景" },
+        { en: "Smooth letter-to-object transformations with stable typography", zh: "丝滑字母到物体变形，字体清晰稳定" },
+        { en: "Slow child-friendly pacing with clear visibility for each letter", zh: "适合儿童的缓慢节奏，每个字母清晰可见" },
+      ],
+      outputs: [
+        { en: "15s MP4 at 960×544 (16:9), 24fps", zh: "15 秒 MP4，960×544 (16:9)，24fps" },
+      ],
+      workflow: [
+        { id: "plan", title: { en: "Plan letter sequence", zh: "规划字母序列" }, desc: { en: "Define X→X-ray, Y→Yo-yo, Z→Zoo with narration timestamps and transformation beats.", zh: "定义 X→X光、Y→溜溜球、Z→动物园的旁白时间戳和变形节拍。" } },
+        { id: "design", title: { en: "Design 3D assets", zh: "设计 3D 素材" }, desc: { en: "Create rounded pastel characters, objects, and star mascot with toy-like materials.", zh: "创建圆润柔和色调角色、物体和星星吉祥物，玩具质感。" } },
+        { id: "animate", title: { en: "Animate transformations", zh: "制作变形动画" }, desc: { en: "Letter visibility → glow → morph → object showcase → recap with squash-and-stretch.", zh: "字母展示→光晕→变形→物体展示→回顾，带挤压拉伸。" } },
+        { id: "render", title: { en: "Render and verify", zh: "渲染并验收" }, desc: { en: "Submit to MiniMax H3; check letter clarity, pacing, transformation smoothness, and child-friendliness.", zh: "提交至 MiniMax H3；检查字母清晰度、节奏、变形流畅度和儿童友好度。" } },
+      ],
+      inputs: [
+        { en: "Optional: reference image for the star mascot or specific visual style", zh: "可选：星星吉祥物参考图或特定视觉风格" },
+      ],
+      preview: {
+        poster: "community-skills/xyz-abc-learning-video/assets/poster.jpg",
+        video: "community-skills/xyz-abc-learning-video/assets/preview.mp4",
+        sourceUrl: "",
+        caption: {
+          zh: "实际成片：15s / 960×544 (16:9) / 24fps，由 MiniMax H3 生成",
+          en: "Actual output: 15s / 960×544 (16:9) / 24fps generated on MiniMax H3",
+        },
+      },
+      install: {
+        command: "npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill xyz-abc-learning-video",
+      },
+      sources: {
+        repository: "https://github.com/gordonlu/awesome-minimax-h3-skills",
+        skillDir: "https://github.com/gordonlu/awesome-minimax-h3-skills/tree/main/community-skills/xyz-abc-learning-video",
+        skillMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/xyz-abc-learning-video/SKILL.md",
+        skillCnMd: "https://github.com/gordonlu/awesome-minimax-h3-skills/blob/main/community-skills/xyz-abc-learning-video/SKILL.cn.md",
+        docs: [],
+      },
+    },
   ],
 };
