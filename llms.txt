@@ -1,37 +1,62 @@
 # Awesome MiniMax H3 Skills
 
-> Visual discovery index for installable MiniMax H3 video-generation skills — 21 workflow cards, each with real output clips, inputs, workflow, and install commands. Curated from the official MiniMax-AI/MiniMax-H3 repository plus community builds. UI languages: Chinese (default), English, Korean, German, Japanese, Spanish (switch via the language menu; `?lang=xx` works too).
+> Visual discovery index for installable MiniMax H3 video-generation skills — 44 skills, each with real output clips, inputs, workflow, and install commands. Curated from the official MiniMax-AI/MiniMax-H3 repository plus community builds. UI languages: Chinese (default), English, Korean, German, Japanese, Spanish (switch via the language menu; `?lang=xx` works too).
 
 ## Notable
 
 - [Skill index](https://h3skills.com/): home page — every skill with its demo clip, inputs, workflow, and install command
 - [Prompt gallery](https://h3skills.com/anthology): 49 prompt examples curated from the official MiniMax H3 handbook, one-click copy
+- [FAQ](https://h3skills.com/faq): what H3 / H3 Skills are, modes, durations, resolutions, licensing
+- [License & attribution](https://h3skills.com/license): MiniMax H3 Community License notes, source attribution, AI-generated labels
 - [Official repo](https://github.com/MiniMax-AI/MiniMax-H3): MiniMax H3 + official skills source
 - [Community repo](https://github.com/gordonlu/awesome-minimax-h3-skills): this site's source
 
 ## Skills
 
-- [H3 Prompt Writing](https://h3skills.com/skill/h3-prompt-writing): foundation skill — structured prompts for all five H3 generation modes (T2VA / I2VA / FL2VA / L2VA / Ref2VA)
-- [Reference Motion Transfer](https://h3skills.com/skill/reference-motion-transfer): recreate a character or animal with the exact dance routine from a reference clip (Ref2VA)
-- [H3 Promo Film Studio](https://h3skills.com/skill/h3-promo-film): text-to-video promo & trailer prompts — food promos, product films, cinematic teasers from text alone
-- [H3 Keyframe Film Studio](https://h3skills.com/skill/h3-keyframe-film): keyframe-driven image-to-video shorts — montages, first-last frame transitions, final-frame landings
-- [Cinematic Key Art Animator](https://h3skills.com/skill/cinematic-key-art-animator): one character key-art becomes a 7–8s moving-key-art clip — Living Key Art or Action Burst
-- [Construction Timelapse Video Generator](https://h3skills.com/skill/construction-timelapse-video-generator): 7–8s accelerated build-from-zero timelapse with persistent build state
-- [Living Ink Painting Video Generator](https://h3skills.com/skill/living-ink-painting-video-generator): ink-wash subject comes alive inside the painting, then breaks free from the paper
-- [Miniature Creature Awakening Video Generator](https://h3skills.com/skill/miniature-creature-awakening-video-generator): a small creature image wakes, acts, interacts, and lands a final pose
-- [Miniature World Landscape Generator](https://h3skills.com/skill/miniature-world-landscape-generator): cinematic miniature landscapes with one hero effect each
-- [Natural Ambient Living Generator](https://h3skills.com/skill/natural-ambient-living-generator): real-scale nature clips where one environmental system owns the motion
-- [Mythic Cloud Whale Generator](https://h3skills.com/skill/mythic-cloud-whale-generator): epic 7s cloud-sea shorts of a colossal mythic whale rising from a golden-hour cloud deck
-- [Cavalry Charge Generator](https://h3skills.com/skill/cavalry-charge-generator): full-speed cavalry charges across a dust-scoured plain at golden dusk
-- [Kinetic Title Card Generator](https://h3skills.com/skill/kinetic-title-card-generator): brand names, film/song titles, slogans as kinetic title cards with spell-perfect text
-- [Minimalist Product Ad Generator](https://h3skills.com/skill/minimalist-product-ad-generator): product images + ad requirements → minimalist product ad shorts (Apple-style)
-- [3D Animation Short Generator](https://h3skills.com/skill/3d-animation-short-generator): a story idea becomes a complete stylized 3D animated short
-- [Papercraft Stop-Motion Explainer](https://h3skills.com/skill/papercraft-stop-motion-explainer): production-ready papercraft stop-motion explainer package from a knowledge topic
-- [Brand Promo Video Generator](https://h3skills.com/skill/brand-promo-video-generator): verified brand assets → polished promotional short video with provenance manifest
-- [Music Video Subtitle Generator](https://h3skills.com/skill/music-video-subtitle-generator): beat-synced MV prompts and lyric typography plans from music and lyrics
-- [Co-op Game Intro Generator](https://h3skills.com/skill/co-op-game-intro-generator): co-op game intro from player details, character references, and an approved menu style
-- [Paper Collage Explainer Generator](https://h3skills.com/skill/paper-collage-explainer-generator): narration or abstract ideas → tactile paper-collage explainer animations
-- [Handdrawn Live-Action Fusion Video Generator](https://h3skills.com/skill/handdrawn-live-video-generator): H3-ready prompts for hand-drawn animation interacting with live-action scenes
+- [H3 Prompt Writing](https://h3skills.com/skill/h3-prompt-writing): Foundation skill — Write structured MiniMax H3 video generation prompts for all five generation modes. (T2VA / I2VA / FL2VA / L2VA / Ref2VA)
+- [Reference Motion Transfer](https://h3skills.com/skill/reference-motion-transfer): Recreate a character or animal with the exact dance routine from a reference clip — lock the look with a reference image, lock the moves with a reference video. (Ref2VA / I2VA / FL2VA / L2VA)
+- [SUV Commercial — Future Luxury Vehicle Ad](https://h3skills.com/skill/suv-commercial): Generate a top-tier future luxury SUV commercial as one continuous 15s 16:9 24fps film from a single vehicle reference image — elegant, restrained, real, with NO BGM. (I2VA)
+- [Link Skills with Base Loop — Character Showcase Sheet](https://h3skills.com/skill/link-skills-with-base-loop): Generate a magazine-grade character showcase sheet from one reference image as a near-static 4s shot. (I2VA)
+- [Prove Product Through First-Person Test — UGC Food Review](https://h3skills.com/skill/prove-product-through-first-person-test): Generate an authentic first-person UGC food-tasting review (iPhone vlog style) from a single product reference image. (I2VA)
+- [Use Material as Progress Clock — Heritage Craft Documentary Ad](https://h3skills.com/skill/use-material-as-progress-clock): Generate a heritage-craft documentary ad where the material's own appearance is the clock of the film. (I2VA)
+- [Structure Product Proof Launch — Flagship Launch Ad (h3skills.com)](https://h3skills.com/skill/structure-product-proof-launch): Generate a flagship 9-hard-cut product-launch ad branded h3skills.com from a single style reference image. (I2VA)
+- [Redirect Mass with Leverage — Grounded Tavern Brawl](https://h3skills.com/skill/redirect-mass-with-leverage): Generate a grounded hyper-realistic dark-fantasy tavern brawl from a two-character reference image. (I2VA)
+- [Single-Goal Escape — Disasters Alternate Front and Back](https://h3skills.com/skill/alternate-obstacles-toward-goal): Generate a one-take realistic disaster-action film — a female freight-ship engineer escaping a reactor corridor fire-wave — as a continuous 15s 16:9 24fps shot. (T2VA)
+- [2D Sticker × Real Night-Market Interaction](https://h3skills.com/skill/create-cross-medium-reaction): Generate a cross-medium comedy: a flat 2D sticker character interacting with a real filmed scene — a sticker shiba sneaking chili flakes into a night-market stir-fry, in 10s 16:9. (T2VA)
+- [Retro Handheld — Everyday Farewell Glance-Back](https://h3skills.com/skill/direct-imperfect-memory-farewell): Generate a hyper-realistic documentary-style short: a forgotten 1998 MiniDV family video of a young woman waving goodbye at a seaside station, 15s 16:9. (T2VA)
+- [Documentary Follow — Encounter Then Depart on the Move](https://h3skills.com/skill/follow-one-encounter-and-departure): Generate a 1970s New York street cinéma-vérité documentary: a shoulder-mounted 16mm camera follows a plain young woman through Greenwich Village until she merges into the flow — 15s 4:3. (T2VA)
+- [Haute Couture Atelier Ad Style — Chinese Embroidery Luxury Ad](https://h3skills.com/skill/haute-couture-atelier-ad-style): Generate a top-tier Western haute-couture ad style: close-up macro shots of a Chinese silk-embroidery masterpiece (ruyi & tangled-lotus motifs on vermilion/navy silk), 15s 16:9. (T2VA)
+- [Pencil Transmutes Reality Into Sketch — Magic Pencil POV](https://h3skills.com/skill/pencil-transmutes-reality-into-sketch): Generate a POV magic-pencil film: a pencil pointed at real Hong Kong subjects transmutes them fully into animated 2D illustrations — MTR train, rooftop cat, red taxi, park woman — 10s 16:9. (T2VA)
+- [Contrast Comedy — Calmer Yet More Out of Control](https://h3skills.com/skill/stage-deadpan-chain-failure): Generate a hyper-realistic absurd comedy: a male ostrich in an opulent cape struts a circus runway, knocks a spotlight askew, topples a mannequin, then mic-drops its cape — 10s 16:9. (T2VA)
+- [Upgrade Satire — New Arrival, Old Love Moved Away](https://h3skills.com/skill/stage-earnest-upgrade-displacement): Generate a 1950s three-strip Technicolor TV ad: a family admires the TRITON thinking machine, the bigger TITAN is wheeled in, and the boy clutching the old one is dragged across the floor — 15s 1:1. (T2VA)
+- [Solo Performance Arc — Sit Up, Lean In, Release](https://h3skills.com/skill/stage-solo-posture-comedy-arc): Generate a single-person seated talking-head comedy: a twentysomething riffing on fitness with 2–3 self-deprecating jokes, natural performance, slight push-ins at each laugh — 12s 16:9. (T2VA)
+- [First-Person Expedition — Inspect After Crossing the Threshold](https://h3skills.com/skill/stage-threshold-inspection-passage): Generate a hyper-realistic first-person science survey: two volcanologists enter a fresh lava tube before its structure changes, documenting it — 15s 16:9. (T2VA)
+- [Character Entrance — From Detail to Full-Body Reveal](https://h3skills.com/skill/stage-progressive-character-reveal): Generate a 15s cinematic character-entrance from one reference image as a four-stage progressive reveal (detail to hero frame), e.g. a fog-harbor lantern-bearer. (I2VA)
+- [Blonde Pilot — Coast Highway Vintage Car Fashion Film](https://h3skills.com/skill/verify-recurring-identity-board): Generate a 15s 16:9 anime fashion short that keeps one character locked to a reference image across the whole clip — a blonde female pilot beside a parked emerald vintage car on a California coast… (I2VA)
+- [CCD Viewfinder Memory — 2009 Campus Vlog](https://h3skills.com/skill/record-memory-through-fixed-viewfinder): Generate a 15s 4:3 CCD-camera memory short styled like old recovered memory-card footage: a young woman films herself with an early-2000s Sony Cyber-shot, persistent camera UI overlay, direct-flash… (I2VA)
+- [H3 Promo Film Studio](https://h3skills.com/skill/h3-promo-film): Turn a text idea into a runnable MiniMax H3 promo or trailer prompt — food promos, product films, cinematic teasers, all from text alone. (T2VA)
+- [H3 Keyframe Film Studio](https://h3skills.com/skill/h3-keyframe-film): Keyframe-driven image-to-video shorts: multi-keyframe montages, first-last frame transitions, final-frame landings — images lock identity, text drives motion. (I2VA / FL2VA / L2VA)
+- [Cinematic Key Art Animator](https://h3skills.com/skill/cinematic-key-art-animator): One character key-art / illustration becomes a 7–8s moving-key-art clip — atmospheric Living Key Art or high-density Action Burst, identity locked. (I2VA)
+- [Construction Timelapse Video Generator](https://h3skills.com/skill/construction-timelapse-video-generator): A 7–8s accelerated build-from-zero timelapse with persistent build state — completed work never disappears, resets, or changes design. (L2VA / FL2VA / T2VA / I2VA)
+- [Living Ink Painting Video Generator](https://h3skills.com/skill/living-ink-painting-video-generator): A painted ink-wash subject moves inside the painting, then accelerates and breaks free from the paper as living ink-and-water. (T2VA)
+- [Miniature Creature Awakening Video Generator](https://h3skills.com/skill/miniature-creature-awakening-video-generator): A small creature image visibly wakes, performs a clear body action, interacts with its surroundings, and lands a final pose. (I2VA)
+- [Miniature World Landscape Generator](https://h3skills.com/skill/miniature-world-landscape-generator): Cinematic miniature landscapes (natural / urban / historical / fantasy / terrarium) with one clearly visible hero effect each. (T2VA)
+- [Natural Ambient Living Generator](https://h3skills.com/skill/natural-ambient-living-generator): Full-scale natural environments living at real-world size — one environmental system is the declared motion owner. (T2VA)
+- [Mythic Cloud Whale Generator](https://h3skills.com/skill/mythic-cloud-whale-generator): Epic 7s cloud-sea shorts of a colossal mythic whale rising out of an endless golden-hour cloud deck. Demo video included. (I2VA / T2VA)
+- [Cavalry Charge Generator](https://h3skills.com/skill/cavalry-charge-generator): Full-speed cavalry charges across a dust-scoured plain at golden dusk — real-time gallop. Demo video included. (I2VA / T2VA)
+- [Kinetic Title Card Generator](https://h3skills.com/skill/kinetic-title-card-generator): Text is the hero — brand names, film or song titles, slogans as kinetic title cards with spell-perfect text. (T2VA)
+- [Minimalist Product Ad Generator](https://h3skills.com/skill/minimalist-product-ad-generator): Turn product images and ad requirements into minimalist product ad shorts for e-commerce promotion and product launches. (I2VA)
+- [3D Animation Short Generator](https://h3skills.com/skill/3d-animation-short-generator): Turn a story idea into a complete stylized 3D animated short. (I2VA)
+- [Papercraft Stop-Motion Explainer](https://h3skills.com/skill/papercraft-stop-motion-explainer): Build a production-ready papercraft stop-motion explainer package from a knowledge topic. (I2VA)
+- [Brand Promo Video Generator](https://h3skills.com/skill/brand-promo-video-generator): Turn verified brand assets and campaign goals into a polished promotional short video. (I2VA / T2VA)
+- [Music Video Subtitle Generator](https://h3skills.com/skill/music-video-subtitle-generator): Create beat-synced MV prompts and lyric typography plans from music and lyrics. (I2VA)
+- [Co-op Game Intro Generator](https://h3skills.com/skill/co-op-game-intro-generator): Create a co-op game intro from player details, character references, and an approved menu style. (I2VA)
+- [Paper Collage Explainer Generator](https://h3skills.com/skill/paper-collage-explainer-generator): Turn narration or abstract ideas into tactile paper-collage explainer animations. (L2VA)
+- [Handdrawn Live-Action Fusion Video Generator](https://h3skills.com/skill/handdrawn-live-video-generator): Create H3-ready prompts for hand-drawn animation interacting with live-action scenes. (T2VA)
+- [Anime JK × Real Shanghai — Bullet-Time One-Shot](https://h3skills.com/skill/jk-shanghai-frozen-run): Generate a 15s 16:9 mixed-media one-shot: a 2D anime JK schoolgirl runs through photorealistic Shanghai, trips, and time freezes as the camera orbits her in bullet-time. (I2VA)
+- [Clay Café Stop-Motion — Cozy Claymation](https://h3skills.com/skill/clay-cafe-stop-motion): Generate a 15s cozy claymation café short — handcrafted stop-motion style with soft natural lighting, tactile paper-and-clay texture, and delicate macro cinematography. (I2VA)
+- [Miniature Rocket Launch Diorama](https://h3skills.com/skill/miniature-rocket-launch-diorama): Generate a 10s miniature diorama rocket launch from a single reference image — fixed isometric camera, handcrafted maquette style. (T2VA / I2VA)
+- [XYZ ABC Learning Video](https://h3skills.com/skill/xyz-abc-learning-video): Generate a 15s animated ABC learning video teaching letters X, Y, Z to children ages 3–6 — adorable rounded 3D style with soft pastel colors and premium minimalist aesthetic. (T2VA / I2VA)
 
 ## Notes
 
