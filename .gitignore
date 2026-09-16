@@ -1,1 +1,6 @@
 .amhsdoc/
+
+# Local-only maintenance tooling (prerender / sitemaps / locales / og images).
+# The deployed site is served from committed static files; these scripts are
+# personal build tools and stay out of the repo.
+scripts/

@@ -47,15 +47,11 @@ python3 -m http.server 8000
 │   ├── styles.css          # 设计系统
 │   └── vendor/             # GSAP, © GreenSock
 ├── data/                   # 手工整理的 Skill 数据 (MIT)
-│   ├── skills.js           # 43 个 Skill 元数据
+│   ├── skills.js           # 44 个 Skill 元数据
 │   ├── anthology.js        # 官方提示词合辑
 │   ├── i18n.js             # 六语言 UI 翻译
 │   └── locales/            # Skill 文本翻译
 ├── community-skills/       # 社区 Skill 源文件 + 资产
-├── scripts/                # 构建工具
-│   ├── prerender.sh        # Chrome 快照 + SEO 后处理
-│   ├── generate_sitemaps.py
-│   └── generate_atom.py
 ├── skill/<slug>/           # 预渲染的中文详情页
 ├── en/                     # 预渲染的英文快照
 ├── og/                     # 社交分享图 (1200×630)

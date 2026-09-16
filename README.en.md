@@ -43,15 +43,11 @@ python3 -m http.server 8000
 │   ├── styles.css          # design system
 │   └── vendor/             # GSAP, © GreenSock
 ├── data/                   # manually curated skill data (MIT)
-│   ├── skills.js           # 43 skill metadata entries
+│   ├── skills.js           # 44 skill metadata entries
 │   ├── anthology.js        # official prompt anthology
 │   ├── i18n.js             # 6-language UI translations
 │   └── locales/            # skill text translations
 ├── community-skills/       # community skill source files + assets
-├── scripts/                # build tooling
-│   ├── prerender.sh        # Chrome snapshot + SEO post-processing
-│   ├── generate_sitemaps.py
-│   └── generate_atom.py
 ├── skill/<slug>/           # pre-rendered Chinese detail pages
 ├── en/                     # pre-rendered English snapshots
 ├── og/                     # social share images (1200×630)
