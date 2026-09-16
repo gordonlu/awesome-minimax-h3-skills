@@ -384,6 +384,32 @@ fi
 find "$ROOT" -name '*.html' -not -path '*/node_modules/*' -exec \
   sed -i 's/?v=[0-9]\+[a-z]*\b/?v='"$SITE_VERSION"'/g' {} +
 
+# ── Step 9: Absolutize asset URLs ─────────────────────────────────────
+# Naive scrapers ignore <base href="/"> and resolve relative asset paths
+# against the current URL, cascading paths infinitely once a 200 fallback
+# page is served (e.g. /skill/x/community-skills/y/assets/community-skills/…).
+# Root-absolute URLs break that cascade at the source.
+python3 - "$ROOT" <<'PYEOF'
+import pathlib, re, sys
+root = pathlib.Path(sys.argv[1])
+attr_re = re.compile(r'\b(src|href|poster)="([^"]*)"')
+keep = ("/", "#", "data:", "http://", "https://", "mailto:", "javascript:")
+changed = 0
+for p in root.rglob("*.html"):
+    if "node_modules" in p.parts:
+        continue
+    s = p.read_text(encoding="utf-8")
+    ns = attr_re.sub(
+        lambda m: m.group(0) if (not m.group(2) or m.group(2).startswith(keep))
+        else f'{m.group(1)}="/{m.group(2)}"',
+        s,
+    )
+    if ns != s:
+        p.write_text(ns, encoding="utf-8")
+        changed += 1
+print(f"absolutized asset URLs in {changed} html files")
+PYEOF
+
 total_zh=$(find "$ROOT/skill" "$ROOT/anthology" -name index.html 2>/dev/null | wc -l)
 total_en=$(find "$ROOT/en" -name index.html 2>/dev/null | wc -l)
 echo "prerender done -> ${total_zh} zh pages + ${total_en} en pages + root index.html (v=${SITE_VERSION})"

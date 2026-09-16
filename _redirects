@@ -3,14 +3,17 @@
 /en/license    /en/license/index.html   200
 
 # Language-based routing: serve /en/ and /zh/ static snapshots
-# /en/* → en/index.html (English snapshot)
-# /zh/* → root index.html (Chinese snapshot, the default)
+# /en/* — SPA fallback for en routes without a static file (/en/prompts etc.)
+# /zh/* — legacy alias, no files on disk → 301 to the canonical root path
 /en/*    /en/index.html   200
-/zh/*    /index.html   200
+/zh/*    /:splat   301
 
-# Canonicalize alternate hosts to the apex domain
-https://www.h3skills.com/*    https://h3skills.com/:splat    301
-https://*.pages.dev/*         https://h3skills.com/:splat    301
+# NOTE: there is intentionally NO "/* /index.html 200" catch-all here.
+# It turned every bogus path into a 200 HTML response, and bots exploited
+# that to recurse forever (/skill/x/community-skills/y/assets/community-skills/…).
+# Unknown paths now fall through to 404.html with a real 404 status.
 
-# SPA fallback: every other path serves the app shell; JS renders the matching view.
-/*    /index.html   200
+# Alternate-host canonicalization (www → apex) is handled by a zone-level
+# Cloudflare Redirect Rule, NOT here: Pages _redirects only matches paths,
+# never hostnames. Dashboard path: h3skills.com zone → Rules → Redirect Rules.
+#   www.h3skills.com/*  →  https://h3skills.com/${1}  (301, keep query string)
