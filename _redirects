@@ -1,17 +1,15 @@
-# Static standalone pages (must come before /en/* catch-all)
-/license    /license/index.html   200
-/en/license    /en/license/index.html   200
-
-# Language-based routing: serve /en/ and /zh/ static snapshots
-# /en/* — SPA fallback for en routes without a static file (/en/prompts etc.)
+# Language-based routing
 # /zh/* — legacy alias, no files on disk → 301 to the canonical root path
-/en/*    /en/index.html   200
 /zh/*    /:splat   301
 
-# NOTE: there is intentionally NO "/* /index.html 200" catch-all here.
-# It turned every bogus path into a 200 HTML response, and bots exploited
-# that to recurse forever (/skill/x/community-skills/y/assets/community-skills/…).
-# Unknown paths now fall through to 404.html with a real 404 status.
+# Every real route is a static file (zh at /, en under /en/), so no catch-all
+# proxying is needed. The old "/* /index.html 200" fallback turned every bogus
+# path into a 200 HTML response, which bots exploited to recurse forever
+# (/skill/x/community-skills/y/assets/community-skills/…). Unknown paths now
+# fall through to 404.html with a real 404 status.
+#
+# Note: Pages normalizes directory URLs to a trailing slash with a 308
+# (/license → /license/, /skill/<slug> → /skill/<slug>/); that is expected.
 
 # Alternate-host canonicalization (www → apex) is handled by a zone-level
 # Cloudflare Redirect Rule, NOT here: Pages _redirects only matches paths,

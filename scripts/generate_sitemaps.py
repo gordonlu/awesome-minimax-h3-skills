@@ -98,6 +98,12 @@ main_urls.append({
     "changefreq": "weekly",
     "priority": "0.8",
 })
+main_urls.append({
+    "loc": f"{SITE}/en/prompts",
+    "lastmod": page_lastmod("en/prompts/index.html") if (ROOT / "en/prompts/index.html").exists() else now,
+    "changefreq": "weekly",
+    "priority": "0.8",
+})
 
 # License page
 main_urls.append({
