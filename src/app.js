@@ -25,6 +25,7 @@
   var I18N = window.AMHS_I18N || {};
 
   var lang = (location.search.match(/[?&]lang=(zh|en|ko|de|ja|es)/) || [])[1] || localStorage.getItem("amhs-lang") || "zh";
+  var enRoute = false; // true while rendering a prerendered /en/ snapshot URL
   function t(key) { return (I18N[lang] && I18N[lang][key]) || I18N.en[key] || key; }
   function L(field) {
     if (field == null) return "";
@@ -1126,7 +1127,10 @@
       link.rel = "canonical";
       document.head.appendChild(link);
     }
-    link.href = "https://h3skills.com" + path;
+    // Mirror the prerendered convention: /en/ pages are self-canonical, except
+    // the English home snapshot which consolidates to the root URL.
+    var base = "https://h3skills.com" + (enRoute && path !== "/" ? "/en" : "");
+    link.href = base + path;
   }
 
   function setMetaDescription(content) {
@@ -1237,6 +1241,24 @@
 
   function route() {
     refreshHomeStats($("#view-home"));
+
+    // Prerendered English snapshots live under /en/. The prefix is a language
+    // signal, not a route: strip it and switch the UI language to English so
+    // the SPA renders the same view instead of soft-404ing — every /en/ page
+    // used to be replaced by the 404 view the moment JS ran, which is how
+    // Google ended up indexing "404" titles for the English pages.
+    var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
+    enRoute = path === "/en" || path.indexOf("/en/") === 0;
+    if (enRoute) {
+      path = path.slice(3).replace(/\/+$/, "") || "/";
+      if (lang !== "en") {
+        lang = "en";
+        try { localStorage.setItem("amhs-lang", lang); } catch (e) {}
+        syncHeader();
+      }
+    }
+    if (path === "/index.html") path = "/";
+
     var oldHash = location.hash;
     if (oldHash === "#/anthology") {
       history.replaceState(null, "", "/anthology" + (location.search || ""));
@@ -1254,7 +1276,7 @@
       renderDetail(om[1]);
       return;
     }
-    var p = (location.pathname || "/").replace(/\/+$/, "") || "/";
+    var p = path;
     if (p === "/anthology") { showAnthology(); return; }
     var m = p.match(/^\/skill\/([a-z0-9-]+)$/);
     if (m) {
