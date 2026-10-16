@@ -240,7 +240,7 @@
       return '<span class="card-tag">' + esc(L(tg)) + "</span>";
     }).join("");
     return (
-      '<article class="skill-card js-reveal" data-slug="' + s.slug + '" tabindex="0" role="link" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
+      '<div class="skill-card js-reveal" data-slug="' + s.slug + '" tabindex="0" role="link" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
         '<div class="card-media">' +
           videoTag(s.preview, "skill-video") +
           '<span class="card-index">' + String(i + 1).padStart(2, "0") + "</span>" +
@@ -254,7 +254,7 @@
           '<div class="card-foot"><div class="card-tags">' + tags + "</div>" +
           '<span class="card-go">' + (lang === "zh" ? "查看" : lang === "ko" ? "보기" : "OPEN") + ' <span aria-hidden="true">→</span></span></div>' +
         "</div>" +
-      "</article>"
+      "</div>"
     );
   }
 
@@ -1127,10 +1127,13 @@
       link.rel = "canonical";
       document.head.appendChild(link);
     }
+    // Pages normalizes directory URLs to a trailing slash (308). Declare the
+    // served slash form so the canonical itself never points at a redirect.
+    var p = path === "/" ? "/" : path.replace(/\/+$/, "") + "/";
     // Mirror the prerendered convention: /en/ pages are self-canonical, except
     // the English home snapshot which consolidates to the root URL.
-    var base = "https://h3skills.com" + (enRoute && path !== "/" ? "/en" : "");
-    link.href = base + path;
+    var base = "https://h3skills.com" + (enRoute && p !== "/" ? "/en" : "");
+    link.href = base + p;
   }
 
   function setMetaDescription(content) {
