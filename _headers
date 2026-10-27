@@ -1,12 +1,42 @@
 # Cache policy: HTML must always revalidate so new deploys show up;
 # mutable JS/CSS get a short cache; images and vendor libs may cache long.
-/index.html
-  Cache-Control: public, max-age=0, must-revalidate
+#
+# Cloudflare merges headers from every matching _headers rule and joins
+# duplicate values with a comma. A specific rule must detach the broader
+# Cache-Control first, or /foo ends up with both max-age=3600 and max-age=0.
+# The root URL "/" does NOT match "/index.html", so it needs its own rule.
+
 /*
   Cache-Control: public, max-age=3600, must-revalidate
+
+/
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+/en/
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+/en/index.html
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
 /src/vendor/*
+  ! Cache-Control
   Cache-Control: public, max-age=604800, immutable
+
 /data/anthology-images/*
+  ! Cache-Control
   Cache-Control: public, max-age=604800, immutable
+
+/og/*
+  ! Cache-Control
+  Cache-Control: public, max-age=604800, immutable
+
 /og-cover.jpg
+  ! Cache-Control
   Cache-Control: public, max-age=604800, immutable

@@ -17,6 +17,7 @@
   };
 
   var REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var SNAPSHOT = /[?&]__prerender=1(?:&|$)/.test(location.search);
   var HAS_GSAP = typeof window.gsap !== "undefined";
   if (HAS_GSAP && window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 
@@ -185,8 +186,8 @@
   function renderMarquee() {
     var items = videoSkills().map(function (s, i) {
       return (
-        '<a class="marquee-item" href="/skill/' + s.slug + '" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
-          '<img src="' + esc(s.preview.poster) + '" alt="' + esc(s.name) + ' demo" loading="' + (i < 4 ? "eager" : "lazy") + '" decoding="async">' +
+        '<a class="marquee-item" href="/skill/' + s.slug + '/" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
+          '<img src="' + esc(s.preview.poster) + '" alt="' + esc(s.name) + ' demo" width="208" height="117" loading="' + (i < 4 ? "eager" : "lazy") + '" decoding="async">' +
           '<span class="mq-label">' + esc(L({ en: s.name, zh: s.nameZh })) + "</span>" +
         "</a>"
       );
@@ -217,7 +218,7 @@
           '<p class="section-label">' + t("fd.label") + "</p>" +
           '<h2 class="section-title">' + t("fd.title") + "</h2>" +
         "</div>" + '<span class="section-note">' + t("fd.note") + "</span></div>" +
-        '<a class="foundation-card js-reveal" href="/skill/' + s.slug + '">' +
+        '<a class="foundation-card js-reveal" href="/skill/' + s.slug + '/">' +
           "<div>" +
             '<span class="foundation-badge">' + t("fd.badge") + "</span>" +
             '<h3 class="foundation-name">' + esc(L({ en: s.name, zh: s.nameZh })) + "</h3>" +
@@ -240,7 +241,7 @@
       return '<span class="card-tag">' + esc(L(tg)) + "</span>";
     }).join("");
     return (
-      '<div class="skill-card js-reveal" data-slug="' + s.slug + '" tabindex="0" role="link" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
+      '<a class="skill-card js-reveal" href="/skill/' + s.slug + '/" data-slug="' + s.slug + '" aria-label="' + esc(L({ en: s.name, zh: s.nameZh })) + '">' +
         '<div class="card-media">' +
           videoTag(s.preview, "skill-video") +
           '<span class="card-index">' + String(i + 1).padStart(2, "0") + "</span>" +
@@ -345,6 +346,7 @@
       '<div class="wrap hero-inner">' +
         '<p class="hero-kicker"><span class="dot"></span>' + t("hero.kicker") + "</p>" +
         '<h1 class="hero-title">' +
+          '<span class="sr-only">MiniMax H3 Skills — </span>' +
           '<span class="line"><span>' + t("hero.title.a") + "</span></span>" +
           '<span class="line"><span>' + t("hero.title.b") + "</span></span>" +
         "</h1>" +
@@ -388,7 +390,7 @@
         '<div class="section-head"><div>' +
           '<p class="section-label">' + t("home.anth.label") + "</p>" +
         "</div>" + '<span class="section-note">' + t("home.anth.note") + "</span></div>" +
-        '<a class="anth-banner js-reveal" href="/anthology">' +
+        '<a class="anth-banner js-reveal" href="/anthology/">' +
           '<div class="anth-banner-glow" aria-hidden="true"></div>' +
           '<div class="anth-banner-body">' +
             '<p class="anth-banner-kicker"><span class="dot"></span>' + t("home.anth.kicker") + "</p>" +
@@ -407,7 +409,7 @@
         (groups
           ? '<div class="anth-banner-chips js-reveal">' +
               window.AMHS_ANTHOLOGY.groups.map(function (g, i) {
-                return '<a class="anth-index-chip" data-anchor="anth-' + g.id + '" href="/anthology">' +
+                return '<a class="anth-index-chip" data-anchor="anth-' + g.id + '" href="/anthology/">' +
                   '<span class="anth-index-num">' + String(i + 1).padStart(2, "0") + "</span>" +
                   "<span>" + esc(L(g.title)) + "</span></a>";
               }).join("") +
@@ -430,9 +432,11 @@
 
     // shuffled playlist of the official demo reels (cap at 6 to limit bandwidth)
     var pool = videoSkills().slice(0, 6).map(function (s) { return s.preview; });
-    for (var i = pool.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+    if (!SNAPSHOT) {
+      for (var i = pool.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = pool[i]; pool[i] = pool[j]; pool[j] = tmp;
+      }
     }
 
     // reduced motion: one static poster, no rotation
@@ -450,10 +454,29 @@
 
     function loadInto(v, p) { v.dataset.for = p.video; v.poster = p.poster; v.src = p.video; v.load(); }
 
-    // preload first poster for faster LCP
-    var pl = document.createElement("link");
-    pl.rel = "preload"; pl.as = "image"; pl.href = pool[0].poster;
-    document.head.appendChild(pl);
+    // preload first poster for faster LCP (dedupe: snapshots already carry it).
+    // Compare resolved URLs: the snapshot stores root-absolute hrefs while
+    // data preview paths are relative.
+    var preloadHref = new URL(pool[0].poster, location.href).href;
+    var alreadyPreloaded = Array.prototype.some.call(
+      document.head.querySelectorAll('link[rel="preload"][as="image"]'),
+      function (l) { return l.href === preloadHref; }
+    );
+    if (!alreadyPreloaded) {
+      var pl = document.createElement("link");
+      pl.rel = "preload"; pl.as = "image"; pl.href = pool[0].poster;
+      document.head.appendChild(pl);
+    }
+
+    // Snapshot mode: static hero, no timers/GSAP. The output must be
+    // byte-identical between prerender runs.
+    if (SNAPSHOT) {
+      loadInto(vids[0], pool[0]);
+      loadInto(vids[1], pool[1 % pool.length]);
+      vids[0].style.opacity = "1";
+      vids[1].style.opacity = "0.001";
+      return;
+    }
 
     function play(v) { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
     function kenBurns(v) {
@@ -505,13 +528,15 @@
 
   function bindCards(root) {
     Array.prototype.forEach.call(root.querySelectorAll(".skill-card"), function (card) {
-      function go() {
-        history.pushState(null, "", "/skill/" + card.dataset.slug + (location.search || ""));
+      function go(e) {
+        if (e && (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey)) return;
+        if (e) e.preventDefault();
+        history.pushState(null, "", "/skill/" + card.dataset.slug + "/" + (location.search || ""));
         route();
       }
       card.addEventListener("click", go);
       card.addEventListener("keydown", function (e) {
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); }
+        if (e.key === " ") { e.preventDefault(); go(); }
       });
       if (HAS_GSAP && !REDUCED) {
         card.addEventListener("mouseenter", function () {
@@ -638,6 +663,7 @@
   }
 
   function renderDetail(slug) {
+    syncHeadings("detail");
     var s = DATA.skills.filter(function (x) { return x.slug === slug; })[0];
     var view = $("#view-detail");
     if (!s) { history.pushState(null, "", "/" + (location.search || "")); route(); return; }
@@ -727,7 +753,7 @@
       sections += detailSection(n++, "detail.related",
         '<div class="related-grid">' + related.map(function (r) {
           return (
-            '<a class="related-card" href="/skill/' + r.slug + '">' +
+            '<a class="related-card" href="/skill/' + r.slug + '/">' +
               '<span class="related-name">' + esc(L({ en: r.name, zh: r.nameZh })) + "</span>" +
               '<span class="related-sum">' + esc(stripHtml(L(r.summary))) + "</span>" +
             "</a>"
@@ -771,10 +797,10 @@
         sections +
         '<nav class="detail-nav" aria-label="More skills">' +
           (prev
-? '<a href="/skill/' + prev.slug + '"><span class="dn-dir">← ' + t("detail.prev") + '</span><span class="dn-name">' + esc(L({ en: prev.name, zh: prev.nameZh })) + "</span></a>"
+? '<a href="/skill/' + prev.slug + '/"><span class="dn-dir">← ' + t("detail.prev") + '</span><span class="dn-name">' + esc(L({ en: prev.name, zh: prev.nameZh })) + "</span></a>"
             : '<span class="dn-name dn-name--empty"></span>') +
           (next
-            ? '<a class="next" href="/skill/' + next.slug + '"><span class="dn-dir">' + t("detail.next") + ' →</span><span class="dn-name">' + esc(L({ en: next.name, zh: next.nameZh })) + "</span></a>"
+            ? '<a class="next" href="/skill/' + next.slug + '/"><span class="dn-dir">' + t("detail.next") + ' →</span><span class="dn-name">' + esc(L({ en: next.name, zh: next.nameZh })) + "</span></a>"
             : '<a class="next disabled"><span class="dn-dir">' + t("detail.next") + '</span><span class="dn-name">—</span></a>') +
         "</nav>" +
       "</div>";
@@ -795,7 +821,7 @@
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "H3 Skills", item: "https://h3skills.com/" },
-        { "@type": "ListItem", position: 2, name: skillName, item: "https://h3skills.com/skill/" + s.slug }
+        { "@type": "ListItem", position: 2, name: skillName, item: "https://h3skills.com/skill/" + s.slug + "/" }
       ]
     });
   }
@@ -1049,13 +1075,22 @@
 
     function start(list) {
       if (!list.length) return;
-      for (var k = list.length - 1; k > 0; k--) {
-        var j = Math.floor(Math.random() * (k + 1));
-        var t = list[k]; list[k] = list[j]; list[j] = t;
+      if (SNAPSHOT) {
+        // probe.onload order is arbitrary; sort so snapshots are reproducible.
+        list = list.slice().sort();
+      } else {
+        for (var k = list.length - 1; k > 0; k--) {
+          var j = Math.floor(Math.random() * (k + 1));
+          var t = list[k]; list[k] = list[j]; list[j] = t;
+        }
       }
-      if (REDUCED) {
+      if (REDUCED || SNAPSHOT) {
         imgs[0].src = base + list[0];
         imgs[0].style.opacity = "1";
+        if (imgs[1]) {
+          imgs[1].src = base + list[1 % list.length];
+          imgs[1].style.opacity = "0.001";
+        }
         return;
       }
       var a = imgs[0], b = imgs[1], idx = 1;
@@ -1162,6 +1197,7 @@
   }
 
   function show404() {
+    syncHeadings("404");
     $("#view-home").hidden = true;
     $("#view-detail").hidden = true;
     $("#view-anthology").hidden = true;
@@ -1181,10 +1217,31 @@
       "</div>";
   }
 
+  function setHeadingLevel(scopeSel, selector, isActive) {
+    var scope = $(scopeSel);
+    if (!scope) return;
+    var heading = scope.querySelector(selector);
+    if (!heading) return;
+    var want = isActive ? "H1" : "DIV";
+    if (heading.tagName === want) return;
+    var el = document.createElement(isActive ? "h1" : "div");
+    el.className = heading.className;
+    el.innerHTML = heading.innerHTML;
+    heading.parentNode.replaceChild(el, heading);
+  }
+
+  function syncHeadings(active) {
+    setHeadingLevel("#view-home", ".hero-title", active === "home");
+    setHeadingLevel("#view-detail", ".detail-name", active === "detail");
+    setHeadingLevel("#view-anthology", ".hero-title", active === "anthology");
+    setHeadingLevel("#not-found", "h1", active === "404");
+  }
+
   function showHome(anchor) {
     $("#view-detail").hidden = true;
     $("#view-anthology").hidden = true;
     $("#view-home").hidden = false;
+    syncHeadings("home");
     document.title = lang === "zh"
       ? "Awesome MiniMax H3 Skills — 官方 Skill 可视化发现"
       : lang === "ko"
@@ -1228,6 +1285,7 @@
   }
 
   function showAnthology() {
+    syncHeadings("anthology");
     $("#view-home").hidden = true;
     $("#view-detail").hidden = true;
     var a = $("#view-anthology");

@@ -19,7 +19,7 @@ A visual discovery and reference site for MiniMax H3 skills, prompts, and genera
 
 ## What's included
 
-- **43 Skills** — 9 official + 34 community skills, each with real output videos, input requirements, workflow, and one-click install
+- **44 Skills** — 10 official (including 1 foundation skill) + 34 community skills, each with real output videos, input requirements, workflow, and one-click install
 - **49 prompts** — curated from the official MiniMax H3 handbook, organized into 10 categories with one-click copy
 - **6 languages** — Chinese / English / Korean / German / Japanese / Spanish
 - **SEO** — per-skill meta, Open Graph, VideoObject structured data, bilingual snapshots

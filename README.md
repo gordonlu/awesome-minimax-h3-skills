@@ -22,7 +22,7 @@ MiniMax H3 的可视化 Skills 索引与提示词参考站点。
 
 ## What's included / 内容概览
 
-- **43 Skills** — 9 个官方 Skill + 34 个社区原创 Skill，每个都有真实成片视频、输入要求、工作流和一键安装方式
+- **44 Skills** — 10 个官方 Skill（含 1 个基础技能）+ 34 个社区原创 Skill，每个都有真实成片视频、输入要求、工作流和一键安装方式
 - **49 条提示词** — 精选自 MiniMax H3 官方《使用手册》，按 10 个场景分类，支持一键复制
 - **6 种语言** — 中文 / English / 한국어 / Deutsch / 日本語 / Español
 - **SEO** — 每个 Skill 页都有独立的 meta、Open Graph、VideoObject 结构化数据和中英双语快照
