@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3 Skill 怎么装到 Cursor / Claude Code？ | H3Skills</title>
+  <meta name="description" content="用 npx skills add 把 H3 Skill 装到能读取 SKILL.md 的 Agent：项目级写入 .cursor/skills、.claude/skills 或 .codex/skills，全局加 -g。含安装命令与验证方法。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="H3 Skill 怎么装到 Cursor / Claude Code？">
+  <meta property="og:description" content="用 npx skills add 把 H3 Skill 装到能读取 SKILL.md 的 Agent：项目级写入 .cursor/skills、.claude/skills 或 .codex/skills，全局加 -g。含安装命令与验证方法。">
+  <meta property="og:url" content="https://h3skills.com/guides/install-h3-skill/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="H3 Skill 怎么装到 Cursor / Claude Code？">
+  <meta name="twitter:description" content="用 npx skills add 把 H3 Skill 装到能读取 SKILL.md 的 Agent：项目级写入 .cursor/skills、.claude/skills 或 .codex/skills，全局加 -g。含安装命令与验证方法。">
+  <link rel="canonical" href="https://h3skills.com/guides/install-h3-skill/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "H3 Skill 怎么装到 Cursor / Claude Code？",
+      "description": "用 npx skills add 把 H3 Skill 装到能读取 SKILL.md 的 Agent：项目级写入 .cursor/skills、.claude/skills 或 .codex/skills，全局加 -g。含安装命令与验证方法。",
+      "url": "https://h3skills.com/guides/install-h3-skill/",
+      "mainEntityOfPage": "https://h3skills.com/guides/install-h3-skill/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "H3 Skill 需要 API Key 吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不需要。Skill 本身是 SKILL.md 工作流说明；真正生成视频仍在 MiniMax H3 的生成界面或 API 中完成。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "装到全局还是项目级？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "自己常用选全局（-g）；团队共享、要跟着仓库版本走选项目级。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cursor 里怎么触发 Skill？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "重启后在 Agent 对话里直接点名，例如「用动作参考迁移 Skill，让这个角色复刻参考视频的舞步」。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 01 · 安装</p>
+      <h1>H3 Skill 怎么装到 Cursor / Claude Code？</h1>
+      <p class="guide-deck">H3 Skill 不是插件，而是一份能被 Agent 读取的 SKILL.md。装对位置，Cursor、Claude Code 和 Codex 都能用。</p>
+      <div class="guide-answer"><p>用一条命令装到能读 <code>SKILL.md</code> 的 Agent：<code>npx skills add &lt;repo&gt; --skill &lt;slug&gt;</code>。默认装到当前项目，写入 <code>.cursor/skills</code>、<code>.claude/skills</code> 或 <code>.codex/skills</code>；加 <code>-g</code> 装到用户级目录。装完重启 Agent，再用自然语言点名 Skill。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#skill-not-plugin">先分清：Skill 不是插件</a></li>
+          <li><a href="#agents">Cursor / Claude Code / Codex 对照</a></li>
+          <li><a href="#steps">四步安装</a></li>
+          <li><a href="#commands">常用安装命令</a></li>
+          <li><a href="#verify">怎么确认装好了</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="skill-not-plugin">
+  <h2>先分清：Skill 不是插件</h2>
+  <p>Skill 是一个目录，核心是 <code>SKILL.md</code>：里面写清这个工作流解决什么问题、需要哪些输入、按什么步骤执行、输出什么。Agent 读取这份文件后，才会在相关任务里调用它。</p>
+  <p>所以安装 H3 Skill 不需要给浏览器装扩展，也不需要配置 API Key。你只需要把目录放到 Agent 会扫描的位置。本站每个 <a href="/#skills">Skill 详情页</a>都给出了对应的 <code>npx skills add</code> 命令。</p>
+  <div class="guide-callout"><p><strong>判断标准：</strong>如果 Agent 能读取项目文件、能看到 <code>SKILL.md</code>，它就能用这个 Skill。不能读文件的纯聊天窗口，装了也不会自动调用。</p></div>
+</section>
+
+<section id="agents">
+  <h2>Cursor / Claude Code / Codex 对照</h2>
+  <p>三个 Agent 的目录名不同，但读取逻辑一致。下面是项目级与用户级路径：</p>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>Agent</th><th>项目级目录</th><th>全局目录</th><th>生效方式</th></tr></thead>
+      <tbody>
+        <tr><td>Cursor</td><td><code>.cursor/skills/&lt;skill&gt;/SKILL.md</code></td><td><code>~/.cursor/skills/</code></td><td>重启 Cursor，在 Agent 对话里直接点名 Skill</td></tr>
+        <tr><td>Claude Code</td><td><code>.claude/skills/&lt;skill&gt;/SKILL.md</code></td><td><code>~/.claude/skills/</code></td><td>新开会话，或运行 <code>/skills</code> 查看</td></tr>
+        <tr><td>Codex</td><td><code>.codex/skills/&lt;skill&gt;/SKILL.md</code></td><td><code>~/.codex/skills/</code></td><td>新开会话读取；也可在 <code>AGENTS.md</code> 里点名</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>如果团队要共享，选项目级并把技能目录提交进仓库；如果只是自己常用，选全局，避免每个项目重复安装。</p>
+</section>
+
+<section id="steps">
+  <h2>四步安装</h2>
+  <ol class="guide-steps">
+    <li><strong>准备 Node.js 与 npx。</strong> 在终端运行 <code>node -v</code> 和 <code>npx -v</code>，能输出版本号即可。</li>
+    <li><strong>进入项目根目录。</strong> 项目级安装必须在你要使用 Skill 的仓库里执行，否则会装到别处。</li>
+    <li><strong>运行安装命令。</strong> 例如 <code>npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing</code>。CLI 会询问安装范围与目标 Agent。</li>
+    <li><strong>重启 Agent 并点名。</strong> 新开会话后直接说「用 H3 提示词写作 Skill，帮我写一个 15 秒产品广告提示词」。</li>
+  </ol>
+  <p>需要一次装给多个 Agent 时，可以显式指定：<code>npx skills add &lt;repo&gt; --skill &lt;slug&gt; -a "*"</code>，或加 <code>--all</code> 安装仓库里的全部 Skill。</p>
+</section>
+
+<section id="commands">
+  <h2>常用安装命令</h2>
+  <p>基础 Skill 来自 MiniMax 官方仓库；社区 Skill 来自本站仓库。两条命令的用法完全一样，只是仓库地址和 slug 不同。</p>
+  <pre class="guide-code"><code># 基础：H3 提示词写作（官方）
+npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing
+
+# 动作参考迁移（社区）
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer
+
+# 片头字效（社区）
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill kinetic-title-card-generator
+
+# 装到全局目录
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer -g
+
+# 查看已安装
+npx skills list</code></pre>
+  <p>更多 Skill 的准确 slug 以详情页「安装」区块为准，例如 <a href="/skill/kinetic-title-card-generator/">片头字效</a>、<a href="/skill/prove-product-through-first-person-test/">UGC 食品测评</a>、<a href="/skill/minimalist-product-ad-generator/">极简产品广告</a>。</p>
+</section>
+
+<section id="verify">
+  <h2>怎么确认装好了</h2>
+  <ul>
+    <li>目录存在：项目根目录下能看到 <code>.cursor/skills/</code>、<code>.claude/skills/</code> 或 <code>.codex/skills/</code>。</li>
+    <li>文件存在：对应 Skill 目录里有 <code>SKILL.md</code>，不是只有一个空文件夹。</li>
+    <li>Agent 能复述：问它「你现在有哪些 Skill？H3 提示词写作的输入是什么？」能答出 <code>integrated_multimodal_description</code> 等字段，说明已经读到。</li>
+  </ul>
+  <p>如果 Agent 说找不到，先确认它打开的是同一个项目目录，再重启会话。大多数「装了没生效」都是装在别的路径，或旧会话没有重新扫描。</p>
+</section>
+
+<section id="clips">
+  <h2>装完能做什么</h2>
+  <p>下面两个是最常用的入口：一个负责把动作迁移到新角色，一个负责做中文动态字卡。点图进详情页可以看到真实成片、完整输入与安装命令。</p>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/reference-motion-transfer/">
+      <img src="/community-skills/reference-motion-transfer/assets/poster.webp" alt="动作参考迁移真实成片" width="1344" height="768" loading="lazy" decoding="async">
+      <span>动作参考迁移<small>REF2VA · 真实成片</small></span>
+    </a>
+    <a class="guide-shot" href="/skill/kinetic-title-card-generator/">
+      <img src="/community-skills/kinetic-title-card-generator/assets/poster.webp" alt="片头字效真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>片头字效<small>T2VA · 真实成片</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>H3 Skill 需要 API Key 吗？</summary><p>不需要。Skill 本身是 SKILL.md 工作流说明；真正生成视频仍在 MiniMax H3 的生成界面或 API 中完成。</p></details>
+      <details><summary>装到全局还是项目级？</summary><p>自己常用选全局（-g）；团队共享、要跟着仓库版本走选项目级。</p></details>
+      <details><summary>Cursor 里怎么触发 Skill？</summary><p>重启后在 Agent 对话里直接点名，例如「用动作参考迁移 Skill，让这个角色复刻参考视频的舞步」。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/choose-h3-mode/">T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？</a></li>
+          <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+          <li><a href="/guides/what-is-minimax-h3-skills/">MiniMax H3 和 H3 Skills 是什么？</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>

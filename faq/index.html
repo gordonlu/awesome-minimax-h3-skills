@@ -33,7 +33,7 @@
         "name": "H3 支持哪些生成模式？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "H3 目前支持五种生成模式：T2VA（文字生成视频）、I2VA（图片生成视频）、FL2VA（首尾帧生成视频）、L2V（视频续写）和 S2V（音视频生成视频）。其中 T2VA、I2VA 和 FL2VA 是最常用的三种。"
+          "text": "H3 目前使用五种生成模式：T2VA（纯文字生成视频+音频）、I2VA（首帧图生成视频+音频）、FL2VA（首帧与尾帧生成视频+音频）、L2VA（给定尾帧倒推开场）和 Ref2VA（角色、图片、视频、音频多模态参考生成）。其中 T2VA、I2VA 和 FL2VA 最常用。"
         }
       },
       {
@@ -118,6 +118,11 @@
     .faq-item.open .faq-a { display: block; }
     .faq-cta { text-align: center; padding: 3rem 2rem; background: #0C0C0E; color: #F4F1EA; }
     .faq-cta a { display: inline-block; padding: 0.8rem 2rem; background: #FF6C37; color: #0C0C0E; text-decoration: none; border-radius: 8px; font-weight: 600; }
+    .faq-guides { max-width: 760px; margin: 0 auto 3rem; padding: 0 2rem; }
+    .faq-guides h2 { color: #F4F1EA; font-size: 1.3rem; margin: 0 0 1rem; }
+    .faq-guides ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .faq-guides a { display: block; padding: 12px 14px; border: 1px solid #333; border-radius: 8px; color: #F4F1EA; text-decoration: none; font-size: 0.95rem; }
+    .faq-guides a:hover { border-color: #FF6C37; color: #FF6C37; }
   </style>
 </head>
 <body>
@@ -150,7 +155,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">H3 支持哪些生成模式？</div>
-      <div class="faq-a">H3 目前支持五种生成模式：T2VA（文字生成视频）、I2VA（图片生成视频）、FL2VA（首尾帧生成视频）、L2V（视频续写）和 S2V（音视频生成视频）。其中 T2VA、I2VA 和 FL2VA 是最常用的三种。</div>
+      <div class="faq-a">H3 目前使用五种生成模式：T2VA（纯文字生成视频+音频）、I2VA（首帧图生成视频+音频）、FL2VA（首帧与尾帧生成视频+音频）、L2VA（给定尾帧倒推开场）和 Ref2VA（角色、图片、视频、音频多模态参考生成）。其中 T2VA、I2VA 和 FL2VA 最常用。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">什么是 H3 Skills？</div>
@@ -184,6 +189,20 @@
       <div class="faq-q">如何提交自己的 Skill 到本站？</div>
       <div class="faq-a">本站是开源项目，欢迎社区贡献。在 GitHub 仓库的 community-skills/ 目录下创建新的 Skill 文件夹，包含 SKILL.md（英文）、SKILL.cn.md（中文）、meta.yaml 和预览视频/海报即可提交 PR。详见仓库的 CONTRIBUTING 指南。</div>
     </div>
+  </section>
+
+  <section class="faq-guides" aria-labelledby="faq-guides-title">
+    <h2 id="faq-guides-title">AI 常问的 8 个问题</h2>
+    <ul>
+      <li><a href="/guides/install-h3-skill/">H3 Skill 怎么装到 Cursor / Claude Code？</a></li>
+      <li><a href="/guides/choose-h3-mode/">T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？</a></li>
+      <li><a href="/guides/recreate-motion-from-reference/">怎么让角色复刻参考视频里的舞步？</a></li>
+      <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+      <li><a href="/guides/h3-on-screen-text/">怎么用 H3 做中文片头或屏幕字？</a></li>
+      <li><a href="/guides/h3-product-launch-ad/">怎么用 H3 做产品发布广告或 UGC 测评？</a></li>
+      <li><a href="/guides/h3-duration-resolution/">H3 视频时长、分辨率、画幅怎么选？</a></li>
+      <li><a href="/guides/what-is-minimax-h3-skills/">MiniMax H3 和 H3 Skills 是什么？</a></li>
+    </ul>
   </section>
 
   <section class="faq-cta">

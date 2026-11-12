@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>怎么让角色复刻参考视频里的舞步？ | H3Skills</title>
+  <meta name="description" content="用动作参考迁移 Skill：准备角色参考图、动作参考视频、迁移等级和时长画幅，按逐帧复刻/保形换动作/局部迁移/只借节拍四档选择，输出 Ref2VA 提示词。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="怎么让角色复刻参考视频里的舞步？">
+  <meta property="og:description" content="用动作参考迁移 Skill：准备角色参考图、动作参考视频、迁移等级和时长画幅，按逐帧复刻/保形换动作/局部迁移/只借节拍四档选择，输出 Ref2VA 提示词。">
+  <meta property="og:url" content="https://h3skills.com/guides/recreate-motion-from-reference/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="怎么让角色复刻参考视频里的舞步？">
+  <meta name="twitter:description" content="用动作参考迁移 Skill：准备角色参考图、动作参考视频、迁移等级和时长画幅，按逐帧复刻/保形换动作/局部迁移/只借节拍四档选择，输出 Ref2VA 提示词。">
+  <link rel="canonical" href="https://h3skills.com/guides/recreate-motion-from-reference/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "怎么让角色复刻参考视频里的舞步？",
+      "description": "用动作参考迁移 Skill：准备角色参考图、动作参考视频、迁移等级和时长画幅，按逐帧复刻/保形换动作/局部迁移/只借节拍四档选择，输出 Ref2VA 提示词。",
+      "url": "https://h3skills.com/guides/recreate-motion-from-reference/",
+      "mainEntityOfPage": "https://h3skills.com/guides/recreate-motion-from-reference/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "怎么让角色复刻参考视频的舞蹈动作？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "用动作参考迁移 Skill：角色图锁身份，参考视频锁动作，先提取节拍表，再按 Ref2VA 六段式提示词生成。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "参考视频和角色图风格不一致可以吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。参考视频只提供动作与节奏，最终画风由角色图和场景提示词决定。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么生成的舞步总是漏动作？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "常见原因是迁移等级选得过高、参考视频机位变化太大，或 retention_analysis 没写清必须保留的动作节点。先用「保形换动作」并补齐节拍表。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 03 · 动作迁移</p>
+      <h1>怎么让角色复刻参考视频里的舞步？</h1>
+      <p class="guide-deck">角色图锁形象，参考视频锁动作，节拍表锁节奏。这个任务不是一句「让角色跳舞」，而是一次 Ref2VA 结构化迁移。</p>
+      <div class="guide-answer"><p>用 <a href="/skill/reference-motion-transfer/">动作参考迁移</a> Skill。准备三样东西：<strong>角色参考图</strong>、<strong>动作参考视频</strong>、<strong>迁移等级</strong>（逐帧复刻 / 保形换动作 / 局部迁移 / 只借节拍）。再给目标时长、画幅和场景偏好，Skill 会输出可运行的 Ref2VA 六段式提示词。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#prepare">要准备什么</a></li>
+          <li><a href="#levels">四级迁移怎么选</a></li>
+          <li><a href="#steps">执行步骤</a></li>
+          <li><a href="#not-for">不适合哪些情况</a></li>
+          <li><a href="#clip">看成片</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="prepare">
+  <h2>要准备什么</h2>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>素材</th><th>要求</th><th>作用</th></tr></thead>
+      <tbody>
+        <tr><td>角色参考图</td><td>主体清晰、正面或 3/4 侧面、光线干净</td><td>锁身份、服装、材质，避免每个镜头换脸</td></tr>
+        <tr><td>动作参考视频</td><td>全身入镜、动作完整、节奏可辨</td><td>锁舞步、肢体轨迹、节拍点</td></tr>
+        <tr><td>迁移等级</td><td>四选一，见下一节</td><td>决定保留多少原动作、允许改多少</td></tr>
+        <tr><td>目标参数</td><td>时长、画幅、场景、相机偏好</td><td>把动作放进你要的广告/短片语境</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>参考视频不需要和最终画风一致。它只负责动作与节奏；最终风格由角色图、场景描述和提示词决定。</p>
+</section>
+
+<section id="levels">
+  <h2>四级迁移怎么选</h2>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>等级</th><th>保留什么</th><th>适合</th><th>代价</th></tr></thead>
+      <tbody>
+        <tr><td>逐帧复刻</td><td>完整动作顺序、节拍、肢体细节</td><td>舞蹈挑战、动作教学、MV 对齐</td><td>对参考视频质量最敏感，机位变化容易穿帮</td></tr>
+        <tr><td>保形换动作</td><td>角色身份与体型，动作按新编舞重排</td><td>同一角色拍多支舞、系列广告</td><td>需要更明确的节拍表与动作描述</td></tr>
+        <tr><td>局部迁移</td><td>只取一个动作母题（抬手、转身、手势）</td><td>把动作嵌进新场景、新剧情</td><td>原视频的完整节奏不会被保留</td></tr>
+        <tr><td>只借节拍重构</td><td>只保留 BPM 与情绪曲线</td><td>想要同款节奏但完全新动作</td><td>动作相似度最低，更像重新编舞</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>建议先从「保形换动作」试：它既保留角色一致性，又不会因为原视频机位不同而崩。要一比一挑战再升级到「逐帧复刻」。</p>
+</section>
+
+<section id="steps">
+  <h2>执行步骤</h2>
+  <ol class="guide-steps">
+    <li><strong>先装 Skill：</strong><code>npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer</code>。</li>
+    <li><strong>上传角色图与参考视频，</strong>告诉 Agent 你要的迁移等级、时长、画幅和场景。</li>
+    <li><strong>让 Skill 先出节拍表：</strong>标出参考视频的 BPM、关键动作时间点、镜头切换点，再写 Ref2VA 六段式提示词。</li>
+    <li><strong>生成后逐项验收：</strong>身份是否一致、动作是否漏步、节拍是否对齐、手部是否穿模。先修提示词里的 retention_analysis，再重生成。</li>
+  </ol>
+</section>
+
+<section id="not-for">
+  <h2>不适合哪些情况</h2>
+  <ul>
+    <li>没有任何参考视频或参考图，只想用文字描述一段舞：改用 <a href="/skill/h3-promo-film/">文生宣传片</a> 或 T2VA 工作流。</li>
+    <li>要求场景和机位与原视频完全不同，却又要逐帧复刻动作：这两件事会互相拉扯，先选一个优先级。</li>
+    <li>只想做歌词字幕或卡拉 OK：改用 <a href="/skill/music-video-subtitle-generator/">音乐 MV 动态字幕</a>。</li>
+  </ul>
+</section>
+
+<section id="clip">
+  <h2>看成片</h2>
+  <p>下面这支是 Skill 自带的真实成片：角色图锁形象，参考视频锁舞步，节拍对齐后再生成。点图进入详情页可以看到完整输入、流程与安装命令。</p>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/reference-motion-transfer/">
+      <img src="/community-skills/reference-motion-transfer/assets/poster.webp" alt="动作参考迁移真实成片：角色复刻参考视频舞步" width="1344" height="768" loading="lazy" decoding="async">
+      <span>动作参考迁移<small>REF2VA · 真实成片</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>怎么让角色复刻参考视频的舞蹈动作？</summary><p>用动作参考迁移 Skill：角色图锁身份，参考视频锁动作，先提取节拍表，再按 Ref2VA 六段式提示词生成。</p></details>
+      <details><summary>参考视频和角色图风格不一致可以吗？</summary><p>可以。参考视频只提供动作与节奏，最终画风由角色图和场景提示词决定。</p></details>
+      <details><summary>为什么生成的舞步总是漏动作？</summary><p>常见原因是迁移等级选得过高、参考视频机位变化太大，或 retention_analysis 没写清必须保留的动作节点。先用「保形换动作」并补齐节拍表。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/choose-h3-mode/">T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？</a></li>
+          <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+          <li><a href="/skill/reference-motion-transfer/">动作参考迁移 Skill 详情与安装</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>

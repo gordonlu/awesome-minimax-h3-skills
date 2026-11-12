@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？ | H3Skills</title>
+  <meta name="description" content="按手里素材选 H3 生成模式：纯文字用 T2VA，首帧图用 I2VA，首尾帧用 FL2VA，只给尾帧用 L2VA，有角色/视频/音频参考用 Ref2VA。附对照表与三条决策路径。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？">
+  <meta property="og:description" content="按手里素材选 H3 生成模式：纯文字用 T2VA，首帧图用 I2VA，首尾帧用 FL2VA，只给尾帧用 L2VA，有角色/视频/音频参考用 Ref2VA。附对照表与三条决策路径。">
+  <meta property="og:url" content="https://h3skills.com/guides/choose-h3-mode/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？">
+  <meta name="twitter:description" content="按手里素材选 H3 生成模式：纯文字用 T2VA，首帧图用 I2VA，首尾帧用 FL2VA，只给尾帧用 L2VA，有角色/视频/音频参考用 Ref2VA。附对照表与三条决策路径。">
+  <link rel="canonical" href="https://h3skills.com/guides/choose-h3-mode/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？",
+      "description": "按手里素材选 H3 生成模式：纯文字用 T2VA，首帧图用 I2VA，首尾帧用 FL2VA，只给尾帧用 L2VA，有角色/视频/音频参考用 Ref2VA。附对照表与三条决策路径。",
+      "url": "https://h3skills.com/guides/choose-h3-mode/",
+      "mainEntityOfPage": "https://h3skills.com/guides/choose-h3-mode/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "H3 有哪几种生成模式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "T2VA、I2VA、FL2VA、L2VA、Ref2VA 五种。T2VA 纯文字；I2VA 首帧图；FL2VA 首尾帧；L2VA 尾帧倒推；Ref2VA 多模态参考。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "只有一张参考图算 I2VA 还是 Ref2VA？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "如果只是把这张图当首帧，用 I2VA；如果它要作为贯穿全片的角色/主体身份参考，并且还有动作或声音参考，用 Ref2VA。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "旧资料里的 S2V 是什么？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "本站现在对应 Ref2VA：角色、图片、视频、音频多模态参考生成。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 02 · 模式选择</p>
+      <h1>T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？</h1>
+      <p class="guide-deck">模式不是越高级越好，而是由你手里的素材决定。先看有没有参考图、参考视频，再决定用哪一个。</p>
+      <div class="guide-answer"><p>先看手里有什么：<strong>只有文字 → T2VA</strong>；<strong>一张首帧图 → I2VA</strong>；<strong>首帧 + 尾帧两张图 → FL2VA</strong>；<strong>只有尾帧、要倒推开场 → L2VA</strong>；<strong>有角色图、参考视频或多段音频 → Ref2VA</strong>。本站统一使用这五个 *VA 名称，旧资料里的 L2V、S2V 不再作为本站模式名。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#table">五种模式对照表</a></li>
+          <li><a href="#paths">三条决策路径</a></li>
+          <li><a href="#names">L2V / S2V 和现在的名字怎么对齐</a></li>
+          <li><a href="#skills">按模式找 Skill</a></li>
+          <li><a href="#clips">看成片</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="table">
+  <h2>五种模式对照表</h2>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>模式</th><th>你提供什么</th><th>控制重点</th><th>典型用途</th></tr></thead>
+      <tbody>
+        <tr><td>T2VA</td><td>纯文字描述</td><td>镜头、动作、声音全部由提示词决定</td><td>概念片、氛围片、纯文字预告</td></tr>
+        <tr><td>I2VA</td><td>一张首帧图 + 文字</td><td>锁定主体外观，动作从首帧往后发展</td><td>角色出场、产品图动起来、海报活化</td></tr>
+        <tr><td>FL2VA</td><td>首帧图 + 尾帧图 + 文字</td><td>锁定开头和结尾，中间路径可控</td><td>变身、转场、限定落点的广告镜头</td></tr>
+        <tr><td>L2VA</td><td>一张尾帧图 + 文字</td><td>从给定结尾倒推合理开场</td><td>先定最终画面，再补过程</td></tr>
+        <tr><td>Ref2VA</td><td>角色/主体图 + 参考视频 / 音频</td><td>锁定身份、动作、节奏与声音</td><td>舞步复刻、角色一致性、MV、跨界互动</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>共同点：五种模式都生成视频与音频，都是 24fps；区别在于「哪些信息由你锁定，哪些交给模型补」。锁定越多，结果越可控，但准备成本也越高。</p>
+</section>
+
+<section id="paths">
+  <h2>三条决策路径</h2>
+  <h3>路径 A：只有文字</h3>
+  <p>用 <strong>T2VA</strong>。适合还没有拍摄素材、只想快速验证创意的场景。先写一句风格句，再按时间码写动作和镜头，最后写环境声与配乐。参考 <a href="/guides/write-h3-prompts/">H3 提示词怎么写</a> 和 <a href="/skill/h3-promo-film/">文生宣传片</a>。</p>
+  <h3>路径 B：有参考图</h3>
+  <ul>
+    <li>只有一张首帧：<strong>I2VA</strong>，例如 <a href="/skill/minimalist-product-ad-generator/">极简产品广告</a>、<a href="/skill/prove-product-through-first-person-test/">第一人称 UGC 测评</a>。</li>
+    <li>有首帧和尾帧：<strong>FL2VA</strong>，用于「必须落在这个画面」的转场或变身。</li>
+    <li>只有尾帧：<strong>L2VA</strong>，先定最终构图，再让模型补开场。</li>
+  </ul>
+  <h3>路径 C：有参考视频、角色图或音频</h3>
+  <p>用 <strong>Ref2VA</strong>。这是控制力最强的一档：角色图锁身份，参考视频锁动作与节奏，音频锁声音。典型是 <a href="/skill/reference-motion-transfer/">动作参考迁移</a>：让角色复刻参考视频里的舞步，并做节拍级对齐。</p>
+</section>
+
+<section id="names">
+  <h2>L2V / S2V 和现在的名字怎么对齐</h2>
+  <p>早期资料里常见的 <code>L2V</code> 和 <code>S2V</code> 容易和现在的五模式混淆。本站统一如下：</p>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>旧写法</th><th>本站现用名</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>L2V（last frame to video）</td><td>L2VA</td><td>给定尾帧，倒推开场；同时生成音频</td></tr>
+        <tr><td>S2V（subject/reference to video）</td><td>Ref2VA</td><td>角色、图片、视频、音频多模态参考生成</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>写提示词或做选型时，以 T2VA / I2VA / FL2VA / L2VA / Ref2VA 为准，避免和站内 Skill、FAQ 的字段名对不上。</p>
+</section>
+
+<section id="skills">
+  <h2>按模式找 Skill</h2>
+  <ul>
+    <li>不确定提示词结构：<a href="/skill/h3-prompt-writing/">H3 提示词写作</a>，覆盖全部五种模式。</li>
+    <li>要复刻动作：<a href="/skill/reference-motion-transfer/">动作参考迁移</a>（Ref2VA / I2VA / FL2VA / L2VA）。</li>
+    <li>图片做关键帧：<a href="/skill/h3-keyframe-film/">图生关键帧短片</a>（I2VA / FL2VA / L2VA）。</li>
+    <li>纯文字宣传片：<a href="/skill/h3-promo-film/">文生宣传片</a>（T2VA）。</li>
+  </ul>
+  <pre class="guide-code"><code>npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill h3-keyframe-film</code></pre>
+</section>
+
+<section id="clips">
+  <h2>看成片</h2>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/h3-keyframe-film/">
+      <img src="/community-skills/h3-keyframe-film/assets/poster.webp" alt="图生关键帧短片真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>图生关键帧短片<small>I2VA / FL2VA / L2VA</small></span>
+    </a>
+    <a class="guide-shot" href="/skill/reference-motion-transfer/">
+      <img src="/community-skills/reference-motion-transfer/assets/poster.webp" alt="动作参考迁移真实成片" width="1344" height="768" loading="lazy" decoding="async">
+      <span>动作参考迁移<small>REF2VA</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>H3 有哪几种生成模式？</summary><p>T2VA、I2VA、FL2VA、L2VA、Ref2VA 五种。T2VA 纯文字；I2VA 首帧图；FL2VA 首尾帧；L2VA 尾帧倒推；Ref2VA 多模态参考。</p></details>
+      <details><summary>只有一张参考图算 I2VA 还是 Ref2VA？</summary><p>如果只是把这张图当首帧，用 I2VA；如果它要作为贯穿全片的角色/主体身份参考，并且还有动作或声音参考，用 Ref2VA。</p></details>
+      <details><summary>旧资料里的 S2V 是什么？</summary><p>本站现在对应 Ref2VA：角色、图片、视频、音频多模态参考生成。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/recreate-motion-from-reference/">怎么让角色复刻参考视频里的舞步？</a></li>
+          <li><a href="/guides/h3-duration-resolution/">H3 时长、分辨率、画幅怎么选？</a></li>
+          <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>

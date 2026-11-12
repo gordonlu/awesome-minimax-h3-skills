@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H3 提示词怎么写？ | H3Skills</title>
+  <meta name="description" content="H3 提示词按字段写：integrated_multimodal_description 写画面与时间线，overall_soundscape 写环境声，non_diegetic_music 写配乐；Ref2VA 再用六段式。附可抄结构与常见错误。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="H3 提示词怎么写？">
+  <meta property="og:description" content="H3 提示词按字段写：integrated_multimodal_description 写画面与时间线，overall_soundscape 写环境声，non_diegetic_music 写配乐；Ref2VA 再用六段式。附可抄结构与常见错误。">
+  <meta property="og:url" content="https://h3skills.com/guides/write-h3-prompts/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="H3 提示词怎么写？">
+  <meta name="twitter:description" content="H3 提示词按字段写：integrated_multimodal_description 写画面与时间线，overall_soundscape 写环境声，non_diegetic_music 写配乐；Ref2VA 再用六段式。附可抄结构与常见错误。">
+  <link rel="canonical" href="https://h3skills.com/guides/write-h3-prompts/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "H3 提示词怎么写？",
+      "description": "H3 提示词按字段写：integrated_multimodal_description 写画面与时间线，overall_soundscape 写环境声，non_diegetic_music 写配乐；Ref2VA 再用六段式。附可抄结构与常见错误。",
+      "url": "https://h3skills.com/guides/write-h3-prompts/",
+      "mainEntityOfPage": "https://h3skills.com/guides/write-h3-prompts/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "H3 提示词有固定格式吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "基础模式三个字段：integrated_multimodal_description、overall_soundscape、non_diegetic_music。Ref2VA 为六段式，额外包含 subject_definitions、summary、retention_analysis、detailed_description。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "H3 提示词要写英文吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "结构描述用英文更稳；对白、歌词、屏幕文字保留原文，不要翻译。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么生成的视频没有声音？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "检查是否把声音写进了画面描述。环境声放 overall_soundscape，配乐放 non_diegetic_music。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 04 · 提示词</p>
+      <h1>H3 提示词怎么写？</h1>
+      <p class="guide-deck">不要写一段散文。H3 要的是结构化字段：画面时间线、环境声、非叙事配乐分开写。</p>
+      <div class="guide-answer"><p>基础模式按三个字段写：<strong>integrated_multimodal_description</strong>（主体、动作、镜头、时间码）、<strong>overall_soundscape</strong>（环境声与动作声）、<strong>non_diegetic_music</strong>（配乐）。Ref2VA 再增加 subject_definitions、summary、retention_analysis，共六段。先写「谁在什么场景做什么」，再写「镜头怎么动」，最后写「声音怎么走」。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#structure">可直接抄的结构</a></li>
+          <li><a href="#ref2va">Ref2VA 六段式</a></li>
+          <li><a href="#mistakes">最常见的四个错误</a></li>
+          <li><a href="#learn">去哪里继续学</a></li>
+          <li><a href="#clips">看成片</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="structure">
+  <h2>可直接抄的结构</h2>
+  <p>先把需求拆成三块，不要混在一句话里。下面是一个 15 秒产品广告的骨架：</p>
+  <pre class="guide-code"><code>integrated_multimodal_description:
+  0-3s: 产品置于黑色台面，顶部柔光扫过，镜头缓慢推近；
+  3-9s: 手指拿起产品，背景虚化，侧逆光勾出轮廓；
+  9-15s: 产品回到画面中心，品牌色光晕收束，镜头停稳。
+  主体：白色磨砂瓶身，标签文字必须清晰可读。
+  镜头：35mm，低机位，稳定器，浅景深。
+  风格：极简、克制、真实材质。
+
+overall_soundscape:
+  环境安静，只有轻微的台面触碰声与布料摩擦声。
+
+non_diegetic_music:
+  低频脉冲，80 BPM，前 3 秒留白，9 秒后加入单音钢琴。</code></pre>
+  <p>关键点：<strong>时间码</strong>让动作有顺序，<strong>主体描述</strong>锁住不能变的东西，<strong>镜头与风格</strong>决定画面质感，<strong>声音</strong>单独写。对白、歌词、屏幕文字保留原文，不要翻译。</p>
+</section>
+
+<section id="ref2va">
+  <h2>Ref2VA 六段式</h2>
+  <p>当你有角色图、参考视频或多段音频时，用 Ref2VA。六个字段的顺序不要改：</p>
+  <ol>
+    <li><code>subject_definitions</code>：定义 &lt;Subject 1&gt;、&lt;Picture 1&gt;、&lt;Video 1&gt;、&lt;Audio 1&gt; 分别是什么。</li>
+    <li><code>summary</code>：一句话说清最终要发生什么。</li>
+    <li><code>retention_analysis</code>：逐项列出必须保留的身份、服装、动作、节拍、声音。</li>
+    <li><code>detailed_description</code>：按时间码写画面、动作、镜头、场景。</li>
+    <li><code>overall_soundscape</code>：环境声、动作声、对白。</li>
+    <li><code>non_diegetic_music</code>：配乐风格、BPM、进出点。</li>
+  </ol>
+  <p>完整字段说明和示例见 <a href="/skill/h3-prompt-writing/">H3 提示词写作</a>；官方提示词范例见 <a href="/anthology/">提示词手册</a>。</p>
+</section>
+
+<section id="mistakes">
+  <h2>最常见的四个错误</h2>
+  <ul>
+    <li><strong>把声音写进画面描述。</strong> 环境声和配乐要放进对应字段，否则容易只生成画面、不生成声音。</li>
+    <li><strong>没有时间码。</strong> 「然后」「接着」对模型不够精确；用 0-3s、3-9s 这种区间。</li>
+    <li><strong>保留项写得太虚。</strong> 不要写「保持一致」，要写「保留蓝色工装、左眉疤痕、银色耳环」。</li>
+    <li><strong>把歌词/屏幕字翻译成英文。</strong> 对白、歌词、画面文字必须保留原文，否则字形会变。</li>
+  </ul>
+</section>
+
+<section id="learn">
+  <h2>去哪里继续学</h2>
+  <ul>
+    <li>安装基础 Skill：<code>npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing</code></li>
+    <li>看 49 条官方提示词：<a href="/anthology/">官方提示词合辑</a></li>
+    <li>按模式选写法：<a href="/guides/choose-h3-mode/">五种生成模式怎么选</a></li>
+    <li>做中文屏幕字：<a href="/guides/h3-on-screen-text/">H3 中文片头/屏幕字</a></li>
+  </ul>
+</section>
+
+<section id="clips">
+  <h2>看成片</h2>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/h3-promo-film/">
+      <img src="/community-skills/h3-promo-film/assets/poster.webp" alt="文生宣传片真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>文生宣传片<small>T2VA</small></span>
+    </a>
+    <a class="guide-shot" href="/skill/h3-keyframe-film/">
+      <img src="/community-skills/h3-keyframe-film/assets/poster.webp" alt="图生关键帧短片真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>图生关键帧短片<small>I2VA / FL2VA / L2VA</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>H3 提示词有固定格式吗？</summary><p>基础模式三个字段：integrated_multimodal_description、overall_soundscape、non_diegetic_music。Ref2VA 为六段式，额外包含 subject_definitions、summary、retention_analysis、detailed_description。</p></details>
+      <details><summary>H3 提示词要写英文吗？</summary><p>结构描述用英文更稳；对白、歌词、屏幕文字保留原文，不要翻译。</p></details>
+      <details><summary>为什么生成的视频没有声音？</summary><p>检查是否把声音写进了画面描述。环境声放 overall_soundscape，配乐放 non_diegetic_music。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/choose-h3-mode/">T2VA、I2VA、FL2VA、L2VA、Ref2VA 怎么选？</a></li>
+          <li><a href="/guides/h3-on-screen-text/">怎么用 H3 做中文片头或屏幕字？</a></li>
+          <li><a href="/skill/h3-prompt-writing/">H3 提示词写作 Skill</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>

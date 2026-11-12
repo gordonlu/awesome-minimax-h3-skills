@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>怎么用 H3 做中文片头或屏幕字？ | H3Skills</title>
+  <meta name="description" content="用片头字效 Skill 做中文动态字卡：T2VA 纯文字生成，每行不超过 6 字，逐字给出准确文案，默认 7–8 秒。适合品牌开场、片名、活动海报，不适合卡拉 OK 字幕。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="怎么用 H3 做中文片头或屏幕字？">
+  <meta property="og:description" content="用片头字效 Skill 做中文动态字卡：T2VA 纯文字生成，每行不超过 6 字，逐字给出准确文案，默认 7–8 秒。适合品牌开场、片名、活动海报，不适合卡拉 OK 字幕。">
+  <meta property="og:url" content="https://h3skills.com/guides/h3-on-screen-text/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="怎么用 H3 做中文片头或屏幕字？">
+  <meta name="twitter:description" content="用片头字效 Skill 做中文动态字卡：T2VA 纯文字生成，每行不超过 6 字，逐字给出准确文案，默认 7–8 秒。适合品牌开场、片名、活动海报，不适合卡拉 OK 字幕。">
+  <link rel="canonical" href="https://h3skills.com/guides/h3-on-screen-text/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "怎么用 H3 做中文片头或屏幕字？",
+      "description": "用片头字效 Skill 做中文动态字卡：T2VA 纯文字生成，每行不超过 6 字，逐字给出准确文案，默认 7–8 秒。适合品牌开场、片名、活动海报，不适合卡拉 OK 字幕。",
+      "url": "https://h3skills.com/guides/h3-on-screen-text/",
+      "mainEntityOfPage": "https://h3skills.com/guides/h3-on-screen-text/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "H3 能直接生成中文文字吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。H3 支持原生中文渲染，片头字效 Skill 就是让文字作为画面主体生成，但文案必须逐字给出并控制在每行 6 字以内。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "H3 做片头字卡用哪个模式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "T2VA，纯文字生成，不需要参考图。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "为什么生成的字总是错一个？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "把准确文案写进提示词，并明确「逐字准确、不得增删替换」；同时减少每行字数、避免生僻字和复杂连笔。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 05 · 中文屏幕字</p>
+      <h1>怎么用 H3 做中文片头或屏幕字？</h1>
+      <p class="guide-deck">H3 的原生中文渲染是差异点：不需要后期贴字，文字可以直接作为画面主体生成。</p>
+      <div class="guide-answer"><p>用 <a href="/skill/kinetic-title-card-generator/">片头字效</a> Skill，走 <strong>T2VA</strong>。文案必须逐字给出，每行不超过 6 个字；默认 7–8 秒，适合品牌开场、片名、歌名和活动海报。它不适合卡拉 OK 逐字歌词，也不适合带参考图的需求。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#why">为什么用 H3 做中文屏幕字</a></li>
+          <li><a href="#prepare">文案怎么准备</a></li>
+          <li><a href="#prompt">提示词骨架</a></li>
+          <li><a href="#limits">限制与替代方案</a></li>
+          <li><a href="#clip">看成片</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="why">
+  <h2>为什么用 H3 做中文屏幕字</h2>
+  <p>很多视频模型对中文字形不稳定，最后还是要回后期贴字。H3 的原生中文渲染让文字直接成为画面的一部分：可以做发光、遮罩、材质、透视和动态排版，而不是在成片上叠一层字幕。</p>
+  <p>这适合「文字就是主角」的镜头：品牌名、片名、歌名、活动主题、口号。完整输入与流程见 <a href="/skill/kinetic-title-card-generator/">片头字效</a> 详情页。</p>
+</section>
+
+<section id="prepare">
+  <h2>文案怎么准备</h2>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>项目</th><th>建议</th><th>原因</th></tr></thead>
+      <tbody>
+        <tr><td>每行字数</td><td>≤ 6 个汉字</td><td>字形更大、更稳，避免挤压变形</td></tr>
+        <tr><td>文案</td><td>逐字给出，不要同义词替换</td><td>品牌名/片名必须一字不差</td></tr>
+        <tr><td>行数</td><td>1–2 行</td><td>动态字卡需要留出运动空间</td></tr>
+        <tr><td>时长</td><td>默认 7–8 秒</td><td>足够完成入场、停留、收尾</td></tr>
+        <tr><td>画幅</td><td>16:9 / 9:16 / 1:1</td><td>按投放渠道选，不要事后裁切</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>把字体气质也写进去：宋体、黑体、手写、金属、霓虹、纸雕。不要只说「高级感」，要给可执行的材质和光线。</p>
+</section>
+
+<section id="prompt">
+  <h2>提示词骨架</h2>
+  <pre class="guide-code"><code>integrated_multimodal_description:
+  画面主体是四个汉字「海上生明月」，逐字从暗处亮起，
+  墨色笔触在字缘扩散，镜头从正面缓慢推近。
+  字体：宋体，厚笔画，边缘有轻微纸纤维。
+  背景：深墨绿，低照度，中心一束暖光。
+  文字必须逐字准确，不得增删或替换。
+  0-2s 入场，2-6s 停留并轻微呼吸，6-8s 收束定格。
+
+overall_soundscape:
+  低频纸张摩擦声，末尾一声轻磬。
+
+non_diegetic_music:
+  极简弦乐，60 BPM，留白为主。</code></pre>
+  <p>把「文字必须逐字准确」写进画面段，比单独写一句「不要写错字」更有效。需要多个字卡时，拆成多个镜头分别生成，不要在一个提示词里塞四五个画面。</p>
+  <pre class="guide-code"><code>npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill kinetic-title-card-generator</code></pre>
+</section>
+
+<section id="limits">
+  <h2>限制与替代方案</h2>
+  <ul>
+    <li>不做卡拉 OK 逐字歌词：改用 <a href="/skill/music-video-subtitle-generator/">音乐 MV 动态字幕</a>。</li>
+    <li>不做整支带大量旁白和产品的广告：改用 <a href="/skill/h3-promo-film/">文生宣传片</a> 或 <a href="/skill/brand-promo-video-generator/">品牌宣传短片</a>。</li>
+    <li>需要携带参考图/参考视频：片头字效不支持，改用 Ref2VA 类 Skill。</li>
+    <li>超过两行的长文案：拆成多张字卡，或回到后期排版。</li>
+  </ul>
+</section>
+
+<section id="clip">
+  <h2>看成片</h2>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/kinetic-title-card-generator/">
+      <img src="/community-skills/kinetic-title-card-generator/assets/poster.webp" alt="片头字效真实成片：中文动态字卡" width="800" height="450" loading="lazy" decoding="async">
+      <span>片头字效<small>T2VA · 真实成片</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>H3 能直接生成中文文字吗？</summary><p>可以。H3 支持原生中文渲染，片头字效 Skill 就是让文字作为画面主体生成，但文案必须逐字给出并控制在每行 6 字以内。</p></details>
+      <details><summary>H3 做片头字卡用哪个模式？</summary><p>T2VA，纯文字生成，不需要参考图。</p></details>
+      <details><summary>为什么生成的字总是错一个？</summary><p>把准确文案写进提示词，并明确「逐字准确、不得增删替换」；同时减少每行字数、避免生僻字和复杂连笔。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+          <li><a href="/guides/h3-product-launch-ad/">怎么用 H3 做产品发布或 UGC 测评？</a></li>
+          <li><a href="/skill/kinetic-title-card-generator/">片头字效 Skill 详情与安装</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>

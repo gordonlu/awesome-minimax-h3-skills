@@ -7,6 +7,14 @@
 - [Skill index](https://h3skills.com/): home page — every skill with its demo clip, inputs, workflow, and install command
 - [Prompt gallery](https://h3skills.com/anthology/): 49 prompt examples curated from the official MiniMax H3 handbook, one-click copy
 - [FAQ](https://h3skills.com/faq/): what H3 / H3 Skills are, modes, durations, resolutions, licensing
+- [Install guide](https://h3skills.com/guides/install-h3-skill/): install a skill into Cursor, Claude Code, or Codex with `npx skills add`
+- [Generation modes](https://h3skills.com/guides/choose-h3-mode/): T2VA vs I2VA vs FL2VA vs L2VA vs Ref2VA, with a decision table
+- [Motion transfer](https://h3skills.com/guides/recreate-motion-from-reference/): recreate a reference dance or motion on a new character
+- [Prompt writing](https://h3skills.com/guides/write-h3-prompts/): the three H3 prompt fields and the six-section Ref2VA structure
+- [Chinese on-screen text](https://h3skills.com/guides/h3-on-screen-text/): native Chinese title cards and screen typography
+- [Product launch ads](https://h3skills.com/guides/h3-product-launch-ad/): launch ads, UGC reviews, and minimalist product spots
+- [Duration & resolution](https://h3skills.com/guides/h3-duration-resolution/): 5/10/15s, ~21s continuation, 1080p, and aspect ratios
+- [What is MiniMax H3 / H3 Skills](https://h3skills.com/guides/what-is-minimax-h3-skills/): model vs skill, and what this site provides
 - [License & attribution](https://h3skills.com/license/): MiniMax H3 Community License notes, source attribution, AI-generated labels
 - [Official repo](https://github.com/MiniMax-AI/MiniMax-H3): MiniMax H3 + official skills source
 - [Community repo](https://github.com/gordonlu/awesome-minimax-h3-skills): this site's source

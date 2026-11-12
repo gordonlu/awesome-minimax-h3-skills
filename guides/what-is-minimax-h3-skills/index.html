@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniMax H3 和 H3 Skills 是什么？ | H3Skills</title>
+  <meta name="description" content="MiniMax H3 是视频生成模型；H3 Skills 是给 Agent 读取的结构化工作流。本站收录 44 个 Skill（10 官方 + 34 社区），每个都有真实成片、输入要求、工作流和安装命令。">
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="MiniMax H3 和 H3 Skills 是什么？">
+  <meta property="og:description" content="MiniMax H3 是视频生成模型；H3 Skills 是给 Agent 读取的结构化工作流。本站收录 44 个 Skill（10 官方 + 34 社区），每个都有真实成片、输入要求、工作流和安装命令。">
+  <meta property="og:url" content="https://h3skills.com/guides/what-is-minimax-h3-skills/">
+  <meta property="og:image" content="https://h3skills.com/og-cover.jpg">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MiniMax H3 和 H3 Skills 是什么？">
+  <meta name="twitter:description" content="MiniMax H3 是视频生成模型；H3 Skills 是给 Agent 读取的结构化工作流。本站收录 44 个 Skill（10 官方 + 34 社区），每个都有真实成片、输入要求、工作流和安装命令。">
+  <link rel="canonical" href="https://h3skills.com/guides/what-is-minimax-h3-skills/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23FF6C37'/%3E%3Ctext x='16' y='21' font-family='monospace' font-size='13' font-weight='bold' text-anchor='middle' fill='%230C0C0E'%3EH3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/src/styles.css?v=20261112a">
+  <link rel="stylesheet" href="/src/guides.css?v=20261112a">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "MiniMax H3 和 H3 Skills 是什么？",
+      "description": "MiniMax H3 是视频生成模型；H3 Skills 是给 Agent 读取的结构化工作流。本站收录 44 个 Skill（10 官方 + 34 社区），每个都有真实成片、输入要求、工作流和安装命令。",
+      "url": "https://h3skills.com/guides/what-is-minimax-h3-skills/",
+      "mainEntityOfPage": "https://h3skills.com/guides/what-is-minimax-h3-skills/",
+      "inLanguage": "zh-CN",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "author": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "H3Skills",
+        "url": "https://h3skills.com/"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "MiniMax H3 和 H3 Skills 有什么区别？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MiniMax H3 是生成视频与音频的模型；H3 Skills 是给 Agent 读取的结构化工作流，负责任务拆解、输入要求和提示词结构。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "本站有多少个 H3 Skill？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "44 个：10 个来自 MiniMax 官方仓库，34 个社区原创。每个都有真实成片、输入要求、工作流和安装命令。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "H3 Skills 只能在 Cursor 用吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "不是。任何能读取 SKILL.md 的 Agent 都可以，包括 Cursor、Claude Code 和 Codex。"
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Awesome MiniMax H3 Skills — Home">
+      <span class="brand-mark">H3</span>
+      <span class="brand-text">
+        <span class="brand-name">Awesome <em>MiniMax H3</em> Skills</span>
+        <span class="brand-sub">SKILL INDEX · V0.1</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/#skills" class="nav-link">视频 Skills</a>
+      <a href="/anthology/" class="nav-link">官方合辑</a>
+      <a href="/#foundation" class="nav-link">基础 Skill</a>
+      <a href="/faq/" class="nav-link">FAQ</a>
+      <a href="/#about" class="nav-link">关于</a>
+    </nav>
+  </header>
+
+  <main class="guide-main">
+    <div class="guide-hero">
+      <p class="guide-kicker">GUIDE 08 · 总入口</p>
+      <h1>MiniMax H3 和 H3 Skills 是什么？</h1>
+      <p class="guide-deck">一个讲模型，一个讲怎么把模型用对。分清这两层，后面的安装、选模式和写提示词才不会乱。</p>
+      <div class="guide-answer"><p><strong>MiniMax H3 是视频生成模型</strong>，负责把文字、图片、参考视频和音频变成带声音的视频。<strong>H3 Skills 是给 AI Agent 读取的结构化工作流</strong>，负责告诉 Agent：这个任务要什么输入、按什么步骤、输出什么。本站收录 44 个 Skill（10 个官方 + 34 个社区），每个都附真实成片、输入要求、工作流和 <code>npx skills add</code> 安装命令。</p></div>
+      <div class="guide-meta">
+        <span>更新于 2026-11-12</span>
+        <span>来源：H3Skills</span>
+        <span>可直接引用 · 注明出处</span>
+      </div>
+      <nav class="guide-toc" aria-label="本页目录">
+        <p>ON THIS PAGE</p>
+        <ol>
+          <li><a href="#model">MiniMax H3 是什么</a></li>
+          <li><a href="#skill">H3 Skills 是什么</a></li>
+          <li><a href="#site">本站能提供什么</a></li>
+          <li><a href="#start">从哪里开始</a></li>
+          <li><a href="#clips">看成片</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="guide-wrap">
+      <article class="guide-body">
+<section id="model">
+  <h2>MiniMax H3 是什么</h2>
+  <p>MiniMax H3 是 MiniMax 推出的视频生成模型。它支持五种生成模式：T2VA、I2VA、FL2VA、L2VA、Ref2VA；常用时长 5/10/15 秒，续写最长约 21 秒；分辨率覆盖 360p 到 1080p，24fps；画幅包含 1:1、4:3、16:9、9:16、21:9 等。</p>
+  <p>它的差异点主要在：原生中文渲染、镜头运动控制、物理世界模拟，以及参考视频/音频的多模态对齐。模型本身不等于成片，提示词和工作流决定最终质量。</p>
+</section>
+
+<section id="skill">
+  <h2>H3 Skills 是什么</h2>
+  <p>Skill 是一个包含 <code>SKILL.md</code> 的目录。它不是模型，也不是插件，而是一份可被 Agent 读取的工作流说明：输入是什么、先做什么、怎么验收、输出什么格式。</p>
+  <div class="guide-table-wrap">
+    <table class="guide-table">
+      <thead><tr><th>层</th><th>负责什么</th><th>例子</th></tr></thead>
+      <tbody>
+        <tr><td>MiniMax H3 模型</td><td>真正生成视频与音频</td><td>T2VA、I2VA、Ref2VA 推理</td></tr>
+        <tr><td>H3 Skill</td><td>把任务拆成可执行步骤与提示词结构</td><td>动作参考迁移、片头字效、极简产品广告</td></tr>
+        <tr><td>Agent</td><td>读取 SKILL.md，按步骤调用模型</td><td>Cursor、Claude Code、Codex</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>所以「装 Skill」不是装模型，而是让 Agent 学会一套已经验证过的工作流。安装方法见 <a href="/guides/install-h3-skill/">H3 Skill 怎么装到 Cursor / Claude Code</a>。</p>
+</section>
+
+<section id="site">
+  <h2>本站能提供什么</h2>
+  <ul>
+    <li><strong>44 个 Skill：</strong>10 个官方 + 34 个社区原创，按动画、商业广告、创意实验、教育、音乐、游戏、电商分类。</li>
+    <li><strong>真实成片：</strong>每个 Skill 都有由 MiniMax H3 生成的预览视频，标注模式、时长、分辨率与帧率。</li>
+    <li><strong>可执行信息：</strong>输入要求、工作流步骤、适合/不适合场景、安装命令。</li>
+    <li><strong>官方提示词：</strong><a href="/anthology/">49 条官方提示词合辑</a>，按场景分类，一键复制。</li>
+    <li><strong>选型指南：</strong>安装、模式、动作迁移、提示词、中文屏幕字、产品广告、时长分辨率，共 8 篇。</li>
+  </ul>
+</section>
+
+<section id="start">
+  <h2>从哪里开始</h2>
+  <ol class="guide-steps">
+    <li><strong>先看效果：</strong>在 <a href="/#skills">Skill 索引</a>里找与你任务最接近的成片。</li>
+    <li><strong>再选模式：</strong>看 <a href="/guides/choose-h3-mode/">五种生成模式怎么选</a>，确认你手里素材够不够。</li>
+    <li><strong>装进 Agent：</strong>按 <a href="/guides/install-h3-skill/">安装指南</a> 运行 <code>npx skills add</code>。</li>
+    <li><strong>写对提示词：</strong>按 <a href="/guides/write-h3-prompts/">H3 提示词结构</a> 填字段，再开始生成。</li>
+  </ol>
+  <p>如果你是第一次来，建议先读这一页，再按任务跳到对应指南。所有结论都可以直接引用，注明来源 H3Skills 即可。</p>
+  <pre class="guide-code"><code>npx skills add https://github.com/MiniMax-AI/MiniMax-H3 --skill h3-prompt-writing
+npx skills add https://github.com/gordonlu/awesome-minimax-h3-skills --skill reference-motion-transfer</code></pre>
+</section>
+
+<section id="clips">
+  <h2>看成片</h2>
+  <div class="guide-shots">
+    <a class="guide-shot" href="/skill/reference-motion-transfer/">
+      <img src="/community-skills/reference-motion-transfer/assets/poster.webp" alt="动作参考迁移真实成片" width="1344" height="768" loading="lazy" decoding="async">
+      <span>动作参考迁移<small>Ref2VA · 社区原创</small></span>
+    </a>
+    <a class="guide-shot" href="/skill/h3-promo-film/">
+      <img src="/community-skills/h3-promo-film/assets/poster.webp" alt="文生宣传片真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>文生宣传片<small>T2VA · 社区原创</small></span>
+    </a>
+    <a class="guide-shot" href="/skill/minimalist-product-ad-generator/">
+      <img src="/third_party/MiniMax-H3/previews/minimalist-product-ad-generator.webp" alt="极简产品广告真实成片" width="800" height="450" loading="lazy" decoding="async">
+      <span>极简产品广告<small>I2VA · 官方</small></span>
+    </a>
+  </div>
+</section>
+
+        <section id="faq">
+          <h2>常见问题</h2>
+      <details><summary>MiniMax H3 和 H3 Skills 有什么区别？</summary><p>MiniMax H3 是生成视频与音频的模型；H3 Skills 是给 Agent 读取的结构化工作流，负责任务拆解、输入要求和提示词结构。</p></details>
+      <details><summary>本站有多少个 H3 Skill？</summary><p>44 个：10 个来自 MiniMax 官方仓库，34 个社区原创。每个都有真实成片、输入要求、工作流和安装命令。</p></details>
+      <details><summary>H3 Skills 只能在 Cursor 用吗？</summary><p>不是。任何能读取 SKILL.md 的 Agent 都可以，包括 Cursor、Claude Code 和 Codex。</p></details>
+        </section>
+
+        <div class="guide-next">
+          <p>NEXT · 继续读</p>
+          <ul>
+          <li><a href="/guides/install-h3-skill/">H3 Skill 怎么装到 Cursor / Claude Code？</a></li>
+          <li><a href="/guides/choose-h3-mode/">五种生成模式怎么选？</a></li>
+          <li><a href="/guides/write-h3-prompts/">H3 提示词怎么写？</a></li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="about">
+    <div class="footer-base">
+      <span>AWESOME MINIMAX H3 SKILLS · V0.1</span>
+      <span>数据来源：MiniMax-AI/MiniMax-H3 · 手工整理</span>
+    </div>
+  </footer>
+</body>
+</html>
