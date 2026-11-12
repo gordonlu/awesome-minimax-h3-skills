@@ -255,7 +255,7 @@
           '<div class="card-foot"><div class="card-tags">' + tags + "</div>" +
           '<span class="card-go">' + (lang === "zh" ? "查看" : lang === "ko" ? "보기" : "OPEN") + ' <span aria-hidden="true">→</span></span></div>' +
         "</div>" +
-      "</div>"
+      "</a>"
     );
   }
 

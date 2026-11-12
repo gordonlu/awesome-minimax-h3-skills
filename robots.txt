@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Cloudflare's managed robots.txt classifies Baiduspider as a training crawler
+# and injects "Disallow: /" ahead of this file. Override it explicitly so Baidu
+# search can index the site.
+User-agent: Baiduspider
+Allow: /
+
 Sitemap: https://h3skills.com/sitemap-index.xml
